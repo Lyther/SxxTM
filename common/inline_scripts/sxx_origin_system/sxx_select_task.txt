@@ -1,0 +1,8 @@
+country_event = { id = sxx_task_begin.$TASK$ }
+modifier = {
+    factor = 0
+    OR = {
+        has_event_chain = sxx_task_$TASK$_chain
+        has_country_flag = sxx_recently_get_task_$TASK$
+    }
+}

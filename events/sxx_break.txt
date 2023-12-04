@@ -1,0 +1,881 @@
+namespace = sxx_break
+
+country_event = {
+	id = sxx_break.1
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_sect = yes
+		is_sxx_fallen_1 = no
+	}
+
+	immediate = {
+		country_event = { id = sxx_break.2 }
+
+		if = {
+			limit = {
+				is_sxx_heaven_country = yes
+			}
+			country_event = { id = sxx_break.10 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_break.2
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_sect = yes
+		is_sxx_fallen_1 = no
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_ascension_perk = ap_sxx_ascend_to_fairyland
+					has_ascension_perk = ap_sxx_build_heaven
+				}
+			}
+			every_owned_planet = {
+				sxx_planet_kuilei_upgrade_effect = yes
+				sxx_planet_cultivate_effect = yes
+				sxx_planet_luding_may_down_state_effect = yes
+			}
+		}
+		else = {
+			every_owned_planet = {
+				sxx_planet_kuilei_upgrade_effect = yes
+				sxx_planet_cultivate_except_dujie_effect = yes
+				sxx_planet_luding_may_down_state_effect = yes
+			}
+		}
+
+		if = {
+			limit = {
+				has_edict = sxx_country_pop_reborn
+			}
+			sxx_owned_pop_reborn_effect = yes
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_ascension_perk = ap_sxx_ascend_to_fairyland
+					has_ascension_perk = ap_sxx_build_heaven
+				}
+				any_owned_pop = {
+					has_pop_flag = sxx_dujie
+					check_variable = { which = sxx_pop_xp value >= value:sxx_pop_xp_max }
+				}
+			}
+			every_owned_pop = {
+				limit = {
+					has_pop_flag = sxx_dujie
+					check_variable = { which = sxx_pop_xp value >= value:sxx_pop_xp_max }
+				}
+				planet.solar_system = {
+					sxx_jieyun_start = yes
+				}
+			}
+			if = {
+				limit = {
+					is_sxx_final_country = no
+				}
+				play_sound = sxx_tianjie_stage
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = sxx_country_break_to_heaven
+					has_country_flag = sxx_country_break_to_fairy
+					has_country_flag = sxx_country_break_to_dujie
+					has_country_flag = sxx_country_break_to_dacheng
+					has_country_flag = sxx_country_break_to_heti
+					has_country_flag = sxx_country_break_to_lianxu
+					has_country_flag = sxx_country_break_to_huashen
+					has_country_flag = sxx_country_break_to_yuanying
+					has_country_flag = sxx_country_break_to_jindan
+					has_country_flag = sxx_country_break_to_zhuji
+					has_country_flag = sxx_country_break_to_lianqi
+				}
+			}
+			country_event = { id = sxx_break.1000 }
+		}
+	}
+}
+
+# 天庭修炼
+country_event = {
+	id = sxx_break.10
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_sect = yes
+		is_sxx_fallen_1 = no
+		has_ascension_perk = ap_sxx_build_heaven
+	}
+
+	immediate = {
+		export_trigger_value_to_variable = {
+			trigger = count_owned_pop
+			parameters = {
+				limit = {
+					has_pop_flag = sxx_xianwang
+				}
+			}
+			variable = num_sxx_xianwang
+		}
+		if = {
+			limit = {
+				check_variable = { which = num_sxx_xianwang value > 4 }
+			}
+			random_owned_pop = {
+				limit = {
+					has_pop_flag = sxx_xianwang
+				}
+				remove_pop_flag = sxx_xianwang
+				set_pop_flag = sxx_zhenxian set_variable = { which = sxx_pop_state value = 10 }
+				modify_species = {
+					species = this
+					remove_trait = trait_sxx_xianwang
+					add_trait = trait_sxx_zhenxian
+				}
+				set_variable = { which = sxx_fairy_pop_xp value = value:sxx_fairy_pop_xp_max }
+			}
+		}
+		export_trigger_value_to_variable = {
+			trigger = count_owned_pop
+			parameters = {
+				limit = {
+					has_pop_flag = sxx_xiandi
+				}
+			}
+			variable = num_sxx_xiandi
+		}
+		if = {
+			limit = {
+				check_variable = { which = num_sxx_xiandi value > 4 }
+			}
+			random_owned_pop = {
+				limit = {
+					has_pop_flag = sxx_xiandi
+				}
+				remove_pop_flag = sxx_xiandi
+				set_pop_flag = sxx_xianwang set_variable = { which = sxx_pop_state value = 11 }
+				modify_species = {
+					species = this
+					remove_trait = trait_sxx_xiandi
+					add_trait = trait_sxx_xianwang
+				}
+				set_variable = { which = sxx_fairy_pop_xp value = value:sxx_fairy_pop_xp_max }
+			}
+		}
+		every_owned_planet = {
+			limit = {
+				is_planet_class = pc_sxx_heaven
+			}
+			sxx_planet_fairy_cultivate_effect = yes
+		}
+	}
+}
+
+# 每年检测资质
+country_event = {
+	id = sxx_break.100
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_sect = yes
+		is_sxx_fallen_1 = no
+	}
+
+	immediate = {
+		switch = {
+			trigger = has_policy_flag
+			sxx_test_all = {
+				every_owned_planet = {
+					limit = {
+						has_active_building = building_sxx_shengxiantai
+					}
+					every_owned_pop = {
+						limit = {
+							NOT = { is_variable_set = sxx_pop_state }
+							is_sxx_cultivable = yes
+							is_being_purged = no
+							is_being_assimilated = no
+						}
+						random_list = {
+							25 = {
+								sxx_chance_happen_effect = { EFFECT = sxx_pop_may_spawn_cultivator CHANCE1 = 100 CHANCE2 = 900 MODIFIER = sxx_cultivator_spawn_chance_produces_mult }
+							}
+							25 = {
+								modifier = {
+									factor = 0
+									has_global_flag = sxx_break_level_1
+								}
+								modifier = {
+									factor = 2
+									has_global_flag = sxx_break_level_3
+								}
+								modifier = {
+									factor = 3
+									has_global_flag = sxx_break_level_4
+								}
+							}
+						}
+					}
+				}
+			}
+			sxx_test_not_slave = {
+				every_owned_planet = {
+					limit = {
+						has_active_building = building_sxx_shengxiantai
+					}
+					every_owned_pop = {
+						limit = {
+							NOT = { is_variable_set = sxx_pop_state }
+							is_sxx_cultivable = yes
+							is_being_purged = no
+							is_being_assimilated = no
+							is_enslaved = no
+						}
+						random_list = {
+							25 = {
+								sxx_chance_happen_effect = { EFFECT = sxx_pop_may_spawn_cultivator CHANCE1 = 100 CHANCE2 = 900 MODIFIER = sxx_cultivator_spawn_chance_produces_mult }
+							}
+							25 = {
+								modifier = {
+									factor = 0
+									has_global_flag = sxx_break_level_1
+								}
+								modifier = {
+									factor = 2
+									has_global_flag = sxx_break_level_3
+								}
+								modifier = {
+									factor = 3
+									has_global_flag = sxx_break_level_4
+								}
+							}
+						}
+					}
+				}
+			}
+			sxx_test_full = {
+				every_owned_planet = {
+					limit = {
+						has_active_building = building_sxx_shengxiantai
+					}
+					every_owned_pop = {
+						limit = {
+							NOT = { is_variable_set = sxx_pop_state }
+							is_sxx_cultivable = yes
+							is_being_purged = no
+							is_being_assimilated = no
+							has_citizenship_rights = yes
+						}
+						random_list = {
+							25 = {
+								sxx_chance_happen_effect = { EFFECT = sxx_pop_may_spawn_cultivator CHANCE1 = 100 CHANCE2 = 900 MODIFIER = sxx_cultivator_spawn_chance_produces_mult }
+							}
+							25 = {
+								modifier = {
+									factor = 0
+									has_global_flag = sxx_break_level_1
+								}
+								modifier = {
+									factor = 2
+									has_global_flag = sxx_break_level_3
+								}
+								modifier = {
+									factor = 3
+									has_global_flag = sxx_break_level_4
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = sxx_country_break_to_lianqi
+			}
+			country_event = { id = sxx_break.1000 }
+		}
+	}
+}
+
+# 每年检测资质（附庸）
+country_event = {
+	id = sxx_break.105
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_sect = no
+		exists = overlord
+		overlord = { is_sxx_sect = yes }
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				has_holding = {
+					holding = holding_sxx_shengxiantai
+					owner = owner.overlord
+				}
+			}
+			every_owned_pop = {
+				limit = {
+					NOT = { is_variable_set = sxx_pop_state }
+					is_sxx_cultivable = yes
+					is_being_purged = no
+					is_being_assimilated = no
+				}
+				random_list = {
+					25 = {
+						sxx_chance_happen_effect = { EFFECT = sxx_vassal_pop_may_spawn_cultivator CHANCE1 = 100 CHANCE2 = 900 MODIFIER = sxx_cultivator_spawn_chance_produces_mult }
+					}
+					25 = {
+						modifier = {
+							factor = 0
+							has_global_flag = sxx_break_level_1
+						}
+						modifier = {
+							factor = 2
+							has_global_flag = sxx_break_level_3
+						}
+						modifier = {
+							factor = 3
+							has_global_flag = sxx_break_level_4
+						}
+					}
+				}
+			}
+		}
+
+		overlord = {
+			if = {
+				limit = {
+					has_country_flag = sxx_country_break_to_lianqi
+				}
+				country_event = { id = sxx_break.1000 }
+			}
+		}
+	}
+}
+
+# 红莲净体弹窗
+planet_event = {
+	id = sxx_break.150
+	title = sxx_break.150.name
+	desc = sxx_break.150.desc
+	picture = GFX_evt_surreal_visions
+	location = root
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_break.150.a
+	}
+	option = {
+		name = sxx_break.150.b
+	}
+}
+
+# 先天道体弹窗
+planet_event = {
+	id = sxx_break.160
+	title = sxx_break.160.name
+	desc = sxx_break.160.desc
+	picture = GFX_evt_surreal_visions
+	location = root
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_break.150.a
+	}
+	option = {
+		name = sxx_break.150.b
+	}
+}
+
+# 紫阳灵体弹窗
+planet_event = {
+	id = sxx_break.165
+	title = sxx_break.165.name
+	desc = sxx_break.165.desc
+	picture = GFX_evt_surreal_visions
+	location = root
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_break.150.a
+	}
+	option = {
+		name = sxx_break.150.b
+	}
+}
+
+# 琉璃神体弹窗
+planet_event = {
+	id = sxx_break.170
+	title = sxx_break.170.name
+	desc = sxx_break.170.desc
+	picture = GFX_evt_surreal_visions
+	location = root
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_break.150.a
+	}
+	option = {
+		name = sxx_break.150.b
+	}
+}
+
+# 荒古圣体弹窗
+planet_event = {
+	id = sxx_break.175
+	title = sxx_break.175.name
+	desc = sxx_break.175.desc
+	picture = GFX_evt_surreal_visions
+	location = root
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_break.150.a
+	}
+	option = {
+		name = sxx_break.150.b
+	}
+}
+
+# 宗门等级突破
+country_event = {
+	id = sxx_break.1000
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		switch = {
+			trigger = has_country_flag
+			sxx_country_break_to_lianqi = { country_event = { id = sxx_break.1001 } }
+			sxx_country_break_to_zhuji = { country_event = { id = sxx_break.1002 } }
+			sxx_country_break_to_jindan = { country_event = { id = sxx_break.1003 } }
+			sxx_country_break_to_yuanying = { country_event = { id = sxx_break.1004 } }
+			sxx_country_break_to_huashen = { country_event = { id = sxx_break.1005 } }
+			sxx_country_break_to_lianxu = { country_event = { id = sxx_break.1006 } }
+			sxx_country_break_to_heti = { country_event = { id = sxx_break.1007 } }
+			sxx_country_break_to_dacheng = { country_event = { id = sxx_break.1008 } }
+			sxx_country_break_to_dujie = { country_event = { id = sxx_break.1009 } }
+			sxx_country_break_to_fairy = { country_event = { id = sxx_break.1010 } }
+			sxx_country_break_to_heaven = { country_event = { id = sxx_break.1011 } }
+		}
+		remove_country_flag = sxx_country_break_to_lianqi
+		remove_country_flag = sxx_country_break_to_zhuji
+		remove_country_flag = sxx_country_break_to_jindan
+		remove_country_flag = sxx_country_break_to_yuanying
+		remove_country_flag = sxx_country_break_to_huashen
+		remove_country_flag = sxx_country_break_to_lianxu
+		remove_country_flag = sxx_country_break_to_heti
+		remove_country_flag = sxx_country_break_to_dacheng
+		remove_country_flag = sxx_country_break_to_dujie
+		remove_country_flag = sxx_country_break_to_fairy
+		remove_country_flag = sxx_country_break_to_heaven
+	}
+}
+
+# 宗门等级突破
+country_event = {
+	id = sxx_break.1001
+	title = sxx_break.1001.name
+	desc = sxx_break.1001.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_psionics
+	show_sound = event_mind_over_matter
+
+	immediate = {
+		add_modifier = { modifier = sxx_lianqi_country }
+	}
+
+	option = {
+		name = sxx_break.1001.a
+		tooltip = {
+			add_modifier = { modifier = sxx_lianqi_country }
+		}
+		add_resource = { influence = 50 }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier3unityreward
+		}
+	}
+}
+
+# 宗门等级突破
+country_event = {
+	id = sxx_break.1002
+	title = sxx_break.1001.name
+	desc = sxx_break.1002.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_psionics
+	show_sound = event_mind_over_matter
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		add_modifier = { modifier = sxx_zhuji_country }
+	}
+
+	option = {
+		name = sxx_break.1001.a
+		tooltip = {
+			add_modifier = { modifier = sxx_zhuji_country }
+		}
+		add_resource = { influence = 100 }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier3unityreward
+		}
+	}
+}
+
+# 宗门等级突破
+country_event = {
+	id = sxx_break.1003
+	title = sxx_break.1001.name
+	desc = sxx_break.1003.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_psionics
+	show_sound = event_mind_over_matter
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		add_modifier = { modifier = sxx_jindan_country }
+		if = {
+			limit = {
+				has_origin = origin_sxx_yuanying
+				any_owned_pop = {
+					has_pop_flag = origin_sxx_yuanying_pop_of@root
+				}
+			}
+			country_event = { id = sxx_origin.10 days = 1 }
+		}
+	}
+
+	option = {
+		name = sxx_break.1001.a
+		tooltip = {
+			add_modifier = { modifier = sxx_jindan_country }
+		}
+		add_resource = { influence = 150 }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier3unityreward
+		}
+	}
+}
+
+country_event = {
+	id = sxx_break.1004
+	title = sxx_break.1001.name
+	desc = sxx_break.1004.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_psionics
+	show_sound = event_mind_over_matter
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		add_modifier = { modifier = sxx_yuanying_country }
+	}
+
+	option = {
+		name = sxx_break.1001.a
+		tooltip = {
+			add_modifier = { modifier = sxx_yuanying_country }
+		}
+		add_resource = { influence = 200 }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 18
+		}
+	}
+}
+
+country_event = {
+	id = sxx_break.1005
+	title = sxx_break.1001.name
+	desc = sxx_break.1005.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_psionics
+	show_sound = event_mind_over_matter
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		add_modifier = { modifier = sxx_huashen_country }
+	}
+
+	option = {
+		name = sxx_break.1001.a
+		tooltip = {
+			add_modifier = { modifier = sxx_huashen_country }
+		}
+		add_resource = { influence = 250 }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 18
+		}
+	}
+}
+
+country_event = {
+	id = sxx_break.1006
+	title = sxx_break.1001.name
+	desc = sxx_break.1006.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_psionics
+	show_sound = event_mind_over_matter
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		add_modifier = { modifier = sxx_lianxu_country }
+	}
+
+	option = {
+		name = sxx_break.1001.a
+		tooltip = {
+			add_modifier = { modifier = sxx_lianxu_country }
+		}
+		add_resource = { influence = 300 }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 18
+		}
+	}
+}
+
+country_event = {
+	id = sxx_break.1007
+	title = sxx_break.1001.name
+	desc = sxx_break.1007.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_psionics
+	show_sound = event_mind_over_matter
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		add_modifier = { modifier = sxx_heti_country }
+	}
+
+	option = {
+		name = sxx_break.1001.a
+		tooltip = {
+			add_modifier = { modifier = sxx_heti_country }
+		}
+		add_resource = { influence = 350 }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 18
+		}
+	}
+}
+
+country_event = {
+	id = sxx_break.1008
+	title = sxx_break.1001.name
+	desc = sxx_break.1008.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_psionics
+	show_sound = event_mind_over_matter
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		add_modifier = { modifier = sxx_dacheng_country }
+	}
+
+	option = {
+		name = sxx_break.1001.a
+		tooltip = {
+			add_modifier = { modifier = sxx_dacheng_country }
+		}
+		add_resource = { influence = 400 }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 18
+		}
+	}
+}
+
+country_event = {
+	id = sxx_break.1009
+	title = sxx_break.1001.name
+	desc = sxx_break.1009.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_psionics
+	show_sound = event_mind_over_matter
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		add_modifier = { modifier = sxx_dujie_country }
+	}
+
+	option = {
+		name = sxx_break.1001.a
+		tooltip = {
+			add_modifier = { modifier = sxx_dujie_country }
+		}
+		add_resource = { influence = 450 }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 18
+		}
+	}
+}
+
+# 宗门等级突破
+country_event = {
+	id = sxx_break.1010
+	title = sxx_break.1001.name
+	desc = sxx_break.1010.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_sxx_feishengchengxian
+	show_sound = event_mind_over_matter
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		add_modifier = { modifier = sxx_fairy_country }
+		begin_event_chain = {
+			event_chain = sxx_ascend_chain
+			target = ROOT
+		}
+		add_event_chain_counter = {
+			event_chain = sxx_ascend_chain
+			counter = sxx_fairy_1
+			amount = value_sxx_fairy_1
+		}
+	}
+
+	option = {
+		name = sxx_break.1010.a
+		tooltip = {
+			add_modifier = { modifier = sxx_fairy_country }
+		}
+		add_resource = { influence = 500 }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 36
+		}
+		tooltip = {
+			begin_event_chain = {
+				event_chain = sxx_ascend_chain
+				target = ROOT
+			}
+		}
+	}
+}
+
+# 宗门等级突破
+country_event = {
+	id = sxx_break.1011
+	title = sxx_break.1001.name
+	desc = sxx_break.1011.desc
+
+	is_triggered_only = yes
+	picture = GFX_evt_sxx_lidichengxian
+	show_sound = event_mind_over_matter
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		add_modifier = { modifier = sxx_heaven_country }
+	}
+
+	option = {
+		name = sxx_break.1011.a
+		tooltip = {
+			add_modifier = { modifier = sxx_heaven_country }
+		}
+		add_resource = { influence = 500 }
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 36
+		}
+	}
+}

@@ -1,0 +1,41 @@
+title = sxx_task_$TASK$_chain_title
+desc = sxx_task_$TASK$_chain_desc
+picture = GFX_evt_synth_sabotage
+show_sound = event_default
+is_triggered_only = yes
+
+after = {
+    set_timed_country_flag = { flag = sxx_recently_get_task_$TASK$ days = 1800 }
+}
+
+option = {
+    name = OK
+    begin_event_chain = {
+        event_chain = sxx_task_$TASK$_chain
+        target = this
+    }
+    hidden_effect = {
+        country_event = { id = sxx_task_month_pulse.$TASK$ days = 30 }
+        change_variable = { which = sxx_task_num value = 1 }
+        remove_country_flag = sxx_getting_task
+    }
+}
+
+option = {
+    name = sxx_change_task
+    trigger = {
+        NOT = { has_country_flag = sxx_change_task_cd }
+    }
+    inline_script = {
+        script = sxx_origin_system/sxx_coins_cost
+        COINS = 1
+    }
+    custom_tooltip = sxx_change_task_tooltip
+    hidden_effect = {
+        set_timed_country_flag = {
+            flag = sxx_change_task_cd
+            days = 1800
+        }
+        country_event = { id = sxx_origin_system.200 }
+    }
+}

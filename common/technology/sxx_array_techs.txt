@@ -1,0 +1,214 @@
+tech_sxx_planetary_array = {
+	cost = @tier1cost3
+	area = physics
+	tier = 1
+	category = { field_manipulation }
+	weight = @tier1weight3
+	is_rare = yes
+
+	prerequisites = { "tech_planetary_unification" }
+
+	potential = {
+		is_sxx_lianqi_country = yes
+	}
+
+	modifier = {
+		custom_tooltip = unlock_sxx_planet_array
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_sxx_zhenfa
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_sxx_array_disk
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 75
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_sxx_zhenfa
+		}
+	}
+}
+
+tech_sxx_array_huzong = {
+	cost = @tier3cost3
+	area = physics
+	tier = 3
+	category = { field_manipulation }
+	weight = @tier3weight3
+	is_rare = yes
+
+	prerequisites = { "tech_sxx_planetary_array" "tech_planetary_shield_generator" }
+
+	potential = {
+		is_sxx_zhuji_country = yes
+	}
+
+	modifier = {
+		custom_tooltip = unlock_sxx_array_huzong
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_sxx_zhenfa
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_sxx_array_disk
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_sxx_zhenfa
+		}
+	}
+}
+
+tech_sxx_array_yangchun = {
+	cost = @tier3cost3
+	area = physics
+	tier = 3
+	category = { field_manipulation }
+	weight = @tier3weight3
+	is_rare = yes
+
+	prerequisites = { "tech_sxx_planetary_array" "tech_sxx_lingyao" }
+
+	potential = {
+		is_sxx_huashen_country = yes
+	}
+
+	modifier = {
+		custom_tooltip = unlock_sxx_array_yangchun
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_sxx_zhenfa
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_sxx_array_disk
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_sxx_zhenfa
+		}
+	}
+}
+
+tech_sxx_array_ningshen = {
+	cost = @tier2cost3
+	area = physics
+	tier = 2
+	category = { field_manipulation }
+	weight = @tier2weight3
+	is_rare = yes
+
+	prerequisites = { "tech_sxx_planetary_array" }
+
+	potential = {
+		is_sxx_jindan_country = yes
+	}
+
+	modifier = {
+		custom_tooltip = unlock_sxx_array_ningshen
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_sxx_zhenfa
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_sxx_array_disk
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_sxx_zhenfa
+		}
+	}
+}
+
+tech_sxx_array_dihuo = {
+	cost = @tier2cost3
+	area = physics
+	tier = 2
+	category = { field_manipulation }
+	weight = @tier2weight3
+	is_rare = yes
+
+	prerequisites = { "tech_sxx_planetary_array" "tech_sxx_liandanfang_1" "tech_sxx_lianqishi_1" }
+
+	potential = {
+		is_sxx_zhuji_country = yes
+	}
+
+	modifier = {
+		custom_tooltip = unlock_sxx_array_dihuo
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_sxx_zhenfa
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_sxx_array_disk
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_sxx_zhenfa
+		}
+	}
+}

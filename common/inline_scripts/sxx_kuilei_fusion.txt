@@ -1,0 +1,9 @@
+trigger = {
+	owner = { is_sxx_$STATE$_country = yes }
+}
+allow = {
+	sxx_kuilei_fusion_trigger = { STATE = $STATE$ }
+}
+hidden_effect = {
+	sxx_kuilei_fusion_effect = { STATE = $STATE$ }
+}

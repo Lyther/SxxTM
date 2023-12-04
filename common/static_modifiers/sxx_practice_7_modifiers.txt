@@ -1,0 +1,134 @@
+################# 坤元地煞诀 ######################
+
+### 0 倍 ###
+# (1+12.5+0)*11.5 = 155.25
+# (3.5+12.5+0)*11.5 = 184
+#（3.79*1.1+12.5+0）*11.5 = 191.6935 # 禁神极限
+
+### 0.5 倍 ###
+# (1+12.5+2.5)*11.5 = 184
+# (3+12.5+2.5)*11.5 = 207
+
+### 1 倍 ###
+# (1+12.5+5)*11.5 = 212.75
+# (3.5+12.5+5)*11.5 = 241.5
+
+### 2 倍 ###
+# (1+12.5+10)*11.5 = 270.25
+# (3.5+12.5+10)*11.5 = 299
+
+### 3 倍 ###
+# (1+12.5+15)*11.5 = 327.75
+# (3.5+12.5+15)*11.5 = 356.5
+
+### 4 倍 ###
+# (1+12.5+20)*11.5 = 385.25
+# (3.5+12.5+20)*11.5 = 414
+
+sxx_practice_modifier_7_1_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_produces_mult = 0.1
+}
+
+sxx_practice_modifier_7_1_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.15
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+}
+
+sxx_practice_modifier_7_2_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_produces_mult = 0.1
+}
+	
+sxx_practice_modifier_7_2_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.15
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+}
+
+sxx_practice_modifier_7_3_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_produces_mult = 0.1
+}
+
+sxx_practice_modifier_7_3_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.15
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+}
+
+sxx_practice_modifier_7_4_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_produces_mult = 0.1
+}
+
+sxx_practice_modifier_7_4_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.15
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+}
+
+sxx_practice_modifier_7_5_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_produces_mult = 0.1
+}
+	
+sxx_practice_modifier_7_5_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.15
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+}
+
+sxx_practice_modifier_7_6_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_produces_mult = 0.1
+}
+
+sxx_practice_modifier_7_6_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.15
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+}
+
+sxx_practice_modifier_7_7_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_produces_mult = 0.1
+}
+
+sxx_practice_modifier_7_7_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.15
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+}
+
+sxx_practice_modifier_7_8_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.1
+	planet_sxx_stones_miners_produces_mult = 0.1
+}
+	
+sxx_practice_modifier_7_8_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.15
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+}
+
+sxx_practice_modifier_7_9_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.2
+	planet_sxx_stones_miners_produces_mult = 0.2
+}
+
+sxx_practice_modifier_7_9_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.3
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+}

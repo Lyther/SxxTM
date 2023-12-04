@@ -1,0 +1,926 @@
+namespace = sxx_test
+
+country_event = {
+	id = sxx_test.1
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		every_owned_pop = {
+			if = {
+				limit = {
+					is_sxx_fairy_pop = yes
+				}
+				change_variable = { which = sxx_fairy_pop_xp value = value:sxx_fairy_pop_xp_get_test }
+			#	sxx_set_fairy_pop_xp_max_if_over_max = yes
+			}
+			else = {
+				change_variable = { which = sxx_pop_xp value = value:sxx_pop_xp_get_test }
+			#	sxx_set_pop_xp_max_if_over_max = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.2
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		every_owned_pop = {
+			sxx_pop_remove_potential_depletion = yes
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.3
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		every_owned_pop = {
+			sxx_pop_set_potential_depletion = yes
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.5
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = sxx_test_break
+		#always = no
+	}
+
+	immediate = {
+		set_country_flag = sxx_test_break
+		every_owned_pop = {
+			limit = {
+				is_sxx_fairy_pop = no
+			}
+			change_variable = { which = sxx_pop_xp value = value:sxx_pop_xp_get_test }
+			sxx_set_pop_xp_max_if_over_max = yes
+		}
+		country_event = { id = sxx_break.2 }
+		country_event = { id = sxx_test.5 days = 5 }
+	}
+}
+
+country_event = {
+	id = sxx_test.6
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = sxx_test_break_2
+		#always = no
+	}
+
+	immediate = {
+		set_country_flag = sxx_test_break_2
+		country_event = { id = sxx_break.2 }
+		country_event = { id = sxx_test.6 days = 5 }
+	}
+}
+
+country_event = {
+	id = sxx_test.10
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_fairy_country }
+		begin_event_chain = {
+			event_chain = sxx_ascend_chain
+			target = ROOT
+		}
+		add_event_chain_counter = {
+			event_chain = sxx_ascend_chain
+			counter = sxx_fairy_1
+			amount = 10
+		}
+		change_variable = { which = value_sxx_fairy_1 value = 10 }
+		add_event_chain_counter = {
+			event_chain = sxx_ascend_chain
+			counter = sxx_fairy_2
+			amount = 8
+		}
+		change_variable = { which = value_sxx_fairy_2 value = 8 }
+		add_event_chain_counter = {
+			event_chain = sxx_ascend_chain
+			counter = sxx_fairy_3
+			amount = 6
+		}
+		change_variable = { which = value_sxx_fairy_3 value = 6 }
+		add_event_chain_counter = {
+			event_chain = sxx_ascend_chain
+			counter = sxx_fairy_4
+			amount = 4
+		}
+		change_variable = { which = value_sxx_fairy_4 value = 4 }
+		add_event_chain_counter = {
+			event_chain = sxx_ascend_chain
+			counter = sxx_fairy_5
+			amount = 10
+		}
+		change_variable = { which = value_sxx_fairy_5 value = 10 }
+		add_resource = { sxx_qiyun = 10000000 }
+	}
+}
+
+country_event = {
+	id = sxx_test.11
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_lianqi_country }
+	}
+}
+
+country_event = {
+	id = sxx_test.12
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_zhuji_country }
+	}
+}
+
+country_event = {
+	id = sxx_test.13
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_jindan_country }
+	}
+}
+
+country_event = {
+	id = sxx_test.14
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_yuanying_country }
+	}
+}
+
+country_event = {
+	id = sxx_test.15
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_huashen_country }
+	}
+}
+
+country_event = {
+	id = sxx_test.16
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_lianxu_country }
+	}
+}
+
+country_event = {
+	id = sxx_test.17
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_heti_country }
+	}
+}
+
+country_event = {
+	id = sxx_test.18
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_dacheng_country }
+	}
+}
+
+country_event = {
+	id = sxx_test.19
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_dujie_country }
+	}
+}
+
+country_event = {
+	id = sxx_test.20
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_fairy_country }
+		begin_event_chain = {
+			event_chain = sxx_ascend_chain
+			target = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.21
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_heaven_country }
+	}
+}
+
+country_event = {
+	id = sxx_test.22
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		remove_modifier = sxx_lianqi_country
+		remove_modifier = sxx_zhuji_country
+		remove_modifier = sxx_jindan_country
+		remove_modifier = sxx_yuanying_country
+		remove_modifier = sxx_huashen_country
+		remove_modifier = sxx_lianxu_country
+		remove_modifier = sxx_heti_country
+		remove_modifier = sxx_dacheng_country
+		remove_modifier = sxx_dujie_country
+		remove_modifier = sxx_fairy_country
+		remove_modifier = sxx_heaven_country
+		add_modifier = { modifier = sxx_heaven_country }
+
+		capital_scope = {
+			hidden_effect = {
+				owner = {
+					set_country_flag = sxx_built_heaven
+				}
+				solar_system = {
+					set_star_flag = cannot_be_hit_by_aow_starfall_spear
+				}
+				set_planet_flag = sxx_heaven_planet
+				set_planet_flag = cannot_be_hit_by_aow_starfall_spear
+				remove_all_buildings = yes
+				remove_all_districts = yes
+				clear_deposits = yes
+			}
+			
+			change_planet_size = 10
+			change_pc = pc_sxx_heaven
+	
+			hidden_effect = {
+				add_building = building_sxx_lingxiao
+				owner = { country_event = { id = sxx_fairy.160 } }
+			}
+
+			sxx_planet_add_main_species_state_pop = { COUNT = 10 STATE = zhenxian STATE_VALUE = 10 }
+			sxx_planet_add_main_species_state_pop = { COUNT = 4 STATE = xianwang STATE_VALUE = 11 }
+			sxx_planet_add_main_species_state_pop = { COUNT = 1 STATE = xiandi STATE_VALUE = 12 }
+		}
+	}
+}
+
+# 空白测试事件
+country_event = {
+	id = sxx_test.30
+	title = sxx_test.30.name
+	desc = sxx_test.30.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
+
+country_event = {
+	id = sxx_test.50
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		random_owned_pop = {
+			limit = {
+				NOT = { is_variable_set = sxx_pop_state }
+				is_sxx_cultivable = yes
+				is_being_purged = no
+				is_being_assimilated = no
+			}
+			while = {
+				count = 100
+				planet = {
+					create_pop = {
+						species = prev
+						effect = { sxx_new_cultivator_spawn_effect = yes }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.51
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 3 STATE = lianqi STATE_VALUE = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.52
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 3 STATE = zhuji STATE_VALUE = 2 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.53
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 3 STATE = jindan STATE_VALUE = 3 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.54
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 3 STATE = yuanying STATE_VALUE = 4 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.55
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 3 STATE = huashen STATE_VALUE = 5 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.56
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 3 STATE = lianxu STATE_VALUE = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.57
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 3 STATE = heti STATE_VALUE = 7 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.58
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 3 STATE = dacheng STATE_VALUE = 8 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.59
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 3 STATE = dujie STATE_VALUE = 9 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.60
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 1 STATE = zhenxian STATE_VALUE = 10 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.61
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 1 STATE = xianwang STATE_VALUE = 11 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.62
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		capital_scope = {
+			sxx_planet_add_main_species_state_pop = { COUNT = 1 STATE = xiandi STATE_VALUE = 12 }
+		}
+	}
+}
+
+# 召唤天魔
+country_event = {
+	id = sxx_test.100
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		event_target:sxx_seal_system = {
+			system_event = { id = sxx_crisis.1000 }
+		}
+	}
+}
+
+# 生成韩立
+country_event = {
+	id = sxx_test.110
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		set_country_flag = sxx_hanli_test
+		country_event = { id = sxx_break.100 }
+		country_event = { id = sxx_break.100 }
+		country_event = { id = sxx_break.100 }
+		country_event = { id = sxx_break.100 }
+		country_event = { id = sxx_break.100 }
+	}
+}
+
+# 诛魔剑满好感
+country_event = {
+	id = sxx_test.120
+
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		set_country_flag = sxx_get_zhumo
+		add_relic = r_sxx_zhumo_sword
+		set_variable = { which = sxx_zhumo_count value = 5 }
+	}
+}
+
+# 正魔之战
+country_event = {
+	id = sxx_test.200
+
+	hide_window = yes
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		every_playable_country = {
+			every_playable_country = {
+				establish_communications_no_message = prev
+			}
+		}
+
+		set_global_flag = galcom_founding_begun
+		random_playable_country = {
+			limit = {
+				perc_communications_with_playable >= 0.7
+				is_homicidal = no
+			}
+			country_event = { id = galcom.2 }
+			every_playable_country = {
+				limit = {
+					NOT = { is_same_value = prev }
+					has_communications = prev
+					is_homicidal = no
+				}
+				country_event = { id = galcom.2 }
+			}
+		}
+		random_country = {
+			limit = { is_country_type = global_event }
+			country_event = { id = galcom.3 days = 2 }
+		}
+
+		set_global_flag = sxx_rew_test
+	}
+}
+
+country_event = {
+	id = sxx_test.250
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		give_technology = { tech = tech_rift_sphere message = no }
+		capital_scope = {
+			solar_system = {
+				spawn_astral_rift = {
+					relative_to = prev
+					orbit_distance = 60
+					orbit_angle = 340
+					tolerance = 360
+					id = sxx_other_world
+					spawn_sound = no
+				}
+				astral_rift = {
+					create_research_station = { owner = root }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_test.300
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		sxx_change_coins = { COINS = 100000000 }
+		country_event = { id = sxx_origin_system.1 }
+	}
+}
+
+country_event = {
+	id = sxx_test.1000
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = sxx_practice_ui
+
+	immediate = {
+		set_country_flag = sxx_get_practice_22
+		set_country_flag = sxx_get_practice_23
+		add_resource = {
+			sxx_gongfa = 1000000000
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}

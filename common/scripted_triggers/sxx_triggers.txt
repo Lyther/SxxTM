@@ -1,0 +1,124 @@
+sxx_species_has_xiuxian_trait = {
+	custom_tooltip = {
+		fail_text = sxx_not_has_xiuxian_trait
+		OR = {
+			has_trait = trait_sxx_lianqi
+			has_trait = trait_sxx_zhuji
+			has_trait = trait_sxx_jindan
+			has_trait = trait_sxx_yuanying
+			has_trait = trait_sxx_huashen
+			has_trait = trait_sxx_lianxu
+			has_trait = trait_sxx_heti
+			has_trait = trait_sxx_dacheng
+			has_trait = trait_sxx_dujie
+			has_trait = trait_sxx_zhenxian
+			has_trait = trait_sxx_xianwang
+			has_trait = trait_sxx_xiandi
+		}
+	}
+}
+
+has_sxx_crisis_emperor = {
+	OR = {
+		has_global_flag = sxx_outer_demon_level_2
+		has_global_flag = sxx_outer_demon_level_3
+		has_global_flag = sxx_outer_demon_level_4
+		has_global_flag = sxx_outer_demon_level_5
+	}
+}
+
+has_sxx_crisis_god = {
+	OR = {
+		has_global_flag = sxx_outer_demon_level_3
+		has_global_flag = sxx_outer_demon_level_4
+		has_global_flag = sxx_outer_demon_level_5
+	}
+}
+
+can_add_sxx_cultivatory_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		is_sxx_sect = yes
+	}
+	OR = {
+		NOT = { has_trait = trait_mechanical }
+		from = {
+			has_valid_civic = civic_sxx_kuilei
+			has_ascension_perk = ap_sxx_robot_cultivable
+			has_policy_flag = ai_full_rights
+		}
+	}
+}
+
+sxx_leader_can_get_xiuxian_leader_trait = {
+	OR = {
+		is_variable_set = sxx_leader_state
+		has_leader_flag = sxx_xiuxian_leader
+	}
+}
+
+sxx_ship_is_tiyanki = {
+	OR = {
+		is_ship_size = leviathan_01_elder_tiyanki
+		is_ship_size = space_whale_1
+		is_ship_size = space_whale_3
+		is_ship_size = space_whale_4
+		is_ship_size = space_whale_2
+		is_ship_size = space_whale_5
+	}
+}
+
+sxx_ship_is_amoeba = {
+	OR = {
+		is_ship_size = space_amoeba_centenarian # 泡泡
+		is_ship_size = space_amoeba_mother
+		is_ship_size = space_amoeba
+	}
+}
+
+sxx_ship_is_crystal = {
+	OR = {
+		is_ship_size = crystal_splitter_ship_large_blue
+		is_ship_size = crystal_ship_large_blue
+		is_ship_size = crystal_ship_large_green
+		is_ship_size = crystal_ship_large_yellow
+		is_ship_size = crystal_ship_large_red
+		is_ship_size = crystal_ship_large_blue_elite
+		is_ship_size = crystal_ship_large_green_elite
+		is_ship_size = crystal_ship_large_yellow_elite
+		is_ship_size = crystal_ship_large_red_elite
+		is_ship_size = crystal_ship_small_blue
+		is_ship_size = crystal_ship_medium_blue
+		is_ship_size = crystal_ship_small_green
+		is_ship_size = crystal_ship_medium_green
+		is_ship_size = crystal_ship_small_yellow
+		is_ship_size = crystal_ship_medium_yellow
+		is_ship_size = crystal_ship_small_red
+		is_ship_size = crystal_ship_medium_red
+		is_ship_size = crystal_ship_small_blue_elite
+		is_ship_size = crystal_ship_medium_blue_elite
+		is_ship_size = crystal_ship_small_green_elite
+		is_ship_size = crystal_ship_medium_green_elite
+		is_ship_size = crystal_ship_small_yellow_elite
+		is_ship_size = crystal_ship_medium_yellow_elite
+		is_ship_size = crystal_ship_small_red_elite
+		is_ship_size = crystal_ship_medium_red_elite
+	}
+}
+
+sxx_ship_is_space_cloud = {
+	OR = {
+		is_ship_size = space_cloud
+		is_ship_size = lesser_space_cloud
+	}
+}
+
+sxx_ship_is_ancient = {
+	OR = {
+		is_ship_size = ancient_mining_drone
+		is_ship_size = ancient_corvette
+		is_ship_size = ancient_destroyer
+		is_ship_size = ancient_mining_expansion_barge
+		is_ship_size = ancient_mining_expansion_drone
+	}
+}

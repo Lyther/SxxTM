@@ -1,0 +1,27 @@
+title = sxx_task_fail_title
+desc = sxx_task_fail_desc
+picture = GFX_evt_synth_sabotage
+show_sound = event_default
+is_triggered_only = yes
+
+immediate = {
+    change_variable = { which = sxx_task_num value = -1 }
+    end_event_chain = sxx_task_$TASK$_chain
+}
+
+after = {
+    tooltip = {
+        end_event_chain = sxx_task_$TASK$_chain
+    }
+}
+
+option = {
+    name = OK
+}
+
+option = {
+    name = sxx_open_the_system
+    hidden_effect = {
+        country_event = { id = sxx_origin_system.1 }
+    }
+}

@@ -1,0 +1,6 @@
+sound =
+{
+	name = "sxx_tianjie_stage_01"
+	file = "event/sxx_tianjie_stage_01.wav"
+	volume = 0.25
+}

@@ -1,0 +1,137 @@
+################# 乙木青元诀 ######################
+
+# (11.5+5+57.5)*2.5 = 185 1*
+# (11.5+5+115)*2.5 = 328.75 2*
+# (11.5+5+172.5)*2.5 = 472.5 3*
+
+### 0 倍 ###
+# (1+8.75+0)*11.5 = 112.125
+# (3.5+8.75+0)*11.5 = 140.875
+
+### 0.5 倍 ###
+# (1+8.75+3.75)*11.5 = 155.25
+# (3.5+8.75+3.75)*11.5 = 184
+
+### 1 倍 ###
+# (1+8.75+7.5)*11.5 = 198.375
+# (3.5+8.75+7.5)*11.5 = 227.125
+
+### 2 倍 ###
+# (1+8.75+15)*11.5 = 284.625
+# (3.5+8.75+15)*11.5 = 313.375
+
+### 3 倍 ###
+# (1+8.75+22.5)*11.5 = 370.875
+# (3.5+8.75+22.5)*11.5 = 399.625
+
+### 4 倍 ###
+# (1+8.75+30)*11.5 = 457.125
+# (3.5+8.75+30)*11.5 = 485.875
+
+sxx_practice_modifier_8_1_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+}
+
+sxx_practice_modifier_8_1_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+}
+
+sxx_practice_modifier_8_2_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+}
+	
+sxx_practice_modifier_8_2_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+}
+
+sxx_practice_modifier_8_3_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+}
+
+sxx_practice_modifier_8_3_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+}
+
+sxx_practice_modifier_8_4_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+}
+
+sxx_practice_modifier_8_4_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+}
+
+sxx_practice_modifier_8_5_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+}
+	
+sxx_practice_modifier_8_5_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+}
+
+sxx_practice_modifier_8_6_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+}
+
+sxx_practice_modifier_8_6_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+}
+
+sxx_practice_modifier_8_7_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+}
+
+sxx_practice_modifier_8_7_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+}
+
+sxx_practice_modifier_8_8_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_food_produces_mult = 0.1
+}
+
+sxx_practice_modifier_8_8_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+}
+
+sxx_practice_modifier_8_9_0 = {
+	hide_from_country_list = yes
+	planet_sxx_factotum_disciples_food_produces_mult = 0.2
+}
+
+sxx_practice_modifier_8_9_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.15
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+}

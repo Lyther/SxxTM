@@ -1,0 +1,20 @@
+# from = country
+# this = species
+
+citizenship_sxx_yuhua = {
+	is_full_citizenship = yes
+
+	potential = {
+		exists = from
+		from = { has_origin = origin_sxx_yuhua }
+		has_trait = trait_sxx_yuhua
+		is_same_species = event_target:sxx_yuhua_species_of@from
+	}
+
+	allow = {
+		hidden_trigger = { exists = from }
+	}
+	ai_will_do = {
+		factor = 100000
+	}
+}

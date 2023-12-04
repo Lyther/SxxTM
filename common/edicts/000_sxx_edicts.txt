@@ -1,0 +1,734 @@
+sxx_manual = {
+	length = 1
+	icon = GFX_edict_type_sxx_xiuxian
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_manual
+	}
+
+	potential = {
+		is_sxx_sect = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = sxx_event.2000 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_manual_fairy = {
+	length = 1
+	icon = GFX_edict_type_sxx_xiuxian
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_manual_fairy
+	}
+
+	potential = {
+		is_sxx_final_country = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = sxx_event.2010 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_call_practice = {
+	length = 1
+	icon = GFX_edict_type_sxx_xiuxian
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_call_practice
+	}
+
+	potential = {
+		is_sxx_sect = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_sxx_special_practice = yes
+				}
+				country_event = { id = sxx_practice.1000 }
+			}
+			else = {
+				country_event = { id = sxx_practice.1001 }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_kill_ruler = {
+	length = 1
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = 1000
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_sxx_sect = yes
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		ruler = {
+			kill_leader = { show_notification = yes }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_country_pop_reborn = {
+	length = -1
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_sxx_sect = yes
+		check_variable = { which = sxx_practice_4 value >= 1 }
+		is_ai = yes
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = edict_sxx_country_pop_reborn_effect
+		hidden_effect = {
+			sxx_owned_pop_reborn_effect = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+sxx_duoshe = {
+	length = 1800
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_duoshe
+	}
+
+	prerequisites = { tech_cloning }
+
+	potential = {
+		is_sxx_sect = yes
+		is_ai = yes
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = sxx_leader.50 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_stones_farm = {
+	length = -1
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+		upkeep = {
+			sxx_stones = 1
+			mult = value:sxx_farming_districts_and_buildings_value
+		}
+	}
+
+	potential = {
+		is_sxx_sect = yes
+	}
+
+	allow = {
+		always = yes
+	}
+
+	modifier = {
+		planet_farmers_food_produces_add = 1
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+sxx_stones_machine_apply_1 = {
+	length = -1
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = 10
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	prerequisites = { tech_sxx_stones_machine_1 }
+
+	potential = {
+		is_sxx_lianqi_country = yes
+	}
+
+	allow = {
+		NOT = {
+			has_deficit = sxx_stones
+		}
+	}
+
+	modifier = {
+		planet_technician_energy_produces_add = 1
+		planet_miners_minerals_produces_add = 1
+		planet_farmers_food_produces_add = 1
+		planet_sxx_secular_stones_miners_1_sxx_stones_produces_add = 2
+		planet_sxx_secular_stones_miners_1_minerals_produces_add = 1
+		planet_sxx_secular_stones_miners_2_sxx_stones_produces_add = 4
+		planet_sxx_secular_stones_miners_2_minerals_produces_add = 2
+		planet_sxx_secular_stones_miners_3_sxx_stones_produces_add = 6
+		planet_sxx_secular_stones_miners_3_minerals_produces_add = 3
+		planet_sxx_secular_stones_miners_4_sxx_stones_produces_add = 10
+		planet_sxx_secular_stones_miners_4_minerals_produces_add = 5
+		planet_technician_sxx_stones_upkeep_add = 0.5
+		planet_miners_sxx_stones_upkeep_add = 0.5
+		planet_farmers_sxx_stones_upkeep_add = 0.5
+		planet_sxx_secular_stones_miners_1_sxx_stones_upkeep_add = 0.5
+		planet_sxx_secular_stones_miners_2_sxx_stones_upkeep_add = 0.5
+		planet_sxx_secular_stones_miners_3_sxx_stones_upkeep_add = 0.5
+		planet_sxx_secular_stones_miners_4_sxx_stones_upkeep_add = 0.5
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+sxx_stones_machine_apply_2 = {
+	length = -1
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = 20
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	prerequisites = { tech_sxx_stones_machine_2 }
+
+	potential = {
+		is_sxx_zhuji_country = yes
+	}
+
+	allow = {
+		NOT = {
+			has_deficit = sxx_stones
+		}
+	}
+
+	modifier = {
+		planet_technician_energy_produces_add = 2
+		planet_miners_minerals_produces_add = 2
+		planet_farmers_food_produces_add = 2
+		planet_sxx_secular_stones_miners_1_sxx_stones_produces_add = 4
+		planet_sxx_secular_stones_miners_1_minerals_produces_add = 2
+		planet_sxx_secular_stones_miners_2_sxx_stones_produces_add = 8
+		planet_sxx_secular_stones_miners_2_minerals_produces_add = 4
+		planet_sxx_secular_stones_miners_3_sxx_stones_produces_add = 12
+		planet_sxx_secular_stones_miners_3_minerals_produces_add = 6
+		planet_sxx_secular_stones_miners_4_sxx_stones_produces_add = 20
+		planet_sxx_secular_stones_miners_4_minerals_produces_add = 10
+		planet_technician_sxx_stones_upkeep_add = 1
+		planet_miners_sxx_stones_upkeep_add = 1
+		planet_farmers_sxx_stones_upkeep_add = 1
+		planet_sxx_secular_stones_miners_1_sxx_stones_upkeep_add = 1
+		planet_sxx_secular_stones_miners_2_sxx_stones_upkeep_add = 1
+		planet_sxx_secular_stones_miners_3_sxx_stones_upkeep_add = 1
+		planet_sxx_secular_stones_miners_4_sxx_stones_upkeep_add = 1
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+sxx_stones_machine_apply_3 = {
+	length = -1
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = 30
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	prerequisites = { tech_sxx_stones_machine_3 }
+
+	potential = {
+		is_sxx_jindan_country = yes
+	}
+
+	allow = {
+		NOT = {
+			has_deficit = sxx_stones
+		}
+	}
+
+	modifier = {
+		planet_technician_energy_produces_add = 3
+		planet_miners_minerals_produces_add = 3
+		planet_farmers_food_produces_add = 3
+		planet_sxx_secular_stones_miners_1_sxx_stones_produces_add = 6
+		planet_sxx_secular_stones_miners_1_minerals_produces_add = 3
+		planet_sxx_secular_stones_miners_2_sxx_stones_produces_add = 12
+		planet_sxx_secular_stones_miners_2_minerals_produces_add = 6
+		planet_sxx_secular_stones_miners_3_sxx_stones_produces_add = 18
+		planet_sxx_secular_stones_miners_3_minerals_produces_add = 9
+		planet_sxx_secular_stones_miners_4_sxx_stones_produces_add = 30
+		planet_sxx_secular_stones_miners_4_minerals_produces_add = 15
+		planet_technician_sxx_stones_upkeep_add = 1.5
+		planet_miners_sxx_stones_upkeep_add = 1.5
+		planet_farmers_sxx_stones_upkeep_add = 1.5
+		planet_sxx_secular_stones_miners_1_sxx_stones_upkeep_add = 1.5
+		planet_sxx_secular_stones_miners_2_sxx_stones_upkeep_add = 1.5
+		planet_sxx_secular_stones_miners_3_sxx_stones_upkeep_add = 1.5
+		planet_sxx_secular_stones_miners_4_sxx_stones_upkeep_add = 1.5
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+sxx_more_special_body = {
+	length = -1
+	icon = GFX_edict_type_sxx_qiyun
+
+	resources = {
+		category = edicts
+		cost = {
+			sxx_qiyun = 1.1
+			mult = value:edict_size_effect
+		}
+		upkeep = {
+			sxx_qiyun = 0.1
+			mult = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		OR = {
+			is_sxx_final_country = yes
+			has_country_flag = sxx_country_can_use_qiyun
+		}
+	}
+
+	allow = {
+		resource_stockpile_compare = { resource = sxx_qiyun value > 0 }
+	}
+
+	effect = {
+		custom_tooltip = edict_sxx_more_special_body_tooltip
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_summon_lingmai = {
+	length = 1
+	icon = GFX_edict_type_sxx_qiyun
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_summon_lingmai
+	}
+
+	potential = {
+		OR = {
+			is_sxx_final_country = yes
+			has_country_flag = sxx_country_can_use_qiyun
+		}
+	}
+
+	allow = {
+		OR = {
+			has_edict = sxx_summon_lingmai
+			AND = {
+				resource_stockpile_compare = { resource = sxx_qiyun value >= 100 }
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = sxx_fairy.1020 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_summon_fairy_avatar = {
+	length = 1
+	icon = GFX_edict_type_sxx_qiyun
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_summon_fairy_avatar
+	}
+
+	potential = {
+		is_sxx_fairy_country = yes
+	}
+
+	allow = {
+	#	resource_stockpile_compare = { resource = sxx_qiyun value >= 10 }
+	#	custom_tooltip = {
+	#		fail_text = fail_text_edict_sxx_summon_fairy_avatar
+	#		check_variable = { which = value_sxx_fate_point value >= 10 }
+	#	}
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = sxx_fairy.1000 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_nizhuan = {
+	length = 1
+	icon = GFX_edict_type_sxx_qiyun
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_nizhuan
+	}
+
+	potential = {
+		is_sxx_fairy_country = yes
+	}
+
+	allow = {
+		hidden_trigger = {
+			OR = {
+				check_variable = { which = value_sxx_fairy_2 value >= 1 }
+				check_variable = { which = value_sxx_fairy_3 value >= 1 }
+				check_variable = { which = value_sxx_fairy_4 value >= 1 }
+				check_variable = { which = value_sxx_fairy_5 value >= 1 }
+				check_variable = { which = value_sxx_fairy_2 value >= 1 }
+				check_variable = { which = num_sxx_xianwang value >= 1 }
+				check_variable = { which = num_sxx_xiandi value >= 1 }
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = sxx_leader.55 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_heaven_pop_resettle = {
+	length = -1
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+		cost = {
+			unity = 110
+			mult = value:edict_size_effect
+		}
+		upkeep = {
+			unity = 10
+			mult = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		owner = { is_sxx_heaven_country = yes }
+		owner = { is_ai = yes }
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_heaven_pop_resettle
+	}
+
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					any_system_within_border = {
+						any_system_planet = {
+							is_planet_class = pc_sxx_heaven
+							is_under_colonization = no
+							is_occupied_flag = no
+							OR = {
+								NOT = { exists = owner }
+								owner = { is_same_value = root }
+							}
+						}
+					}
+				}
+				random_system_within_border = {
+					limit = {
+						any_system_planet = {
+							is_planet_class = pc_sxx_heaven
+							is_under_colonization = no
+							is_occupied_flag = no
+							OR = {
+								NOT = { exists = owner }
+								owner = { is_same_value = root }
+							}
+						}
+					}
+					random_system_planet = {
+						limit = {
+							is_planet_class = pc_sxx_heaven
+							is_under_colonization = no
+							is_occupied_flag = no
+							OR = {
+								NOT = { exists = owner }
+								owner = { is_same_value = root }
+							}
+						}
+						if = {
+							limit = {
+								NOT = { exists = owner }
+							}
+							set_owner = root
+						}
+						save_event_target_as = sxx_heaven
+					}
+				}
+				#random_owned_planet = {
+				#	limit = {
+				#		is_planet_class = pc_sxx_heaven
+				#		is_under_colonization = no
+				#		is_occupied_flag = no
+				#	}
+				#	save_event_target_as = sxx_heaven
+				#}
+				every_owned_planet = {
+					limit = {
+						NOT = {
+							is_planet_class = pc_sxx_heaven
+						}
+						is_occupied_flag = no
+					}
+					every_owned_pop = {
+						limit = {
+							has_job = sxx_other_fairy
+						}
+						resettle_pop = {
+							pop = this
+							planet = event_target:sxx_heaven
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_show_pop_cultivation_data = {
+	length = -1
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_show_pop_cultivation_data
+	}
+
+	potential = {
+		is_sxx_sect = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_pop = {
+				remove_modifier = sxx_pop_speed_show
+				remove_modifier = sxx_pop_xp_show
+				remove_modifier = sxx_pop_xp_max_show
+				if = {
+					limit = {
+						is_variable_set = sxx_pop_state
+						is_sxx_fairy_pop = no
+					}
+					if = {
+						limit = {
+							is_sxx_cultivable_cultivator = yes
+						}
+						add_modifier = {
+							modifier = sxx_pop_speed_show
+							multiplier = value:sxx_pop_xp_add_total
+							days = 30
+						}
+					}
+					add_modifier = {
+						modifier = sxx_pop_xp_show
+						multiplier = sxx_pop_xp
+						days = 30
+					}
+					add_modifier = {
+						modifier = sxx_pop_xp_max_show
+						multiplier = value:sxx_pop_xp_max
+						days = 30
+					}
+				}
+				else_if = {
+					limit = {
+						is_sxx_fairy_pop = yes
+					}
+					add_modifier = {
+						modifier = sxx_pop_speed_show
+						multiplier = value:sxx_fairy_pop_xp_add_total
+						days = 30
+					}
+					add_modifier = {
+						modifier = sxx_pop_xp_show
+						multiplier = sxx_fairy_pop_xp
+						days = 30
+					}
+					add_modifier = {
+						modifier = sxx_pop_xp_max_show
+						multiplier = value:sxx_fairy_pop_xp_max
+						days = 30
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_give_back = {
+	length = 1
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_give_back
+	}
+
+	potential = {
+		is_ai = no
+		event_target:sxx_pool_planet = {
+			OR = {
+				NOT = { exists = owner }
+				owner = { NOT = { is_country_type = sxx_memory_pool } }
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			event_target:sxx_pool_planet = {
+				set_owner = event_target:sxx_pool_country
+				create_pop = {
+					species = owner_main_species
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

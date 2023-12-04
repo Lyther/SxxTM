@@ -1,0 +1,611 @@
+@activation_cost = 3000
+@triumph_duration = 3600
+@triumph_duration_short = 1800
+@triumph_duration_veryshort = 900
+
+r_sxx_sword_fragment = {
+	activation_duration = @triumph_duration_veryshort
+	portrait = "GFX_relic_sxx_sword_fragment"
+	sound = "relic_activation_blade_of_the_huntress"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+		produces = {
+			sxx_stones = 100
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 1000
+			has_global_flag = sxx_crisis_god_appeared
+			NOT = { has_global_flag = sxx_crisis_god_died }
+		}
+	}
+
+	score = 5000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_sword_fragment_active
+		custom_tooltip = relic_triumph_cooldown_veryshort
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration_veryshort
+			}
+			country_event = { id = sxx_crisis.2050 days = 30 random = 330 }
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_sword_fragment
+		}
+	}
+}
+
+r_sxx_zhumo_sword = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_zhumo_sword"
+	sound = "relic_activation_blade_of_the_huntress"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+		produces = {
+		#	sxx_stones = 100
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 500
+			is_sxx_sect = yes
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		ship_archaeological_site_clues_add = 1
+	}
+
+	score = 5000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_zhumo_sword_active
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			country_event = { id = sxx_other_event.150 }
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_zhumo_sword
+		}
+	}
+}
+
+r_sxx_zhumo_sword_no_soul = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_zhumo_sword"
+	sound = "relic_activation_blade_of_the_huntress"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+		produces = {
+		#	sxx_stones = 100
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	score = 5000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_zhumo_sword_no_soul_active
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_zhumo_sword_no_soul
+		}
+	}
+}
+
+r_sxx_zhangtian_bottle = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_zhangtian_bottle"
+	sound = "relic_activation_generic"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		custom_tooltip = sxx_zhangtian_bottle_passive_effect
+	}
+
+	score = 5000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_zhangtian_bottle_active
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			country_event = { id = sxx_other_event.275 } # 为了隐藏tooltip，用事件
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_zhangtian_bottle
+		}
+	}
+}
+
+r_sxx_hunyuan_pot = {
+	activation_duration = @triumph_duration_veryshort
+	portrait = "GFX_relic_sxx_hunyuan_pot"
+	sound = "relic_activation_generic"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+		cost = {
+			trigger = {
+				check_variable = { which = sxx_hunyuan_pot_count value = 0 }
+			}
+			food = 1000
+		}
+		cost = {
+			trigger = {
+				check_variable = { which = sxx_hunyuan_pot_count value >= 1 }
+			}
+			food = 1000
+			multiplier = sxx_hunyuan_pot_count
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		sxx_heaven_stability_add = 100
+	}
+
+	score = 5000
+
+	active_effect = {
+		if = {
+			limit = {
+				check_variable = { which = sxx_hunyuan_pot_count value = 0 }
+			}
+			add_resource = {
+				sxx_pills = 200
+			}
+			hidden_effect = {
+				set_variable = { which = sxx_hunyuan_pot_count value = 1 }
+			}
+		}
+		else = {
+			add_resource = {
+				sxx_pills = 200
+				mult = sxx_hunyuan_pot_count
+			}
+		}
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration_veryshort
+			}
+		}
+		custom_tooltip = "relic_triumph_cooldown_veryshort"
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = sxx_hunyuan_pot_count
+						value <= 49
+					}
+				}
+				change_variable = {
+					which = sxx_hunyuan_pot_count
+					value = 1
+				}
+			}
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_hunyuan_pot
+		}
+		is_sxx_sect = yes
+	}
+}
+
+r_sxx_sword_tomb = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_sword_tomb"
+	sound = "relic_activation_blade_of_the_huntress"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+		produces = {
+			sxx_gongfa = 100
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	score = 5000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_sword_tomb_active
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			every_owned_pop = {
+				limit = {
+					is_sxx_potential_depletion = yes
+				}
+				random_list = {
+					20 = { sxx_pop_remove_potential_depletion = yes }
+					80 = {}
+				}
+			}
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_sword_tomb
+		}
+		is_sxx_sect = yes
+	}
+}
+
+r_sxx_array_disk = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_array_disk"
+	sound = "relic_activation_extradimensional_warlock"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		custom_tooltip = sxx_array_disk_passive_effect
+	}
+
+	score = 5000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_array_disk_active_tooltip
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			set_country_flag = can_set_sxx_jinshen_array_disk
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_array_disk
+		}
+		is_sxx_sect = yes
+		NOT = {
+			any_owned_planet = { has_modifier = sxx_jinshen_array_disk_modifier }
+		}
+	}
+}
+
+r_sxx_star_eye = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_star_eye"
+	sound = "relic_activation_intact_zro_soulstone"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_happiness = -0.05
+	}
+
+	score = 5000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_star_eye_active_tooltip
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			sxx_star_eye_active_effect = yes
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_star_eye
+		}
+		#is_sxx_sect = yes
+	}
+}
+
+r_sxx_sphere = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_sphere"
+	sound = "relic_activation_scales_of_the_worm"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 300
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		custom_tooltip = sxx_sphere_passive_effect
+	}
+	triggered_country_modifier = {
+		potential = {
+			NOT = { has_country_flag = r_sxx_sphere_activing }
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.005
+		mult = r_sxx_sphere_count
+	}
+	triggered_country_modifier = {
+		potential = {
+			has_country_flag = r_sxx_sphere_activing
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.01
+		mult = r_sxx_sphere_count
+	}
+
+	score = 10000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_sphere_active_tooltip
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			set_timed_country_flag = { flag = r_sxx_sphere_activing days = 3600 }
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_sphere
+		}
+		is_sxx_sect = yes
+	}
+}
+
+r_sxx_crystal = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_crystal"
+	sound = "ap_rift_event_15_time_crystal"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 300
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		custom_tooltip = sxx_crystal_passive_effect
+	}
+	triggered_country_modifier = {
+		potential = {
+			NOT = { has_country_flag = r_sxx_crystal_activing }
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.0075
+		mult = r_sxx_crystal_count
+	}
+	triggered_country_modifier = {
+		potential = {
+			has_country_flag = r_sxx_crystal_activing
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.015
+		mult = r_sxx_crystal_count
+	}
+
+	score = 10000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_sphere_active_tooltip
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			set_timed_country_flag = { flag = r_sxx_crystal_activing days = 3600 }
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_crystal
+		}
+		is_sxx_sect = yes
+	}
+}
+
+r_sxx_cube = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_sxx_cube"
+	sound = "relic_activation_intact_zro_soulstone"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 300
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		custom_tooltip = sxx_cube_passive_effect
+	}
+	triggered_country_modifier = {
+		potential = {
+			NOT = { has_country_flag = r_sxx_cube_activing }
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.01
+		mult = r_sxx_cube_count
+	}
+	triggered_country_modifier = {
+		potential = {
+			has_country_flag = r_sxx_cube_activing
+		}
+		sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.02
+		mult = r_sxx_cube_count
+	}
+
+	score = 10000
+
+	active_effect = {
+		custom_tooltip = relic_sxx_sphere_active_tooltip
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			set_timed_country_flag = { flag = r_sxx_cube_activing days = 3600 }
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_sxx_cube
+		}
+		is_sxx_sect = yes
+	}
+}

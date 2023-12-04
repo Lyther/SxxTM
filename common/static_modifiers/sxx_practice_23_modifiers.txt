@@ -1,0 +1,139 @@
+################# 玄君七章秘经 ######################
+
+### 0 倍 ###
+# (1+5+0)*33.5 = 201
+# (3.5+5+0)*11.5 = 284.75
+
+### 0.5 倍 ###
+# (1+5+2.5)*33.5 = 284.75
+# (3.5+5+2.5)*33.5 = 368.5
+
+### 1 倍 ###
+# (1+5+5)*33.5 = 368.5
+# (3.5+5+5)*33.5 = 452.25
+
+### 2 倍 ###
+# (1+5+10)*33.5 = 536
+# (3.5+5+10)*33.5 = 619.75
+
+### 3 倍 ###
+# (1+5+15)*33.5 = 703.5
+# (3.5+5+15)*33.5 = 787.25
+
+### 4 倍 ###
+# (1+5+20)*33.5 = 871
+# (3.5+5+20)*33.5 = 954.75
+
+sxx_practice_modifier_23_1_0 = {
+	hide_from_country_list = yes
+	ship_anomaly_generation_chance_mult = 0.1
+	ship_anomaly_research_speed_mult = 0.2
+}
+
+sxx_practice_modifier_23_1_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2.5
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = 0.05
+	planet_stability_add = -1
+	pop_happiness = -0.02
+}
+
+sxx_practice_modifier_23_2_0 = {
+	hide_from_country_list = yes
+	ship_anomaly_generation_chance_mult = 0.1
+	ship_anomaly_research_speed_mult = 0.2
+}
+	
+sxx_practice_modifier_23_2_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2.5
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = 0.05
+	planet_stability_add = -1
+	pop_happiness = -0.02
+}
+
+sxx_practice_modifier_23_3_0 = {
+	hide_from_country_list = yes
+	ship_anomaly_generation_chance_mult = 0.1
+	ship_anomaly_research_speed_mult = 0.2
+}
+
+sxx_practice_modifier_23_3_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2.5
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = 0.05
+	planet_stability_add = -1
+	pop_happiness = -0.02
+}
+
+sxx_practice_modifier_23_4_0 = {
+	hide_from_country_list = yes
+	ship_anomaly_generation_chance_mult = 0.1
+	ship_anomaly_research_speed_mult = 0.2
+}
+
+sxx_practice_modifier_23_4_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 5
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = 0.05
+	planet_stability_add = -1
+	pop_happiness = -0.02
+}
+
+sxx_practice_modifier_23_5_0 = {
+	hide_from_country_list = yes
+	ship_anomaly_generation_chance_mult = 0.1
+	ship_anomaly_research_speed_mult = 0.2
+}
+	
+sxx_practice_modifier_23_5_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 5
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = 0.05
+	planet_stability_add = -1
+	pop_happiness = -0.02
+}
+
+sxx_practice_modifier_23_6_0 = {
+	hide_from_country_list = yes
+	ship_anomaly_generation_chance_mult = 0.1
+	ship_anomaly_research_speed_mult = 0.2
+}
+
+sxx_practice_modifier_23_6_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 5
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = 0.05
+	planet_stability_add = -1
+	pop_happiness = -0.02
+}
+
+sxx_practice_modifier_23_7_0 = {
+	hide_from_country_list = yes
+	ship_anomaly_generation_chance_mult = 0.2
+	ship_anomaly_research_speed_mult = 0.4
+}
+
+sxx_practice_modifier_23_7_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 10
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = 0.1
+	planet_stability_add = -2
+	pop_happiness = -0.04
+}
+
+sxx_practice_modifier_23_8_0 = {
+	hide_from_country_list = yes
+}
+	
+sxx_practice_modifier_23_8_1 = {
+	hide_from_country_list = yes
+}
+
+sxx_practice_modifier_23_9_0 = {
+	hide_from_country_list = yes
+}
+
+sxx_practice_modifier_23_9_1 = {
+    hide_from_country_list = yes
+}

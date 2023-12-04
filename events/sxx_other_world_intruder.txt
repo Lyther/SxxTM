@@ -1,0 +1,108 @@
+namespace = sxx_other_world_intruder
+
+country_event = {
+    id = sxx_other_world_intruder.1
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_global_flag = sxx_other_world_intruder_end }
+    }
+
+    immediate = {
+        random_list = {
+            80 = { sxx_create_other_world_intruder_fleet_1 = yes }
+            20 = { sxx_create_other_world_intruder_fleet_2 = yes }
+        }
+        country_event = { id = sxx_other_world_intruder.1 days = 5 random = 25 }
+    }
+}
+
+astral_rift_event = {
+    id = sxx_other_world_intruder.2
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_global_flag = sxx_other_world_intruder_end
+        every_country = {
+            limit = {
+                is_ai = no
+            }
+            country_event = { id = sxx_other_world_intruder.3 }
+        }
+    }
+}
+
+country_event = {
+    id = sxx_other_world_intruder.3
+    title = sxx_other_world_intruder.3.name
+    desc = sxx_other_world_intruder.3.desc
+    picture = GFX_evt_situation_the_seal
+    show_sound = ap_rift_event_5_cosmic_ambiance
+    location = from
+
+    is_triggered_only = yes
+
+    option = {
+        name = sxx_other_world_intruder.3.a
+    }
+}
+
+# 轰炸
+fleet_event = {
+    id = sxx_other_world_intruder.10
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        owner = { is_country_type = sxx_other_world_intruder }
+        from = {
+            is_scope_type = planet
+            is_colony = yes
+            #NOT = { is_planet_class = pc_sxx_heaven }
+        }
+    }
+
+    immediate = {
+        save_event_target_as = sxx_planet_bomber
+        from = {
+            random_owned_pop = {
+                limit = {
+                    is_sxx_fairy_pop = no
+                }
+                kill_pop = yes
+            }
+            planet_event = { id = sxx_other_world_intruder.11 days = 2 }
+        }
+    }
+}
+
+planet_event = {
+    id = sxx_other_world_intruder.11
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        exists = event_target:sxx_planet_bomber
+        any_fleet_in_orbit = {
+            is_same_value = event_target:sxx_planet_bomber
+        }
+        is_colony = yes
+        #NOT = { is_planet_class = pc_sxx_heaven }
+    }
+
+    immediate = {
+        random_owned_pop = {
+            limit = {
+                is_sxx_fairy_pop = no
+            }
+            kill_pop = yes
+        }
+        planet_event = { id = sxx_other_world_intruder.11 days = 2 }
+    }
+}

@@ -1,0 +1,91 @@
+sxx_leader_set_state = {
+	owner = {
+		random_owned_pop = {
+			limit = {
+				has_pop_flag = sxx_$STATE$
+				is_sxx_cultivable_cultivator = yes
+				NOT = { has_modifier = sxx_leader_pop_modifier }
+				has_citizenship_rights = yes
+			}
+			add_modifier = { modifier = sxx_leader_pop_modifier }
+			set_pop_flag = sxx_leader_pop_of@prevprev
+			prevprev = {
+				set_leader_flag = sxx_pop_leader
+				change_species = prev
+				change_leader_portrait = species
+				add_trait_no_notify = leader_trait_sxx_$STATE$
+				set_variable = { which = sxx_leader_state value = $VAR$ }
+			}
+		}
+	}
+}
+
+leader_remove_xiuxian_leader_trait = {
+	remove_trait = leader_trait_sxx_lianqi
+	remove_trait = leader_trait_sxx_zhuji
+	remove_trait = leader_trait_sxx_jindan
+	remove_trait = leader_trait_sxx_yuanying
+	remove_trait = leader_trait_sxx_huashen
+	remove_trait = leader_trait_sxx_lianxu
+	remove_trait = leader_trait_sxx_heti
+	remove_trait = leader_trait_sxx_dacheng
+	remove_trait = leader_trait_sxx_dujie
+	remove_trait = leader_trait_sxx_zhenxian
+	remove_trait = leader_trait_sxx_xianwang
+	remove_trait = leader_trait_sxx_xiandi
+}
+
+leader_add_sxx_state_trait = {
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_ai = yes }
+		}
+		leader_remove_xiuxian_leader_trait = yes
+	}
+	add_trait_no_notify = leader_trait_sxx_$STATE$
+}
+
+sxx_special_leader_effect = {
+	if = {
+		limit = {
+			event_target:sxx_selected_leader_pop = {
+				has_pop_flag = sxx_hanli_pop
+			}
+		}
+		#change_leader_class = official
+		set_name = "NAME_Sxx_Hanli"
+		set_gender = male
+		add_trait_no_notify = leader_trait_sxx_zhangtian_bottle
+		add_trait_no_notify = leader_trait_reclusive_2
+		switch = {
+			trigger = leader_class
+			scientist = {
+				add_trait_no_notify = leader_trait_sxx_pills_produce_2
+				add_trait_no_notify = leader_trait_neurotic_2
+			}
+			commander = {
+				add_trait_no_notify = leader_trait_cautious_2
+			}
+			official = {
+				add_trait_no_notify = leader_trait_sxx_pills_saint
+				add_trait_no_notify = leader_trait_sxx_pills_produce_2
+				add_trait_no_notify = leader_trait_insider_trading
+			}
+		}
+		save_global_event_target_as = sxx_hanli_leader # 可能有多个韩立，只保证是没失联的
+		set_leader_flag = legendary_leader
+		set_leader_flag = sxx_hanli
+		set_leader_flag = immune_to_negative_traits
+		set_leader_flag = leader_death_events_blocked
+		change_leader_portrait = sxx_hanli # 这里没效果？
+	}
+	if = {
+		limit = {
+			event_target:sxx_selected_leader_pop = {
+				has_pop_flag = sxx_old_heaven_zhenxian
+			}
+		}
+		add_trait_no_notify = leader_trait_sxx_old
+	}
+}

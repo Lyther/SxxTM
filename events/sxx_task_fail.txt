@@ -1,0 +1,856 @@
+namespace = sxx_task_fail
+
+country_event = {
+	id = sxx_task_fail.1
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 1
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.2
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 2
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.3
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 3
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.4
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 4
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.5
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 5
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.6
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 6
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.7
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 7
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.8
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 8
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.9
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 9
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.10
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 10
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.20
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 20
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.21
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 21
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.22
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 22
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.23
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 23
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.24
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 24
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.30
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 30
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.31
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 31
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.32
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 32
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.40
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 40
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.41
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 41
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.42
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 42
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.43
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 43
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.50
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 50
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.51
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 51
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.52
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 52
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.55
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 55
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.56
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 56
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.57
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 57
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.60
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 60
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.65
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 65
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.67
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 67
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.70
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 70
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.71
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 71
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.72
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 72
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.73
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 73
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.74
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 74
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.80
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 80
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.81
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 81
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.85
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 85
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.86
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 86
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.90
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 90
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.91
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 91
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.95
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 95
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.96
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 96
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.100
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 100
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.101
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 101
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.120
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 120
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.130
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 130
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.131
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 131
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.132
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 132
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.133
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 133
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.134
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 134
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.135
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 135
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.136
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 136
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.137
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 137
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.138
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 138
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.139
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 139
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.140
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 140
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.200
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 200
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.201
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 201
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.202
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 202
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.210
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 210
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.211
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 211
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.212
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 212
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.213
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 213
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.220
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 220
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.221
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 221
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.222
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 222
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.223
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 223
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.230
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 230
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.240
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 240
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.241
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 241
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.242
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 242
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.243
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 243
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.250
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 250
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.251
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 251
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.252
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 252
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.253
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 253
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.260
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 260
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.261
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 261
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.262
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 262
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.263
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 263
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.270
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 270
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.300
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 300
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.301
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 301
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.302
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 302
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.305
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 305
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.306
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 306
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.307
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 307
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.310
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 310
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.311
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 311
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.312
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 312
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.400
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 400
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.401
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 401
+	}
+}
+
+country_event = {
+	id = sxx_task_fail.402
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_fail_event
+		TASK = 402
+	}
+}

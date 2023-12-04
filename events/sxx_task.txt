@@ -1,0 +1,685 @@
+namespace = sxx_task
+
+planet_event = {
+    id = sxx_task.20
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_planet_class = pc_sxx_blessed_spot
+    }
+
+    immediate = {
+        from = {
+            sxx_add_task_counter = { TASK = 20 }
+            sxx_add_task_counter = { TASK = 21 }
+            sxx_add_task_counter = { TASK = 22 }
+        }
+    }
+}
+
+planet_event = {
+    id = sxx_task.30
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        owner = {
+            sxx_add_task_counter = { TASK = 30 }
+            sxx_add_task_counter = { TASK = 31 }
+            sxx_add_task_counter = { TASK = 32 }
+        }
+    }
+}
+
+country_event = {
+    id = sxx_task.50
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        fromfrom = {
+            OR = {
+                using_war_goal = {
+                    type = wg_humiliation
+                    owner = root
+                }
+                using_war_goal = {
+                    type = wg_conquest
+                    owner = root
+                }
+            }
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                from = { is_sxx_sect = yes }
+            }
+            if = {
+                limit = {
+                    has_event_chain = sxx_task_55_chain
+                }
+                country_event = { id = sxx_task_finish.55 }
+            }
+            if = {
+                limit = {
+                    has_event_chain = sxx_task_56_chain
+                }
+                country_event = { id = sxx_task_finish.56 }
+            }
+            if = {
+                limit = {
+                    has_event_chain = sxx_task_57_chain
+                }
+                country_event = { id = sxx_task_finish.57 }
+            }
+        }
+        else = {
+            if = {
+                limit = {
+                    has_event_chain = sxx_task_50_chain
+                }
+                country_event = { id = sxx_task_finish.50 }
+            }
+            if = {
+                limit = {
+                    has_event_chain = sxx_task_51_chain
+                }
+                country_event = { id = sxx_task_finish.51 }
+            }
+            if = {
+                limit = {
+                    has_event_chain = sxx_task_52_chain
+                }
+                country_event = { id = sxx_task_finish.52 }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = sxx_task.60
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from = {
+            is_sxx_sect = no
+            is_fallen_empire = yes
+        }
+        fromfrom = {
+            is_total_war = no
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                has_event_chain = sxx_task_60_chain
+            }
+            country_event = { id = sxx_task_finish.60 }
+        }
+    }
+}
+
+country_event = {
+    id = sxx_task.65
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_sxx_evil_invasion
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                any_country = {
+                    has_event_chain = sxx_task_65_chain
+                }
+            }
+            every_country = {
+                limit = {
+                    has_event_chain = sxx_task_65_chain
+                }
+                country_event = { id = sxx_task_finish.65 }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = sxx_task.67
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_sxx_fallen_1 = yes
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                any_country = {
+                    has_event_chain = sxx_task_67_chain
+                }
+            }
+            every_country = {
+                limit = {
+                    has_event_chain = sxx_task_67_chain
+                }
+                country_event = { id = sxx_task_finish.67 }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = sxx_task.70
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_country_type = extradimensional
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                any_country = {
+                    has_event_chain = sxx_task_70_chain
+                }
+            }
+            every_country = {
+                limit = {
+                    has_event_chain = sxx_task_70_chain
+                }
+                country_event = { id = sxx_task_finish.70 }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = sxx_task.71
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_country_type = extradimensional_2
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                any_country = {
+                    has_event_chain = sxx_task_71_chain
+                }
+            }
+            every_country = {
+                limit = {
+                    has_event_chain = sxx_task_71_chain
+                }
+                country_event = { id = sxx_task_finish.71 }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = sxx_task.72
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_country_type = extradimensional_3
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                any_country = {
+                    has_event_chain = sxx_task_72_chain
+                }
+            }
+            every_country = {
+                limit = {
+                    has_event_chain = sxx_task_72_chain
+                }
+                country_event = { id = sxx_task_finish.72 }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = sxx_task.73
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_country_type = swarm
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                any_country = {
+                    has_event_chain = sxx_task_73_chain
+                }
+            }
+            every_country = {
+                limit = {
+                    has_event_chain = sxx_task_73_chain
+                }
+                country_event = { id = sxx_task_finish.73 }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = sxx_task.74
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_country_type = ai_empire
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                any_country = {
+                    has_event_chain = sxx_task_74_chain
+                }
+            }
+            every_country = {
+                limit = {
+                    has_event_chain = sxx_task_74_chain
+                }
+                country_event = { id = sxx_task_finish.74 }
+            }
+        }
+    }
+}
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+# on_ship_destroyed_perp
+country_event = {
+    id = sxx_task.80
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        fromfromfrom = {
+            sxx_ship_is_tiyanki = yes
+        }
+    }
+
+    immediate = {
+        sxx_add_task_counter = { TASK = 80 }
+        sxx_add_task_counter = { TASK = 81 }
+    }
+}
+
+country_event = {
+    id = sxx_task.85
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        fromfromfrom = {
+            sxx_ship_is_amoeba = yes
+        }
+    }
+
+    immediate = {
+        sxx_add_task_counter = { TASK = 85 }
+        sxx_add_task_counter = { TASK = 86 }
+    }
+}
+
+country_event = {
+    id = sxx_task.90
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        fromfromfrom = {
+            sxx_ship_is_crystal = yes
+        }
+    }
+
+    immediate = {
+        sxx_add_task_counter = { TASK = 90 }
+        sxx_add_task_counter = { TASK = 91 }
+    }
+}
+
+country_event = {
+    id = sxx_task.95
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        fromfromfrom = {
+            sxx_ship_is_space_cloud = yes
+        }
+    }
+
+    immediate = {
+        sxx_add_task_counter = { TASK = 95 }
+        sxx_add_task_counter = { TASK = 96 }
+    }
+}
+
+country_event = {
+    id = sxx_task.100
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        fromfromfrom = {
+            sxx_ship_is_ancient = yes
+        }
+    }
+
+    immediate = {
+        sxx_add_task_counter = { TASK = 100 }
+        sxx_add_task_counter = { TASK = 101 }
+    }
+}
+
+country_event = {
+    id = sxx_task.120
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_120_chain
+        fromfromfrom = {
+            is_ship_size = enclave_station
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.120 }
+    }
+}
+
+country_event = {
+    id = sxx_task.130
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_130_chain
+        fromfromfrom = {
+            is_ship_size = space_dragon_red
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.130 }
+    }
+}
+
+country_event = {
+    id = sxx_task.131
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_131_chain
+        fromfromfrom = {
+            is_ship_size = stellarite
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.131 }
+    }
+}
+
+country_event = {
+    id = sxx_task.132
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_132_chain
+        fromfromfrom = {
+            is_ship_size = sphere
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.132 }
+    }
+}
+
+country_event = {
+    id = sxx_task.133
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_133_chain
+        fromfromfrom = {
+            is_ship_size = dimensional_horror
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.133 }
+    }
+}
+
+country_event = {
+    id = sxx_task.134
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_134_chain
+        fromfromfrom = {
+            is_ship_size = toxic_god
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.134 }
+    }
+}
+
+country_event = {
+    id = sxx_task.135
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_135_chain
+        fromfromfrom = {
+            is_ship_size = npc_warship_01
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.135 }
+    }
+}
+
+country_event = {
+    id = sxx_task.136
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_136_chain
+        fromfromfrom = {
+            OR = {
+                is_ship_size = wraith_01_blue
+                is_ship_size = wraith_01_red
+                is_ship_size = wraith_01_yellow
+            }
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.136 }
+    }
+}
+
+country_event = {
+    id = sxx_task.137
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_137_chain
+        fromfromfrom = {
+            is_ship_size = space_dragon_origin
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.137 }
+    }
+}
+
+country_event = {
+    id = sxx_task.138
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_138_chain
+        fromfromfrom = {
+            is_ship_size = leviathan_01_scavenger_bot
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.138 }
+    }
+}
+
+country_event = {
+    id = sxx_task.139
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_139_chain
+        fromfromfrom = {
+            is_ship_size = leviathan_01_elder_tiyanki
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.139 }
+    }
+}
+
+country_event = {
+    id = sxx_task.140
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_event_chain = sxx_task_140_chain
+        fromfromfrom = {
+            is_ship_size = leviathan_01_voidspawn
+        }
+    }
+
+    immediate = {
+        country_event = { id = sxx_task_finish.140 }
+    }
+}
+
+fleet_event = {
+    id = sxx_task.200
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                fleet.owner = { has_event_chain = sxx_task_200_chain }
+            }
+            fleet.owner = { country_event = { id = sxx_task_finish.200 } }
+        }
+        if = {
+            limit = {
+                fleet.owner = { has_event_chain = sxx_task_201_chain }
+            }
+            fleet.owner = { country_event = { id = sxx_task_finish.201 } }
+        }
+        if = {
+            limit = {
+                fleet.owner = { has_event_chain = sxx_task_202_chain }
+            }
+            fleet.owner = { country_event = { id = sxx_task_finish.202 } }
+        }
+    }
+}
+
+planet_event = {
+    id = sxx_task.250
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        from = {
+            sxx_add_task_counter = { TASK = 250 }
+            sxx_add_task_counter = { TASK = 251 }
+            sxx_add_task_counter = { TASK = 252 }
+            sxx_add_task_counter = { TASK = 253 }
+        }
+    }
+}
+
+planet_event = {
+    id = sxx_task.260
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        from = {
+            sxx_add_task_counter = { TASK = 260 }
+            sxx_add_task_counter = { TASK = 261 }
+            sxx_add_task_counter = { TASK = 262 }
+            sxx_add_task_counter = { TASK = 263 }
+        }
+    }
+}
+
+planet_event = {
+    id = sxx_task.270
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        from.controller = { has_event_chain = sxx_task_270_chain }
+        if = {
+            limit = {
+                is_star = yes
+            }
+            solar_system = { any_system_colony = { count_owned_pop = { count >= 50 } } }
+        }
+        else = {
+            count_owned_pop = { count >= 50 }
+        }
+    }
+
+    immediate = {
+        from.controller = { country_event = { id = sxx_task_finish.270 } }
+    }
+}

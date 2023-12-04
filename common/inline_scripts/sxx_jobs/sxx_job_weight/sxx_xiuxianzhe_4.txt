@@ -1,0 +1,24 @@
+modifier = {
+	factor = 1.25
+	has_trait = trait_sxx_kuilei
+}
+modifier = {
+	factor = 1.1
+	is_enslaved = yes
+}
+modifier = {
+	factor = 2
+	has_trait = trait_zombie
+}
+modifier = {
+	factor = 1.5
+	is_sxx_potential_depletion = yes
+}
+modifier = {
+	factor = 0.01
+	is_sxx_important_pop = yes
+}
+modifier = {
+	add = 10000
+	always = yes
+}

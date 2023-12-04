@@ -1,0 +1,105 @@
+concept_sxx_mortal = { }
+
+concept_sxx_lianqi = {
+    icon = "gfx/interface/icons/traits/trait_sxx_lianqi.dds"
+}
+
+concept_sxx_zhuji = {
+    icon = "gfx/interface/icons/traits/trait_sxx_zhuji.dds"
+}
+
+concept_sxx_jindan = {
+    icon = "gfx/interface/icons/traits/trait_sxx_jindan.dds"
+}
+
+concept_sxx_yuanying = {
+    icon = "gfx/interface/icons/traits/trait_sxx_yuanying.dds"
+}
+
+concept_sxx_huashen = {
+    icon = "gfx/interface/icons/traits/trait_sxx_huashen.dds"
+}
+
+concept_sxx_lianxu = {
+    icon = "gfx/interface/icons/traits/trait_sxx_lianxu.dds"
+}
+
+concept_sxx_heti = {
+    icon = "gfx/interface/icons/traits/trait_sxx_heti.dds"
+}
+
+concept_sxx_dacheng = {
+    icon = "gfx/interface/icons/traits/trait_sxx_dacheng.dds"
+}
+
+concept_sxx_dujie = {
+    icon = "gfx/interface/icons/traits/trait_sxx_dujie.dds"
+}
+
+concept_sxx_pd = {
+    icon = "gfx/interface/icons/traits/trait_sxx_potential_depletion.dds"
+}
+
+concept_sxx_linggen = {
+    icon = "gfx/interface/icons/traits/trait_sxx_linggen.dds"
+}
+
+concept_sxx_abg = {
+    icon = "gfx/interface/icons/traits/trait_sxx_abg.dds"
+}
+
+concept_sxx_zhuji_country = { }
+
+concept_sxx_jindan_country = { }
+
+concept_sxx_yuanying_country = { }
+
+
+concept_building_sxx_shengxiantai = {
+    icon = "gfx/interface/icons/buildings/building_sxx_shengxiantai.dds"
+}
+
+concept_sxx_xp = { }
+concept_sxx_xp_max = { }
+concept_sxx_cultivation = { }
+concept_sxx_normal_cultivation = { }
+concept_sxx_break = { }
+concept_sxx_speed = { }
+concept_sxx_speed_1 = { }
+concept_sxx_speed_2 = { }
+concept_sxx_speed_3 = { }
+
+concept_sxx_speed_1_produces_mult = { }
+concept_sxx_speed_1_mod_produces_mult = { }
+concept_sxx_gongfa_speed_1_mod_produces_mult = { }
+concept_sxx_speed_2_produces_mult = { }
+concept_sxx_speed_2_mod_produces_mult = { }
+concept_sxx_gongfa_speed_2_mod_produces_mult = { }
+concept_sxx_speed_3_produces_mult = { }
+concept_sxx_speed_3_mod_produces_mult = { }
+concept_sxx_gongfa_speed_3_mod_produces_mult = { }
+concept_sxx_speed_mod_produces_mult = { }
+concept_sxx_base_speed_mod_produces_mult = { }
+concept_sxx_extra_speed_mod_produces_mult = { }
+concept_sxx_job_speed_mod_produces_mult = { }
+concept_sxx_gongfa_speed_mod_produces_mult = { }
+
+concept_sxx_break_success_chance_produces_mult = { }
+
+concept_sxx_break_die_chance_upkeep_mult = { }
+
+concept_sxx_break_pd_chance_upkeep_mult = { }
+
+concept_sxx_normal_die_chance_upkeep_mult = { }
+
+concept_sxx_normal_pd_chance_upkeep_mult = { }
+
+concept_sxx_cultivator_spawn_chance_produces_mult = { }
+
+concept_sxx_heaven_stability_add = {
+    icon = "gfx/interface/icons/modifiers/mod_sxx_heaven_stability_add.dds"
+}
+
+concept_sxx_practice = {}
+
+concept_sxx_special_body = {}

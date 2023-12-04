@@ -1,0 +1,254 @@
+@minor_artifact_decision_cost = 100
+@minor_artifact_decision_duration = 3600
+@minor_artifact_ai_threshold = 200
+
+artifact_sxx_precursor1_research = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 1500
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	potential = {
+		has_country_flag = sxx_precursor1_world_found
+		NOT = { has_country_flag = sxx_precursor1_research_started }
+	}
+
+	effect = {
+		enable_special_project = {
+			name = "SXX_PRECURSOR1_SECRETS"
+			location = capital_scope
+			owner = ROOT
+		}
+
+		hidden_effect = {
+			set_country_flag = sxx_precursor1_research_started
+			country_event = { id = ancrel.10040 }
+		}
+	}
+}
+
+artifact_sxx_precursor2_research = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 1500
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	potential = {
+		has_country_flag = sxx_precursor2_world_found
+		NOT = { has_country_flag = sxx_precursor2_research_started }
+	}
+
+	effect = {
+		enable_special_project = {
+			name = "SXX_PRECURSOR2_SECRETS"
+			location = capital_scope
+			owner = ROOT
+		}
+
+		hidden_effect = {
+			set_country_flag = sxx_precursor2_research_started
+			country_event = { id = ancrel.10040 }
+		}
+	}
+}
+
+artifact_sxx_precursor3_research = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 1500
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	potential = {
+		has_country_flag = sxx_precursor3_world_found
+		NOT = { has_country_flag = sxx_precursor3_research_started }
+	}
+
+	effect = {
+		enable_special_project = {
+			name = "SXX_PRECURSOR3_SECRETS"
+			location = capital_scope
+			owner = ROOT
+		}
+
+		hidden_effect = {
+			set_country_flag = sxx_precursor3_research_started
+			country_event = { id = ancrel.10040 }
+		}
+	}
+}
+
+artifact_sxx_precursor4_research = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 1500
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	potential = {
+		has_country_flag = sxx_precursor4_world_found
+		NOT = { has_country_flag = sxx_precursor4_research_started }
+	}
+
+	effect = {
+		enable_special_project = {
+			name = "SXX_PRECURSOR4_SECRETS"
+			location = capital_scope
+			owner = ROOT
+		}
+
+		hidden_effect = {
+			set_country_flag = sxx_precursor4_research_started
+			country_event = { id = ancrel.10040 }
+		}
+	}
+}
+
+artifact_sxx_precursor5_research = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 1500
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	potential = {
+		has_country_flag = sxx_precursor5_world_found
+		NOT = { has_country_flag = sxx_precursor5_research_started }
+	}
+
+	effect = {
+		enable_special_project = {
+			name = "SXX_PRECURSOR5_SECRETS"
+			location = capital_scope
+			owner = ROOT
+		}
+
+		hidden_effect = {
+			set_country_flag = sxx_precursor5_research_started
+			country_event = { id = ancrel.10040 }
+		}
+	}
+}
+
+############################## 先驱者洞见 ##################################
+
+sxx_artifact_precursor_clue = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 1000
+		}
+	}
+
+	potential = {
+		is_ai = no
+
+		OR = {
+			AND = {
+				has_event_chain = sxx_precursor1_chain
+				any_system_within_border = {
+					has_star_flag = sxx_precursor_1
+				}
+				NOT = {
+					has_completed_event_chain_counter = {
+						event_chain = sxx_precursor1_chain
+						counter = sxx_precursor1_artifacts
+					}
+				}
+			}
+			AND = {
+				has_event_chain = sxx_precursor2_chain
+				any_system_within_border = {
+					has_star_flag = sxx_precursor_2
+				}
+				NOT = {
+					has_completed_event_chain_counter = {
+						event_chain = sxx_precursor2_chain
+						counter = sxx_precursor2_artifacts
+					}
+				}
+			}
+			AND = {
+				has_event_chain = sxx_precursor3_chain
+				any_system_within_border = {
+					has_star_flag = sxx_precursor_3
+				}
+				NOT = {
+					has_completed_event_chain_counter = {
+						event_chain = sxx_precursor3_chain
+						counter = sxx_precursor3_artifacts
+					}
+				}
+			}
+			AND = {
+				has_event_chain = sxx_precursor4_chain
+				any_system_within_border = {
+					has_star_flag = sxx_precursor_4
+				}
+				NOT = {
+					has_completed_event_chain_counter = {
+						event_chain = sxx_precursor4_chain
+						counter = sxx_precursor4_artifacts
+					}
+				}
+			}
+			AND = {
+				has_event_chain = sxx_precursor5_chain
+				any_system_within_border = {
+					has_star_flag = sxx_precursor_5
+				}
+				NOT = {
+					has_completed_event_chain_counter = {
+						event_chain = sxx_precursor5_chain
+						counter = sxx_precursor5_artifacts
+					}
+				}
+			}
+		}
+	}
+
+	allow = {
+		NOT = { has_modifier = sxx_artifact_precursor_insight_cooldown }
+	}
+
+	effect = {
+		custom_tooltip = sxx_artifact_precursor_clue_effect
+
+		hidden_effect = {
+			owner = {
+				country_event = { id = sxx_precursor.10020 }
+			}
+			add_modifier = {
+				modifier = sxx_artifact_precursor_insight_cooldown
+				days = 3600
+			}
+		}
+	}
+}

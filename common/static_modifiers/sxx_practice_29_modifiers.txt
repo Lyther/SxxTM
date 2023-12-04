@@ -1,0 +1,190 @@
+################# Sxx 百炼成仙 ######################
+
+sxx_practice_modifier_29_1_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.25
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.25
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.25
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.25
+	sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.05
+}
+
+sxx_practice_modifier_29_1_1 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.25
+	planet_sxx_weapon_refiners_consumer_goods_produces_mult = 0.25
+	planet_sxx_pills_makers_sxx_pills_produces_mult = 0.25
+	species_leader_exp_gain = 0.25
+	planet_sxx_stones_makers_produces_mult = 0.25
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.25
+	planet_sxx_stones_miners_produces_mult = 0.25
+	planet_sxx_factotum_disciples_food_produces_mult = 0.25
+}
+
+sxx_practice_modifier_29_2_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.50
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.50
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.50
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.50
+	sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.50
+}
+	
+sxx_practice_modifier_29_2_1 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.50
+	planet_sxx_weapon_refiners_consumer_goods_produces_mult = 0.50
+	planet_sxx_pills_makers_sxx_pills_produces_mult = 0.50
+	species_leader_exp_gain = 0.25
+	planet_sxx_stones_makers_produces_mult = 0.50
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.50
+	planet_sxx_stones_miners_produces_mult = 0.50
+	planet_sxx_factotum_disciples_food_produces_mult = 0.25
+}
+
+sxx_practice_modifier_29_3_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.75
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.75
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.75
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.75
+	sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.05
+}
+
+sxx_practice_modifier_29_3_1 = {
+    hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.75
+	planet_sxx_weapon_refiners_consumer_goods_produces_mult = 0.75
+	planet_sxx_pills_makers_sxx_pills_produces_mult = 0.75
+	species_leader_exp_gain = 0.75
+	planet_sxx_stones_makers_produces_mult = 0.75
+	planet_sxx_factotum_disciples_minerals_produces_mult = 0.75
+	planet_sxx_stones_miners_produces_mult = 0.75
+	planet_sxx_factotum_disciples_food_produces_mult = 0.75
+}
+
+sxx_practice_modifier_29_4_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 1.00
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 1.00
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 1.00
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1.00
+	sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.05
+}
+
+sxx_practice_modifier_29_4_1 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 1.00
+	planet_sxx_weapon_refiners_consumer_goods_produces_mult = 1.00
+	planet_sxx_pills_makers_sxx_pills_produces_mult = 1.00
+	species_leader_exp_gain = 1.00
+	planet_sxx_stones_makers_produces_mult = 1.00
+	planet_sxx_factotum_disciples_minerals_produces_mult = 1.00
+	planet_sxx_stones_miners_produces_mult = 1.00
+	planet_sxx_factotum_disciples_food_produces_mult = 1.00
+}
+
+sxx_practice_modifier_29_5_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 1.50
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 1.50
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 1.50
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1.50
+	sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.10
+}
+	
+sxx_practice_modifier_29_5_1 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 1.50
+	planet_sxx_weapon_refiners_consumer_goods_produces_mult = 1.50
+	planet_sxx_pills_makers_sxx_pills_produces_mult = 1.50
+	species_leader_exp_gain = 1.50
+	planet_sxx_stones_makers_produces_mult = 1.50
+	planet_sxx_factotum_disciples_minerals_produces_mult = 1.50
+	planet_sxx_stones_miners_produces_mult = 1.50
+	planet_sxx_factotum_disciples_food_produces_mult = 1.50
+}
+
+sxx_practice_modifier_29_6_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 2.00
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 2.00
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 2.00
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2.00
+	sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.10
+}
+
+sxx_practice_modifier_29_6_1 = {
+    hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 2.00
+	planet_sxx_weapon_refiners_consumer_goods_produces_mult = 2.00
+	planet_sxx_pills_makers_sxx_pills_produces_mult = 2.00
+	species_leader_exp_gain = 2.00
+	planet_sxx_stones_makers_produces_mult = 2.00
+	planet_sxx_factotum_disciples_minerals_produces_mult = 2.00
+	planet_sxx_stones_miners_produces_mult = 2.00
+	planet_sxx_factotum_disciples_food_produces_mult = 2.00
+}
+
+sxx_practice_modifier_29_7_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 2.50
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 2.50
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 2.50
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2.50
+	sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.10
+}
+
+sxx_practice_modifier_29_7_1 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 2.50
+	planet_sxx_weapon_refiners_consumer_goods_produces_mult = 2.50
+	planet_sxx_pills_makers_sxx_pills_produces_mult = 2.50
+	species_leader_exp_gain = 2.50
+	planet_sxx_stones_makers_produces_mult = 2.50
+	planet_sxx_factotum_disciples_minerals_produces_mult = 2.50
+	planet_sxx_stones_miners_produces_mult = 2.50
+	planet_sxx_factotum_disciples_food_produces_mult = 2.50
+}
+
+sxx_practice_modifier_29_8_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 5.00
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 5.00
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 5.00
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 5.00
+	sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.20
+}
+	
+sxx_practice_modifier_29_8_1 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 5.00
+	planet_sxx_weapon_refiners_consumer_goods_produces_mult = 5.00
+	planet_sxx_pills_makers_sxx_pills_produces_mult = 5.00
+	species_leader_exp_gain = 5.00
+	planet_sxx_stones_makers_produces_mult = 5.00
+	planet_sxx_factotum_disciples_minerals_produces_mult = 5.00
+	planet_sxx_stones_miners_produces_mult = 5.00
+	planet_sxx_factotum_disciples_food_produces_mult = 5.00
+}
+
+sxx_practice_modifier_29_9_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 6.50
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 6.50
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 6.50
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 6.50
+	sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.30
+}
+
+sxx_practice_modifier_29_9_1 = {
+    hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 6.50
+	planet_sxx_weapon_refiners_consumer_goods_produces_mult = 6.50
+	planet_sxx_pills_makers_sxx_pills_produces_mult = 6.50
+	species_leader_exp_gain = 6.50
+	planet_sxx_stones_makers_produces_mult = 6.50
+	planet_sxx_factotum_disciples_minerals_produces_mult = 6.50
+	planet_sxx_stones_miners_produces_mult = 6.50
+	planet_sxx_factotum_disciples_food_produces_mult = 6.50
+}

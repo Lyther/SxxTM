@@ -1,0 +1,46 @@
+##############################
+##--------------------------##
+##---------CATEGORY---------##
+##--------------------------##
+##############################
+
+category = {
+	name = "Effects"
+	soundeffects = {
+		pc_sxx_blessed_spot
+	}
+}
+
+##############################
+##--------------------------##
+##----------SOUNDS----------##
+##--------------------------##
+##############################
+
+soundeffect = {
+	name = pc_sxx_blessed_spot
+	volume = 0.35
+	loop = no
+	sounds = {
+		sound = pc_gaia_planet_01
+		sound = pc_gaia_planet_02
+		sound = pc_gaia_planet_03
+	} 
+	playbackrate_random_offset = { -10.0 10.0 }
+	fade_out = 0.5
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = sxx_tianjie_stage
+	#loop = yes
+	sounds = {
+		sound = sxx_tianjie_stage_01
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.35
+	#looping_volume_random_offset = yes
+	#volume_random_offset = { 0.0 -0.05 }
+}

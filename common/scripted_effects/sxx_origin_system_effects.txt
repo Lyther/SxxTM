@@ -1,0 +1,3136 @@
+sxx_change_coins = {
+    custom_tooltip_with_params = {
+        description = sxx_change_coins_tooltip
+        description_parameters = {
+            COINS = $COINS$
+        }
+    }
+    hidden_effect = {
+        change_variable = { which = sxx_coins value = $COINS$ }
+    }
+}
+
+sxx_random_selsect_task_simple = {
+    random_list = {
+        1 = { remove_country_flag = sxx_getting_task } # 防止没任务卡住
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 1 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|jindan| }
+            modifier = {
+                factor = 0.5
+                is_sxx_lianxu_country = yes
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 2 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|yuanying| }
+            modifier = {
+                factor = 0.5
+                is_sxx_heti_country = yes
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 3 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|huashen| }
+            modifier = {
+                factor = 0.5
+                is_sxx_dacheng_country = yes
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 4 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|lianxu| }
+            modifier = {
+                factor = 0.5
+                is_sxx_dujie_country = yes
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 5 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|heti| }
+            modifier = {
+                factor = 0.5
+                is_sxx_final_country = yes
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 6 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|dacheng| }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 7 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|dujie| }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 8 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|final| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 20 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|huashen| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 23 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|huashen| }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_system_within_border = {
+                        any_system_planet = {
+                            is_planet_class = pc_habitat
+                            NOT = { has_modifier = sxx_tiangong }
+                        }
+                    }
+                }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 30 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0.5
+                years_passed > 10
+            }
+            modifier = {
+                factor = 0.5
+                years_passed > 20
+            }
+            modifier = {
+                factor = 0.5
+                years_passed > 30
+            }
+            modifier = {
+                factor = 0.2
+                years_passed > 50
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 40 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|huashen|SERIES|40|SERIES_NUM|0| }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 41 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|huashen|SERIES|40|SERIES_NUM|1| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 50 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|yuanying| }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_default_or_fallen = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                mid_game_years_passed >= 0
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 51 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|yuanying| }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_default_or_fallen = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    mid_game_years_passed < 0
+                    end_game_years_passed >= 0
+                }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 52 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|yuanying| }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_default_or_fallen = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                end_game_years_passed < 0
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 55 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|yuanying| }
+            modifier = {
+                factor = 0
+                NOT = { any_country = { is_sxx_sect = yes } }
+            }
+            modifier = {
+                factor = 0
+                mid_game_years_passed >= 0
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 56 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|yuanying| }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_sxx_sect = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    mid_game_years_passed < 0
+                    end_game_years_passed >= 0
+                }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 57 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|yuanying| }
+            modifier = {
+                factor = 0
+                NOT = { any_country = { is_sxx_sect = yes } }
+            }
+            modifier = {
+                factor = 0
+                end_game_years_passed < 0
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 60 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|lianxu| }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_fallen_empire = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 25
+            }
+            modifier = {
+                factor = 0.5
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 65 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|heti| }
+            modifier = {
+                factor = 0
+                NOT = { any_country = {  has_origin = origin_sxx_evil_invasion } }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 25
+            }
+            modifier = {
+                factor = 0.5
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 67 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|final| }
+            modifier = {
+                factor = 0
+                NOT = { any_country = { is_sxx_fallen_1 = yes } }
+            }
+            modifier = {
+                factor = 0.2
+                mid_game_years_passed < 0
+            }
+            modifier = {
+                factor = 0.5
+                end_game_years_passed < 0
+            }
+            modifier = {
+                factor = 0.5
+                end_game_years_passed < 25
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 70 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = { any_country = { is_country_type = extradimensional } }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 71 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = { any_country = { is_country_type = extradimensional_2 } }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 72 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = { any_country = { is_country_type = extradimensional_3 } }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 73 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = { any_country = { is_country_type = swarm } }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 74 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = { any_country = { is_country_type = ai_empire } }
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 80 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_tiyanki = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 10
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 85 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_amoeba = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 10
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 90 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_crystal = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 10
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 95 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_space_cloud = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 20
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 125
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 100 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_ancient = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 10
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 120 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = enclave_station
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 130 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = space_dragon_red
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 131 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = stellarite
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 132 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = sphere
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 133 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = dimensional_horror
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 134 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = toxic_god
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 135 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = npc_warship_01
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 136 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            OR = {
+                                is_ship_size = wraith_01_blue
+                                is_ship_size = wraith_01_red
+                                is_ship_size = wraith_01_yellow
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 137 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = space_dragon_origin
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 138 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = leviathan_01_scavenger_bot
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 139 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = leviathan_01_elder_tiyanki
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 140 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = leviathan_01_voidspawn
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 200 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0.2
+                NOT = {
+                    any_system_within_border = {
+                        any_archaeological_site = {
+                            is_site_completed = no
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_archaeological_site = {
+                        is_site_completed = no
+                    }
+                }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 210 }
+            modifier = { factor = value:sxx_task_weight_modifier|SERIES|210|SERIES_NUM|0| }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = { is_country_type = primitive }
+                }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 211 }
+            modifier = { factor = value:sxx_task_weight_modifier|SERIES|210|SERIES_NUM|1| }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = { is_country_type = primitive }
+                }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 212 }
+            modifier = { factor = value:sxx_task_weight_modifier|SERIES|210|SERIES_NUM|2| }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = { is_country_type = primitive }
+                }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 220 }
+            modifier = { factor = value:sxx_task_weight_modifier|SERIES|220|SERIES_NUM|0| }
+            modifier = {
+                factor = 0
+                years_passed < 15
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 221 }
+            modifier = { factor = value:sxx_task_weight_modifier|SERIES|220|SERIES_NUM|1| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 222 }
+            modifier = { factor = value:sxx_task_weight_modifier|SERIES|220|SERIES_NUM|2| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 223 }
+            modifier = { factor = value:sxx_task_weight_modifier|SERIES|220|SERIES_NUM|3| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 230 }
+            modifier = { factor = value:sxx_task_weight_modifier|SERIES|230|SERIES_NUM|0| }
+            modifier = {
+                factor = 0
+                years_passed < 15
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 240 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                is_at_war = yes
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 241 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                is_at_war = yes
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 250 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 251 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 15
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 252 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 253 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 45
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 260 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 60
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 261 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 65
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 262 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 70
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 263 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 75
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 270 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|heti| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 300 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|jindan|SERIES|300|SERIES_NUM|0| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 301 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|lianxu|SERIES|300|SERIES_NUM|1| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 302 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|dujie|SERIES|300|SERIES_NUM|2| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 305 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|jindan|SERIES|305|SERIES_NUM|0| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 306 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|lianxu|SERIES|305|SERIES_NUM|1| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 307 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|dujie|SERIES|305|SERIES_NUM|2| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 310 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|jindan|SERIES|310|SERIES_NUM|0| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 311 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|lianxu|SERIES|310|SERIES_NUM|1| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 312 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|dujie|SERIES|310|SERIES_NUM|2| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 400 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                OR = {
+                    NOR = {
+                        has_federations_dlc = yes
+                        has_nemesis = yes
+                    }
+                    is_years_since_community_formation < 20
+                    is_part_of_galactic_council = yes
+                    is_galactic_custodian = yes
+                    is_galactic_emperor = yes
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+        30 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 401 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_nemesis = no
+                    is_galactic_council_established = no
+                    has_galactic_custodian = yes
+                    has_galactic_emperor = yes
+                    is_galactic_community_member = no
+                    #is_part_of_galactic_council = no
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+        10 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 402 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_nemesis = no
+                    has_galactic_emperor = yes
+                    is_galactic_custodian = no
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+    }
+}
+
+sxx_random_selsect_task_normal = {
+    random_list = {
+        1 = { remove_country_flag = sxx_getting_task } # 防止没任务卡住
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 1 }
+            modifier = {
+                factor = 0.5
+                is_sxx_lianxu_country = yes
+            }
+            modifier = {
+                factor = 0
+                is_sxx_zhuji_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 2 }
+            modifier = {
+                factor = 0.5
+                is_sxx_heti_country = yes
+            }
+            modifier = {
+                factor = 0
+                is_sxx_jindan_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 3 }
+            modifier = {
+                factor = 0.5
+                is_sxx_dacheng_country = yes
+            }
+            modifier = {
+                factor = 0
+                is_sxx_yuanying_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 4 }
+            modifier = {
+                factor = 0.5
+                is_sxx_dujie_country = yes
+            }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 5 }
+            modifier = {
+                factor = 0.5
+                is_sxx_final_country = yes
+            }
+            modifier = {
+                factor = 0
+                is_sxx_lianxu_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 6 }
+            modifier = {
+                factor = 0
+                is_sxx_heti_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 7 }
+            modifier = {
+                factor = 0
+                is_sxx_dacheng_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 8 }
+            modifier = {
+                factor = 0
+                is_sxx_dujie_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 9 }
+            modifier = {
+                factor = 0
+                is_sxx_final_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 21 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 23 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0.2
+                NOT = {
+                    any_system_within_border = {
+                        any_system_planet = {
+                            is_planet_class = pc_habitat
+                            NOT = { has_modifier = sxx_tiangong }
+                        }
+                    }
+                }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 31 }
+            modifier = {
+                factor = 0.5
+                years_passed > 10
+            }
+            modifier = {
+                factor = 0.5
+                years_passed > 20
+            }
+            modifier = {
+                factor = 0.5
+                years_passed > 30
+            }
+            modifier = {
+                factor = 0.2
+                years_passed > 50
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 40 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_40_finished value = 0 } }
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 41 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_40_finished value = 1 } }
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 42 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_40_finished value = 2 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 50 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_default_or_fallen = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                mid_game_years_passed >= 0
+            }
+            modifier = {
+                factor = 0
+                is_sxx_jindan_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 51 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_default_or_fallen = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    mid_game_years_passed < 0
+                    end_game_years_passed >= 0
+                }
+            }
+            modifier = {
+                factor = 0
+                is_sxx_jindan_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 52 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_default_or_fallen = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                end_game_years_passed < 0
+            }
+            modifier = {
+                factor = 0
+                is_sxx_jindan_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 55 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_sxx_sect = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                mid_game_years_passed >= 0
+            }
+            modifier = {
+                factor = 0
+                is_sxx_jindan_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 56 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_sxx_sect = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    mid_game_years_passed < 0
+                    end_game_years_passed >= 0
+                }
+            }
+            modifier = {
+                factor = 0
+                is_sxx_jindan_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 57 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_sxx_sect = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                end_game_years_passed < 0
+            }
+            modifier = {
+                factor = 0
+                is_sxx_jindan_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 60 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_fallen_empire = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0
+                years_passed < 25
+            }
+            modifier = {
+                factor = 0.5
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 65 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        has_origin = origin_sxx_evil_invasion
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                is_sxx_lianxu_country = no
+            }
+            modifier = {
+                factor = 0
+                years_passed < 25
+            }
+            modifier = {
+                factor = 0.5
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 67 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_sxx_fallen_1 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                is_sxx_dujie_country = no
+            }
+            modifier = {
+                factor = 0.2
+                mid_game_years_passed < 0
+            }
+            modifier = {
+                factor = 0.5
+                end_game_years_passed < 0
+            }
+            modifier = {
+                factor = 0.5
+                end_game_years_passed < 25
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 70 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_country_type = extradimensional
+                    }
+                }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 71 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_country_type = extradimensional_2
+                    }
+                }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 72 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_country_type = extradimensional_3
+                    }
+                }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 73 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_country_type = swarm
+                    }
+                }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 74 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_country_type = ai_empire
+                    }
+                }
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 80 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_tiyanki = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 85 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_amoeba = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 90 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_crystal = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 95 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_space_cloud = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 10
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 125
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 100 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_ancient = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 120 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = enclave_station
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 130 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = space_dragon_red
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 131 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = stellarite
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 132 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = sphere
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 133 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = dimensional_horror
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 134 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = toxic_god
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 135 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = npc_warship_01
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 136 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            OR = {
+                                is_ship_size = wraith_01_blue
+                                is_ship_size = wraith_01_red
+                                is_ship_size = wraith_01_yellow
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 137 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = space_dragon_origin
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 138 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = leviathan_01_scavenger_bot
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 139 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = leviathan_01_elder_tiyanki
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 140 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = leviathan_01_voidspawn
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 40
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 201 }
+            modifier = {
+                factor = 0.2
+                NOT = {
+                    any_system_within_border = {
+                        any_archaeological_site = {
+                            is_site_completed = no
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_archaeological_site = {
+                        is_site_completed = no
+                    }
+                }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 210 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = { is_country_type = primitive }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_210_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 211 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = { is_country_type = primitive }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_210_finished value = 1 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 212 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = { is_country_type = primitive }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_210_finished value = 2 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 213 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = { is_country_type = primitive }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_210_finished value = 3 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 220 }
+            modifier = {
+                factor = 0
+                years_passed < 10
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_220_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 221 }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_220_finished value = 1 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 222 }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_220_finished value = 2 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 223 }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_220_finished value = 3 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 230 }
+            modifier = {
+                factor = 0
+                years_passed < 10
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_230_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 241 }
+            modifier = {
+                factor = 0
+                is_at_war = yes
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 242 }
+            modifier = {
+                factor = 0
+                is_at_war = yes
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 250 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed >= 30
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 251 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 10
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 252 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 20
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 253 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 260 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                OR = {
+                    years_passed < 40
+                    years_passed >= 65
+                }
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 261 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 45
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 262 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 50
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 263 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 55
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 270 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|heti| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 300 }
+            modifier = {
+                factor = 0
+                is_sxx_zhuji_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_300_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 301 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_300_finished value = 1 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 302 }
+            modifier = {
+                factor = 0
+                is_sxx_dacheng_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_300_finished value = 2 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 305 }
+            modifier = {
+                factor = 0
+                is_sxx_zhuji_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_305_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 306 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_305_finished value = 1 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 307 }
+            modifier = {
+                factor = 0
+                is_sxx_dacheng_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_305_finished value = 2 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 310 }
+            modifier = {
+                factor = 0
+                is_sxx_zhuji_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_310_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 311 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_310_finished value = 1 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 312 }
+            modifier = {
+                factor = 0
+                is_sxx_dacheng_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_310_finished value = 2 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 400 }
+            modifier = {
+                factor = 0
+                OR = {
+                    NOR = {
+                        has_federations_dlc = yes
+                        has_nemesis = yes
+                    }
+                    is_years_since_community_formation < 20
+                    is_part_of_galactic_council = yes
+                    is_galactic_custodian = yes
+                    is_galactic_emperor = yes
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+        30 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 401 }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_nemesis = no
+                    is_galactic_council_established = no
+                    has_galactic_custodian = yes
+                    has_galactic_emperor = yes
+                    is_galactic_community_member = no
+                    #is_part_of_galactic_council = no
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+        10 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 402 }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_nemesis = no
+                    has_galactic_emperor = yes
+                    is_galactic_custodian = no
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+    }
+}
+
+sxx_random_selsect_task_hard = {
+    random_list = {
+        1 = { remove_country_flag = sxx_getting_task } # 防止没任务卡住
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 1 }
+            modifier = {
+                factor = 0.5
+                is_sxx_lianxu_country = yes
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 2 }
+            modifier = {
+                factor = 0.5
+                is_sxx_heti_country = yes
+            }
+            modifier = {
+                factor = 0
+                is_sxx_zhuji_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 3 }
+            modifier = {
+                factor = 0.5
+                is_sxx_dacheng_country = yes
+            }
+            modifier = {
+                factor = 0
+                is_sxx_jindan_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 4 }
+            modifier = {
+                factor = 0.5
+                is_sxx_dujie_country = yes
+            }
+            modifier = {
+                factor = 0
+                is_sxx_yuanying_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 5 }
+            modifier = {
+                factor = 0.5
+                is_sxx_final_country = yes
+            }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 6 }
+            modifier = {
+                factor = 0
+                is_sxx_lianxu_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 7 }
+            modifier = {
+                factor = 0
+                is_sxx_heti_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 8 }
+            modifier = {
+                factor = 0
+                is_sxx_dacheng_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 9 }
+            modifier = {
+                factor = 0
+                is_sxx_dujie_country = no
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 10 }
+            modifier = {
+                factor = 0
+                is_sxx_final_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 22 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 24 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0.2
+                NOT = {
+                    any_system_within_border = {
+                        any_system_planet = {
+                            is_planet_class = pc_habitat
+                            NOT = { has_modifier = sxx_tiangong }
+                        }
+                    }
+                }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 32 }
+            modifier = {
+                factor = 0.5
+                years_passed > 10
+            }
+            modifier = {
+                factor = 0.5
+                years_passed > 20
+            }
+            modifier = {
+                factor = 0.5
+                years_passed > 30
+            }
+            modifier = {
+                factor = 0.2
+                years_passed > 50
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 40 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_40_finished value = 0 } }
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 41 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_40_finished value = 1 } }
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 42 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_40_finished value = 2 } }
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 43 }
+            modifier = {
+                factor = 0
+                is_sxx_huashen_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_40_finished value = 3 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 50 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_default_or_fallen = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                mid_game_years_passed >= 0
+            }
+            modifier = {
+                factor = 0
+                is_sxx_zhuji_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 51 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_default_or_fallen = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    mid_game_years_passed < 0
+                    end_game_years_passed >= 0
+                }
+            }
+            modifier = {
+                factor = 0
+                is_sxx_zhuji_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 52 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_default_or_fallen = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                end_game_years_passed < 0
+            }
+            modifier = {
+                factor = 0
+                is_sxx_zhuji_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 55 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_sxx_sect = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                mid_game_years_passed >= 0
+            }
+            modifier = {
+                factor = 0
+                is_sxx_zhuji_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 56 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_sxx_sect = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    mid_game_years_passed < 0
+                    end_game_years_passed >= 0
+                }
+            }
+            modifier = {
+                factor = 0
+                is_sxx_zhuji_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 57 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_sxx_sect = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                end_game_years_passed < 0
+            }
+            modifier = {
+                factor = 0
+                is_sxx_zhuji_country = no
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 60 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_fallen_empire = yes
+                        is_sxx_sect = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 25
+            }
+            modifier = {
+                factor = 0.5
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 65 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        has_origin = origin_sxx_evil_invasion
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 25
+            }
+            modifier = {
+                factor = 0.5
+                years_passed < 50
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 67 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_sxx_fallen_1 = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                is_sxx_dacheng_country = no
+            }
+            modifier = {
+                factor = 0.2
+                mid_game_years_passed < 0
+            }
+            modifier = {
+                factor = 0.5
+                end_game_years_passed < 0
+            }
+            modifier = {
+                factor = 0.5
+                end_game_years_passed < 25
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 70 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_country_type = extradimensional
+                    }
+                }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 71 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_country_type = extradimensional_2
+                    }
+                }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 72 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_country_type = extradimensional_3
+                    }
+                }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 73 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_country_type = swarm
+                    }
+                }
+            }
+        }
+        100 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 74 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = {
+                        is_country_type = ai_empire
+                    }
+                }
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 81 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_tiyanki = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 86 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_amoeba = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 91 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_crystal = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 96 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_space_cloud = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 10
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 125
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 101 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            sxx_ship_is_ancient = yes
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.5
+                years_passed >= 100
+            }
+        }
+        20 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 120 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = enclave_station
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 20
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 130 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = space_dragon_red
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 131 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = stellarite
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 132 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = sphere
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 133 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = dimensional_horror
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 134 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = toxic_god
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 135 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = npc_warship_01
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 136 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            OR = {
+                                is_ship_size = wraith_01_blue
+                                is_ship_size = wraith_01_red
+                                is_ship_size = wraith_01_yellow
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 20
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 137 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = space_dragon_origin
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 138 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = leviathan_01_scavenger_bot
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 139 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = leviathan_01_elder_tiyanki
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 140 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_galaxy_fleet = {
+                        any_owned_ship = {
+                            is_ship_size = leviathan_01_voidspawn
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 202 }
+            modifier = {
+                factor = 0.2
+                NOT = {
+                    any_system_within_border = {
+                        any_archaeological_site = {
+                            is_site_completed = no
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_archaeological_site = {
+                        is_site_completed = no
+                    }
+                }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 210 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = { is_country_type = primitive }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_210_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 211 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = { is_country_type = primitive }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_210_finished value = 1 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 212 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = { is_country_type = primitive }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_210_finished value = 2 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 213 }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_country = { is_country_type = primitive }
+                }
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_210_finished value = 3 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 220 }
+            modifier = {
+                factor = 0
+                years_passed < 5
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_220_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 221 }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_220_finished value = 1 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 222 }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_220_finished value = 2 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 223 }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_220_finished value = 3 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 230 }
+            modifier = {
+                factor = 0
+                years_passed < 5
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_230_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 242 }
+            modifier = {
+                factor = 0
+                is_at_war = yes
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 243 }
+            modifier = {
+                factor = 0
+                is_at_war = yes
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 250 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed >= 10
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 251 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                OR = {
+                    years_passed < 5
+                    years_passed >= 15
+                }
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 252 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 10
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 253 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 15
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 260 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                OR = {
+                    years_passed < 20
+                    years_passed >= 30
+                }
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 261 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                OR = {
+                    years_passed < 25
+                    years_passed >= 35
+                }
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 262 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 30
+            }
+        }
+        25 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 263 }
+            modifier = { factor = value:sxx_task_weight_modifier }
+            modifier = {
+                factor = 0
+                years_passed < 35
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 270 }
+            modifier = { factor = value:sxx_task_weight_modifier|MIN_STATE|heti| }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 300 }
+            modifier = {
+                factor = 0
+                is_sxx_lianqi_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_300_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 301 }
+            modifier = {
+                factor = 0
+                is_sxx_yuanying_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_300_finished value = 1 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 302 }
+            modifier = {
+                factor = 0
+                is_sxx_heti_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_300_finished value = 2 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 305 }
+            modifier = {
+                factor = 0
+                is_sxx_lianqi_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_305_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 306 }
+            modifier = {
+                factor = 0
+                is_sxx_yuanying_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_305_finished value = 1 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 307 }
+            modifier = {
+                factor = 0
+                is_sxx_heti_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_305_finished value = 2 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 310 }
+            modifier = {
+                factor = 0
+                is_sxx_lianqi_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_310_finished value = 0 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 311 }
+            modifier = {
+                factor = 0
+                is_sxx_yuanying_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_310_finished value = 1 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 312 }
+            modifier = {
+                factor = 0
+                is_sxx_heti_country = no
+            }
+            modifier = {
+                factor = 0
+                NOT = { check_variable = { which = sxx_task_310_finished value = 2 } }
+            }
+        }
+        50 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 400 }
+            modifier = {
+                factor = 0
+                OR = {
+                    NOR = {
+                        has_federations_dlc = yes
+                        has_nemesis = yes
+                    }
+                    is_years_since_community_formation < 20
+                    is_part_of_galactic_council = yes
+                    is_galactic_custodian = yes
+                    is_galactic_emperor = yes
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+        30 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 401 }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_nemesis = no
+                    is_galactic_council_established = no
+                    has_galactic_custodian = yes
+                    has_galactic_emperor = yes
+                    is_galactic_community_member = no
+                    #is_part_of_galactic_council = no
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+        10 = {
+            inline_script = { script = sxx_origin_system/sxx_select_task TASK = 402 }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_nemesis = no
+                    has_galactic_emperor = yes
+                    is_galactic_custodian = no
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+    }
+}
+
+sxx_add_task_counter = {
+    if = {
+        limit = {
+            has_event_chain = sxx_task_$TASK$_chain
+        }
+        add_event_chain_counter = {
+            event_chain = sxx_task_$TASK$_chain
+            counter = sxx_task_$TASK$_counter
+            amount = 1
+        }
+        if = {
+            limit = {
+                has_completed_event_chain_counter = {
+                    event_chain = sxx_task_$TASK$_chain
+                    counter = sxx_task_$TASK$_counter
+                }
+            }
+            country_event = { id = sxx_task_finish.$TASK$ }
+        }
+    }
+}
+
+sxx_task_month_pulse_effect = {
+    if = {
+        limit = {
+            has_event_chain = sxx_task_$TASK$_chain
+        }
+        add_event_chain_counter = {
+            event_chain = sxx_task_$TASK$_chain
+            counter = sxx_time_remaining
+            amount = 1
+        }
+        if = {
+            limit = {
+                has_completed_event_chain_counter = {
+                    event_chain = sxx_task_$TASK$_chain
+                    counter = sxx_time_remaining
+                }
+            }
+            country_event = { id = sxx_task_fail.$TASK$ }
+        }
+        else = {
+            country_event = { id = sxx_task_month_pulse.$TASK$ days = 30 }
+        }
+    }
+}
+
+sxx_origin_system_new_pop_zizhi_effect = {
+    modify_species = {
+        species = this
+        remove_trait = trait_sxx_zizhi1
+        remove_trait = trait_sxx_zizhi2
+        remove_trait = trait_sxx_zizhi3
+        remove_trait = trait_sxx_zizhi4
+        remove_trait = trait_sxx_zizhi5
+        remove_trait = trait_sxx_zizhi6
+        remove_trait = trait_sxx_zizhi7
+    }
+    if = {
+        limit = {
+            owner = { check_variable = { which = sxx_origin_system_zizhi value = -2 } }
+        }
+        modify_species = {
+            species = this
+            add_trait = trait_sxx_zizhi1
+        }
+    }
+    else_if = {
+        limit = {
+            owner = { check_variable = { which = sxx_origin_system_zizhi value = -1 } }
+        }
+        modify_species = {
+            species = this
+            add_trait = trait_sxx_zizhi2
+        }
+    }
+    else_if = {
+        limit = {
+            owner = { check_variable = { which = sxx_origin_system_zizhi value = 0 } }
+        }
+        modify_species = {
+            species = this
+            add_trait = trait_sxx_zizhi3
+        }
+    }
+    else_if = {
+        limit = {
+            owner = { check_variable = { which = sxx_origin_system_zizhi value = 1 } }
+        }
+        modify_species = {
+            species = this
+            add_trait = trait_sxx_zizhi4
+        }
+    }
+    else_if = {
+        limit = {
+            owner = { check_variable = { which = sxx_origin_system_zizhi value = 2 } }
+        }
+        modify_species = {
+            species = this
+            add_trait = trait_sxx_zizhi5
+        }
+    }
+    else_if = {
+        limit = {
+            owner = { check_variable = { which = sxx_origin_system_zizhi value = 3 } }
+        }
+        modify_species = {
+            species = this
+            add_trait = trait_sxx_zizhi6
+        }
+    }
+    else_if = {
+        limit = {
+            owner = { check_variable = { which = sxx_origin_system_zizhi value = 4 } }
+        }
+        modify_species = {
+            species = this
+            add_trait = trait_sxx_zizhi7
+        }
+    }
+}

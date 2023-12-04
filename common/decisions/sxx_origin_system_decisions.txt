@@ -1,0 +1,107 @@
+decision_sxx_origin_system_create_lingmai_1 = {
+    icon = decision_sxx_lingmai
+
+    owned_planets_only = yes
+
+    resources = {
+        category = decisions
+    }
+
+    potential = {
+        owner = {
+            check_variable = { which = sxx_origin_system_lingmai_1_can_create value > 0 }
+        }
+    }
+
+    effect = {
+        add_deposit = d_sxx_lingmai_1
+        hidden_effect = {
+           owner = { subtract_variable = { which = sxx_origin_system_lingmai_1_can_create value = 1 } }
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+decision_sxx_origin_system_create_lingmai_2 = {
+    icon = decision_sxx_lingmai
+
+    owned_planets_only = yes
+
+    resources = {
+        category = decisions
+    }
+
+    potential = {
+        owner = {
+            check_variable = { which = sxx_origin_system_lingmai_2_can_create value > 0 }
+        }
+    }
+
+    effect = {
+        add_deposit = d_sxx_lingmai_2
+        hidden_effect = {
+            owner = { subtract_variable = { which = sxx_origin_system_lingmai_2_can_create value = 1 } }
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+decision_sxx_origin_system_create_lingmai_3 = {
+    icon = decision_sxx_lingmai
+
+    owned_planets_only = yes
+
+    resources = {
+        category = decisions
+    }
+
+    potential = {
+        owner = {
+            check_variable = { which = sxx_origin_system_lingmai_3_can_create value > 0 }
+        }
+    }
+
+    effect = {
+        add_deposit = d_sxx_lingmai_3
+        hidden_effect = {
+            owner = { subtract_variable = { which = sxx_origin_system_lingmai_3_can_create value = 1 } }
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+decision_sxx_origin_system_create_lingmai_4 = {
+    icon = decision_sxx_lingmai
+
+    owned_planets_only = yes
+
+    resources = {
+        category = decisions
+    }
+
+    potential = {
+        owner = {
+            check_variable = { which = sxx_origin_system_lingmai_4_can_create value > 0 }
+        }
+    }
+
+    effect = {
+        add_deposit = d_sxx_lingmai_4
+        hidden_effect = {
+            owner = { subtract_variable = { which = sxx_origin_system_lingmai_4_can_create value = 1 } }
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}

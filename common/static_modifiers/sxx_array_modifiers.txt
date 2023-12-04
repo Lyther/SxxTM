@@ -1,0 +1,39 @@
+sxx_array_juling = {
+	sxx_planet_jobs_sxx_speed_1_produces_mult = 0.05
+	sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.001
+	icon = "gfx/interface/icons/planet_modifiers/pm_sxx_array_juling.dds"
+	icon_frame = 2
+}
+
+sxx_array_huzong = {
+	planet_orbital_bombardment_damage = -0.1
+	icon = "gfx/interface/icons/planet_modifiers/pm_sxx_array_huzong.dds"
+	icon_frame = 2
+}
+
+sxx_array_yangchun = {
+	pop_growth_speed = 0.05
+	sxx_planet_jobs_sxx_cultivator_spawn_chance_produces_mult = 0.05
+	planet_jobs_food_produces_mult = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_sxx_array_yangchun.dds"
+	icon_frame = 2
+}
+
+sxx_array_ningshen = {
+	planet_jobs_physics_research_produces_mult = 0.05
+	planet_jobs_society_research_produces_mult = 0.05
+	planet_jobs_engineering_research_produces_mult = 0.05
+	planet_jobs_sxx_gongfa_produces_mult = 0.05
+	pop_category_sxx_xiuxianzhe_sxx_gongfa_produces_mult = 0.05
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.01
+	icon = "gfx/interface/icons/planet_modifiers/pm_sxx_array_ningshen.dds"
+	icon_frame = 2
+}
+
+sxx_array_dihuo = {
+	planet_sxx_pills_makers_sxx_pills_produces_mult = 0.05
+	planet_sxx_weapon_refiners_consumer_goods_produces_mult = 0.05
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_sxx_array_dihuo.dds"
+	icon_frame = 2
+}

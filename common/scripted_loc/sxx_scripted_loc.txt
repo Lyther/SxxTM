@@ -1,0 +1,76 @@
+defined_text = {
+	name = GetSxxPrecursorCiv
+	text = {
+		trigger = {
+			has_country_flag = sxx_precursor1_artifact_recoverer
+		}
+		localization_key = sxx_precursor1_precursor_civ
+	}
+	text = {
+		trigger = {
+			has_country_flag = sxx_precursor2_artifact_recoverer
+		}
+		localization_key = sxx_precursor2_precursor_civ
+	}
+	text = {
+		trigger = {
+			has_country_flag = sxx_precursor3_artifact_recoverer
+		}
+		localization_key = sxx_precursor3_precursor_civ
+	}
+	text = {
+		trigger = {
+			has_country_flag = sxx_precursor4_artifact_recoverer
+		}
+		localization_key = sxx_precursor4_precursor_civ
+	}
+	text = {
+		trigger = {
+			has_country_flag = sxx_precursor5_artifact_recoverer
+		}
+		localization_key = sxx_precursor5_precursor_civ
+	}
+}
+
+defined_text = {
+	name = GetSxxPopLittleState
+	text = {
+		trigger = {
+			check_variable = { which = sxx_pop_state value = 1 }
+			check_variable = { which = sxx_pop_xp value <= value:sxx_pop_max_xp_percent_get|PER|0.3| }
+		}
+		localization_key = sxx_lianqi_1
+	}
+	text = {
+		trigger = {
+			check_variable = { which = sxx_pop_state value = 1 }
+			check_variable = { which = sxx_pop_xp value > value:sxx_pop_max_xp_percent_get|PER|0.3| }
+			check_variable = { which = sxx_pop_xp value <= value:sxx_pop_max_xp_percent_get|PER|0.6| }
+		}
+		localization_key = sxx_lianqi_2
+	}
+	text = {
+		trigger = {
+			check_variable = { which = sxx_pop_state value = 1 }
+			check_variable = { which = sxx_pop_xp value > value:sxx_pop_max_xp_percent_get|PER|0.6| }
+			check_variable = { which = sxx_pop_xp value <= value:sxx_pop_max_xp_percent_get|PER|0.9| }
+		}
+		localization_key = sxx_lianqi_3
+	}
+	text = {
+		trigger = {
+			check_variable = { which = sxx_pop_state value = 1 }
+			check_variable = { which = sxx_pop_xp value > value:sxx_pop_max_xp_percent_get|PER|0.9| }
+			check_variable = { which = sxx_pop_xp value <= value:sxx_pop_max_xp_percent_get|PER|1| }
+		}
+		localization_key = sxx_lianqi_4
+	}
+	text = {
+		trigger = {
+			check_variable = { which = sxx_pop_state value = 1 }
+			check_variable = { which = sxx_pop_xp value > value:sxx_pop_max_xp_percent_get|PER|0.9| }
+			check_variable = { which = sxx_pop_xp value = value:sxx_pop_xp_max }
+		}
+		localization_key = sxx_lianqi_5
+	}
+}

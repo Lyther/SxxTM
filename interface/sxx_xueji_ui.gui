@@ -1,0 +1,631 @@
+guiTypes = {
+	containerWindowType = {
+		name = "sxx_xueji_ui"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1250 height = 600 }
+
+		background = { name = "background" quadTextureSprite ="GFX_tile_outliner_bg" }
+
+		iconType = { name = "hex_bg" spriteType = "GFX_hex_bg" position = { x = -10 y = -14 } alwaysTransparent = yes }
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long" position = { x = 6 y = 22 } alwaysTransparent = yes }
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x= -42 y = 12 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		# Custom header
+		instantTextBoxType = {
+			name = "sxx_xueji_ui_header"
+			font = "malgun_goth_24"
+			text = "sxx_xueji_ui_header" 	# header text
+			position = { x = 20 y = 5 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+
+		buttonType = { name = "focus_button" position = { x = -1180 y = -1112 } spriteType = "GFX_fleetview_focus" } # hidden
+		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1120 y = -115 } } # hidden
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1110 y = -11430 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = -1117 y = -1145 }
+			size = { width = 0 height = 0 } 	# hide portrait window
+			iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+			iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
+		}
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -1117 y = -1145 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden
+		instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+		OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = -11138 } } # hidden
+		iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = -11235 } } # hidden
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -1125 y = -1175 }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -1127 y = -11110 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}
+	
+		### EVENT DIPLO ###
+	
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 2 y = 50 }
+			#size = { width=563 height=220 }
+			moveable = no
+
+			instantTextBoxType={
+			 name = "action_title"
+			 font = "malgun_goth_24"
+			 position = { x = 20 y = 0 }
+			 maxWidth = 200
+			 alwaysTransparent = yes
+			}
+			instantTextBoxType={
+			 name = "action_desc"
+			 font = "malgun_goth_24"
+			 position = { x = 490 y = 0 }
+			 maxWidth = 500
+			 maxHeight = 180
+			 Orientation = "UPPER_LEFT"
+			 format = center
+			 alwaysTransparent = yes
+			 text_color_code = "H"
+			}
+			listboxType = { name = "option_list" position = { x = -11500 y = -1130 } } # hidden option list
+		}
+
+		# Description Section
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 20 y = 90 }
+			maxWidth = 465
+			maxHeight = 220
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+
+		#######################################################################################################
+		#######################################################################################################
+		#######################################################################################################
+
+		################################## 修士境界 #############################################
+
+		instantTextBoxType = {
+			name = "sxx_xueji_state_name"
+			font = "malgun_goth_24"
+			text = "sxx_xueji_state_name" # 修士境界
+			position = { x = 20 y = 50 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = sxx_xueji_1_name
+			font = "malgun_goth_24"
+			text = sxx_trait_1
+			position = { x = 100 y = 100 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_2_name
+			font = "malgun_goth_24"
+			text = sxx_trait_2
+			position = { x = 220 y = 100 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_3_name
+			font = "malgun_goth_24"
+			text = sxx_trait_3
+			position = { x = 340 y = 100 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_4_name
+			font = "malgun_goth_24"
+			text = sxx_trait_4
+			position = { x = 460 y = 100 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_5_name
+			font = "malgun_goth_24"
+			text = sxx_trait_5
+			position = { x = 580 y = 100 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_6_name
+			font = "malgun_goth_24"
+			text = sxx_trait_6
+			position = { x = 700 y = 100 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_7_name
+			font = "malgun_goth_24"
+			text = sxx_trait_7
+			position = { x = 820 y = 100 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_8_name
+			font = "malgun_goth_24"
+			text = sxx_trait_8
+			position = { x = 940 y = 100 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_9_name
+			font = "malgun_goth_24"
+			text = sxx_trait_9
+			position = { x = 1060 y = 100 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		effectButtonType = {
+			name = sxx_xueji_1_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 160 y = 90 }
+			effect = sxx_button_xueji_1_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_2_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 280 y = 90 }
+			effect = sxx_button_xueji_2_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_3_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 400 y = 90 }
+			effect = sxx_button_xueji_3_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_4_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 520 y = 90 }
+			effect = sxx_button_xueji_4_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_5_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 640 y = 90 }
+			effect = sxx_button_xueji_5_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_6_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 760 y = 90 }
+			effect = sxx_button_xueji_6_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_7_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 880 y = 90 }
+			effect = sxx_button_xueji_7_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_8_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 1000 y = 90 }
+			effect = sxx_button_xueji_8_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_9_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 1120 y = 90 }
+			effect = sxx_button_xueji_9_effect_0
+		}
+
+		effectButtonType = {
+			name = sxx_xueji_1_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 160 y = 90 }
+			effect = sxx_button_xueji_1_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_2_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 280 y = 90 }
+			effect = sxx_button_xueji_2_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_3_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 400 y = 90 }
+			effect = sxx_button_xueji_3_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_4_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 520 y = 90 }
+			effect = sxx_button_xueji_4_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_5_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 640 y = 90 }
+			effect = sxx_button_xueji_5_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_6_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 760 y = 90 }
+			effect = sxx_button_xueji_6_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_7_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 880 y = 90 }
+			effect = sxx_button_xueji_7_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_8_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 1000 y = 90 }
+			effect = sxx_button_xueji_8_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_9_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 1120 y = 90 }
+			effect = sxx_button_xueji_9_effect_1
+		}
+
+		############################ 凡人阶层 ###############################################
+
+		instantTextBoxType = {
+			name = "sxx_xueji_mortal_name"
+			font = "malgun_goth_24"
+			text = "sxx_xueji_mortal_name"
+			position = { x = 20 y = 175 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = sxx_xueji_worker_name
+			font = "malgun_goth_24"
+			text = sxx_xueji_worker_name
+			position = { x = 100 y = 225 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_specialist_name
+			font = "malgun_goth_24"
+			text = sxx_xueji_specialist_name
+			position = { x = 220 y = 225 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_ruler_name
+			font = "malgun_goth_24"
+			text = sxx_xueji_ruler_name
+			position = { x = 340 y = 225 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_other_name
+			font = "malgun_goth_24"
+			text = sxx_xueji_other_name
+			position = { x = 460 y = 225 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		effectButtonType = {
+			name = sxx_xueji_worker_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 160 y = 215 }
+			effect = sxx_button_xueji_worker_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_specialist_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 280 y = 215 }
+			effect = sxx_button_xueji_specialist_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_ruler_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 400 y = 215 }
+			effect = sxx_button_xueji_ruler_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_other_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 520 y = 215 }
+			effect = sxx_button_xueji_other_effect_0
+		}
+
+		effectButtonType = {
+			name = sxx_xueji_worker_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 160 y = 215 }
+			effect = sxx_button_xueji_worker_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_specialist_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 280 y = 215 }
+			effect = sxx_button_xueji_specialist_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_ruler_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 400 y = 215 }
+			effect = sxx_button_xueji_ruler_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_other_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 520 y = 215 }
+			effect = sxx_button_xueji_other_effect_1
+		}
+
+		############################ 物种权力 ###############################################
+
+		instantTextBoxType = {
+			name = "sxx_xueji_cs_name"
+			font = "malgun_goth_24"
+			text = "sxx_xueji_cs_name"
+			position = { x = 20 y = 300 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = sxx_xueji_cs_under_limit_name
+			font = "malgun_goth_24"
+			text = sxx_xueji_cs_under_limit_name
+			position = { x = 100 y = 350 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_cs_under_slave_name
+			font = "malgun_goth_24"
+			text = sxx_xueji_cs_under_slave_name
+			position = { x = 300 y = 350 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_cs_purge_name
+			font = "malgun_goth_24"
+			text = sxx_xueji_cs_purge_name
+			position = { x = 500 y = 350 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		effectButtonType = {
+			name = sxx_xueji_cs_under_limit_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 210 y = 340 }
+			effect = sxx_button_xueji_cs_under_limit_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_cs_under_slave_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 410 y = 340 }
+			effect = sxx_button_xueji_cs_under_slave_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_cs_purge_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 610 y = 340 }
+			effect = sxx_button_xueji_cs_purge_effect_0
+		}
+
+		effectButtonType = {
+			name = sxx_xueji_cs_under_limit_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 210 y = 340 }
+			effect = sxx_button_xueji_cs_under_limit_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_cs_under_slave_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 410 y = 340 }
+			effect = sxx_button_xueji_cs_under_slave_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_cs_purge_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 610 y = 340 }
+			effect = sxx_button_xueji_cs_purge_effect_1
+		}
+
+		############################ 特殊 ###############################################
+
+		instantTextBoxType = {
+			name = "sxx_xueji_special_name"
+			font = "malgun_goth_24"
+			text = "sxx_xueji_special_name"
+			position = { x = 20 y = 425 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = sxx_xueji_pd_name
+			font = "malgun_goth_24"
+			text = sxx_xueji_pd_name
+			position = { x = 100 y = 475 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = sxx_xueji_not_cultivable_name
+			font = "malgun_goth_24"
+			text = sxx_xueji_not_cultivable_name
+			position = { x = 300 y = 475 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+
+		effectButtonType = {
+			name = sxx_xueji_pd_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 210 y = 465 }
+			effect = sxx_button_xueji_pd_effect_0
+		}
+		effectButtonType = {
+			name = sxx_xueji_not_cultivable_0
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox"
+			size = { x = 200 y = 200 }
+			position = { x = 410 y = 465 }
+			effect = sxx_button_xueji_not_cultivable_effect_0
+		}
+
+		effectButtonType = {
+			name = sxx_xueji_pd_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 210 y = 465 }
+			effect = sxx_button_xueji_pd_effect_1
+		}
+		effectButtonType = {
+			name = sxx_xueji_not_cultivable_1
+			quadTextureSprite = "GFX_sxx_button_24_24_checkbox_0"
+			size = { x = 200 y = 200 }
+			position = { x = 410 y = 465 }
+			effect = sxx_button_xueji_not_cultivable_effect_1
+		}
+
+		############################ 血祭 ###############################################
+
+		effectButtonType = {
+			name = sxx_xueji
+			quadTextureSprite = "GFX_sxx_button_xueji"
+			size = { x = 200 y = 200 }
+			position = { x = 1150 y = 550 }
+			clicksound = "back_click"
+			effect = sxx_button_xueji_effect
+		}
+	}
+}

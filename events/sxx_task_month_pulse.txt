@@ -1,0 +1,1323 @@
+namespace = sxx_task_month_pulse
+
+country_event = {
+	id = sxx_task_month_pulse.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 1 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 2 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 3 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 4 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 5 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 6 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 7 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 8 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.9
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 9 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 10 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.20
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 20 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.21
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 21 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.22
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 22 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.23
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 23 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.24
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 24 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.30
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 30 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.31
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 31 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.32
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 32 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.40
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_event_chain = sxx_task_40_chain
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				count_owned_planet = {
+					limit = { is_sxx_blessed_spot = yes }
+					count >= 1
+				}
+			}
+			country_event = { id = sxx_task_finish.40 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 40 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.41
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_event_chain = sxx_task_41_chain
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				count_owned_planet = {
+					limit = { is_sxx_blessed_spot = yes }
+					count >= 3
+				}
+			}
+			country_event = { id = sxx_task_finish.41 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 41 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.42
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_event_chain = sxx_task_42_chain
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				count_owned_planet = {
+					limit = { is_sxx_blessed_spot = yes }
+					count >= 5
+				}
+			}
+			country_event = { id = sxx_task_finish.42 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 42 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.43
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_event_chain = sxx_task_43_chain
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				count_owned_planet = {
+					limit = { is_sxx_blessed_spot = yes }
+					count >= 10
+				}
+			}
+			country_event = { id = sxx_task_finish.43 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 43 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.50
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 50 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.51
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 51 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.52
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 52 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.55
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 55 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.56
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 56 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.57
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 57 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.60
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 60 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.65
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 65 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.67
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 67 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.70
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 70 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.71
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 71 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.72
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 72 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.73
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 73 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.74
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 74 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.80
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 80 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.81
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 81 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.85
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 85 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.86
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 86 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.90
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 90 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.91
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 91 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.95
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 95 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.96
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 96 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.100
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 100 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.101
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 101 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.120
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 120 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.130
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 130 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.131
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 131 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.132
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 132 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.133
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 133 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.134
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 134 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.135
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 135 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.136
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 136 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.137
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 137 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.138
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 138 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.139
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 139 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.140
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 140 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.200
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 200 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.201
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 201 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.202
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 202 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.210
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				count_owned_ship = {
+					limit = { is_ship_size = observation_station }
+					count >= 1
+				}
+			}
+			country_event = { id = sxx_task_finish.210 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 210 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.211
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				count_owned_ship = {
+					limit = { is_ship_size = observation_station }
+					count >= 2
+				}
+			}
+			country_event = { id = sxx_task_finish.211 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 211 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.212
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				count_owned_ship = {
+					limit = { is_ship_size = observation_station }
+					count >= 3
+				}
+			}
+			country_event = { id = sxx_task_finish.212 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 212 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.213
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				count_owned_ship = {
+					limit = { is_ship_size = observation_station }
+					count >= 5
+				}
+			}
+			country_event = { id = sxx_task_finish.213 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 213 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.220
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				count_country = {
+					limit = {
+						has_overlord = root
+					}
+					count >= 1
+				}
+			}
+			country_event = { id = sxx_task_finish.220 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 220 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.221
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				count_country = {
+					limit = {
+						has_overlord = root
+					}
+					count >= 3
+				}
+			}
+			country_event = { id = sxx_task_finish.221 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 221 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.222
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				count_country = {
+					limit = {
+						has_overlord = root
+					}
+					count >= 5
+				}
+			}
+			country_event = { id = sxx_task_finish.222 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 222 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.223
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				count_country = {
+					limit = {
+						has_overlord = root
+					}
+					count >= 10
+				}
+			}
+			country_event = { id = sxx_task_finish.223 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 223 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.230
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_federation = yes
+			}
+			country_event = { id = sxx_task_finish.230 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 230 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.240
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_event_chain = sxx_task_240_chain
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			country_event = { id = sxx_task_fail.240 }
+		}
+		else = {
+			add_event_chain_counter = {
+				event_chain = sxx_task_240_chain
+				counter = sxx_time_remaining
+				amount = 1
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = sxx_task_240_chain
+						counter = sxx_time_remaining
+					}
+				}
+				country_event = { id = sxx_task_finish.240 }
+			}
+			else = {
+				country_event = { id = sxx_task_month_pulse.240 days = 30 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.241
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_event_chain = sxx_task_241_chain
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			country_event = { id = sxx_task_fail.241 }
+		}
+		else = {
+			add_event_chain_counter = {
+				event_chain = sxx_task_241_chain
+				counter = sxx_time_remaining
+				amount = 1
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = sxx_task_241_chain
+						counter = sxx_time_remaining
+					}
+				}
+				country_event = { id = sxx_task_finish.241 }
+			}
+			else = {
+				country_event = { id = sxx_task_month_pulse.241 days = 30 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.242
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_event_chain = sxx_task_242_chain
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			country_event = { id = sxx_task_fail.242 }
+		}
+		else = {
+			add_event_chain_counter = {
+				event_chain = sxx_task_242_chain
+				counter = sxx_time_remaining
+				amount = 1
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = sxx_task_242_chain
+						counter = sxx_time_remaining
+					}
+				}
+				country_event = { id = sxx_task_finish.242 }
+			}
+			else = {
+				country_event = { id = sxx_task_month_pulse.242 days = 30 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.243
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_event_chain = sxx_task_243_chain
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			country_event = { id = sxx_task_fail.243 }
+		}
+		else = {
+			add_event_chain_counter = {
+				event_chain = sxx_task_243_chain
+				counter = sxx_time_remaining
+				amount = 1
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = sxx_task_243_chain
+						counter = sxx_time_remaining
+					}
+				}
+				country_event = { id = sxx_task_finish.243 }
+			}
+			else = {
+				country_event = { id = sxx_task_month_pulse.243 days = 30 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.250
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 250 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.251
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 251 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.252
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 252 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.253
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 253 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.260
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 260 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.261
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 261 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.262
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 262 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.263
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 263 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.270
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_task_month_pulse_effect = { TASK = 270 }
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.300
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				resource_revenue_compare = { resource = sxx_stones value >= 100  }
+			}
+			country_event = { id = sxx_task_finish.300 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 300 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.301
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				resource_revenue_compare = { resource = sxx_stones value >= 1000  }
+			}
+			country_event = { id = sxx_task_finish.301 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 301 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.302
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				resource_revenue_compare = { resource = sxx_stones value >= 10000  }
+			}
+			country_event = { id = sxx_task_finish.302 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 302 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.305
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				resource_revenue_compare = { resource = sxx_pills value >= 10  }
+			}
+			country_event = { id = sxx_task_finish.305 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 305 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.306
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				resource_revenue_compare = { resource = sxx_pills value >= 100  }
+			}
+			country_event = { id = sxx_task_finish.306 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 306 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.307
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				resource_revenue_compare = { resource = sxx_pills value >= 1000  }
+			}
+			country_event = { id = sxx_task_finish.307 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 307 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.310
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				resource_revenue_compare = { resource = sxx_gongfa value >= 10  }
+			}
+			country_event = { id = sxx_task_finish.310 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 310 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.311
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				resource_revenue_compare = { resource = sxx_gongfa value >= 100  }
+			}
+			country_event = { id = sxx_task_finish.311 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 311 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.312
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				resource_revenue_compare = { resource = sxx_gongfa value >= 1000  }
+			}
+			country_event = { id = sxx_task_finish.312 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 312 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.400
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				is_part_of_galactic_council = yes
+			}
+			country_event = { id = sxx_task_finish.400 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 400 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.401
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				is_galactic_custodian = yes
+			}
+			country_event = { id = sxx_task_finish.401 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 401 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_month_pulse.402
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				is_galactic_emperor = yes
+			}
+			country_event = { id = sxx_task_finish.402 }
+		}
+		else = {
+			sxx_task_month_pulse_effect = { TASK = 402 }
+		}
+	}
+}

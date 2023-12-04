@@ -1,0 +1,39 @@
+sxx_xinxipingbi_category = {
+	desc = sxx_xinxipingbi_category_desc
+	picture = GFX_evt_decryption
+	level = 4
+	max_once_global = yes
+	max_once = yes
+
+	spawn_chance = {
+		modifier = {
+			add = 5
+			habitable_planet_not_urban = yes
+		}
+	}
+
+	on_success = sxx_other_event.10
+}
+
+sxx_cat_monster_category = {
+	desc = sxx_cat_monster_category_desc
+	picture = GFX_evt_alien_ruins
+	level = 1
+	max_once_global = yes
+	max_once = yes
+
+	spawn_chance = {
+		modifier = {
+			add = 10
+			habitable_planet = yes
+		}
+		modifier = {
+			factor = 0
+			from.owner = {
+				is_sxx_sect = no
+			}
+		}
+	}
+
+	on_success = sxx_other_event.300
+}

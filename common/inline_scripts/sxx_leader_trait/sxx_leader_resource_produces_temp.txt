@@ -1,0 +1,255 @@
+####################### 被SB蠢驴气晕 #######################
+########## 太美丽辣领袖更新，诶呀这不是MOD嘛，创一下 ##########
+
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 1 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT1$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 2 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT2$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 3 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT3$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 4 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT4$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 5 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT5$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 6 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT6$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 7 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT7$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 8 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT8$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 9 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT9$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 10 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT10$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 11 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT11$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = commander
+		check_variable = { which = sxx_leader_state value = 12 }
+	}
+	leader_commanders_$RESOURCE$_produces_add = $AMOUNT12$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 1 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT1$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 2 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT2$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 3 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT3$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 4 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT4$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 5 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT5$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 6 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT6$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 7 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT7$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 8 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT8$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 9 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT9$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 10 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT10$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 11 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT11$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = official
+		check_variable = { which = sxx_leader_state value = 12 }
+	}
+	leader_officials_$RESOURCE$_produces_add = $AMOUNT12$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 1 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT1$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 2 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT2$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 3 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT3$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 4 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT4$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 5 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT5$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 6 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT6$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 7 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT7$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 8 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT8$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 9 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT9$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 10 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT10$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 11 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT11$
+}
+triggered_self_modifier = {
+	potential = {
+		leader_class = scientist
+		check_variable = { which = sxx_leader_state value = 12 }
+	}
+	leader_scientists_$RESOURCE$_produces_add = $AMOUNT12$
+}

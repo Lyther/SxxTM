@@ -1,0 +1,254 @@
+sxx_planet_add_main_species_state_pop = {
+	if = {
+		limit = {
+			owner_main_species = { is_sxx_cultivable = yes }
+		}
+		while = {
+			count = $COUNT|1$
+			create_pop = {
+				species = owner_main_species
+				effect = {
+					pop_sxx_remove_xiuxian_flag_and_trait = yes
+					set_pop_flag = sxx_$STATE$ set_variable = { which = sxx_pop_state value = $STATE_VALUE$ }
+					modify_species = {
+						species = this
+						add_trait = trait_sxx_$STATE$
+					}
+				}
+			}
+		}
+	}
+}
+
+sxx_planet_spawn_fairy_reborn_pop = {
+	create_pop = {
+		species = owner_main_species
+		effect = {
+			pop_sxx_remove_xiuxian_flag_and_trait = yes
+			if = {
+				limit = {
+					owner = { has_origin = origin_sxx_yuhua }
+				}
+				change_species = event_target:sxx_yuhua_species_of@owner
+				set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 }
+				modify_species = {
+					species = this
+					add_trait = trait_sxx_huashen
+				}
+			}
+			else = {
+				set_pop_flag = sxx_lianqi set_variable = { which = sxx_pop_state value = 1 }
+				modify_species = {
+					species = this
+					add_trait = trait_sxx_lianqi
+				}
+			}
+			add_modifier = {
+				modifier = sxx_fairy_reborn_$STATE$
+			}
+		}
+	}
+}
+
+sxx_planet_remove_all_array = {
+	remove_modifier = sxx_array_juling
+	remove_modifier = sxx_array_huzong
+	remove_modifier = sxx_array_yangchun
+	remove_modifier = sxx_array_ningshen
+	remove_modifier = sxx_array_dihuo
+}
+
+sxx_upgrade_building_zongmen = {
+	switch = {
+		trigger = has_building
+		building_sxx_zongmen_1 = { remove_building = building_sxx_zongmen_1 add_building = building_sxx_zongmen_2 }
+		building_sxx_zongmen_2 = { remove_building = building_sxx_zongmen_2 add_building = building_sxx_zongmen_3 }
+		building_sxx_zongmen_3 = { remove_building = building_sxx_zongmen_3 add_building = building_sxx_zongmen_4 }
+		building_sxx_zongmen_4 = { remove_building = building_sxx_zongmen_4 add_building = building_sxx_zongmen_5 }
+		building_sxx_zongmen_5 = { remove_building = building_sxx_zongmen_5 add_building = building_sxx_zongmen_6 }
+		building_sxx_zongmen_6 = { remove_building = building_sxx_zongmen_6 add_building = building_sxx_zongmen_7 }
+		building_sxx_zongmen_7 = { remove_building = building_sxx_zongmen_7 add_building = building_sxx_zongmen_8 }
+		building_sxx_zongmen_8 = { remove_building = building_sxx_zongmen_8 add_building = building_sxx_zongmen_9 }
+		building_sxx_zongmen_9 = { remove_building = building_sxx_zongmen_9 add_building = building_sxx_zongmen_10 }
+		building_sxx_zongmen_10 = {}
+		default = { add_building = building_sxx_zongmen_1 }
+	}
+}
+
+sxx_planet_xueji_ui_update = {
+	if = {
+		limit = {
+			NOR = {
+				has_planet_flag = sxx_xueji_cs_under_slave
+				has_planet_flag = sxx_xueji_cs_purge
+				has_planet_flag = sxx_xueji_not_cultivable
+			}
+		}
+		remove_planet_flag = sxx_xueji_9
+		switch = {
+			trigger = has_active_building
+			building_sxx_zongmen_1 = {
+				remove_planet_flag = sxx_xueji_8
+				remove_planet_flag = sxx_xueji_7
+				remove_planet_flag = sxx_xueji_6
+				remove_planet_flag = sxx_xueji_5
+				remove_planet_flag = sxx_xueji_4
+				remove_planet_flag = sxx_xueji_3
+				remove_planet_flag = sxx_xueji_2
+				remove_planet_flag = sxx_xueji_1
+			}
+			building_sxx_zongmen_2 = {
+				remove_planet_flag = sxx_xueji_8
+				remove_planet_flag = sxx_xueji_7
+				remove_planet_flag = sxx_xueji_6
+				remove_planet_flag = sxx_xueji_5
+				remove_planet_flag = sxx_xueji_4
+				remove_planet_flag = sxx_xueji_3
+				remove_planet_flag = sxx_xueji_2
+			}
+			building_sxx_zongmen_3 = {
+				remove_planet_flag = sxx_xueji_8
+				remove_planet_flag = sxx_xueji_7
+				remove_planet_flag = sxx_xueji_6
+				remove_planet_flag = sxx_xueji_5
+				remove_planet_flag = sxx_xueji_4
+				remove_planet_flag = sxx_xueji_3
+			}
+			building_sxx_zongmen_4 = {
+				remove_planet_flag = sxx_xueji_8
+				remove_planet_flag = sxx_xueji_7
+				remove_planet_flag = sxx_xueji_6
+				remove_planet_flag = sxx_xueji_5
+				remove_planet_flag = sxx_xueji_4
+			}
+			building_sxx_zongmen_5 = {
+				remove_planet_flag = sxx_xueji_8
+				remove_planet_flag = sxx_xueji_7
+				remove_planet_flag = sxx_xueji_6
+				remove_planet_flag = sxx_xueji_5
+			}
+			building_sxx_zongmen_6 = {
+				remove_planet_flag = sxx_xueji_8
+				remove_planet_flag = sxx_xueji_7
+				remove_planet_flag = sxx_xueji_6
+			}
+			building_sxx_zongmen_7 = {
+				remove_planet_flag = sxx_xueji_8
+				remove_planet_flag = sxx_xueji_7
+			}
+			building_sxx_zongmen_8 = { remove_planet_flag = sxx_xueji_8 }
+		}
+	}
+}
+
+sxx_kuilei_fusion_effect = {
+	random_owned_pop = {
+		limit = {
+			has_trait = trait_sxx_kuilei
+			has_pop_flag = sxx_$STATE$
+			is_sxx_potential_depletion = no
+			check_variable = {
+				which = sxx_pop_xp
+				value < value:sxx_pop_xp_max
+			}
+			planet = {
+				NOT = {
+					any_owned_pop = {
+						has_trait = trait_sxx_kuilei
+						has_pop_flag = sxx_$STATE$
+						is_sxx_potential_depletion = no
+						check_variable = {
+							which = sxx_pop_xp
+							value < value:sxx_pop_xp_max
+						}
+						check_variable = { which = sxx_pop_xp value > prevprev.sxx_pop_xp }
+					}
+				}
+			}
+		}
+		save_event_target_as = sxx_kuilei_xp_high
+	}
+	random_owned_pop = {
+		limit = {
+			has_trait = trait_sxx_kuilei
+			has_pop_flag = sxx_$STATE$
+			check_variable = {
+				which = sxx_pop_xp
+				value < value:sxx_pop_xp_max
+			}
+			planet = {
+				NOT = {
+					any_owned_pop = {
+						has_trait = trait_sxx_kuilei
+						has_pop_flag = sxx_$STATE$
+						NOT = { is_same_value = event_target:sxx_kuilei_xp_high }
+						check_variable = {
+							which = sxx_pop_xp
+							value < value:sxx_pop_xp_max
+						}
+						check_variable = { which = sxx_pop_xp value < prevprev.sxx_pop_xp }
+					}
+				}
+			}
+			NOT = { is_same_value = event_target:sxx_kuilei_xp_high }
+		}
+		save_event_target_as = sxx_kuilei_xp_low
+	}
+	event_target:sxx_kuilei_xp_high = {
+		change_variable = {
+			which = sxx_pop_xp
+			value = value:sxx_pop_xp_max_mult_value|MULT|0.1|
+		}
+		change_variable = {
+			which = sxx_pop_xp_temp
+			value = event_target:sxx_kuilei_xp_low.sxx_pop_xp
+		}
+		multiply_variable = {
+			which = sxx_pop_xp_temp
+			value = 0.5
+		}
+		change_variable = {
+			which = sxx_pop_xp
+			value = sxx_pop_xp_temp
+		}
+		clear_variable = sxx_pop_xp_temp
+		sxx_set_pop_xp_max_if_over_max = yes
+	}
+	event_target:sxx_kuilei_xp_low = {
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_ai = yes }
+			}
+			kill_pop = yes
+		}
+	}
+}
+
+sxx_call_pop_effect = {
+	hidden_effect = {
+		owner = {
+			every_owned_pop = {
+				limit = {
+					[[JOB]
+						has_job = $JOB$
+					]
+					[[STATE]
+						has_pop_flag = sxx_$STATE$
+					]
+					[[TRIGGER]
+						$TRIGGER$ = yes
+					]
+					planet = {
+						is_occupied_flag = no
+						NOT = { is_same_value = root }
+					}
+				}
+				resettle_pop = {
+					pop = this
+					planet = root
+				}
+			}
+		}
+	}
+}

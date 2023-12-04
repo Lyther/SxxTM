@@ -1,0 +1,241 @@
+sxxtm_elder_job = {
+    potential = {
+        is_ai = no
+        is_sxx_sect = yes
+    }
+    allow = {
+        is_ai = no
+    }
+    option = {
+        name = "sxxtm_elder_job_default"
+        policy_flags = {
+            sxxtm_elder_job_default
+        }
+    }
+    option = {
+        name = "sxxtm_elder_job_low"
+        policy_flags = {
+            sxxtm_elder_job_low
+        }
+        modifier = {
+            job_sxx_elder_per_pop = 0.02
+        }
+    }
+    option = {
+        name = "sxxtm_elder_job_medium"
+        policy_flags = {
+            sxxtm_elder_job_medium
+        }
+        modifier = {
+            job_sxx_elder_per_pop = 0.04
+        }
+    }
+    option = {
+        name = "sxxtm_elder_job_high"
+        policy_flags = {
+            sxxtm_elder_job_high
+        }
+        modifier = {
+            job_sxx_elder_per_pop = 0.10
+        }
+    }
+    option = {
+        name = "sxxtm_elder_job_all"
+        policy_flags = {
+            sxxtm_elder_job_all
+        }
+        modifier = {
+            job_sxx_elder_per_pop = 1.00
+        }
+    }
+}
+
+sxxtm_deacon_job = {
+    potential = {
+        is_ai = no
+        is_sxx_sect = yes
+    }
+    allow = {
+        is_ai = no
+    }
+    option = {
+        name = "sxxtm_deacon_job_default"
+        policy_flags = {
+            sxxtm_deacon_job_default
+        }
+    }
+    option = {
+        name = "sxxtm_deacon_job_low"
+        policy_flags = {
+            sxxtm_deacon_job_low
+        }
+        modifier = {
+            job_sxx_deacon_per_pop = 0.04
+        }
+    }
+    option = {
+        name = "sxxtm_deacon_job_medium"
+        policy_flags = {
+            sxxtm_deacon_job_medium
+        }
+        modifier = {
+            job_sxx_deacon_per_pop = 0.10
+        }
+    }
+    option = {
+        name = "sxxtm_deacon_job_high"
+        policy_flags = {
+            sxxtm_deacon_job_high
+        }
+        modifier = {
+            job_sxx_deacon_per_pop = 0.20
+        }
+    }
+    option = {
+        name = "sxxtm_deacon_job_all"
+        policy_flags = {
+            sxxtm_deacon_job_all
+        }
+        modifier = {
+            job_sxx_deacon_per_pop = 1.00
+        }
+    }
+}
+
+sxxtm_factotum_disciple_job = {
+    potential = {
+        is_ai = no
+        is_sxx_sect = yes
+    }
+    allow = {
+        is_ai = no
+    }
+    option = {
+        name = "sxxtm_factotum_disciple_job_default"
+        policy_flags = {
+            sxxtm_factotum_disciple_job_default
+        }
+    }
+    option = {
+        name = "sxxtm_factotum_disciple_job_low"
+        policy_flags = {
+            sxxtm_factotum_disciple_job_low
+        }
+        modifier = {
+            job_sxx_factotum_disciple_per_pop = 0.04
+        }
+    }
+    option = {
+        name = "sxxtm_factotum_disciple_job_medium"
+        policy_flags = {
+            sxxtm_factotum_disciple_job_medium
+        }
+        modifier = {
+            job_sxx_factotum_disciple_per_pop = 0.10
+        }
+    }
+    option = {
+        name = "sxxtm_factotum_disciple_job_high"
+        policy_flags = {
+            sxxtm_factotum_disciple_job_high
+        }
+        modifier = {
+            job_sxx_factotum_disciple_per_pop = 0.20
+        }
+    }
+    option = {
+        name = "sxxtm_factotum_disciple_job_all"
+        policy_flags = {
+            sxxtm_factotum_disciple_job_all
+        }
+        modifier = {
+            job_sxx_factotum_disciple_per_pop = 1.00
+        }
+    }
+}
+
+sxxtm_repeatable_tech_enable = {
+    potential = {
+        is_ai = no
+        is_sxx_sect = yes
+    }
+    allow = {
+        is_ai = no
+    }
+    option = {
+        name = "sxxtm_repeatable_tech_all"
+        policy_flags = {
+            sxxtm_repeatable_tech_all_enable
+        }
+    }
+    option = {
+        name = "sxxtm_repeatable_tech_lingshi_damage_enable"
+        policy_flags = {
+            sxxtm_repeatable_tech_lingshi_damage_only
+        }
+    }
+    option = {
+        name = "sxxtm_repeatable_tech_lingshi_fire_rate_enable"
+        policy_flags = {
+            sxxtm_repeatable_tech_lingshi_fire_rate_only
+        }
+    }
+    option = {
+        name = "sxxtm_repeatable_tech_none"
+        policy_flags = {
+            sxxtm_repeatable_tech_none_enable
+        }
+    }
+}
+
+sxxtm_repeatable_tech_multiple = {
+    potential = {
+        is_ai = no
+        is_sxx_sect = yes
+    }
+    allow = {
+        is_ai = no
+    }
+    option = {
+        name = "sxxtm_repeatable_tech_mul_default"
+        policy_flags = {
+            sxxtm_repeatable_tech_mul_1
+        }
+    }
+    option = {
+        name = "sxxtm_repeatable_tech_mul_plus"
+        policy_flags = {
+            sxxtm_repeatable_tech_mul_5
+        }
+    }
+    option = {
+        name = "sxxtm_repeatable_tech_mul_pro"
+        policy_flags = {
+            sxxtm_repeatable_tech_mul_10
+        }
+    }
+    option = {
+        name = "sxxtm_repeatable_tech_mul_max"
+        policy_flags = {
+            sxxtm_repeatable_tech_mul_25
+        }
+    }
+    option = {
+        name = "sxxtm_repeatable_tech_mul_ultra"
+        policy_flags = {
+            sxxtm_repeatable_tech_mul_100
+        }
+    }
+    option = {
+        name = "sxxtm_repeatable_tech_mul_pro_max"
+        policy_flags = {
+            sxxtm_repeatable_tech_mul_500
+        }
+    }
+    option = {
+        name = "sxxtm_repeatable_tech_mul_pro_max_ultra"
+        policy_flags = {
+            sxxtm_repeatable_tech_mul_10000
+        }
+    }
+}

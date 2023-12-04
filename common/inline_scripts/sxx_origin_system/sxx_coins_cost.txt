@@ -1,0 +1,7 @@
+allow = {
+    custom_tooltip = {
+        fail_text = sxx_coins_not_enough
+        check_variable = { which = sxx_coins value >= $COINS$ }
+    }
+}
+sxx_change_coins = { COINS = -$COINS$ }

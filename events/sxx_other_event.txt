@@ -1,0 +1,2173 @@
+namespace = sxx_other_event
+
+############################# 尸煞 ##############################
+
+ship_event = {
+	id = sxx_other_event.10
+	title = sxx_other_event.10.name
+	desc = {
+		text = sxx_other_event.10.sect_desc
+		trigger = {
+			owner = { is_sxx_sect = yes }
+		}
+	}
+	desc = {
+		text = sxx_other_event.10.not_sect_desc
+		trigger = {
+			owner = { is_sxx_sect = no }
+		}
+	}
+	picture = GFX_evt_decryption
+	location = from
+	show_sound = event_default
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			random_list = {
+				50 = { set_planet_flag = sxx_no_zombie }
+				50 = { set_planet_flag = sxx_has_zombie }
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.10.a
+		trigger = { owner = { is_sxx_sect = yes } }
+		enable_special_project = {
+			name = "SXX_XINXIPINGBIN_PROJECT_SECT"
+			location = from
+			owner = root.owner
+		}
+	}
+
+	option = {
+		name = sxx_other_event.10.b
+		trigger = { owner = { is_sxx_sect = no } }
+		enable_special_project = {
+			name = "SXX_XINXIPINGBIN_PROJECT_NOT_SECT"
+			location = from
+			owner = root.owner
+		}
+	}
+}
+
+ship_event = {
+	id = sxx_other_event.15
+	title = sxx_other_event.15.name
+	desc = sxx_other_event.15.desc
+	picture = GFX_evt_excavation_team
+	location = fromfromfrom
+	show_sound = event_default
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfromfrom = {
+			save_event_target_as = sxx_xinxipingbi_planet
+			if = {
+				limit = {
+					has_planet_flag = sxx_has_zombie
+				}
+				random_list = {
+					50 = { set_planet_flag = sxx_yuanying_zombie }
+					50 = { set_planet_flag = sxx_huashen_zombie }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.15.a
+		hidden_effect = {
+			owner = { country_event = { id = sxx_other_event.25 days = 20 random = 10 } }
+		}
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = sxx_other_event.15.b
+		hidden_effect = {
+			owner = { country_event = { id = sxx_other_event.30 days = 20 random = 10 } }
+		}
+		
+		ai_chance = {
+			modifier = {
+				owner = { is_materialist = yes }
+				factor = 100
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = sxx_other_event.20
+	title = sxx_other_event.20.name
+	desc = sxx_other_event.20.desc
+	picture = GFX_evt_excavation_team
+	location = fromfromfrom
+	show_sound = event_default
+
+	is_triggered_only = yes
+
+	immediate = {
+		fromfromfrom = {
+			save_event_target_as = sxx_xinxipingbi_planet
+			if = {
+				limit = {
+					has_planet_flag = sxx_has_zombie
+				}
+				random_list = {
+					50 = { set_planet_flag = sxx_yuanying_zombie }
+					50 = { set_planet_flag = sxx_huashen_zombie }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.15.a
+		hidden_effect = {
+			owner = { country_event = { id = sxx_other_event.25 days = 20 random = 10 } }
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = sxx_other_event.15.b
+		hidden_effect = {
+			owner = { country_event = { id = sxx_other_event.30 days = 20 random = 10 } }
+		}
+		
+		ai_chance = {
+			modifier = {
+				owner = { is_materialist = yes }
+				factor = 100
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.25
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:sxx_xinxipingbi_planet = {
+			if = {
+				limit = {
+					has_planet_flag = sxx_has_zombie
+				}
+				create_country = {
+					name = "NAME_SXX_Event_Zombie"
+					species = random
+					type = sxx_event_hostile
+					effect = {
+						set_country_flag = sxx_event_zombie_country
+						create_fleet = {
+							name = "NAME_SXX_Event_Zombie_Fleet"
+							settings = {
+								can_upgrade = no
+								can_change_composition = no
+								can_change_leader = no
+								uses_naval_capacity = no
+								spawn_debris = no
+							}
+							effect = {
+								set_owner = prev
+								if = {
+									limit = {
+										prevprev = {
+											has_planet_flag = sxx_yuanying_zombie
+										}
+									}
+									create_ship = {
+										name = "NAME_SXX_Event_Zombie_yuanying"
+										design = "NAME_SXX_Cultivator_General"
+										effect = {
+											add_modifier = { modifier = sxx_cultivator_ship_modifier_4 }
+											set_ship_flag = sxx_event_zombie_ship
+										}
+									}
+								}
+								else_if = {
+									limit = {
+										prevprev = {
+											has_planet_flag = sxx_huashen_zombie
+										}
+									}
+									create_ship = {
+										name = "NAME_SXX_Event_Zombie_huashen"
+										design = "NAME_SXX_Cultivator_General"
+										effect = {
+											add_modifier = { modifier = sxx_cultivator_ship_modifier_5 }
+											set_ship_flag = sxx_event_zombie_ship
+										}
+									}
+								}
+								set_location = {
+									target = prevprev
+									distance = 5
+									angle = random
+								}
+								set_fleet_stance = aggressive
+								set_aggro_range = 500
+								set_aggro_range_measure_from = self
+							}
+						}
+					}
+				}
+				root = { country_event = { id = sxx_other_event.35 } }
+			}
+			else = {
+				root = { country_event = { id = sxx_other_event.40 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.30
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:sxx_xinxipingbi_planet = {
+			if = {
+				limit = {
+					has_planet_flag = sxx_has_zombie
+				}
+				root = { country_event = { id = sxx_other_event.45 } }
+			}
+			else = {
+				root = { country_event = { id = sxx_other_event.50 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.35
+	title = sxx_other_event.35.name
+	desc = {
+		text = sxx_other_event.35.sect_desc
+		trigger = {
+			owner = { is_sxx_sect = yes }
+		}
+	}
+	desc = {
+		text = sxx_other_event.35.not_sect_desc
+		trigger = {
+			owner = { is_sxx_sect = no }
+		}
+	}
+	picture = GFX_evt_zro_1
+	location = event_target:sxx_xinxipingbi_planet
+	show_sound = event_activating_unknown_technology
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = sxx_released_event_zombie
+	}
+
+	option = {
+		name = sxx_other_event.35.a
+		trigger = {
+			is_sxx_sect = yes
+		}
+	}
+
+	option = {
+		name = sxx_other_event.35.b
+		trigger = {
+			is_sxx_sect = no
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.40
+	title = sxx_other_event.40.name
+	desc = {
+		text = sxx_other_event.40.sect_desc
+		trigger = {
+			owner = { is_sxx_sect = yes }
+		}
+	}
+	desc = {
+		text = sxx_other_event.40.not_sect_desc
+		trigger = {
+			owner = { is_sxx_sect = no }
+		}
+	}
+	picture = GFX_evt_excavation_team
+	location = event_target:sxx_xinxipingbi_planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_other_event.40.a
+		trigger = {
+			is_sxx_sect = yes
+		}
+		add_resource = {
+			sxx_stones = 2000
+			sxx_pills = 500
+			sxx_gongfa = 100
+			minor_artifacts = 50
+		}
+	}
+
+	option = {
+		name = sxx_other_event.40.b
+		trigger = {
+			is_sxx_sect = no
+		}
+		add_resource = {
+			minor_artifacts = 100
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.45
+	title = sxx_other_event.45.name
+	desc = {
+		text = sxx_other_event.45.sect_desc
+		trigger = {
+			owner = { is_sxx_sect = yes }
+		}
+	}
+	desc = {
+		text = sxx_other_event.45.not_sect_desc
+		trigger = {
+			owner = { is_sxx_sect = no }
+		}
+	}
+	picture = GFX_evt_excavation_team
+	location = event_target:sxx_xinxipingbi_planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_other_event.45.a
+		trigger = {
+			is_sxx_sect = yes
+		}
+		add_resource = {
+			sxx_stones = 2000
+			sxx_pills = 500
+			minor_artifacts = 50
+		}
+
+		ai_chance = {
+			modifier = {
+				owner = { is_xenophobe = yes }
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.45.b
+		trigger = {
+			is_sxx_sect = yes
+		}
+		add_resource = {
+			sxx_stones = 2000
+			sxx_pills = 500
+			minor_artifacts = 50
+		}
+		if = {
+			limit = {
+				event_target:sxx_xinxipingbi_planet = {
+					has_planet_flag = sxx_yuanying_zombie
+				}
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_yuanying
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_yuanying set_variable = { which = sxx_pop_state value = 4 } }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:sxx_xinxipingbi_planet = {
+					has_planet_flag = sxx_huashen_zombie
+				}
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_huashen
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 } }
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = sxx_other_event.45.c
+		trigger = {
+			is_sxx_sect = no
+		}
+		add_resource = {
+			minor_artifacts = 100
+		}
+
+		ai_chance = {
+			modifier = {
+				owner = { is_xenophobe = yes }
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.45.d
+		trigger = {
+			is_sxx_sect = no
+		}
+		add_resource = {
+			minor_artifacts = 100
+		}
+		if = {
+			limit = {
+				event_target:sxx_xinxipingbi_planet = {
+					has_planet_flag = sxx_yuanying_zombie
+				}
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_yuanying
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_yuanying set_variable = { which = sxx_pop_state value = 4 } }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:sxx_xinxipingbi_planet = {
+					has_planet_flag = sxx_huashen_zombie
+				}
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_huashen
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 } }
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.50
+	title = sxx_other_event.50.name
+	desc = {
+		text = sxx_other_event.50.sect_desc
+		trigger = {
+			owner = { is_sxx_sect = yes }
+		}
+	}
+	desc = {
+		text = sxx_other_event.50.not_sect_desc
+		trigger = {
+			owner = { is_sxx_sect = no }
+		}
+	}
+	picture = GFX_evt_excavation_team
+	location = event_target:sxx_xinxipingbi_planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_other_event.50.a
+		trigger = {
+			is_sxx_sect = yes
+		}
+		add_resource = {
+			sxx_stones = 2000
+			sxx_pills = 500
+			minor_artifacts = 50
+		}
+	}
+
+	option = {
+		name = sxx_other_event.50.b
+		trigger = {
+			is_sxx_sect = yes
+		}
+		add_resource = {
+			sxx_stones = 2000
+			sxx_pills = 500
+			minor_artifacts = 50
+		}
+	}
+
+	option = {
+		name = sxx_other_event.50.c
+		trigger = {
+			is_sxx_sect = no
+		}
+		add_resource = {
+			minor_artifacts = 100
+		}
+	}
+}
+
+# 击杀尸煞
+country_event = {
+	id = sxx_other_event.60
+	title = sxx_other_event.60.name
+	desc = {
+		text = sxx_other_event.60.released_sect_desc
+		trigger = {
+			is_sxx_sect = yes
+			has_country_flag = sxx_released_event_zombie
+		}
+	}
+	desc = {
+		text = sxx_other_event.60.unreleased_sect_desc
+		trigger = {
+			is_sxx_sect = yes
+			NOT = { has_country_flag = sxx_released_event_zombie }
+		}
+	}
+	desc = {
+		text = sxx_other_event.60.released_not_sect_desc
+		trigger = {
+			is_sxx_sect = no
+			has_country_flag = sxx_released_event_zombie
+		}
+	}
+	desc = {
+		text = sxx_other_event.60.unreleased_not_sect_desc
+		trigger = {
+			is_sxx_sect = no
+			NOT = { has_country_flag = sxx_released_event_zombie }
+		}
+	}
+	picture = GFX_evt_large_explosion
+
+	is_triggered_only = yes
+
+	trigger = {
+		fromfromfrom = {
+			has_ship_flag = sxx_event_zombie_ship
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				fromfromfrom = {
+					has_modifier = sxx_cultivator_ship_modifier_4
+				}
+			}
+			set_country_flag = sxx_get_event_zombie_yuanying
+		}
+		else_if = {
+			limit = {
+				fromfromfrom = {
+					has_modifier = sxx_cultivator_ship_modifier_5
+				}
+			}
+			set_country_flag = sxx_get_event_zombie_huashen
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = sxx_get_event_zombie_yuanying
+			remove_country_flag = sxx_get_event_zombie_huashen
+		}
+	}
+
+	option = {
+		name = sxx_other_event.45.a
+		trigger = {
+			is_sxx_sect = yes
+			has_country_flag = sxx_released_event_zombie
+		}
+		add_resource = {
+			sxx_stones = 2000
+			sxx_pills = 500
+			sxx_gongfa = 100
+			minor_artifacts = 50
+		}
+
+		ai_chance = {
+			modifier = {
+				owner = { is_xenophobe = yes }
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.45.b
+		trigger = {
+			is_sxx_sect = yes
+			has_country_flag = sxx_released_event_zombie
+			exists = capital_scope
+		}
+		add_resource = {
+			sxx_stones = 2000
+			sxx_pills = 500
+			sxx_gongfa = 100
+			minor_artifacts = 50
+		}
+		if = {
+			limit = {
+				has_country_flag = sxx_get_event_zombie_yuanying
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_yuanying
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_yuanying set_variable = { which = sxx_pop_state value = 4 } }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = sxx_get_event_zombie_huashen
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_huashen
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 } }
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = sxx_other_event.45.a
+		trigger = {
+			is_sxx_sect = yes
+			NOT = { has_country_flag = sxx_released_event_zombie }
+		}
+
+		ai_chance = {
+			modifier = {
+				owner = { is_xenophobe = yes }
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.45.b
+		trigger = {
+			is_sxx_sect = yes
+			NOT = { has_country_flag = sxx_released_event_zombie }
+			exists = capital_scope
+		}
+		if = {
+			limit = {
+				has_country_flag = sxx_get_event_zombie_yuanying
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_yuanying
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_yuanying set_variable = { which = sxx_pop_state value = 4 } }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = sxx_get_event_zombie_huashen
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_huashen
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 } }
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = sxx_other_event.45.c
+		trigger = {
+			is_sxx_sect = no
+			has_country_flag = sxx_released_event_zombie
+		}
+		add_resource = {
+			minor_artifacts = 100
+		}
+
+		ai_chance = {
+			modifier = {
+				owner = { is_xenophobe = yes }
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.45.d
+		trigger = {
+			is_sxx_sect = no
+			has_country_flag = sxx_released_event_zombie
+			exists = capital_scope
+		}
+		add_resource = {
+			minor_artifacts = 100
+		}
+		if = {
+			limit = {
+				has_country_flag = sxx_get_event_zombie_yuanying
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_yuanying
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_yuanying set_variable = { which = sxx_pop_state value = 4 } }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = sxx_get_event_zombie_huashen
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_huashen
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 } }
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = sxx_other_event.45.c
+		trigger = {
+			is_sxx_sect = no
+			NOT = { has_country_flag = sxx_released_event_zombie }
+		}
+
+		ai_chance = {
+			modifier = {
+				owner = { is_xenophobe = yes }
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.45.d
+		trigger = {
+			is_sxx_sect = no
+			NOT = { has_country_flag = sxx_released_event_zombie }
+			exists = capital_scope
+		}
+		if = {
+			limit = {
+				has_country_flag = sxx_get_event_zombie_yuanying
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_yuanying
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_yuanying set_variable = { which = sxx_pop_state value = 4 } }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = sxx_get_event_zombie_huashen
+			}
+			hidden_effect = {
+				create_species = {
+					name = "NAME_SXX_Shisha"
+					class = NECROID
+					portrait = random
+					traits = {
+						trait = trait_sxx_huashen
+						trait = trait_zombie
+						trait = random_traits
+					}
+				}
+			}
+			capital_scope = {
+				custom_tooltip = sxx_create_shisha_pop_tooltip
+				hidden_effect = {
+					create_pop = {
+						species = last_created_species
+						effect = { set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 } }
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+########################## 德罗星 #################################
+
+# 入侵德罗星
+planet_event = {
+	id = sxx_other_event.100
+	hide_window = yes
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_planet_flag = sxx_douluo_planet
+		has_global_flag = game_started # 防止德罗自己触发
+	}
+
+	immediate = {
+		from = {
+			country_event = { id = sxx_other_event.105 days = 1 }
+		}
+	}
+}
+
+# 蓝银缠绕
+country_event = {
+	id = sxx_other_event.105
+	title = TRANSMISSION
+	desc = sxx_other_event.105.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = sxx_other_event.106 }
+		}
+	}
+
+	option = {
+		name = sxx_other_event.105.a
+	}
+}
+
+# 蓝银缠绕
+country_event = {
+	id = sxx_other_event.106
+	title = TRANSMISSION
+	desc = sxx_other_event.106.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = sxx_other_event.107 }
+		}
+	}
+
+	option = {
+		name = sxx_other_event.106.a
+	}
+}
+
+# 蓝银缠绕
+country_event = {
+	id = sxx_other_event.107
+	title = TRANSMISSION
+	desc = sxx_other_event.107.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = sxx_other_event.107.a
+		hidden_effect = {
+			country_event = { id = sxx_other_event.110 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = sxx_other_event.107.b
+	}
+	option = {
+		name = sxx_other_event.107.c
+	}
+}
+
+country_event = {
+	id = sxx_other_event.110
+	title = sxx_other_event.110.name
+	desc = sxx_other_event.110.desc
+	#location = event_target:beholder_planet
+	is_triggered_only = yes
+
+	event_window_type = leader_recruit
+	picture_event_data = {
+		portrait = event_target:sxx_tangsan_leader
+	}
+	picture = GFX_leader_recruitment_bg_legendary_beholder
+
+	immediate = {
+		create_country = {
+            name = "NAME_sxx_tangsan"
+            type = global_event
+            auto_delete = yes
+            flag = {
+                icon = {
+                    category = "special"
+                    file = "unknown.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                save_event_target_as = sxx_tangsan_country
+            }
+        }
+        event_target:sxx_tangsan_country = {
+			#create_species = {
+			#	name = "NAME_Unknown"
+			#	class = SXX_PARAGON
+			#	portrait = sxx_tangsan
+			#	namelist = "PRT1"
+			#	#home_world ?
+			#	traits = {
+			#		trait = trait_adaptive
+			#		trait = trait_nomadic
+			#		trait = trait_wasteful
+			#		trait = trait_sxx_douluo_god
+			#	}
+			#	effect = {
+			#		save_event_target_as = sxx_tangsan_species
+			#	}
+			#}
+			create_leader = {
+				species = event_target:sxx_douluo_god_species
+				event_leader = yes
+				class = commander
+				name = "NAME_Sxx_Tangsan"
+				skill = 7
+				immortal = yes
+				randomize_traits = no
+				#can_manually_change_location = no
+				#homeplanet = from ?
+				skip_background_generation = yes
+				background_ethic = ethic_authoritarian
+				custom_catch_phrase = sxx_tangsan_catch_phrase
+				custom_description = sxx_tangsan_backstory
+				traits = {
+					trait = leader_trait_sxx_qusi
+					trait = leader_trait_sxx_hunhuan
+					trait = leader_trait_corsair_2 # 抢夺者
+					trait = leader_trait_sxx_qiya
+					trait = leader_trait_intolerant_2 # 心胸狭隘
+					trait = leader_trait_melancholic # 郁郁寡欢
+					trait = leader_trait_tyrannical # 喜怒无常
+					trait = leader_trait_tyrannical # 飞扬跋扈
+					trait = subclass_commander_admiral
+				}
+				gender = male
+				set_age = 23333
+				#hide_age = yes
+				effect = {
+					save_global_event_target_as = sxx_tangsan_leader
+					set_leader_flag = legendary_leader
+					set_leader_flag = sxx_tangsan
+					#set_leader_flag = immune_to_negative_traits
+					set_leader_flag = leader_death_events_blocked
+					set_owner = root
+					exile_leader_as = sxx_tangsan_leader
+				}
+			}
+		}
+	}
+	
+	option = { # HIRE
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = paragon_sxx_tangsan_joins
+
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:sxx_tangsan_leader
+			}
+			last_created_leader = {
+				save_global_event_target_as = sxx_tangsan_leader
+				set_leader_flag = legendary_leader
+				set_leader_flag = sxx_tangsan
+				#set_leader_flag = immune_to_negative_traits
+				set_leader_flag = leader_death_events_blocked
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization =  MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:sxx_tangsan_leader
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:sxx_tangsan_leader
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # DISMISS
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:sxx_tangsan_leader = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.110.a
+		response_text = sxx_other_event.110.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_other_event.110.b
+		response_text = sxx_other_event.110.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_other_event.110.c
+		response_text = sxx_other_event.110.c.response
+		is_dialog_only = yes
+	}
+}
+
+########################## 诛魔剑 #################################
+
+ship_event = {
+	id = sxx_other_event.120
+	title = sxx_other_event.120.name
+	desc = sxx_other_event.120.desc
+	picture = GFX_evt_excavation_team
+	location = fromfromfrom
+	show_sound = event_default
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_other_event.120.a
+		owner = {
+			large_artifact_reward = yes
+			hidden_effect = {
+				country_event = { id = sxx_other_event.130 }
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = sxx_other_event.125
+	title = sxx_other_event.125.name
+	desc = sxx_other_event.125.desc
+	picture = GFX_evt_excavation_team
+	location = fromfromfrom
+	show_sound = event_default
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_other_event.125.a
+		owner = {
+			large_artifact_reward = yes
+			hidden_effect = {
+				country_event = { id = sxx_other_event.135 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.130
+	title = sxx_other_event.130.name
+	desc = sxx_other_event.130.desc
+	picture = GFX_evt_excavation_team
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_other_event.130.a
+		hidden_effect = {
+			country_event = { id = sxx_other_event.140 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.135
+	title = sxx_other_event.135.name
+	desc = sxx_other_event.135.desc
+	picture = GFX_evt_excavation_team
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_other_event.135.a
+		hidden_effect = {
+			country_event = { id = sxx_other_event.145 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.140
+	title = sxx_other_event.140.name
+	desc = sxx_other_event.140.desc
+	#picture = GFX_evt_psionics
+	show_sound = event_psionic
+
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = shroud1
+		room = shroud_room
+	}
+
+	option = {
+		name = sxx_other_event.140.a
+		response_text = sxx_other_event.140.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_other_event.140.b
+		response_text = sxx_other_event.140.b.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = sxx_other_event.140.c
+		response_text = sxx_other_event.140.c.response
+		add_relic = r_sxx_zhumo_sword
+
+		hidden_effect = {
+			set_country_flag = sxx_get_zhumo
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.145
+	title = sxx_other_event.145.name
+	desc = sxx_other_event.145.desc
+	#picture = GFX_evt_psionics
+	show_sound = event_psionic
+
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = shroud1
+		room = shroud_room
+	}
+
+	option = {
+		name = sxx_other_event.145.a
+		response_text = sxx_other_event.145.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_other_event.145.b
+		response_text = sxx_other_event.145.b.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = sxx_other_event.145.c
+		trigger = {
+			is_gestalt = no
+		}
+		response_text = sxx_other_event.145.c.response
+		add_relic = r_sxx_zhumo_sword
+		force_add_civic = civic_sxx_sect
+
+		hidden_effect = {
+			set_country_flag = sxx_get_zhumo
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = sxx_other_event.145.d
+		response_text = sxx_other_event.145.c.response
+		add_relic = r_sxx_zhumo_sword
+
+		hidden_effect = {
+			set_country_flag = sxx_get_zhumo
+		}
+	}
+}
+
+# 遗珍启用
+country_event = {
+	id = sxx_other_event.150
+	title = sxx_other_event.150.name
+	desc = sxx_other_event.150.desc
+	#picture = GFX_evt_psionics
+	show_sound = event_psionic
+
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = shroud1
+		room = shroud_room
+	}
+
+	trigger = {
+		has_country_flag = sxx_get_zhumo
+	}
+
+	immediate = {
+		change_variable = { which = sxx_zhumo_count value = 1 }
+	}
+
+	option = {
+		name = sxx_other_event.150.1
+		response_text = sxx_other_event.150.1.response
+		trigger = {
+			check_variable = { which = sxx_zhumo_count value >= 1 }
+		}
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_other_event.150.2
+		response_text = sxx_other_event.150.2.response
+		trigger = {
+			check_variable = { which = sxx_zhumo_count value >= 2 }
+		}
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_other_event.150.3
+		response_text = sxx_other_event.150.3.response
+		trigger = {
+			check_variable = { which = sxx_zhumo_count value >= 3 }
+		}
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_other_event.150.4
+		response_text = sxx_other_event.150.4.response
+		trigger = {
+			check_variable = { which = sxx_zhumo_count value >= 4 }
+		}
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_other_event.150.5
+		response_text = sxx_other_event.150.5.response
+		trigger = {
+			is_sxx_sect = yes
+			check_variable = { which = sxx_zhumo_count value >= 5 }
+			NOT = { has_country_flag = sxx_get_practice_22 }
+		}
+		hidden_effect = {
+			set_country_flag = sxx_get_practice_22
+		}
+	}
+	option = {
+		name = sxx_other_event.150.11
+		response_text = sxx_other_event.150.11.response
+		trigger = {
+			is_sxx_sect = no
+			is_gestalt = no
+		}
+		force_add_civic = civic_sxx_sect
+	}
+	option = {
+		name = sxx_other_event.150.12
+		response_text = sxx_other_event.150.12.response
+		trigger = {
+			is_sxx_sect = no
+		}
+	}
+
+	option = {
+		name = sxx_other_event.150.a
+		response_text = sxx_other_event.150.a.response
+		trigger = {
+			is_sxx_sect = yes
+		}
+		add_monthly_resource_mult = {
+			resource = sxx_gongfa
+			value = 60
+		}
+	}
+	option = {
+		name = sxx_other_event.150.b
+		response_text = sxx_other_event.150.b.response
+		default_hide_option = yes
+		trigger = {
+			is_sxx_sect = yes
+		}
+		capital_scope = { add_modifier = { modifier = sxx_zhumo_modifier_1 days = 1800 } }
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = sxx_other_event.150.c
+		response_text = sxx_other_event.150.c.response
+		trigger = {
+			is_sxx_sect = yes
+		}
+		capital_scope = { add_modifier = { modifier = sxx_zhumo_modifier_2 days = 1800 } }
+	}
+}
+
+country_event = {
+	id = sxx_other_event.200
+	title = sxx_other_event.200.name
+	desc = sxx_other_event.200.desc
+	picture = GFX_evt_zro_2
+	show_sound = event_the_great_awakening
+
+	is_triggered_only = yes
+
+	after = {
+		event_target:sxx_monster = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = sxx_other_event.200.a
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier2unityreward
+		}
+	}
+
+	option = {
+		name = sxx_other_event.200.b
+		trigger = {
+			is_sxx_sect = yes
+		}
+		custom_tooltip = sxx_get_practice_23_tooltip
+		hidden_effect = {
+			owner = { set_country_flag = sxx_get_practice_23 }
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+############################ 韩立 ##################################
+
+pop_event = {
+	id = sxx_other_event.250
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_cultivable_cultivator = yes
+		has_pop_flag = sxx_lianqi
+		has_pop_flag = sxx_hanli_pop
+		NOT = { has_modifier = sxx_leader_pop_modifier }
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+		owner = { is_sxx_jindan_country = yes }
+		planet = {
+			is_sxx_jindan_planet = yes
+		}
+	}
+
+	immediate = {
+		sxx_pop_set_potential_depletion = yes
+		if = {
+			limit = {
+				owner = { has_country_flag = sxx_hanli_test }
+			}
+			pop_event = { id = sxx_other_event.255 days = 1 random = 1 }
+		}
+		else = {
+			switch = {
+				trigger = has_global_flag
+				sxx_break_level_1 = { pop_event = { id = sxx_other_event.255 days = 1080 random = 360 } }
+				sxx_break_level_2 = { pop_event = { id = sxx_other_event.255 days = 2160 random = 720 } }
+				sxx_break_level_3 = { pop_event = { id = sxx_other_event.255 days = 3240 random = 1080 } }
+				sxx_break_level_4 = { pop_event = { id = sxx_other_event.255 days = 4320 random = 1440 } }
+				default = { pop_event = { id = sxx_other_event.255 days = 2160 random = 720 } }
+			}
+		}
+	}
+}
+
+pop_event = {
+	id = sxx_other_event.255
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_cultivable_cultivator = yes
+		has_pop_flag = sxx_lianqi
+		has_pop_flag = sxx_hanli_pop
+		NOT = { has_modifier = sxx_leader_pop_modifier }
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+		owner = { is_sxx_jindan_country = yes}
+		planet = {
+			is_sxx_jindan_planet = yes
+		}
+	}
+
+	immediate = {
+		sxx_pop_break_to_zhuji = yes
+		add_modifier = { modifier = sxx_hanli_modifier }
+		planet = {
+			planet_event = { id = sxx_other_event.260 days = 5 random = 30 }
+		}
+	}
+}
+
+planet_event = {
+	id = sxx_other_event.260
+	title = sxx_other_event.260.name
+	desc = sxx_other_event.260.desc
+	picture = GFX_evt_alien_segregation
+	location = root
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+		owner = { is_sxx_jindan_country = yes}
+		is_sxx_jindan_planet = yes
+		from = {
+			is_sxx_cultivable_cultivator = yes
+			has_pop_flag = sxx_zhuji
+			has_pop_flag = sxx_hanli_pop
+			NOT = { has_modifier = sxx_leader_pop_modifier }
+			is_being_purged = no
+			is_being_assimilated = no
+			is_sapient = yes
+		}
+	}
+
+	option = {
+		name = sxx_other_event.260.a
+		hidden_effect = {
+			if = {
+				limit = {
+					any_owned_pop = {
+						OR = {
+							has_pop_flag = sxx_zhuji
+							has_pop_flag = sxx_jindan
+						}
+						NOT = { is_same_value = from }
+					}
+				}
+				random_list = {
+					25 = { planet_event = { id = sxx_other_event.261 } } # 击杀
+					75 = { planet_event = { id = sxx_other_event.262 } } # 被反杀
+				}
+			}
+			else = {
+				planet_event = { id = sxx_other_event.261 }
+			}
+		}
+	}
+	option = {
+		name = sxx_other_event.260.b
+		hidden_effect = {
+			if = {
+				limit = {
+					any_owned_pop = {
+						OR = {
+							has_pop_flag = sxx_zhuji
+							has_pop_flag = sxx_jindan
+						}
+						NOT = { is_same_value = from }
+					}
+				}
+				random_list = {
+					25 = { planet_event = { id = sxx_other_event.263 } } # 击杀
+					75 = { planet_event = { id = sxx_other_event.264 } } # 被反杀
+				}
+			}
+			else = {
+				planet_event = { id = sxx_other_event.263 }
+			}
+		}
+	}
+	option = {
+		name = sxx_other_event.260.c
+		allow = {
+			from = { NOT = { has_modifier = sxx_leader_pop_modifier } }
+		}
+		hidden_effect = {
+			owner = { country_event = { id = sxx_other_event.270 } }
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = sxx_other_event.260.d
+	}
+}
+
+# 击杀
+planet_event = {
+	id = sxx_other_event.261
+	title = sxx_other_event.261.name
+	desc = sxx_other_event.261.desc
+	picture = GFX_evt_salute
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_other_event.261.a
+		fromfrom = {
+			kill_pop = yes
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2unityreward
+			}
+		}
+	}
+}
+
+# 被反杀
+planet_event = {
+	id = sxx_other_event.262
+	title = sxx_other_event.262.name
+	desc = {
+		trigger = {
+			event_target:sxx_pop_killed_by_hanli = {
+				has_pop_flag = sxx_zhuji
+			}
+		}
+		text = sxx_other_event.262.desc.zhuji
+	}
+	desc = {
+		trigger = {
+			event_target:sxx_pop_killed_by_hanli = {
+				has_pop_flag = sxx_jindan
+			}
+		}
+		text = sxx_other_event.262.desc.jindan
+	}
+	picture = GFX_evt_worrying_signal
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_pop = {
+			limit = {
+				OR = {
+					has_pop_flag = sxx_zhuji
+					has_pop_flag = sxx_jindan
+				}
+				NOT = { is_same_value = fromfrom }
+			}
+			save_event_target_as = sxx_pop_killed_by_hanli
+		}
+		fromfrom = {
+			kill_pop = yes
+		}
+	}
+
+	option = {
+		name = sxx_other_event.262.a
+		trigger = {
+			event_target:sxx_pop_killed_by_hanli = {
+				has_pop_flag = sxx_zhuji
+			}
+		}
+		event_target:sxx_pop_killed_by_hanli = {
+			kill_pop = yes
+		}
+		owner = {
+			add_resource = { unity = -1000 }
+		}
+	}
+	option = {
+		name = sxx_other_event.262.b
+		trigger = {
+			event_target:sxx_pop_killed_by_hanli = {
+				has_pop_flag = sxx_jindan
+			}
+		}
+		event_target:sxx_pop_killed_by_hanli = {
+			kill_pop = yes
+		}
+		owner = {
+			add_resource = { unity = -3000 }
+		}
+	}
+}
+
+# 击杀
+planet_event = {
+	id = sxx_other_event.263
+	title = sxx_other_event.263.name
+	desc = sxx_other_event.263.desc
+	picture = GFX_evt_salute
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_other_event.263.a
+		fromfrom = {
+			kill_pop = yes
+		}
+		owner = { add_relic = r_sxx_zhangtian_bottle }
+	}
+}
+
+# 被反杀
+planet_event = {
+	id = sxx_other_event.264
+	title = sxx_other_event.264.name
+	desc = {
+		trigger = {
+			event_target:sxx_pop_killed_by_hanli = {
+				has_pop_flag = sxx_zhuji
+			}
+		}
+		text = sxx_other_event.264.desc.zhuji
+	}
+	desc = {
+		trigger = {
+			event_target:sxx_pop_killed_by_hanli = {
+				has_pop_flag = sxx_jindan
+			}
+		}
+		text = sxx_other_event.264.desc.jindan
+	}
+	picture = GFX_evt_worrying_signal
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_pop = {
+			limit = {
+				OR = {
+					has_pop_flag = sxx_zhuji
+					has_pop_flag = sxx_jindan
+				}
+				NOT = { is_same_value = fromfrom }
+			}
+			save_event_target_as = sxx_pop_killed_by_hanli
+		}
+		fromfrom = {
+			kill_pop = yes
+		}
+	}
+
+	option = {
+		name = sxx_other_event.262.a
+		trigger = {
+			event_target:sxx_pop_killed_by_hanli = {
+				has_pop_flag = sxx_zhuji
+			}
+		}
+		event_target:sxx_pop_killed_by_hanli = {
+			kill_pop = yes
+		}
+	}
+	option = {
+		name = sxx_other_event.262.b
+		trigger = {
+			event_target:sxx_pop_killed_by_hanli = {
+				has_pop_flag = sxx_jindan
+			}
+		}
+		event_target:sxx_pop_killed_by_hanli = {
+			kill_pop = yes
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.270
+	title = sxx_other_event.270.name
+	desc = sxx_other_event.270.desc
+	location = from
+	is_triggered_only = yes
+
+	event_window_type = leader_recruit
+	picture_event_data = {
+		portrait = event_target:sxx_hanli_leader
+	}
+	picture = GFX_leader_recruitment_bg_legendary_beholder
+
+	immediate = {
+		create_country = {
+            name = "NAME_sxx_hanli"
+            type = global_event
+            auto_delete = yes
+            flag = {
+                icon = {
+                    category = "special"
+                    file = "unknown.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                save_event_target_as = sxx_hanli_country
+            }
+        }
+        event_target:sxx_hanli_country = {
+			create_leader = {
+				species = event_target:sxx_hanli_pop
+				event_leader = yes
+				class = official
+				name = "NAME_Sxx_Hanli"
+				skill = 1
+				#immortal = yes
+				randomize_traits = no
+				#can_manually_change_location = no
+				#homeplanet = from ?
+				skip_background_generation = yes
+				#background_ethic = ethic_authoritarian
+				custom_catch_phrase = sxx_hanli_catch_phrase
+				custom_description = sxx_hanli_backstory
+				traits = {
+					trait = leader_trait_sxx_zhuji
+					trait = leader_trait_sxx_zhangtian_bottle
+					trait = leader_trait_sxx_pills_saint
+					trait = leader_trait_sxx_pills_produce_2
+					trait = leader_trait_reclusive_2
+					trait = leader_trait_insider_trading
+				}
+				gender = male
+				set_age = 25
+				#hide_age = yes
+				effect = {
+					change_leader_portrait = sxx_hanli
+					save_global_event_target_as = sxx_hanli_leader
+					set_leader_flag = legendary_leader
+					set_leader_flag = sxx_hanli
+					set_leader_flag = immune_to_negative_traits
+					set_leader_flag = leader_death_events_blocked
+					set_variable = { which = sxx_leader_state value = 2 }
+					set_owner = root
+					exile_leader_as = sxx_hanli_leader
+				}
+			}
+		}
+	}
+	
+	option = { # HIRE
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = paragon_sxx_hanli_joins
+
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:sxx_hanli_leader
+			}
+			last_created_leader = {
+				change_leader_portrait = sxx_hanli
+				save_global_event_target_as = sxx_hanli_leader
+				set_leader_flag = legendary_leader
+				set_leader_flag = sxx_hanli
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = leader_death_events_blocked
+				set_leader_flag = sxx_pop_leader
+				set_variable = { which = sxx_leader_state value = 2 }
+				add_skill_without_trait_selection = owner.modifier:leader_initial_skill
+				event_target:sxx_hanli_pop = {
+					add_modifier = { modifier = sxx_leader_pop_modifier }
+					set_pop_flag = sxx_leader_pop_of@prev
+					prev = {
+						change_species = prev
+						#change_leader_portrait = species
+					}
+				}
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization =  MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:sxx_hanli_leader
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:sxx_hanli_leader
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # DISMISS
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:sxx_hanli_leader = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.270.a
+		response_text = sxx_other_event.270.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_other_event.270.b
+		response_text = sxx_other_event.270.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_other_event.270.c
+		response_text = sxx_other_event.270.c.response
+		is_dialog_only = yes
+	}
+}
+
+# 掌天瓶激活
+country_event = {
+	id = sxx_other_event.275
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		sxx_ai_get_practice_effect = { NUM = 4 GONGFA1 = 0 GONGFA2 = 0 }
+	}
+}
+
+
+# 大猫
+ship_event = {
+	id = sxx_other_event.300
+	title = sxx_other_event.300.name
+	desc = sxx_other_event.300.desc
+	picture = GFX_evt_animal_wildlife
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_sxx_sect = yes }
+	}
+
+	after = {
+		owner = {
+			add_resource = {
+				sxx_stones = 1000
+				sxx_pills = 100 # 250
+				sxx_gongfa = 50
+				minor_artifacts = 50
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.300.a
+	}
+
+	option = {
+		name = sxx_other_event.300.b
+		owner = {
+			hidden_effect = {
+				country_event = { id = sxx_other_event.305 days = 30 }
+			}
+		}
+	}
+
+	option = {
+		name = sxx_other_event.300.c
+		owner = {
+			add_resource = {
+				sxx_pills = 500
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.305
+	title = sxx_other_event.305.name
+	desc = sxx_other_event.305.desc
+	picture = GFX_evt_deficit
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_sxx_sect = yes }
+	}
+
+	after = {
+		add_resource = {
+			sxx_pills = -100
+		}
+	}
+
+	option = {
+		name = sxx_other_event.305.a
+	}
+
+	option = {
+		name = sxx_other_event.305.b
+		add_resource = {
+			sxx_pills = 500
+		}
+	}
+
+	option = {
+		name = sxx_other_event.305.c
+		custom_tooltip = sxx_other_event.305.c.tooltip
+		hidden_effect = {
+			country_event = { id = sxx_other_event.305 days = 30 random = 150 }
+		}
+	}
+}

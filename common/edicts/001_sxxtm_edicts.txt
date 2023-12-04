@@ -1,0 +1,41 @@
+add_sxx_traits_manually = {
+	length = 1
+	icon = "GFX_edict_type_time"
+
+	potential = {
+		is_ai = no
+		is_sxx_sect = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = sxxtm_event.10 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+destroy_sxx_outer_demon = {
+	length = 1
+	icon = "GFX_edict_type_time"
+
+	potential = {
+		is_ai = no
+	}
+
+	effect = {
+		hidden_effect = {
+			every_country = {
+				limit = { is_country_type = sxx_outer_demon }
+				destroy_country = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

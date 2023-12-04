@@ -1,0 +1,74 @@
+﻿l_simp_chinese:
+
+ decision_sxx_create_leader:0"招募修仙领袖"
+ decision_sxx_create_leader_desc:0"招募一个修仙者作为领袖。"
+ decision_sxx_create_leader_tooltip:0"选择星球上的一个修仙者人口，使其化身担任领袖"
+
+ sxx_leader.1.name:0"招募修仙领袖"
+ sxx_leader.1.desc:0"宗门将会挑选合适的修仙者作为领导整个宗门的领袖。为了不影响他们的正常修炼，我们将帮助其凝聚出一具身外化身来处理宗门事务。\n\n身外化身与该修士境界同步，并不具备战斗能力。若其身外化身死亡，该修士人口不受影响；若该修士人口死亡，其身外化身不会消散，但将永远无法突破境界。"
+
+ sxx_leader.5.name:0"招募[Owner.GetHeirTitle]"
+ sxx_leader.5.desc:0"宗门将会挑选合适的修仙者作为整个宗门的[Owner.GetHeirTitle]。为了不影响他的正常修炼，我们将帮助其凝聚出一具身外化身来处理宗门事务。\n\n身外化身与该修士境界同步，并不具备战斗能力。若其身外化身死亡，该修士人口不受影响；若该修士人口死亡，其身外化身不会消散，但将永远无法突破境界。"
+
+ sxx_leader.1.1:0"$sxx_trait_1$领袖"
+ sxx_leader.1.2:0"$sxx_trait_2$领袖"
+ sxx_leader.1.3:0"$sxx_trait_3$领袖"
+ sxx_leader.1.4:0"$sxx_trait_4$领袖"
+ sxx_leader.1.5:0"$sxx_trait_5$领袖"
+ sxx_leader.1.6:0"$sxx_trait_6$领袖"
+ sxx_leader.1.7:0"$sxx_trait_7$领袖"
+ sxx_leader.1.8:0"$sxx_trait_8$领袖"
+ sxx_leader.1.9:0"$sxx_trait_9$领袖"
+ sxx_leader.1.10:0"$sxx_trait_10$领袖"
+ sxx_leader.1.11:0"$sxx_trait_11$领袖"
+ sxx_leader.1.12:0"$sxx_trait_12$领袖"
+ sxx_leader.1.close:0"以后再说吧……"
+
+ sxx_leader.2.a:0"$official$"
+ sxx_leader.2.b:0"$scientist$"
+ sxx_leader.2.c:0"$commander$"
+
+ sxx_leader_pop_modifier:0"修仙领袖"
+ sxx_leader_pop_modifier_tooltip:0"这位修士正在担任宗门的领袖\n$mod_sxx_planet_jobs_sxx_speed_2_produces_mult$：§G+250%§!\n$mod_sxx_planet_jobs_sxx_break_success_chance_produces_mult$：§G+5%§!\n修仙者人口产生的$SXX_STONES_UPKEEP$：§R+0.5§!"
+
+ MESSAGE_SXX_LINGMAI_UPGRADED_TITLE:0 "灵脉进阶完毕"
+ MESSAGE_SXX_LINGMAI_UPGRADED_1:0 "$PLANET|Y$上的一座§Y下品灵脉§!已经进阶为§Y中品灵脉§!"
+ MESSAGE_SXX_LINGMAI_UPGRADED_2:0 "$PLANET|Y$上的一座§Y中品灵脉§!已经进阶为§Y上品灵脉§!"
+
+ NAME_Sxx_Tangsan:0"唐三"
+ paragon_sxx_tangsan_joins:1 "§Y$NAME_Sxx_Tangsan$§!作为一名§H领袖§!加入你的帝国"
+ sxx_tangsan_catch_phrase:0 "§L“海神唐三在此，宗主有何命令？”§!"
+ sxx_tangsan_backstory:1 "前世为唐门外门弟子，因偷学内门绝学，为唐门所不容，跳崖自尽，却来到了另一个世界——德罗大陆。成神后传承海神与修罗神双神位，成为了德罗神界委员会五大神王之一。"
+
+ NAME_Sxx_Hanli:0"韩立"
+ paragon_sxx_hanli_joins:1 "§Y$NAME_Sxx_Hanli$§!作为一名§H领袖§!加入你的帝国"
+ sxx_hanli_catch_phrase:0 "§L“感谢宗主赏识，韩某愿为宗门效力。”§!"
+ sxx_hanli_backstory:1 "韩立出身乡野，相貌普通，皮肤黝黑。在升仙台上检测出拥有一点点修仙资质，被升仙台执事勉强批准加入我门。在练气中期就已潜力耗尽，但不知为何在不长的时间内修为突破至筑基，被提拔为领袖。"
+
+ edict_sxx_duoshe:0"夺舍秘法"
+ edict_sxx_duoshe_desc:0"没有修仙资质的领袖可以在宗门的帮助下施展夺舍秘法，占据拥有修仙资质的肉体。原肉身将由分魂掌控，视为身外化身。"
+ effect_edict_sxx_duoshe:0"使一位凡人领袖获得对应的修仙人口"
+
+ sxx_leader.50.name:0"夺舍秘法"
+ sxx_leader.50.desc:0"没有修仙资质的领袖可以在宗门的帮助下施展夺舍秘法，占据拥有修仙资质的肉体。原肉身将由分魂掌控，视为身外化身。\n\n凡人修仙乃是逆天改命，制造出的肉身将会遭受天劫，故每5年才能有一具这样的肉体在天劫下幸存可供夺舍。"
+ sxx_leader.50.1:0"[sxx_leader_1.GetName]"
+ sxx_leader.50.2:0"[sxx_leader_2.GetName]"
+ sxx_leader.50.3:0"[sxx_leader_3.GetName]"
+ sxx_leader.50.4:0"[sxx_leader_4.GetName]"
+ sxx_leader.50.5:0"[sxx_leader_5.GetName]"
+ sxx_leader.50.a:0"再想想"
+ sxx_leader.50.tooltip:0"在首都创建该领袖对应的练气期人口"
+
+ edict_sxx_nizhuan:0"气运：逆转时光"
+ edict_sxx_nizhuan_desc:0"修为达到地仙（仙王）对时空法则的掌控已经达到一定程度，他们甚至可以追溯时光长河，将已死亡的凡人的灵魂从过去转移到现在并重塑肉身，实现复活。"
+ effect_edict_sxx_nizhuan:0"复活一位失联的领袖对应的人口"
+
+ sxx_leader.55.name:0"逆转时光"
+ sxx_leader.55.desc:0"修为达到地仙（仙王）对时空法则的掌控已经达到一定程度，他们甚至可以追溯时光长河，将已死亡的凡人的灵魂从过去转移到现在并重塑肉身，实现复活——不过也许有些东西会在追溯时光的过程中遗失。\n\n从无垠时光长河中追溯特定的人需要定位，只有留下化身的领袖才能依靠紧密的因果联系来确定位置实现复活。"
+ sxx_leader.55.1:0"[sxx_leader_1.GetName]"
+ sxx_leader.55.2:0"[sxx_leader_2.GetName]"
+ sxx_leader.55.3:0"[sxx_leader_3.GetName]"
+ sxx_leader.55.4:0"[sxx_leader_4.GetName]"
+ sxx_leader.55.5:0"[sxx_leader_5.GetName]"
+ sxx_leader.55.a:0"再想想"
+ sxx_leader.55.tooltip:0"在首都创建该领袖对应的人口"

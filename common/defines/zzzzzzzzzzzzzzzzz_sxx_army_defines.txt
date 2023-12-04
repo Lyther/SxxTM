@@ -1,0 +1,28 @@
+NShip = {
+	MILITARY_POWER_HEALTH_WEIGHT				= 0.00009155	# vanilla 0.5
+	MILITARY_POWER_ARMOR_WEIGHT					= 0.5			# vanilla 1 	compared to health
+	MILITARY_POWER_SHIELD_WEIGHT				= 0.5			# vanilla 1 	compared to health
+	MILITARY_POWER_DAMAGE_WEIGHT				= 0.00009155	# vanilla 0.5
+	MILITARY_POWER_SCALE						= 9432.93 		# vanilla 0.25
+	MILITARY_POWER_EXPONENT						= 0.539			# vanilla 0.65
+	MILITARY_POWER_ARMOR_PENETRATION_WEIGHT 	= 0.5			# vanilla 0.5 	larger value = adds more military power
+	MILITARY_POWER_SHIELD_PENETRATION_WEIGHT	= 0.5			# vanilla 0.5
+	MILITARY_POWER_HULL_DAMAGE_WEIGHT 			= 0.33			# vanilla 0.33
+	MILITARY_POWER_ARMOR_DAMAGE_WEIGHT 			= 0.33			# vanilla 0.33
+	MILITARY_POWER_SHIELD_DAMAGE_WEIGHT			= 0.33			# vanilla 0.33
+	MILITARY_POWER_TRACKING_WEIGHT 				= -0.5			# vanilla -0.5 	at 0% tracking
+	MILITARY_POWER_RANGE_DIV 					= 100			# vanilla 100 	smaller value = adds more military power
+	MILITARY_POWER_MISSILE_MULT 				= 0.75			# vanilla 0.75 	overall military power of missiles is lowered due to being vulnerable to PD
+	MILITARY_POWER_PD_MULT 						= 1.15			# vanilla 1.15 	overall military power of PD is increased to compensate for relatively bad DPS/range
+	MILITARY_POWER_SIZE_MULTIPLIER_WEIGHT 		= 4.0 			# vanilla 4.0 increase the expected DPS and military power for weapons with size multipliers as if they're fighting this
+}
+
+NArmy = {
+	ARMY_MILITARY_POWER_SCALE					= 1980.50625 	# 0.25
+	ARMY_MILITARY_POWER_EXPONENT				= 0.65 			# 0.65	# math: power = ( ( effective_health * damage_per_day ) ^ exponent ) * scale
+	ARMY_MILITARY_POWER_DAMAGE_MULT				= 0.001 		# 1
+	ARMY_MILITARY_POWER_MORALE_DAMAGE_MULT		= 0.0005 		# 0.5
+	ARMY_MILITARY_POWER_HEALTH_MULT				= 0.001 		# 1
+	ARMY_MILITARY_POWER_MORALE_MULT 			= 0.0005 		# 0.5
+	ARMY_MILITARY_POWER_NO_MORALE_FACTOR		= 3
+}

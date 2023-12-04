@@ -1,0 +1,50 @@
+﻿l_simp_chinese:
+
+ tech_sxx_planetary_array:0"行星级阵法"
+ tech_sxx_planetary_array_desc:0"通过庞大而复杂的阵纹连接，最终我们能够将阵法覆盖整颗星球。"
+ unlock_sxx_planet_array:0"£building£ §Y$building_sxx_zongmen$§!将提供£job_sxx_array_master£§Y$job_sxx_array_master_plural$§!岗位\n§H解锁行星阵法：§!聚灵阵"
+
+ sxx_array_juling:0"行星阵法：聚灵阵"
+ sxx_array_juling_desc:0"汇聚宇宙中天地灵气的行星阵法，可以增加星球上的灵气浓度，加快修炼速度。"
+
+ tech_sxx_array_huzong:0"护宗大阵"
+ tech_sxx_array_huzong_desc:0"将遍布全球的特定防御阵纹同时激发，可以构建出一个笼罩全球的灵力护罩。"
+ unlock_sxx_array_huzong:0"§H解锁行星阵法：§!护宗大阵"
+
+ sxx_array_huzong:0"行星阵法：护宗大阵"
+ sxx_array_huzong_desc:0"笼罩行星表面的大阵，可以隔绝外来的攻击。"
+
+ tech_sxx_array_yangchun:0"阳春阵"
+ tech_sxx_array_yangchun_desc:0"通过研究万灵生机的奥秘，我们可以通过阵法激发阳春之力。"
+ unlock_sxx_array_yangchun:0"§H解锁行星阵法：§!阳春阵"
+
+ sxx_array_yangchun:0"行星阵法：阳春阵"
+ sxx_array_yangchun_desc:0"阵法运转产生阳春之力，可以使星球焕发无限生机。"
+
+ tech_sxx_array_ningshen:0"凝神阵"
+ tech_sxx_array_ningshen_desc:0"通过研究阵法对识海的影响，我们可以用阵法刺激识海，使其更加专注。"
+ unlock_sxx_array_ningshen:0"§H解锁行星阵法：§!凝神阵"
+
+ sxx_array_ningshen:0"行星阵法：凝神阵"
+ sxx_array_ningshen_desc:0"阵法波动影响识海，使人更加专注。"
+
+ tech_sxx_array_dihuo:0"地火阵"
+ tech_sxx_array_dihuo_desc:0"我们可以通过大阵引动星球地火。"
+ unlock_sxx_array_dihuo:0"§H解锁行星阵法：§!地火阵"
+
+ sxx_array_dihuo:0"行星阵法：地火阵"
+ sxx_array_dihuo_desc:0"大阵引出地火，增加炼丹炼器效率。"
+
+ decision_sxx_array:0"行星阵法"
+ decision_sxx_array_desc:0"这是覆盖整个星球的阵法。"
+ decision_sxx_array_tooltip:0"设置§Y行星阵法§!"
+ sxx_planet_array_event_ongoing_tooltip:0"§R正在设置行星阵法§!"
+
+ sxx_event.120.name:0"$decision_sxx_array$"
+ sxx_event.120.desc:0"我们将重新设置我们的行星阵法。\n\n行星阵法的效果与星球上的§Y$mod_sxx_array_strength_add$§!成正比。"
+ sxx_event.120.a:0"聚灵阵"
+ sxx_event.120.b:0"护宗大阵"
+ sxx_event.120.c:0"阳春阵"
+ sxx_event.120.d:0"凝神阵"
+ sxx_event.120.e:0"地火阵"
+ sxx_event.120.close:0"以后再说"

@@ -1,0 +1,796 @@
+pop_sxx_remove_xiuxian_flag_and_trait = {
+	remove_pop_flag = sxx_lianqi
+	remove_pop_flag = sxx_zhuji
+	remove_pop_flag = sxx_jindan
+	remove_pop_flag = sxx_yuanying
+	remove_pop_flag = sxx_huashen
+	remove_pop_flag = sxx_lianxu
+	remove_pop_flag = sxx_heti
+	remove_pop_flag = sxx_dacheng
+	remove_pop_flag = sxx_dujie
+	remove_pop_flag = sxx_zhenxian
+	remove_pop_flag = sxx_xianwang
+	remove_pop_flag = sxx_xiandi
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_lianqi
+		remove_trait = trait_sxx_zhuji
+		remove_trait = trait_sxx_jindan
+		remove_trait = trait_sxx_yuanying
+		remove_trait = trait_sxx_huashen
+		remove_trait = trait_sxx_lianxu
+		remove_trait = trait_sxx_heti
+		remove_trait = trait_sxx_dacheng
+		remove_trait = trait_sxx_dujie
+		remove_trait = trait_sxx_zhenxian
+		remove_trait = trait_sxx_xianwang
+		remove_trait = trait_sxx_xiandi
+	}
+}
+
+sxx_pop_set_potential_depletion = {
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_ai = yes }
+		}
+		add_modifier = { modifier = sxx_pop_potential_depletion }
+		if = {
+			limit = {
+				owner = { has_country_flag = add_trait_sxx_potential_depletion }
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_sxx_potential_depletion
+			}
+		}
+		set_pop_flag = sxx_potential_depletion
+	}
+}
+
+sxx_pop_remove_potential_depletion = {
+	remove_modifier = sxx_pop_potential_depletion
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_potential_depletion
+	}
+	remove_pop_flag = sxx_potential_depletion
+}
+
+sxx_pop_become_zombie = {
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_ai = yes }
+		}
+		modify_species = {
+			species = this
+			add_trait = trait_zombie
+			remove_trait = trait_sxx_linggen
+		}
+	}
+	else = {
+		modify_species = {
+			species = this
+			remove_trait = trait_sxx_linggen
+		}
+	}
+	sxx_pop_remove_potential_depletion = yes
+}
+
+sxx_pop_become_zombie_or_be_killed = {
+	if = {
+		limit = {
+			sxx_pop_can_become_zombie = yes
+		}	
+		sxx_pop_become_zombie = yes
+	}
+	else = {
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_ai = yes }
+			}
+			kill_pop = yes
+		}
+	}
+}
+
+sxx_pop_die_and_become_yuhuaxian_if_possible = {
+	if = {
+		limit = {
+			owner = {
+				has_origin = origin_sxx_yuhua
+			}
+			has_trait = trait_sxx_linggen
+			sxx_pop_is_not_under_huashen = yes
+			is_sxx_fairy_pop = no
+		}
+		planet = { create_pop = { species = event_target:sxx_yuhua_species_of@owner } }
+		last_created_pop = {
+			pop_sxx_remove_xiuxian_flag_and_trait = yes # 有时候不执行，现在应该修好了
+			modify_species = { species = this remove_trait = trait_sxx_template }
+			prev = {
+				switch = {
+					trigger = has_pop_flag
+					sxx_huashen = {
+						prev = {
+							set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 }
+							modify_species = {
+								species = this
+								add_trait = trait_sxx_huashen
+							}
+						}
+					}
+					sxx_lianxu = {
+						prev = {
+							set_pop_flag = sxx_lianxu set_variable = { which = sxx_pop_state value = 6 }
+							modify_species = {
+								species = this
+								add_trait = trait_sxx_lianxu
+							}
+						}
+					}
+					sxx_heti = {
+						prev = {
+							set_pop_flag = sxx_heti set_variable = { which = sxx_pop_state value = 7 }
+							modify_species = {
+								species = this
+								add_trait = trait_sxx_heti
+							}
+						}
+					}
+					sxx_dacheng = {
+						prev = {
+							set_pop_flag = sxx_dacheng set_variable = { which = sxx_pop_state value = 8 }
+							modify_species = {
+								species = this
+								add_trait = trait_sxx_dacheng
+							}
+						}
+					}
+				}
+			}
+		}
+		owner = { country_event = { id = sxx_origin.7 } }
+	}
+	sxx_pop_become_zombie_or_be_killed = yes
+}
+
+sxx_pop_down_state = {
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_ai = yes }
+		}
+		set_variable = { which = sxx_pop_xp value = 0 }
+		if = {
+			limit = {
+				has_trait = trait_sxx_yuhua
+			}
+			switch = {
+				trigger = has_pop_flag
+				sxx_lianxu = {
+					remove_pop_flag = sxx_lianxu
+					set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_lianxu
+						add_trait = trait_sxx_huashen
+					}
+				}
+				sxx_heti = {
+					remove_pop_flag = sxx_heti
+					set_pop_flag = sxx_lianxu set_variable = { which = sxx_pop_state value = 6 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_heti
+						add_trait = trait_sxx_lianxu
+					}
+				}
+				sxx_dacheng = {
+					remove_pop_flag = sxx_dacheng
+					set_pop_flag = sxx_heti set_variable = { which = sxx_pop_state value = 7 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_dacheng
+						add_trait = trait_sxx_heti
+					}
+				}
+				sxx_dujie = {
+					remove_pop_flag = sxx_dujie
+					set_pop_flag = sxx_dacheng set_variable = { which = sxx_pop_state value = 8 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_dujie
+						add_trait = trait_sxx_dacheng
+					}
+				}
+				default = {
+					sxx_pop_die_and_become_yuhuaxian_if_possible = yes
+				}
+			}
+		}
+		else = {
+			switch = {
+				trigger = has_pop_flag
+				sxx_zhuji = {
+					remove_pop_flag = sxx_zhuji
+					set_pop_flag = sxx_lianqi set_variable = { which = sxx_pop_state value = 1 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zhuji
+						add_trait = trait_sxx_lianqi
+					}
+				}
+				sxx_jindan = {
+					remove_pop_flag = sxx_jindan
+					set_pop_flag = sxx_zhuji set_variable = { which = sxx_pop_state value = 2 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_jindan
+						add_trait = trait_sxx_zhuji
+					}
+				}
+				sxx_yuanying = {
+					remove_pop_flag = sxx_yuanying
+					set_pop_flag = sxx_jindan set_variable = { which = sxx_pop_state value = 3 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_yuanying
+						add_trait = trait_sxx_jindan
+					}
+				}
+				sxx_huashen = {
+					remove_pop_flag = sxx_huashen
+					set_pop_flag = sxx_yuanying set_variable = { which = sxx_pop_state value = 4 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_huashen
+						add_trait = trait_sxx_yuanying
+					}
+				}
+				sxx_lianxu = {
+					remove_pop_flag = sxx_lianxu
+					set_pop_flag = sxx_huashen set_variable = { which = sxx_pop_state value = 5 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_lianxu
+						add_trait = trait_sxx_huashen
+					}
+				}
+				sxx_heti = {
+					remove_pop_flag = sxx_heti
+					set_pop_flag = sxx_lianxu set_variable = { which = sxx_pop_state value = 6 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_heti
+						add_trait = trait_sxx_lianxu
+					}
+				}
+				sxx_dacheng = {
+					remove_pop_flag = sxx_dacheng
+					set_pop_flag = sxx_heti set_variable = { which = sxx_pop_state value = 7 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_dacheng
+						add_trait = trait_sxx_heti
+					}
+				}
+				sxx_dujie = {
+					remove_pop_flag = sxx_dujie
+					set_pop_flag = sxx_dacheng set_variable = { which = sxx_pop_state value = 8 }
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_dujie
+						add_trait = trait_sxx_dacheng
+					}
+				}
+				default = {
+					sxx_pop_become_zombie_or_be_killed = yes
+				}
+			}
+		}
+	}
+}
+
+sxx_new_cultivator_spawn_effect = {
+	set_timed_pop_flag = { flag = sxx_new_cultivator days = 62 } # 刚创建岗位权重读不出修正？用flag控制
+	sxx_pop_break_to_lianqi = yes
+	if = {
+		limit = {
+			owner = {
+				has_edict = sxx_more_special_body
+			}
+		}
+		random_list = {
+			10 = {
+				add_modifier = { modifier = sxx_honglianjingti } planet = { planet_event = { id = sxx_break.150 days = 1 random = 29 } }
+			}
+			100 = {
+				random_list = {
+					10 = { add_modifier = { modifier = sxx_xiantiandaoti } planet = { planet_event = { id = sxx_break.160 days = 1 random = 29 } } }
+					10 = { add_modifier = { modifier = sxx_ziyanglingti } planet = { planet_event = { id = sxx_break.165 days = 1 random = 29 } } }
+					10 = { add_modifier = { modifier = sxx_liulishenti } planet = { planet_event = { id = sxx_break.170 days = 1 random = 29 } } }
+					10 = { add_modifier = { modifier = sxx_huanggushengti } planet = { planet_event = { id = sxx_break.175 days = 1 random = 29 } } }
+				}
+			}
+			99890 = {}
+		}
+	}
+	else = {
+		random_list = {
+			1 = {
+				add_modifier = { modifier = sxx_honglianjingti } planet = { planet_event = { id = sxx_break.150 days = 1 random = 29 } }
+			}
+			10 = {
+				random_list = {
+					10 = { add_modifier = { modifier = sxx_xiantiandaoti } planet = { planet_event = { id = sxx_break.160 days = 1 random = 29 } } }
+					10 = { add_modifier = { modifier = sxx_ziyanglingti } planet = { planet_event = { id = sxx_break.165 days = 1 random = 29 } } }
+					10 = { add_modifier = { modifier = sxx_liulishenti } planet = { planet_event = { id = sxx_break.170 days = 1 random = 29 } } }
+					10 = { add_modifier = { modifier = sxx_huanggushengti } planet = { planet_event = { id = sxx_break.175 days = 1 random = 29 } } }
+				}
+			}
+			99989 = {}
+		}
+	}
+
+	if = {
+		limit = {
+			planet = { has_modifier = sxx_add_linggen_modifier }
+			is_sxx_cultivable = yes
+			NOT = { has_trait = trait_sxx_kuilei }
+		}
+		modify_species = {
+			species = this
+			add_trait = trait_sxx_linggen
+		}
+	}
+	if = {
+		limit = {
+			NOT = { has_global_flag = sxx_hanli_has_spawned }
+			is_sxx_special_body = no
+			owner = { is_ai = no }
+			planet = {
+				is_sxx_jindan_planet = yes
+				is_sxx_lianxu_planet = no
+			}
+		}
+		random_list = {
+			50 = {
+				set_global_flag = sxx_hanli_has_spawned
+				set_pop_flag = sxx_hanli_pop
+				set_pop_flag = sxx_pop_cannot_reborn
+				save_global_event_target_as = sxx_hanli_pop
+				if = {
+					limit = {
+						owner = { has_country_flag = sxx_hanli_test }
+					}
+					pop_event = { id = sxx_other_event.250 days = 1 random = 1 }
+				}
+				else = {
+					pop_event = { id = sxx_other_event.250 days = 180 random = 180 }
+				}
+			}
+			9950 = {
+				modifier = {
+					factor = 0
+					owner = { has_country_flag = sxx_hanli_test }
+				}
+			}
+		}
+	}
+}
+
+sxx_pop_may_spawn_cultivator = {
+	switch = {
+		trigger = is_pop_category
+		ruler = {
+			if = {
+				limit = {
+					has_modifier = sxx_pop_recently_spawned_cultivator
+				}
+				random_list = {
+					99 = {}
+					1 = {
+						remove_modifier = sxx_pop_recently_spawned_cultivator
+						add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+						planet = {
+							create_pop = {
+								species = prev
+								effect = { sxx_new_cultivator_spawn_effect = yes }
+							}
+						}
+					}
+				}
+			}
+			else = {
+				add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+				planet = {
+					create_pop = {
+						species = prev
+						effect = { sxx_new_cultivator_spawn_effect = yes }
+					}
+				}
+			}
+		}
+		specialist = {
+			random_list = {
+				40 = {}
+				60 = {
+					if = {
+						limit = {
+							has_modifier = sxx_pop_recently_spawned_cultivator
+						}
+						random_list = {
+							99 = {}
+							1 = {
+								remove_modifier = sxx_pop_recently_spawned_cultivator
+								add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+								planet = {
+									create_pop = {
+										species = prev
+										effect = { sxx_new_cultivator_spawn_effect = yes }
+									}
+								}
+							}
+						}
+					}
+					else = {
+						add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+						planet = {
+							create_pop = {
+								species = prev
+								effect = { sxx_new_cultivator_spawn_effect = yes }
+							}
+						}
+					}
+				}
+			}
+		}
+		worker = {
+			random_list = {
+				80 = {}
+				20 = {
+					if = {
+						limit = {
+							has_modifier = sxx_pop_recently_spawned_cultivator
+						}
+						random_list = {
+							99 = {}
+							1 = {
+								remove_modifier = sxx_pop_recently_spawned_cultivator
+								add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+								planet = {
+									create_pop = {
+										species = prev
+										effect = { sxx_new_cultivator_spawn_effect = yes }
+									}
+								}
+							}
+						}
+					}
+					else = {
+						add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+						planet = {
+							create_pop = {
+								species = prev
+								effect = { sxx_new_cultivator_spawn_effect = yes }
+							}
+						}
+					}
+				}
+			}
+		}
+		default = {
+			random_list = {
+				90 = {}
+				10 = {
+					if = {
+						limit = {
+							has_modifier = sxx_pop_recently_spawned_cultivator
+						}
+						random_list = {
+							99 = {}
+							1 = {
+								remove_modifier = sxx_pop_recently_spawned_cultivator
+								add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+								planet = {
+									create_pop = {
+										species = prev
+										effect = { sxx_new_cultivator_spawn_effect = yes }
+									}
+								}
+							}
+						}
+					}
+					else = {
+						add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+						planet = {
+							create_pop = {
+								species = prev
+								effect = { sxx_new_cultivator_spawn_effect = yes }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+sxx_vassal_pop_may_spawn_cultivator = {
+	switch = {
+		trigger = is_pop_category
+		ruler = {
+			if = {
+				limit = {
+					has_modifier = sxx_pop_recently_spawned_cultivator
+				}
+				random_list = {
+					99 = {}
+					1 = {
+						remove_modifier = sxx_pop_recently_spawned_cultivator
+						add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+						root.overlord.capital_scope = {
+							create_pop = {
+								species = prev
+								effect = { sxx_new_cultivator_spawn_effect = yes }
+							}
+						}
+					}
+				}
+			}
+			else = {
+				add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+				root.overlord.capital_scope = {
+					create_pop = {
+						species = prev
+						effect = { sxx_new_cultivator_spawn_effect = yes }
+					}
+				}
+			}
+		}
+		specialist = {
+			random_list = {
+				40 = {}
+				60 = {
+					if = {
+						limit = {
+							has_modifier = sxx_pop_recently_spawned_cultivator
+						}
+						random_list = {
+							99 = {}
+							1 = {
+								remove_modifier = sxx_pop_recently_spawned_cultivator
+								add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+								root.overlord.capital_scope = {
+									create_pop = {
+										species = prev
+										effect = { sxx_new_cultivator_spawn_effect = yes }
+									}
+								}
+							}
+						}
+					}
+					else = {
+						add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+						root.overlord.capital_scope = {
+							create_pop = {
+								species = prev
+								effect = { sxx_new_cultivator_spawn_effect = yes }
+							}
+						}
+					}
+				}
+			}
+		}
+		worker = {
+			random_list = {
+				80 = {}
+				20 = {
+					if = {
+						limit = {
+							has_modifier = sxx_pop_recently_spawned_cultivator
+						}
+						random_list = {
+							99 = {}
+							1 = {
+								remove_modifier = sxx_pop_recently_spawned_cultivator
+								add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+								root.overlord.capital_scope = {
+									create_pop = {
+										species = prev
+										effect = { sxx_new_cultivator_spawn_effect = yes }
+									}
+								}
+							}
+						}
+					}
+					else = {
+						add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+						root.overlord.capital_scope = {
+							create_pop = {
+								species = prev
+								effect = { sxx_new_cultivator_spawn_effect = yes }
+							}
+						}
+					}
+				}
+			}
+		}
+		default = {
+			random_list = {
+				90 = {}
+				10 = {
+					if = {
+						limit = {
+							has_modifier = sxx_pop_recently_spawned_cultivator
+						}
+						random_list = {
+							99 = {}
+							1 = {
+								remove_modifier = sxx_pop_recently_spawned_cultivator
+								add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+								root.overlord.capital_scope = {
+									create_pop = {
+										species = prev
+										effect = { sxx_new_cultivator_spawn_effect = yes }
+									}
+								}
+							}
+						}
+					}
+					else = {
+						add_modifier = { modifier = sxx_pop_recently_spawned_cultivator days = 3600 }
+						root.overlord.capital_scope = {
+							create_pop = {
+								species = prev
+								effect = { sxx_new_cultivator_spawn_effect = yes }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+sxx_pop_xueji_effect = {
+	if = {
+		limit = {
+			planet = { count_owned_pop = { count > 1 } }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+			}
+			switch = {
+				trigger = has_pop_flag
+				sxx_lianqi = { planet = { change_variable = { which = sxx_evil_break_count value = 0.1 } } }
+				sxx_zhuji = { planet = { change_variable = { which = sxx_evil_break_count value = 0.2 } } }
+				sxx_jindan = { planet = { change_variable = { which = sxx_evil_break_count value = 0.4 } } }
+				sxx_yuanying = { planet = { change_variable = { which = sxx_evil_break_count value = 0.8 } } }
+				sxx_huashen = { planet = { change_variable = { which = sxx_evil_break_count value = 1.6 } } }
+				sxx_lianxu = { planet = { change_variable = { which = sxx_evil_break_count value = 3.2 } } }
+				sxx_heti = { planet = { change_variable = { which = sxx_evil_break_count value = 6.4 } } }
+				sxx_dacheng = { planet = { change_variable = { which = sxx_evil_break_count value = 12.8 } } }
+				sxx_dujie = { planet = { change_variable = { which = sxx_evil_break_count value = 25.6 } } }
+				default = { planet = { change_variable = { which = sxx_evil_break_count value = 0.2 } } }
+			}
+		}
+		else_if = {
+			limit = {
+				has_trait = trait_zombie
+			}
+			switch = {
+				trigger = has_pop_flag
+				sxx_lianqi = { planet = { change_variable = { which = sxx_evil_break_count value = 0.5 } } }
+				sxx_zhuji = { planet = { change_variable = { which = sxx_evil_break_count value = 1 } } }
+				sxx_jindan = { planet = { change_variable = { which = sxx_evil_break_count value = 2 } } }
+				sxx_yuanying = { planet = { change_variable = { which = sxx_evil_break_count value = 4 } } }
+				sxx_huashen = { planet = { change_variable = { which = sxx_evil_break_count value = 8 } } }
+				sxx_lianxu = { planet = { change_variable = { which = sxx_evil_break_count value = 16 } } }
+				sxx_heti = { planet = { change_variable = { which = sxx_evil_break_count value = 32 } } }
+				sxx_dacheng = { planet = { change_variable = { which = sxx_evil_break_count value = 64 } } }
+				sxx_dujie = { planet = { change_variable = { which = sxx_evil_break_count value = 128 } } }
+				default = { planet = { change_variable = { which = sxx_evil_break_count value = 1 } } }
+			}
+		}
+		else = {
+			switch = {
+				trigger = has_pop_flag
+				sxx_lianqi = { planet = { change_variable = { which = sxx_evil_break_count value = 1 } } }
+				sxx_zhuji = { planet = { change_variable = { which = sxx_evil_break_count value = 2 } } }
+				sxx_jindan = { planet = { change_variable = { which = sxx_evil_break_count value = 4 } } }
+				sxx_yuanying = { planet = { change_variable = { which = sxx_evil_break_count value = 8 } } }
+				sxx_huashen = { planet = { change_variable = { which = sxx_evil_break_count value = 16 } } }
+				sxx_lianxu = { planet = { change_variable = { which = sxx_evil_break_count value = 32 } } }
+				sxx_heti = { planet = { change_variable = { which = sxx_evil_break_count value = 64 } } }
+				sxx_dacheng = { planet = { change_variable = { which = sxx_evil_break_count value = 128 } } }
+				sxx_dujie = { planet = { change_variable = { which = sxx_evil_break_count value = 256 } } }
+				default = { planet = { change_variable = { which = sxx_evil_break_count value = 2 } } }
+			}
+		}
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_ai = yes }
+			}
+			kill_pop = yes
+		}
+	}
+}
+
+sxx_add_pop_little_state_modidier_effect = {
+	if = {
+		limit = {
+			is_sxx_fairy_pop = no
+		}
+		if = {
+			limit = {
+				check_variable = { which = sxx_pop_xp value <= value:sxx_pop_max_xp_percent_get|PER|0.3| }
+			}
+			add_modifier = { modifier = sxx_pop_state_show_$STATE$_1 days = 30 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_pop_xp value <= value:sxx_pop_max_xp_percent_get|PER|0.6| }
+			}
+			add_modifier = { modifier = sxx_pop_state_show_$STATE$_2 days = 30 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_pop_xp value <= value:sxx_pop_max_xp_percent_get|PER|0.9| }
+			}
+			add_modifier = { modifier = sxx_pop_state_show_$STATE$_3 days = 30 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_pop_xp value < value:sxx_pop_max_xp_percent_get|PER|1| }
+			}
+			add_modifier = { modifier = sxx_pop_state_show_$STATE$_4 days = 30 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_pop_xp value = value:sxx_pop_max_xp_percent_get|PER|1| }
+			}
+			add_modifier = { modifier = sxx_pop_state_show_$STATE$_5 days = 30 }
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				check_variable = { which = sxx_fairy_pop_xp value <= value:sxx_pop_max_xp_percent_get|PER|0.3| }
+			}
+			add_modifier = { modifier = sxx_pop_state_show_$STATE$_1 days = 30 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_fairy_pop_xp value <= value:sxx_pop_max_xp_percent_get|PER|0.6| }
+			}
+			add_modifier = { modifier = sxx_pop_state_show_$STATE$_2 days = 30 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_fairy_pop_xp value <= value:sxx_pop_max_xp_percent_get|PER|0.9| }
+			}
+			add_modifier = { modifier = sxx_pop_state_show_$STATE$_3 days = 30 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_fairy_pop_xp value < value:sxx_pop_max_xp_percent_get|PER|1| }
+			}
+			add_modifier = { modifier = sxx_pop_state_show_$STATE$_4 days = 30 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_fairy_pop_xp value = value:sxx_pop_max_xp_percent_get|PER|1| }
+			}
+			add_modifier = { modifier = sxx_pop_state_show_$STATE$_5 days = 30 }
+		}
+	}
+}

@@ -1,0 +1,859 @@
+# 概率触发效果，随修正变化
+# 修正上下限：-100% ~ (CHANCE2/CHANCE1)%
+sxx_chance_happen_effect = {
+	random_list = {
+		$CHANCE1$ = {
+			$EFFECT$ = yes
+			modifier = {
+				add = value:sxx_chance_add|CHANCE1|$CHANCE1$|CHANCE2|$CHANCE2$|MODIFIER|$MODIFIER$|
+			}
+		}
+		$CHANCE2$ = {
+			modifier = {
+				add = value:sxx_chance_subtract|CHANCE1|$CHANCE1$|CHANCE2|$CHANCE2$|MODIFIER|$MODIFIER$|
+			}
+		}
+	}
+}
+
+# 概率触发效果，随修正变化
+# 修正上下限：-100% ~ (CHANCE2/CHANCE1)%
+sxx_chance_happen_effect_2 = {
+	random_list = {
+		$CHANCE1$ = {
+			$EFFECT1$ = yes
+			modifier = {
+				add = value:sxx_chance_add|CHANCE1|$CHANCE1$|CHANCE2|$CHANCE2$|MODIFIER|$MODIFIER$|
+			}
+		}
+		$CHANCE2$ = {
+			$EFFECT2$ = yes
+			modifier = {
+				add = value:sxx_chance_subtract|CHANCE1|$CHANCE1$|CHANCE2|$CHANCE2$|MODIFIER|$MODIFIER$|
+			}
+		}
+	}
+}
+
+sxx_test_add_variable_1_effect = {
+	owner = {
+		change_variable = {
+			which = sxx_test_v
+			value = 1
+		}
+	}
+}
+
+sxx_test_ex = {
+	every_owned_pop = {
+		set_variable = {
+			which = sxx_test_v_add
+			value = value:sxx_chance_add_test|MODIFIER|sxx_break_die_chance_upkeep_mult|
+		}
+		set_variable = {
+			which = sxx_test_v_sub
+			value = value:sxx_chance_subtract_test|MODIFIER|sxx_break_die_chance_upkeep_mult|
+		}
+	}
+}
+
+sxx_test_die = {
+	random_owned_pop = {
+		sxx_chance_happen_effect = { EFFECT = sxx_test_add_variable_1_effect CHANCE1 = 500 CHANCE2 = 500 MODIFIER = sxx_break_die_chance_upkeep_mult }
+	}
+}
+
+sxx_test_die_1 = {
+	sxx_chance_happen_effect = { EFFECT = sxx_test_add_variable_1_effect CHANCE1 = 500 CHANCE2 = 500 MODIFIER = sxx_break_die_chance_upkeep_mult }
+}
+
+sxx_remove_xiuxian_trait = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_lianqi
+		remove_trait = trait_sxx_zhuji
+		remove_trait = trait_sxx_jindan
+		remove_trait = trait_sxx_yuanying
+		remove_trait = trait_sxx_huashen
+		remove_trait = trait_sxx_lianxu
+		remove_trait = trait_sxx_heti
+		remove_trait = trait_sxx_dacheng
+		remove_trait = trait_sxx_dujie
+		remove_trait = trait_sxx_zhenxian
+		remove_trait = trait_sxx_xianwang
+		remove_trait = trait_sxx_xiandi
+	}
+}
+
+sxx_species_break_to_lianqi = {
+	modify_species = {
+		species = this
+		add_trait = trait_sxx_lianqi
+	}
+}
+
+sxx_species_break_to_zhuji = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_lianqi
+		add_trait = trait_sxx_zhuji
+	}
+}
+
+sxx_species_break_to_jindan = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_zhuji
+		add_trait = trait_sxx_jindan
+	}
+}
+
+sxx_species_break_to_yuanying = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_jindan
+		add_trait = trait_sxx_yuanying
+	}
+}
+
+sxx_species_break_to_huashen = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_yuanying
+		add_trait = trait_sxx_huashen
+	}
+}
+
+sxx_species_break_to_lianxu = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_huashen
+		add_trait = trait_sxx_lianxu
+	}
+}
+
+sxx_species_break_to_heti = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_lianxu
+		add_trait = trait_sxx_heti
+	}
+}
+
+sxx_species_break_to_dacheng = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_heti
+		add_trait = trait_sxx_dacheng
+	}
+}
+
+sxx_species_break_to_dujie = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_dacheng
+		add_trait = trait_sxx_dujie
+	}
+}
+
+sxx_species_break_to_zhenxian = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_dujie
+		add_trait = trait_sxx_zhenxian
+	}
+}
+
+sxx_species_break_to_xianwang = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_zhenxian
+		add_trait = trait_sxx_xianwang
+	}
+}
+
+sxx_species_break_to_xiandi = {
+	modify_species = {
+		species = this
+		remove_trait = trait_sxx_xianwang
+		add_trait = trait_sxx_xiandi
+	}
+}
+
+sxx_owned_pop_reborn_effect = {
+	every_owned_pop = {
+		limit = {
+			is_sxx_potential_depletion = yes
+			is_sxx_cultivable_cultivator = yes
+			NOR = {
+				has_trait = trait_sxx_kuilei
+				has_pop_flag = sxx_pop_cannot_reborn
+			}
+		}
+		switch = {
+			trigger = has_pop_flag
+			sxx_lianqi = { sxx_reborn_effect = { LEVEL = 1 MULT = 1 } }
+			sxx_zhuji = { sxx_reborn_effect = { LEVEL = 2 MULT = 2 } }
+			sxx_jindan = { sxx_reborn_effect = { LEVEL = 3 MULT = 4 } }
+			sxx_yuanying = { sxx_reborn_effect = { LEVEL = 4 MULT = 8 } }
+			sxx_huashen = { sxx_reborn_effect = { LEVEL = 5 MULT = 16 } }
+			sxx_lianxu = { sxx_reborn_effect = { LEVEL = 6 MULT = 32 } }
+			sxx_heti = { sxx_reborn_effect = { LEVEL = 7 MULT = 64 } }
+			sxx_dacheng = { sxx_reborn_effect = { LEVEL = 8 MULT = 128 } }
+			sxx_dujie = { sxx_reborn_effect = { LEVEL = 9 MULT = 256 } }
+		}
+	}
+}
+
+add_sxx_kuilei_species = {
+	if = {
+		limit = {
+			has_valid_civic = civic_sxx_kuilei
+			has_built_species = no
+		}
+		create_built_robot_species = yes
+	}
+}
+
+give_sxx_huashen_techs = {
+	give_technology = { tech = tech_sxx_lingshi_weapon_1 }
+	give_technology = { tech = tech_sxx_lingshi_weapon_2 }
+	give_technology = { tech = tech_sxx_lingshi_weapon_3 }
+	give_technology = { tech = tech_sxx_lingshi_weapon_4 }
+	give_technology = { tech = tech_sxx_lingshi_weapon_5 }
+	give_technology = { tech = tech_sxx_liandanfang_1 }
+	give_technology = { tech = tech_sxx_liandanfang_2 }
+	give_technology = { tech = tech_sxx_lianqishi_1 }
+	give_technology = { tech = tech_sxx_lianqishi_2 }
+	give_technology = { tech = tech_sxx_stones_plant_1 }
+	give_technology = { tech = tech_sxx_stones_plant_2 }
+	give_technology = { tech = tech_sxx_stones_making_1 }
+	give_technology = { tech = tech_sxx_stones_making_2 }
+	give_technology = { tech = tech_sxx_stones_making_3 }
+	give_technology = { tech = tech_sxx_pills_making_1 }
+	give_technology = { tech = tech_sxx_weapon_refining_1 }
+	give_technology = { tech = tech_sxx_gene_template }
+	give_technology = { tech = tech_sxx_xumi_1 }
+	give_technology = { tech = tech_sxx_xumi_2 }
+	give_technology = { tech = tech_sxx_stones_machine_1 }
+	give_technology = { tech = tech_sxx_stones_machine_2 }
+	give_technology = { tech = tech_sxx_stones_machine_3 }
+	give_technology = { tech = tech_sxx_stones_energy_plant }
+	give_technology = { tech = tech_sxx_lingyao }
+	give_technology = { tech = tech_sxx_pills_processing_center }
+}
+
+sxx_star_eye_active_effect = {
+	if = {
+		limit = { is_ai = yes }
+		every_owned_pop = {
+			if = {
+				limit = {
+					is_sxx_fairy_pop = yes # 仙人
+				}
+				random_list = {
+					1 = { kill_pop = yes modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+					99 = {
+						random_list = {
+							50 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_g_1 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_g_2 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_g_3 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							50 = {}
+						}
+						random_list = {
+							50 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_f_1 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_f_2 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_f_3 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							50 = {}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_variable_set = sxx_pop_state # 修仙者
+				}
+				random_list = {
+					2 = { sxx_pop_die_and_become_yuhuaxian_if_possible = yes modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+					98 = {
+						random_list = {
+							10 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_g_1 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_g_2 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_g_3 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							100 = {}
+						}
+						random_list = {
+							10 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_c_1 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_2 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_3 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							100 = {}
+						}
+						random_list = {
+							10 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_c_4 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_5 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_6 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							100 = {}
+						}
+						random_list = {
+							10 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_c_7 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_8 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_9 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							100 = {}
+						}
+						random_list = {
+							10 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_c_10 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_11 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_12 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							100 = {}
+						}
+						random_list = {
+							10 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_c_13 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_14 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_15 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							100 = {}
+						}
+						random_list = {
+							10 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_c_16 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_17 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_18 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							100 = {}
+						}
+						random_list = {
+							10 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_c_19 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_20 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_21 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							100 = {}
+						}
+						random_list = {
+							10 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_c_22 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_23 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_24 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							100 = {}
+						}
+						random_list = {
+							10 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_c_25 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_26 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_27 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							100 = {}
+						}
+						random_list = {
+							10 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_c_28 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_29 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_c_30 days = 3600 } modifier = { factor = 0 has_modifier = sxx_practice_modifier_23_1_0 } }
+								}
+							}
+							100 = {}
+						}
+					}
+				}
+			}
+			else = { # 凡人（有玄君的国家凡人仍会受到深渊一瞥的负面影响）
+				random_list = {
+					4 = { kill_pop = yes }
+					96 = {
+						random_list = {
+							50 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_g_1 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_g_2 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_g_3 days = 3600 } }
+								}
+							}
+							50 = {}
+						}
+						random_list = {
+							50 = {
+								random_list = {
+									20 = { add_modifier = { modifier = sxx_star_eye_modifier_m_1 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_m_2 days = 3600 } }
+									40 = { add_modifier = { modifier = sxx_star_eye_modifier_m_3 days = 3600 } }
+								}
+							}
+							50 = {}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+sxx_ship_unassign_one_ship_fleet_leader = {
+	if = {
+		limit = {
+			fleet = {
+				exists = leader
+				count_owned_ship = { count = 1 }
+			}
+		}
+		fleet.leader = { unassign_leader = this }
+	}
+}
+
+sxx_collector_surrenders_artifact = {
+	if = {
+		limit = { has_event_chain = "sxx_precursor1_chain" }
+		add_event_chain_counter = {
+			event_chain = "sxx_precursor1_chain"
+			counter = "sxx_precursor1_artifacts"
+			amount = 1
+		}
+		hidden_effect = {
+			country_event = { id = sxx_precursor.97 }
+		}
+		break = yes
+	}
+	if = {
+		limit = { has_event_chain = "sxx_precursor2_chain" }
+		add_event_chain_counter = {
+			event_chain = "sxx_precursor2_chain"
+			counter = "sxx_precursor2_artifacts"
+			amount = 1
+		}
+		hidden_effect = {
+			country_event = { id = sxx_precursor.297 }
+		}
+		break = yes
+	}
+	if = {
+		limit = { has_event_chain = "sxx_precursor3_chain" }
+		add_event_chain_counter = {
+			event_chain = "sxx_precursor3_chain"
+			counter = "sxx_precursor3_artifacts"
+			amount = 1
+		}
+		hidden_effect = {
+			country_event = { id = sxx_precursor.497 }
+		}
+		break = yes
+	}
+	if = {
+		limit = { has_event_chain = "sxx_precursor4_chain" }
+		add_event_chain_counter = {
+			event_chain = "sxx_precursor4_chain"
+			counter = "sxx_precursor4_artifacts"
+			amount = 1
+		}
+		hidden_effect = {
+			country_event = { id = sxx_precursor.697 }
+		}
+		break = yes
+	}
+	if = {
+		limit = { has_event_chain = "sxx_precursor5_chain" }
+		add_event_chain_counter = {
+			event_chain = "sxx_precursor5_chain"
+			counter = "sxx_precursor5_artifacts"
+			amount = 1
+		}
+		hidden_effect = {
+			country_event = { id = sxx_precursor.897 }
+		}
+		break = yes
+	}
+}
+
+spawn_sxx_precursor1_anomaly = {
+	random_system_within_border = {
+		limit = {
+			has_star_flag = sxx_precursor_1
+			any_system_planet = {
+				uninhabitable_regular_planet = yes
+				NOT = { has_planet_flag = precursor_world }
+				has_owner = no
+				has_anomaly = no
+				is_surveyed = {
+					who = root
+					status = yes
+				}
+			}
+		}
+		random_system_planet = {
+			limit = {
+				uninhabitable_regular_planet = yes
+				NOT = { has_planet_flag = precursor_world }
+				has_owner = no
+				has_anomaly = no
+				is_surveyed = {
+					who = root
+					status = yes
+				}
+			}
+			save_event_target_as = sxx_precursor_planet
+			set_planet_flag = precursor_world
+			enable_special_project = {
+				name = "SXX_PRECURSOR1_ARTIFACT_FOUND"
+				location = this
+				owner = root
+			}
+		}
+	}
+	set_country_flag = ongoing_sxx_precursor_artifact
+}
+
+spawn_sxx_precursor2_anomaly = {
+	random_system_within_border = {
+		limit = {
+			has_star_flag = sxx_precursor_2
+			any_system_planet = {
+				uninhabitable_regular_planet = yes
+				NOT = { has_planet_flag = precursor_world }
+				has_owner = no
+				has_anomaly = no
+				is_surveyed = {
+					who = root
+					status = yes
+				}
+			}
+		}
+		random_system_planet = {
+			limit = {
+				uninhabitable_regular_planet = yes
+				NOT = { has_planet_flag = precursor_world }
+				has_owner = no
+				has_anomaly = no
+				is_surveyed = {
+					who = root
+					status = yes
+				}
+			}
+			save_event_target_as = sxx_precursor_planet
+			set_planet_flag = precursor_world
+			enable_special_project = {
+				name = "SXX_PRECURSOR2_ARTIFACT_FOUND"
+				location = this
+				owner = root
+			}
+		}
+	}
+	set_country_flag = ongoing_sxx_precursor_artifact
+}
+
+spawn_sxx_precursor3_anomaly = {
+	random_system_within_border = {
+		limit = {
+			has_star_flag = sxx_precursor_3
+			any_system_planet = {
+				uninhabitable_regular_planet = yes
+				NOT = { has_planet_flag = precursor_world }
+				has_owner = no
+				has_anomaly = no
+				is_surveyed = {
+					who = root
+					status = yes
+				}
+			}
+		}
+		random_system_planet = {
+			limit = {
+				uninhabitable_regular_planet = yes
+				NOT = { has_planet_flag = precursor_world }
+				has_owner = no
+				has_anomaly = no
+				is_surveyed = {
+					who = root
+					status = yes
+				}
+			}
+			save_event_target_as = sxx_precursor_planet
+			set_planet_flag = precursor_world
+			enable_special_project = {
+				name = "SXX_PRECURSOR3_ARTIFACT_FOUND"
+				location = this
+				owner = root
+			}
+		}
+	}
+	set_country_flag = ongoing_sxx_precursor_artifact
+}
+
+spawn_sxx_precursor4_anomaly = {
+	random_system_within_border = {
+		limit = {
+			has_star_flag = sxx_precursor_4
+			any_system_planet = {
+				uninhabitable_regular_planet = yes
+				NOT = { has_planet_flag = precursor_world }
+				has_owner = no
+				has_anomaly = no
+				is_surveyed = {
+					who = root
+					status = yes
+				}
+			}
+		}
+		random_system_planet = {
+			limit = {
+				uninhabitable_regular_planet = yes
+				NOT = { has_planet_flag = precursor_world }
+				has_owner = no
+				has_anomaly = no
+				is_surveyed = {
+					who = root
+					status = yes
+				}
+			}
+			save_event_target_as = sxx_precursor_planet
+			set_planet_flag = precursor_world
+			enable_special_project = {
+				name = "SXX_PRECURSOR4_ARTIFACT_FOUND"
+				location = this
+				owner = root
+			}
+		}
+	}
+	set_country_flag = ongoing_sxx_precursor_artifact
+}
+
+spawn_sxx_precursor5_anomaly = {
+	random_system_within_border = {
+		limit = {
+			has_star_flag = sxx_precursor_5
+			any_system_planet = {
+				uninhabitable_regular_planet = yes
+				NOT = { has_planet_flag = precursor_world }
+				has_owner = no
+				has_anomaly = no
+				is_surveyed = {
+					who = root
+					status = yes
+				}
+			}
+		}
+		random_system_planet = {
+			limit = {
+				uninhabitable_regular_planet = yes
+				NOT = { has_planet_flag = precursor_world }
+				has_owner = no
+				has_anomaly = no
+				is_surveyed = {
+					who = root
+					status = yes
+				}
+			}
+			save_event_target_as = sxx_precursor_planet
+			set_planet_flag = precursor_world
+			enable_special_project = {
+				name = "SXX_PRECURSOR5_ARTIFACT_FOUND"
+				location = this
+				owner = root
+			}
+		}
+	}
+	set_country_flag = ongoing_sxx_precursor_artifact
+}
+
+sxx_jieyun_start = {
+	if = {
+		limit = {
+			NOT = { has_modifier = sxx_jieyun }
+		}
+		star = {
+			create_ambient_object = {
+				type = "space_storm_1"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_ambient_object_flag = sxx_jieyun_object
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}
+		add_modifier = { modifier = sxx_jieyun }
+		system_event = { id = sxx_event.300 days = 30 }
+	}
+}
+
+sxx_jieyun_end = {
+	random_system_ambient_object = {
+		limit = { has_ambient_object_flag = sxx_jieyun_object }
+		destroy_ambient_object = this
+	}
+	remove_modifier = sxx_jieyun
+}
+
+############################ 异界联军 #############################
+
+sxx_create_other_world_intruder_fleet_1 = {
+	event_target:sxx_other_world_intruder_country = {
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = random
+			skill = 10
+			immortal = yes
+			traits = {
+				trait = leader_trait_sxx_dujie
+				#trait = leader_trait_sxx_zhanzhen
+				trait = leader_trait_corsair_3 # 抢夺者
+				trait = subclass_commander_admiral
+			}
+		}
+	}
+	last_created_leader = {
+		set_variable = { which = sxx_leader_state value = 9 }
+		random_list = {
+			10 = { set_age = 1653 }
+			10 = { set_age = 1437 }
+			10 = { set_age = 1286 }
+			10 = { set_age = 1142 }
+			10 = { set_age = 1139 }
+			10 = { set_age = 1058 }
+			10 = { set_age = 1015 }
+			10 = { set_age = 984 }
+			10 = { set_age = 942 }
+			10 = { set_age = 921 }
+		}
+	}
+	create_fleet = {
+		name = "NAME_SXX_Other_World_Intruder_Fleet_1"
+		settings = {
+			can_upgrade = no
+			can_change_composition = no
+			can_change_leader = no
+			uses_naval_capacity = no
+			spawn_debris = no
+		}
+		effect = {
+			set_owner = event_target:sxx_other_world_intruder_country
+			create_ship = {
+				name = "NAME_SXX_Ship_dujie"
+				design = "NAME_SXX_Cultivator_dujie"
+				effect = {
+					add_modifier = { modifier = sxx_cultivator_ship_modifier_9 }
+				}
+			}
+			while = {
+				count = 9
+				create_ship = {
+					name = "NAME_SXX_Ship_dacheng"
+					design = "NAME_SXX_Cultivator_dacheng"
+					effect = {
+						add_modifier = { modifier = sxx_cultivator_ship_modifier_8 }
+					}
+				}
+			}
+			assign_leader = last_created_leader
+			set_location = {
+				target = event_target:sxx_other_world_intruder_astral_rift
+				distance = 5
+				angle = random
+			}
+		}
+	}
+}
+
+sxx_create_other_world_intruder_fleet_2 = {
+	event_target:sxx_other_world_intruder_country = {
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = random
+			skill = 10
+			immortal = yes
+			traits = {
+				trait = leader_trait_sxx_dujie
+				trait = leader_trait_sxx_zhanzhen
+				trait = leader_trait_corsair_3 # 抢夺者
+				trait = subclass_commander_admiral
+			}
+		}
+	}
+	last_created_leader = {
+		set_variable = { which = sxx_leader_state value = 9 }
+		random_list = {
+			10 = { set_age = 2653 }
+			10 = { set_age = 2437 }
+			10 = { set_age = 2286 }
+			10 = { set_age = 2142 }
+			10 = { set_age = 2139 }
+			10 = { set_age = 2058 }
+			10 = { set_age = 2015 }
+			10 = { set_age = 1984 }
+			10 = { set_age = 1942 }
+			10 = { set_age = 1921 }
+		}
+	}
+	create_fleet = {
+		name = "NAME_SXX_Other_World_Intruder_Fleet_2"
+		settings = {
+			can_upgrade = no
+			can_change_composition = no
+			can_change_leader = no
+			uses_naval_capacity = no
+			spawn_debris = no
+		}
+		effect = {
+			set_owner = event_target:sxx_other_world_intruder_country
+			while = {
+				count = 36
+				create_ship = {
+					name = "NAME_SXX_Ship_dujie"
+					design = "NAME_SXX_Cultivator_dujie"
+					effect = {
+						add_modifier = { modifier = sxx_cultivator_ship_modifier_9 }
+					}
+				}
+			}
+			assign_leader = last_created_leader
+			set_location = {
+				target = event_target:sxx_other_world_intruder_astral_rift
+				distance = 5
+				angle = random
+			}
+		}
+	}
+}

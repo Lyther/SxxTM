@@ -1,0 +1,74 @@
+trigger = {
+	owner = { is_sxx_$STATE$_country = yes }
+}
+allow = {
+	owner = {
+		any_owned_pop = {
+			has_pop_flag = sxx_$STATE$
+			is_sxx_cultivable_cultivator = yes
+			NOT = { has_modifier = sxx_leader_pop_modifier }
+			has_citizenship_rights = yes
+		}
+	}
+}
+hidden_effect = {
+	owner = {
+		random_owned_pop = {
+			limit = {
+				has_pop_flag = sxx_$STATE$
+				is_sxx_cultivable_cultivator = yes
+				NOT = { has_modifier = sxx_leader_pop_modifier }
+				has_citizenship_rights = yes
+			}
+			weights = {
+				base = 100
+				modifier = {
+					factor = 0.01
+					is_sxx_potential_depletion = yes
+				}
+				modifier = {
+					factor = 3
+					has_job_category = sxx_xiuxianzhe_3
+				}
+				modifier = {
+					factor = 2
+					has_job_category = sxx_xiuxianzhe_2
+				}
+				modifier = {
+					factor = 0.5
+					has_job_category = sxx_xiuxianzhe_4
+				}
+				modifier = {
+					factor = 1.5
+					is_same_species = owner_main_species
+				}
+				modifier = {
+					factor = 5
+					is_sxx_special_body = yes
+				}
+			}
+			save_event_target_as = sxx_selected_leader_pop
+			switch = {
+				trigger = has_pop_flag
+				sxx_lianqi = { root = { set_variable = { which = sxx_leader_state value = 1 } leader_add_sxx_state_trait = { STATE = lianqi } } } 
+				sxx_zhuji = { root = { set_variable = { which = sxx_leader_state value = 2 } leader_add_sxx_state_trait = { STATE = zhuji } } } 
+				sxx_jindan = { root = { set_variable = { which = sxx_leader_state value = 3 } leader_add_sxx_state_trait = { STATE = jindan } } }
+				sxx_yuanying = { root = { set_variable = { which = sxx_leader_state value = 4 } leader_add_sxx_state_trait = { STATE = yuanying } } }
+				sxx_huashen = { root = { set_variable = { which = sxx_leader_state value = 5 } leader_add_sxx_state_trait = { STATE = huashen } } }
+				sxx_lianxu = { root = { set_variable = { which = sxx_leader_state value = 6 } leader_add_sxx_state_trait = { STATE = lianxu } } }
+				sxx_heti = { root = { set_variable = { which = sxx_leader_state value = 7 } leader_add_sxx_state_trait = { STATE = heti } } }
+				sxx_dacheng = { root = { set_variable = { which = sxx_leader_state value = 8 } leader_add_sxx_state_trait = { STATE = dacheng } } }
+				sxx_dujie = { root = { set_variable = { which = sxx_leader_state value = 9 } leader_add_sxx_state_trait = { STATE = dujie } } }
+				sxx_zhenxian = { root = { set_variable = { which = sxx_leader_state value = 10 } leader_add_sxx_state_trait = { STATE = zhenxian } } }
+				sxx_xianwang = { root = { set_variable = { which = sxx_leader_state value = 11 } leader_add_sxx_state_trait = { STATE = xianwang } } }
+				sxx_xiandi = { root = { set_variable = { which = sxx_leader_state value = 12 } leader_add_sxx_state_trait = { STATE = xiandi } } }
+			}
+			add_modifier = { modifier = sxx_leader_pop_modifier }
+			set_pop_flag = sxx_leader_pop_of@root
+		}
+	}
+	set_leader_flag = sxx_pop_leader
+	change_species = event_target:sxx_selected_leader_pop
+	change_leader_portrait = species
+	sxx_special_leader_effect = yes
+}

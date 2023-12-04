@@ -1,0 +1,41 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_sxx_pills_master }
+	}
+	modifier = {
+		job_sxx_pills_maker_add = $COUNT$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		planet = { is_capital = yes }
+		exists = owner
+		owner = { has_valid_civic = civic_sxx_pills_master }
+	}
+	modifier = {
+		job_sxx_pills_maker_add = $COUNT$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_sxx_weapon_master }
+	}
+	modifier = {
+		job_sxx_weapon_refiner_add = $COUNT$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		planet = { is_capital = yes }
+		exists = owner
+		owner = { has_valid_civic = civic_sxx_weapon_master }
+	}
+	modifier = {
+		job_sxx_weapon_refiner_add = $COUNT$
+	}
+}

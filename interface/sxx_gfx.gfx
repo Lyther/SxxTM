@@ -1,0 +1,813 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_edict_type_sxx_xiuxian"
+		textureFile = "gfx/interface/icons/resources/sxx_xiuxian.dds"
+	}
+	spriteType = {
+		name = "GFX_edict_type_sxx_qiyun"
+		textureFile = "gfx/interface/icons/resources/sxx_qiyun.dds"
+	}
+
+	############################# 领袖特质 ###################################
+	spriteType = {
+		name = "GFX_leader_trait_sxx_lianqi"
+		texturefile = "gfx/interface/icons/traits/trait_sxx_lianqi.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_zhuji"
+		texturefile = "gfx/interface/icons/traits/trait_sxx_zhuji.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_jindan"
+		texturefile = "gfx/interface/icons/traits/trait_sxx_jindan.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_yuanying"
+		texturefile = "gfx/interface/icons/traits/trait_sxx_yuanying.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_huashen"
+		texturefile = "gfx/interface/icons/traits/trait_sxx_huashen.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_lianxu"
+		texturefile = "gfx/interface/icons/traits/trait_sxx_lianxu.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_heti"
+		texturefile = "gfx/interface/icons/traits/trait_sxx_heti.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_dacheng"
+		texturefile = "gfx/interface/icons/traits/trait_sxx_dacheng.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_dujie"
+		texturefile = "gfx/interface/icons/traits/trait_sxx_dujie.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_sxx_lost_connection_with_body"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_lost_connection_with_body.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_to_fairy"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_to_fairy.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_guanli"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_guanli.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_xianlu"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_xianlu.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_juejing"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_juejing.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_jiangdao"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_jiangdao.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_pills_saint"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_pills_saint.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_weapon_saint"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_weapon_saint.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_lingmai"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_lingmai.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_lianbao"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_lianbao.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_kexue"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_kexue.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_zhanzhen"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_zhanzhen.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_huanshu"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_huanshu.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_gongfa_produce"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_gongfa_produce.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_pills_produce"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_pills_produce.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_weapon_produce"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_weapon_produce.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_daoshi"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_daoshi.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_stones_mine"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_stones_mine.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_stones_make"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_stones_make.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_zhendao"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_zhendao.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_kuilei"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_kuilei.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_wuchi"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_wuchi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_sxx_qusi"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_qusi.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_hunhuan"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_hunhuan.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_qiya"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_qiya.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_zhangtian_bottle"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_zhangtian_bottle.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_sxx_old"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/sxx_old.dds"
+	}
+
+	############################################################################
+
+	##### 议程 #####
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_sxx_gongfa"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_sxx_gongfa.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_sxx_cultivation"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_sxx_cultivation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_evt_sxx_feishengchengxian"
+		texturefile = "gfx/event_pictures/sxx_feishengchengxian.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_sxx_lidichengxian"
+		texturefile = "gfx/event_pictures/sxx_lidichengxian.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_sxx_blessed_spot"
+		texturefile = "gfx/event_pictures/sxx_blessed_spot.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_sxx_heaven"
+		texturefile = "gfx/event_pictures/sxx_heaven.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_sxx_demon_seal"
+		texturefile = "gfx/event_pictures/sxx_demon_seal.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_relic_sxx_sword_fragment"
+		texturefile = "gfx/interface/icons/relics/r_sxx_sword_fragment.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_relic_sxx_zhumo_sword"
+		texturefile = "gfx/interface/icons/relics/r_sxx_zhumo_sword.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_relic_sxx_hunyuan_pot"
+		texturefile = "gfx/interface/icons/relics/r_sxx_hunyuan_pot.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_relic_sxx_sword_tomb"
+		texturefile = "gfx/interface/icons/relics/r_sxx_sword_tomb.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_relic_sxx_array_disk"
+		texturefile = "gfx/interface/icons/relics/r_sxx_array_disk.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_relic_sxx_star_eye"
+		texturefile = "gfx/interface/icons/relics/r_sxx_star_eye.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_relic_sxx_zhangtian_bottle"
+		texturefile = "gfx/interface/icons/relics/r_sxx_zhangtian_bottle.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_relic_sxx_sphere"
+		texturefile = "gfx/interface/icons/relics/r_sxx_sphere.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_relic_sxx_crystal"
+		texturefile = "gfx/interface/icons/relics/r_sxx_crystal.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_relic_sxx_cube"
+		texturefile = "gfx/interface/icons/relics/r_sxx_cube.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_colony_type_sxx_stones"
+		texturefile = "gfx/interface/planetview/colony_type_sxx_stones.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_capital_sxx_stones"
+		texturefile = "gfx/interface/planetview/colony_type_capital_sxx_stones.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_sxx_gongfa"
+		texturefile = "gfx/interface/planetview/colony_type_sxx_gongfa.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_capital_sxx_gongfa"
+		texturefile = "gfx/interface/planetview/colony_type_capital_sxx_gongfa.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_capital_sxx_lingyao"
+		texturefile = "gfx/interface/planetview/colony_type_capital_sxx_lingyao.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_sxx_heaven"
+		textureFile = "gfx/interface/planetview/colony_type_sxx_heaven.dds"
+	}
+
+	spriteType = {
+		name = "GFX_diplomacy_sxx_sub_sect"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_sxx_sub_sect.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ap_sxx_ascend_to_fairyland"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_sxx_ascend_to_fairyland.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_sxx_build_heaven"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_sxx_build_heaven.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_sxx_robot_cultivable"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_sxx_robot_cultivable.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_sxx_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_shield"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_weapon_s"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_weapon_s.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_weapon_m"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_weapon_m.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_weapon_l"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_weapon_l.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_pd"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_pd.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_fairy_beam"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_fairy_beam.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_fairy_lance"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_fairy_lance.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_fairy_aura"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_fairy_aura.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_ship_sml"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_ship_sml.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_ship_lance"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_ship_lance.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_ship_beam"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_ship_beam.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sxx_ship_pd"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sxx_ship_pd.dds"
+	}
+
+	spriteType = {
+		name = "GFX_wg_sxx_evil"
+		texturefile = "gfx/interface/icons/diplomacy/diplomatic_rival_mutual_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_wg_sxx_anti_evil"
+		texturefile = "gfx/interface/icons/diplomacy/diplomatic_rival_mutual_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_wg_sxx_fe1_humiliation"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_opinion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_origin_sxx_cultivator_family"
+		texturefile = "gfx/event_pictures/origins/origin_sxx_cultivator_family.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_sxx_yuanying"
+		texturefile = "gfx/event_pictures/origins/origin_sxx_yuanying.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_sxx_yuhua"
+		texturefile = "gfx/event_pictures/origins/origin_sxx_yuhua.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_sxx_abandoned_by_god"
+		texturefile = "gfx/event_pictures/origins/origin_sxx_abandoned_by_god.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_sxx_heaven_fall"
+		texturefile = "gfx/event_pictures/origins/origin_sxx_heaven_fall.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_sxx_system"
+		texturefile = "gfx/event_pictures/origins/origin_sxx_system.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_origin_sxx_invincible"
+		texturefile = "gfx/event_pictures/origins/origin_sxx_invincible.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_resource_sxx_stones"
+		textureFile = "gfx/interface/icons/resources/sxx_stones.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_sxx_stones_large"
+		textureFile = "gfx/interface/icons/resources/sxx_stones_large.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_sxx_pills"
+		textureFile = "gfx/interface/icons/resources/sxx_pills.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_sxx_pills_large"
+		textureFile = "gfx/interface/icons/resources/sxx_pills_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_planet_modifier_ground_support_sxx_ground_army"
+		sprite_sheet_sprite_type = "GFX_planet_view_bombarded"
+		default_frame = 1
+	}
+
+	spriteType = {
+		name = "GFX_sxx_star_furnace_0_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/sxx_star_furnace.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_star_furnace_1_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/sxx_star_furnace.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_star_furnace_2_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/sxx_star_furnace.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_star_furnace_3_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/sxx_star_furnace.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_star_furnace_4_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/sxx_star_furnace.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_star_furnace_5_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/sxx_star_furnace.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_star_furnace_6_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/sxx_star_furnace.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_star_furnace_7_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/sxx_star_furnace.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_star_furnace_8_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/sxx_star_furnace.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_star_furnace_9_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/sxx_star_furnace.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_star_furnace_10_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/sxx_star_furnace.dds"
+	}
+
+	spriteType = {
+		name = "GFX_fleet_order_button_ground_support_sxx_ground_army"
+		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_selective_action.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_fleet_order_button_ground_support_sxx_ground_army_selected"
+		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_selective_selected.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_0"
+		texturefile = "gfx/interface/buttons/sxx_button_0.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_sort_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_1"
+		texturefile = "gfx/interface/buttons/sxx_button_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_sort_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_2"
+		texturefile = "gfx/interface/buttons/sxx_button_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_sort_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_3"
+		texturefile = "gfx/interface/buttons/sxx_button_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_sort_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_4"
+		texturefile = "gfx/interface/buttons/sxx_button_4.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_sort_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_5"
+		texturefile = "gfx/interface/buttons/sxx_button_5.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_sort_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_6"
+		texturefile = "gfx/interface/buttons/sxx_button_6.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_sort_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_7"
+		texturefile = "gfx/interface/buttons/sxx_button_7.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_sort_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_8"
+		texturefile = "gfx/interface/buttons/sxx_button_8.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_sort_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_9"
+		texturefile = "gfx/interface/buttons/sxx_button_9.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_sort_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_1_0"
+		texturefile = "gfx/interface/buttons/sxx_button_1_0.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_button_2_0"
+		texturefile = "gfx/interface/buttons/sxx_button_2_0.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_button_3_0"
+		texturefile = "gfx/interface/buttons/sxx_button_3_0.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_button_4_0"
+		texturefile = "gfx/interface/buttons/sxx_button_4_0.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_button_5_0"
+		texturefile = "gfx/interface/buttons/sxx_button_5_0.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_button_6_0"
+		texturefile = "gfx/interface/buttons/sxx_button_6_0.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_button_7_0"
+		texturefile = "gfx/interface/buttons/sxx_button_7_0.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_button_8_0"
+		texturefile = "gfx/interface/buttons/sxx_button_8_0.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_button_9_0"
+		texturefile = "gfx/interface/buttons/sxx_button_9_0.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_track_project"
+		texturefile = "gfx/interface/buttons/sxx_button_track_project.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_sxx_button_track_project_selected"
+		texturefile = "gfx/interface/buttons/sxx_button_track_project_selected.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sxx_arrow"
+		texturefile = "gfx/interface/buttons/sxx_arrow.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sxx_button_24_24_checkbox"
+		texturefile = "gfx/interface/buttons/sxx_button_24_24_checkbox.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3			
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/sxx_button_24_24_checkbox_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_268_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 100.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_sxx_button_24_24_checkbox_0"
+		texturefile = "gfx/interface/buttons/sxx_button_24_24_checkbox_0.dds"
+	}
+	spriteType = {
+		name = "GFX_sxx_button_xueji"
+		texturefile = "gfx/interface/buttons/sxx_button_xueji.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_sort_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+}

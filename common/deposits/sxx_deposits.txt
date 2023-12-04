@@ -1,0 +1,625 @@
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 0.8
+@mid_rare = 0.5
+@low_rare = 0.2
+
+@sxx_high = 8
+@sxx_med = 5
+@sxx_low = 2
+
+@sxx_rare = 1
+
+@planet_type_bonus = 1.5
+@blessed_factor = 4
+@gaia_factor = 2
+@nuked_factor = 0.5
+
+d_sxx_lingmai_1 = {
+	icon = d_sxx_lingmai
+	is_for_colonizable = yes
+
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = no
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_sxx_sect = yes
+			}
+		}
+		modifier = {
+			building_sxx_stones_mine_1_max = 1
+		}
+	}
+
+	potential = {
+		can_generate_lingmai = yes
+	}
+
+	planet_modifier = {
+		sxx_planet_jobs_sxx_speed_1_produces_mult = 0.2
+		sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.004
+	}
+
+	drop_weight = {
+		weight = @sxx_high
+		modifier = {
+			factor = @gaia_factor
+			is_planet_class = pc_gaia
+		}
+		modifier = {
+			factor = @nuked_factor
+			is_planet_class = pc_nuked
+		}
+		modifier = {
+			factor = @blessed_factor
+			is_planet_class = pc_sxx_blessed_spot
+		}
+	}
+}
+
+d_sxx_lingmai_2 = {
+	icon = d_sxx_lingmai
+	is_for_colonizable = yes
+
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = no
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_sxx_sect = yes
+			}
+		}
+		modifier = {
+			building_sxx_stones_mine_2_max = 1
+		}
+	}
+
+	potential = {
+		can_generate_lingmai = yes
+	}
+
+	planet_modifier = {
+		sxx_planet_jobs_sxx_speed_1_produces_mult = 0.4
+		sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.008
+	}
+
+	drop_weight = {
+		weight = @sxx_med
+		modifier = {
+			factor = @gaia_factor
+			is_planet_class = pc_gaia
+		}
+		modifier = {
+			factor = @nuked_factor
+			is_planet_class = pc_nuked
+		}
+		modifier = {
+			factor = @blessed_factor
+			is_planet_class = pc_sxx_blessed_spot
+		}
+	}
+}
+
+d_sxx_lingmai_3 = {
+	icon = d_sxx_lingmai
+	is_for_colonizable = yes
+
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = no
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_sxx_sect = yes
+			}
+		}
+		modifier = {
+			building_sxx_stones_mine_3_max = 1
+		}
+	}
+
+	potential = {
+		can_generate_lingmai = yes
+	}
+
+	planet_modifier = {
+		sxx_planet_jobs_sxx_speed_1_produces_mult = 0.6
+		sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.012
+	}
+
+	drop_weight = {
+		weight = @sxx_low
+		modifier = {
+			factor = @gaia_factor
+			is_planet_class = pc_gaia
+		}
+		modifier = {
+			factor = @nuked_factor
+			is_planet_class = pc_nuked
+		}
+		modifier = {
+			factor = @blessed_factor
+			is_planet_class = pc_sxx_blessed_spot
+		}
+	}
+}
+
+d_sxx_lingmai_4 = {
+	icon = d_sxx_lingmai
+	is_for_colonizable = yes
+
+	category = deposit_cat_rare
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = no
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_sxx_sect = yes
+			}
+		}
+		modifier = {
+			building_sxx_stones_mine_4_max = 1
+		}
+	}
+
+	potential = {
+		can_generate_lingmai = yes
+	}
+
+	planet_modifier = {
+		sxx_planet_jobs_sxx_speed_1_produces_mult = 1
+		sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.02
+	}
+
+	drop_weight = {
+		weight = @sxx_rare
+		modifier = {
+			factor = @gaia_factor
+			is_planet_class = pc_gaia
+		}
+		modifier = {
+			factor = @nuked_factor
+			is_planet_class = pc_nuked
+		}
+		modifier = {
+			factor = @blessed_factor
+			is_planet_class = pc_sxx_blessed_spot
+		}
+	}
+}
+
+d_sxx_lingtian = {
+	icon = d_sxx_lingtian
+	is_for_colonizable = yes
+
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			food = 32
+		}
+	}
+}
+
+d_sxx_mijing = {
+	icon = d_sxx_mijing
+	is_for_colonizable = yes
+
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			consumer_goods = 16
+		}
+	}
+}
+
+d_sxx_seal = {
+	icon = d_sxx_seal
+
+	category = deposit_cat_rare
+
+	potential = {
+		always = no
+	}
+
+	planet_modifier = {
+		habitability_ceil_add = -25
+		pop_growth_speed_reduction = 25
+		planet_immigration_pull_mult = -25
+		planet_resettlement_unemployed_destination_mult = -25
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+####################################### 野矿类 ###########################################
+
+d_sxx_stones_2 = {
+	icon = d_sxx_lingmai
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 1
+		}
+		produces = {
+			trigger = {
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = { is_sxx_sect = yes }
+					}
+					AND = {
+						exists = owner
+						owner = { is_sxx_sect = yes }
+					}
+				}
+			}
+			sxx_stones = 2
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	drop_weight = {
+		weight = 0.25
+	}
+}
+
+d_sxx_stones_4 = {
+	icon = d_sxx_lingmai
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 2
+		}
+		produces = {
+			trigger = {
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = { is_sxx_sect = yes }
+					}
+					AND = {
+						exists = owner
+						owner = { is_sxx_sect = yes }
+					}
+				}
+			}
+			sxx_stones = 4
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	drop_weight = {
+		weight = 0.2
+	}
+}
+
+d_sxx_stones_6 = {
+	icon = d_sxx_lingmai
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 4
+		}
+		produces = {
+			trigger = {
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = { is_sxx_sect = yes }
+					}
+					AND = {
+						exists = owner
+						owner = { is_sxx_sect = yes }
+					}
+				}
+			}
+			sxx_stones = 8
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	drop_weight = {
+		weight = 0.15
+	}
+}
+
+d_sxx_stones_8 = {
+	icon = d_sxx_lingmai
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 8
+		}
+		produces = {
+			trigger = {
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = { is_sxx_sect = yes }
+					}
+					AND = {
+						exists = owner
+						owner = { is_sxx_sect = yes }
+					}
+				}
+			}
+			sxx_stones = 16
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	drop_weight = {
+		weight = 0.1
+	}
+}
+
+d_sxx_stones_10 = {
+	icon = d_sxx_lingmai
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 16
+		}
+		produces = {
+			trigger = {
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = { is_sxx_sect = yes }
+					}
+					AND = {
+						exists = owner
+						owner = { is_sxx_sect = yes }
+					}
+				}
+			}
+			sxx_stones = 32
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	drop_weight = {
+		weight = 0.05
+	}
+}
+
+
+d_sxx_gongfa_1 = {
+	icon = d_sxx_mijing
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = 1
+			society_research = 1
+			engineering_research = 1
+		}
+		produces = {
+			trigger = {
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = { is_sxx_sect = yes }
+					}
+					AND = {
+						exists = owner
+						owner = { is_sxx_sect = yes }
+					}
+				}
+			}
+			sxx_gongfa = 1
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+
+	drop_weight = {
+		weight = 0.05
+	}
+}
+
+d_sxx_gongfa_2 = {
+	icon = d_sxx_mijing
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = 2
+			society_research = 2
+			engineering_research = 2
+		}
+		produces = {
+			trigger = {
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = { is_sxx_sect = yes }
+					}
+					AND = {
+						exists = owner
+						owner = { is_sxx_sect = yes }
+					}
+				}
+			}
+			sxx_gongfa = 2
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+
+	drop_weight = {
+		weight = 0.04
+	}
+}
+
+d_sxx_gongfa_3 = {
+	icon = d_sxx_mijing
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = 4
+			society_research = 4
+			engineering_research = 4
+		}
+		produces = {
+			trigger = {
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = { is_sxx_sect = yes }
+					}
+					AND = {
+						exists = owner
+						owner = { is_sxx_sect = yes }
+					}
+				}
+			}
+			sxx_gongfa = 4
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+
+	drop_weight = {
+		weight = 0.03
+	}
+}
+
+d_sxx_gongfa_4 = {
+	icon = d_sxx_mijing
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = 8
+			society_research = 8
+			engineering_research = 8
+		}
+		produces = {
+			trigger = {
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = { is_sxx_sect = yes }
+					}
+					AND = {
+						exists = owner
+						owner = { is_sxx_sect = yes }
+					}
+				}
+			}
+			sxx_gongfa = 8
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+
+	drop_weight = {
+		weight = 0.02
+	}
+}
+
+d_sxx_gongfa_5 = {
+	icon = d_sxx_mijing
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = 16
+			society_research = 16
+			engineering_research = 16
+		}
+		produces = {
+			trigger = {
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = { is_sxx_sect = yes }
+					}
+					AND = {
+						exists = owner
+						owner = { is_sxx_sect = yes }
+					}
+				}
+			}
+			sxx_gongfa = 16
+		}
+	}
+	station = shipclass_research_station
+	is_for_colonizable = no
+
+	drop_weight = {
+		weight = 0.01
+	}
+}

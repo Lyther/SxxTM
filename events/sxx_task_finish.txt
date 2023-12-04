@@ -1,0 +1,1384 @@
+namespace = sxx_task_finish
+
+country_event = {
+	id = sxx_task_finish.1
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 1 COINS = 10
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.2
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 2 COINS = 30
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.3
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 3 COINS = 100
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.4
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 4 COINS = 300
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.5
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 5 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.6
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 6 COINS = 3000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.7
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 7 COINS = 10000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.8
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 8 COINS = 30000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.9
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 9 COINS = 100000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.10
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 10 COINS = 300000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.20
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 20 COINS = 500
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.21
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 21 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.22
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 22 COINS = 2000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.23
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 23 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.24
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 24 COINS = 2000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.30
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 30 COINS = 10
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.31
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 31 COINS = 30
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.32
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 32 COINS = 50
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.40
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_40_chain
+		set_variable = { which = sxx_task_40_finished value = 1 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 300 }
+		tooltip = {
+			end_event_chain = sxx_task_40_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.41
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_41_chain
+		set_variable = { which = sxx_task_40_finished value = 2 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 1000 }
+		tooltip = {
+			end_event_chain = sxx_task_41_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.42
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_42_chain
+		set_variable = { which = sxx_task_40_finished value = 3 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 3000 }
+		tooltip = {
+			end_event_chain = sxx_task_42_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.43
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_43_chain
+		set_variable = { which = sxx_task_40_finished value = 4 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 30000 }
+		tooltip = {
+			end_event_chain = sxx_task_43_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.50
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 50 COINS = 100
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.51
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 51 COINS = 300
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.52
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 52 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.55
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 55 COINS = 200
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.56
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 56 COINS = 600
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.57
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 57 COINS = 2000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.60
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 60 COINS = 5000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.65
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 65 COINS = 50000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.67
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 67 COINS = 1000000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.70
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 70 COINS = 100000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.71
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 71 COINS = 100000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.72
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 72 COINS = 100000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.73
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 73 COINS = 100000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.74
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 74 COINS = 100000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.80
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 80 COINS = 50
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.81
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 81 COINS = 500
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.85
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 85 COINS = 50
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.86
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 86 COINS = 500
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.90
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 90 COINS = 50
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.91
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 91 COINS = 500
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.95
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 95 COINS = 100
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.96
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 96 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.100
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 100 COINS = 50
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.101
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 101 COINS = 500
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.120
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 120 COINS = 500
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.130
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 130 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.131
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 131 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.132
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 132 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.133
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 133 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.134
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 134 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.135
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 135 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.136
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 136 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.137
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 137 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.138
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 138 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.139
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 139 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.140
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 140 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.200
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 200 COINS = 50
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.201
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 201 COINS = 100
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.202
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 202 COINS = 200
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.210
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_210_chain
+		set_variable = { which = sxx_task_210_finished value = 1 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 10 }
+		tooltip = {
+			end_event_chain = sxx_task_210_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.211
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_211_chain
+		set_variable = { which = sxx_task_210_finished value = 2 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 30 }
+		tooltip = {
+			end_event_chain = sxx_task_211_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.212
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_212_chain
+		set_variable = { which = sxx_task_210_finished value = 3 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 100 }
+		tooltip = {
+			end_event_chain = sxx_task_212_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.213
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_213_chain
+		set_variable = { which = sxx_task_210_finished value = 4 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 300 }
+		tooltip = {
+			end_event_chain = sxx_task_213_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.220
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_220_chain
+		set_variable = { which = sxx_task_220_finished value = 1 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 100 }
+		tooltip = {
+			end_event_chain = sxx_task_220_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.221
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_221_chain
+		set_variable = { which = sxx_task_220_finished value = 2 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 300 }
+		tooltip = {
+			end_event_chain = sxx_task_221_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.222
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_222_chain
+		set_variable = { which = sxx_task_220_finished value = 3 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 1000 }
+		tooltip = {
+			end_event_chain = sxx_task_222_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.223
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_223_chain
+		set_variable = { which = sxx_task_220_finished value = 4 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 3000 }
+		tooltip = {
+			end_event_chain = sxx_task_223_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.230
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_230_chain
+		set_variable = { which = sxx_task_230_finished value = 1 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 100 }
+		tooltip = {
+			end_event_chain = sxx_task_230_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.240
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 240 COINS = 30
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.241
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 241 COINS = 100
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.242
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 242 COINS = 300
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.243
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 243 COINS = 1000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.250
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 250 COINS = 10
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.251
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 251 COINS = 30
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.252
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 252 COINS = 100
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.253
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 253 COINS = 300
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.260
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 260 COINS = 10
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.261
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 261 COINS = 30
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.262
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 262 COINS = 100
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.263
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 263 COINS = 300
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.270
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 270 COINS = 2000
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.300
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_300_chain
+		set_variable = { which = sxx_task_300_finished value = 1 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 50 }
+		tooltip = {
+			end_event_chain = sxx_task_300_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.301
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_301_chain
+		set_variable = { which = sxx_task_300_finished value = 2 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 500 }
+		tooltip = {
+			end_event_chain = sxx_task_301_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.302
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_302_chain
+		set_variable = { which = sxx_task_300_finished value = 3 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 5000 }
+		tooltip = {
+			end_event_chain = sxx_task_302_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.305
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_305_chain
+		set_variable = { which = sxx_task_305_finished value = 1 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 50 }
+		tooltip = {
+			end_event_chain = sxx_task_305_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.306
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_306_chain
+		set_variable = { which = sxx_task_305_finished value = 2 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 500 }
+		tooltip = {
+			end_event_chain = sxx_task_306_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.307
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_307_chain
+		set_variable = { which = sxx_task_305_finished value = 3 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 5000 }
+		tooltip = {
+			end_event_chain = sxx_task_307_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.310
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_310_chain
+		set_variable = { which = sxx_task_310_finished value = 1 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 50 }
+		tooltip = {
+			end_event_chain = sxx_task_310_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.311
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_311_chain
+		set_variable = { which = sxx_task_310_finished value = 2 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 500 }
+		tooltip = {
+			end_event_chain = sxx_task_311_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.312
+	title = sxx_task_finish_title
+	desc = sxx_task_finish_desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = sxx_task_num value = -1 }
+		end_event_chain = sxx_task_312_chain
+		set_variable = { which = sxx_task_310_finished value = 3 }
+	}
+
+	after = {
+		sxx_change_coins = { COINS = 5000 }
+		tooltip = {
+			end_event_chain = sxx_task_312_chain
+		}
+	}
+
+	option = {
+		name = OK
+	}
+
+	option = {
+		name = sxx_open_the_system
+		hidden_effect = {
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.400
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 400 COINS = 500
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.401
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 401 COINS = 1500
+	}
+}
+
+country_event = {
+	id = sxx_task_finish.402
+
+	inline_script = {
+		script = sxx_origin_system/sxx_task_finish_event
+		TASK = 402 COINS = 5000
+	}
+}

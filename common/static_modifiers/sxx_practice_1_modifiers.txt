@@ -1,0 +1,133 @@
+#################################################### 朱雀禁神录 ###############################################################
+
+### 0 倍 ###
+# (2+8.75+0)*11.5 = 123.625
+# (7+8.75+0)*11.5 = 181.125 # 无禁神极限
+
+### 0.5 倍 ###
+# (2+8.75+2.5)*11.5 = 152.375
+# (7+8.75+2.5)*11.5 = 209.875
+
+### 1 倍 ###
+# (2+8.75+5)*11.5 = 181.125
+# (7+8.75+5)*11.5 = 238.625
+
+### 2 倍 ###
+# (2+8.75+10)*11.5 = 238.625
+# (7+8.75+10)*11.5 = 296.125
+
+### 3 倍 ###
+# (2+8.75+15)*11.5 = 296.125
+# (7+8.75+15)*11.5 = 353.625
+
+### 4 倍 ###
+# (2+8.75+20)*11.5 = 353.625
+# (7+8.75+20)*11.5 = 411.125
+
+sxx_practice_modifier_1_1_0 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.1
+}
+
+sxx_practice_modifier_1_1_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+}
+
+sxx_practice_modifier_1_2_0 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.1
+}
+	
+sxx_practice_modifier_1_2_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+}
+
+sxx_practice_modifier_1_3_0 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.1
+}
+		
+sxx_practice_modifier_1_3_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+}
+
+sxx_practice_modifier_1_4_0 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.1
+}
+		
+sxx_practice_modifier_1_4_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+}
+
+sxx_practice_modifier_1_5_0 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.1
+}
+		
+sxx_practice_modifier_1_5_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+}
+
+sxx_practice_modifier_1_6_0 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.1
+}
+		
+sxx_practice_modifier_1_6_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+}
+
+sxx_practice_modifier_1_7_0 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.1
+}
+		
+sxx_practice_modifier_1_7_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+}
+
+sxx_practice_modifier_1_8_0 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.1
+}
+		
+sxx_practice_modifier_1_8_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.075
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+}
+
+sxx_practice_modifier_1_9_0 = {
+	hide_from_country_list = yes
+	planet_sxx_weapon_refiners_alloys_produces_mult = 0.2
+}
+		
+sxx_practice_modifier_1_9_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.2
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.15
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+}

@@ -1,0 +1,289 @@
+namespace = sxx_astral_rift
+
+astral_rift_event = {
+	id = sxx_astral_rift.100
+	title = sxx_astral_rift.100.name
+	desc = sxx_astral_rift.100.desc
+	picture = GFX_evt_animal_wildlife
+	show_sound = ap_rift_event_9_cosmic_whirlwind
+	difficulty = 6
+	astral_rift = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_astral_rift.100.a
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+		set_next_astral_rift_event = { id = sxx_astral_rift.105 }
+	}
+}
+
+astral_rift_event = {
+	id = sxx_astral_rift.105
+	title = sxx_astral_rift.105.name
+	desc = sxx_astral_rift.105.desc
+	picture = GFX_evt_shroudwalker_enclave
+	show_sound = event_conversation
+	difficulty = 4
+	astral_rift = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_astral_rift.105.a
+		set_next_astral_rift_event = { id = sxx_astral_rift.110 }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		trigger = { explorer = { is_gestalt = no } }
+		name = sxx_astral_rift.105.b
+		set_next_astral_rift_event = { id = sxx_astral_rift.115 }
+	}
+}
+
+astral_rift_event = {
+	id = sxx_astral_rift.110
+	title = sxx_astral_rift.110.name
+	desc = sxx_astral_rift.110.desc
+	picture = GFX_evt_shroudwalker_enclave
+	show_sound = event_conversation
+	difficulty = 4
+	astral_rift = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_astral_rift.110.a
+		allow = {
+			explorer = {
+				resource_stockpile_compare = { resource = food value >= 1 }
+			}
+		}
+		explorer = {
+			add_resource = {
+				food = -1
+				sxx_stones = 100000
+			}
+		}
+		set_next_astral_rift_event = { id = sxx_astral_rift.120 }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = sxx_astral_rift.110.b
+		set_next_astral_rift_event = { id = sxx_astral_rift.115 }
+	}
+}
+
+astral_rift_event = {
+	id = sxx_astral_rift.115
+	title = sxx_astral_rift.115.name
+	desc = sxx_astral_rift.115.desc
+	picture = GFX_evt_hand_shake
+	show_sound = event_conversation
+	difficulty = 8
+	astral_rift = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_astral_rift.115.a
+		explorer = {
+			add_modifier = { modifier = sxx_tafa }
+			astral_thread_medium_reward = yes
+		}
+		finish_astral_rift = yes
+	}
+}
+
+astral_rift_event = {
+	id = sxx_astral_rift.120
+	title = sxx_astral_rift.120.name
+	desc = sxx_astral_rift.120.desc
+	picture = GFX_evt_shroudwalker_enclave
+	show_sound = event_conversation
+	difficulty = 4
+	astral_rift = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_astral_rift.120.a
+		allow = {
+			explorer = {
+				resource_stockpile_compare = { resource = food value >= 1 }
+			}
+		}
+		explorer = {
+			add_resource = {
+				food = -3
+				sxx_stones = 500000
+			}
+		}
+		set_next_astral_rift_event = { id = sxx_astral_rift.125 }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = sxx_astral_rift.120.b
+		set_next_astral_rift_event = { id = sxx_astral_rift.130 }
+	}
+}
+
+astral_rift_event = {
+	id = sxx_astral_rift.125
+	title = sxx_astral_rift.125.name
+	desc = sxx_astral_rift.125.desc
+	picture = GFX_evt_archaeologists_escaping
+	show_sound = ap_rift_event_30_military_alien_march
+	difficulty = @astral_rift_initial_difficulty
+	astral_rift = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		leader = { save_event_target_as = sxx_die_leader }
+	}
+
+	after = {
+		event_target:sxx_die_leader = {
+			kill_leader = { show_notification = yes }
+		}
+	}
+
+	option = {
+		name = sxx_astral_rift.125.a
+		hidden_effect = {
+			save_global_event_target_as = sxx_other_world_intruder_astral_rift
+			create_country = {
+				name = "NAME_SXX_Other_World_Intruder"
+				type = sxx_other_world_intruder
+				flag = {
+					icon = {
+						category = "pirate"
+						file = "flag_pirate_2.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "triangle_split.dds"
+					}
+					colors={
+						"red"
+						"yellow"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					save_global_event_target_as = sxx_other_world_intruder_country
+					every_playable_country = {
+						establish_communications_no_message = event_target:sxx_other_world_intruder_country
+					}
+					country_event = { id = sxx_other_world_intruder.1 days = 5 random = 25 }
+				}
+			}
+			sxx_create_other_world_intruder_fleet_1 = yes
+			astral_rift_event = { id = sxx_other_world_intruder.2 days = 360 random = 720 }
+		}
+		finish_astral_rift = yes
+	}
+	option = {
+		name = sxx_astral_rift.125.b
+		trigger = {
+			explorer = {
+				is_sxx_heaven_country = yes
+				any_owned_pop = { has_pop_flag = sxx_xianwang }
+			}
+		}
+		custom_tooltip = sxx_astral_rift.125.b.tooltip
+		hidden_effect = {
+			explorer = {
+				country_event = { id = sxx_astral_rift.135 days = 1 }
+			}
+		}
+		finish_astral_rift = yes
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = sxx_astral_rift.125.c
+		trigger = {
+			explorer = {
+				is_sxx_heaven_country = yes
+				any_owned_pop = { has_pop_flag = sxx_xiandi }
+			}
+		}
+		custom_tooltip = sxx_astral_rift.125.c.tooltip
+		hidden_effect = {
+			explorer = {
+				country_event = { id = sxx_astral_rift.140 days = 1 }
+			}
+		}
+		finish_astral_rift = yes
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+astral_rift_event = {
+	id = sxx_astral_rift.130
+	title = sxx_astral_rift.130.name
+	desc = sxx_astral_rift.130.desc
+	picture = GFX_evt_shroudwalker_enclave
+	show_sound = ap_rift_event_9_cosmic_whirlwind
+	difficulty = 8
+	astral_rift = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_astral_rift.130.a
+		explorer = {
+			astral_thread_medium_reward = yes
+		}
+		finish_astral_rift = yes
+	}
+}
+
+country_event = {
+	id = sxx_astral_rift.135
+	title = sxx_astral_rift.135.name
+	desc = sxx_astral_rift.135.desc
+	picture = GFX_evt_astral_rift_riftworld
+	show_sound = event_super_explosion
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_astral_rift.135.a
+	}
+}
+
+country_event = {
+	id = sxx_astral_rift.140
+	title = sxx_astral_rift.140.name
+	desc = sxx_astral_rift.140.desc
+	picture = GFX_evt_astral_rift_vortex
+	show_sound = ap_rift_event_9_cosmic_calm
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = sxx_astral_rift.140.a
+	}
+}

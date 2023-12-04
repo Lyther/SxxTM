@@ -1,0 +1,70 @@
+﻿l_simp_chinese:
+
+ astral_rift_sxx_other_world:0"异界"
+
+ sxx_astral_rift.100.name:0"新世界"
+ sxx_astral_rift.100.desc:0"裂隙下方是一片广袤无比的大陆，生机勃勃，而且空间中充斥着浓郁的天地灵气。当我们转头去观察星界裂隙时，我们发现它开始变得不稳定——它似乎在渐渐合拢，不过时间倒也不是那么紧急，剩下的时间足够我们慢慢探索。"
+ sxx_astral_rift.100.a:0"好好探索这片新世界。"
+
+ sxx_astral_rift.105.name:0"修仙文明"
+ sxx_astral_rift.105.desc:0"经过一段时间的探索，我们终于找到了智慧生命的迹象——一位大乘期修士！由于都会意念交流，我们立刻展开了沟通。\n\n我们说我们是从边远星域前来历练的修士，于是他向我们介绍了这里的情况。这里是超级宗门真武圣地下辖的一处坊市星球，宇宙各大宗门以及许多散修都经常前往这里买卖交易，是宇宙中最知名的坊市之一。\n\n从他的话里，我们了解到这方宇宙的修仙文明十分兴盛，宇宙中遍布大大小小的宗门、家族，出过飞升者的宗门一时半会都数不过来。"
+ sxx_astral_rift.105.a:0"去坊市逛逛。"
+ sxx_astral_rift.105.b:0"与当地的修仙者交流一下修炼经验。"
+
+ sxx_astral_rift.110.name:0"收购"
+ sxx_astral_rift.110.desc:0"来到坊市，我们发现了琳琅满目的各种天材地宝、绝世神兵，可惜由于修炼体系的不同，对我们基本没太大用处。\n\n这时，我们发现了一条收购消息——地心淬灵乳，10万灵石一茶盏。地心淬灵乳是我们世界很常见的中低阶灵药，在这里居然如此珍贵。经过简单的问询，我们得知这是他们的修炼体系中用于炼制增加大乘突破渡劫成功率的一味药引，但是已经近乎绝迹。"
+ sxx_astral_rift.110.a:0"我们有，去跟他们换灵石！"
+ sxx_astral_rift.110.b:0"太招摇了，还是算了。"
+
+ sxx_astral_rift.115.name:0"修炼交流"
+ sxx_astral_rift.115.desc:0"我们与当地的各位修仙者展开了修炼心得交流，由于我们的修炼体系差异，双方都有很大的收获。通过参考他们那独特的修炼方式，我们将其中某些相通之处与我们的修炼方式结合起来，扫清了我们修炼之路上的许多阻碍。"
+ sxx_astral_rift.115.a:0"棒极了！"
+ sxx_tafa:0"化用他法"
+
+ sxx_astral_rift.120.name:0"抉择"
+ sxx_astral_rift.120.desc:0"交出地心淬灵乳的我们成为了坊市的焦点，受到了多方关注，有许多宗门私下联系我们是否还有地心淬灵乳，或者说在哪发现的。他们愿意以更高的价格购买。"
+ sxx_astral_rift.120.a:0"有，当然有！我们要发财了！"
+ sxx_astral_rift.120.b:0"不，我们没有了，那是我们在一处秘境的丹炉里发现的一点残余。"
+
+ sxx_astral_rift.125.name:0"暴露"
+ sxx_astral_rift.125.desc:0"交易完成后不久，我们被截杀了！\n\n在我们回住处的路上，十几位渡劫期强者瞬间出现，将我们的人当场杀死并进行了可怕的搜魂。\n\n我们的身份暴露了，星界裂隙暴露了，我们的世界也暴露了！\n\n由于对科技手段的不了解，他们没有注意到我们的探测装置。根据传回的画面显示，整个宇宙都因为我们的世界沸腾了，全宇宙几百个超级宗门全部联合了起来，组成了浩浩荡荡的侵略大军，向着星界裂隙袭来……"
+ sxx_astral_rift.125.a:0"不，不……"
+ sxx_astral_rift.125.b:0"无所谓，我会出手。"
+ sxx_astral_rift.125.b.tooltip:0"我们的§Y仙王§!将会出手"
+ sxx_astral_rift.125.c:0"交给我。"
+ sxx_astral_rift.125.c.tooltip:0"交给我们的§Y仙帝§!"
+
+ sxx_astral_rift.130.name:0"安全返回"
+ sxx_astral_rift.130.desc:0"因为始终咬定没有更多的地心淬灵乳，各方渐渐对我们失去了兴趣。\n\n终于，我们在裂隙关闭前找到机会摆脱了跟踪，返回了我们的宇宙。"
+ sxx_astral_rift.130.a:0"小心驶得万年船。"
+
+ sxx_astral_rift.135.name:0"天王之力"
+ sxx_astral_rift.135.desc:0"一个跨步，我们的天王就穿过了裂隙，进入了异界。\n\n没给远处的敌人反应的时间，一只遮天巨手覆盖了整个宇宙……等我们回过神来时，裂隙中只剩下了数不清的空间碎片和乱流。\n\n等等，天王他从宇宙碎片中拿出来了一个东西。"
+ sxx_astral_rift.135.a:0"呃……"
+
+ sxx_astral_rift.140.name:0"我为天帝"
+ sxx_astral_rift.140.desc:0"话音刚落，天帝就出现在了这片陌生的宇宙中。\n\n在这一方宇宙中，他静静矗立在虚空，似乎正在感受这个全新的世界。异界修仙者发现了他，正准备通报敌袭。这时，天帝微微放开了他一直压制的自身气息，一丝仙帝的威压瞬间扩散开来。以他为中心，大日如烛火般熄灭，星海如尘埃般崩解。狰狞的空间裂缝瞬间出现，随后在刹那间充满整个宇宙空间。接着，如同玻璃在碎裂，碎片变为碎块，碎块变为碎渣，最后化作虚无。\n\n这方宇宙在一个呼吸间已然湮灭。\n\n随后，天帝伸出手，这片宇宙中唯一没有被摧毁的东西飞到了他的掌心。"
+ sxx_astral_rift.140.a:0"这就是天帝……"
+
+ NAME_SXX_Other_World_Intruder:0"异界联军"
+ NAME_SXX_Other_World_Intruder_Fleet_1:0"联军先锋"
+ NAME_SXX_Other_World_Intruder_Fleet_2:0"联军主力"
+
+ sxx_other_world_intruder.3.name:0"异界裂隙关闭"
+ sxx_other_world_intruder.3.desc:0"那条通往异界的星界裂隙终于关闭了，异界入侵者们再也无法进入我们的宇宙了！"
+ sxx_other_world_intruder.3.a:0"终于关上了。"
+
+ sxx_other_world_intruder.21.name:0"神秘球体"
+ sxx_other_world_intruder.21.desc:0"我们在击杀的一位入侵者的遗物中发现了一个神秘的球体，体积只比头颅略小，然而密度却超过黑洞。\n\n击杀者研究了半天也没有发现它的作用，只觉得浑身气血翻腾难以静心，于是把他上交给了宗门。"
+ sxx_other_world_intruder.21.a:0"很好。"
+
+ r_sxx_sphere:0"鸿蒙灵珠"
+ r_sxx_sphere_desc:0"散发着鸿蒙之气的神秘球体，肉体靠近时会感到气血被引动。"
+ sxx_sphere_passive_effect:0"§R吞噬陨落者的血肉§!"
+ r_sxx_crystal:0"本源紫晶"
+ r_sxx_crystal_desc:0"表面有着玄妙纹路的紫色晶体，会吸收灵石中的能量。"
+ sxx_crystal_passive_effect:0"§R吞噬陨落者的真元§!"
+ r_sxx_cube:0"神晶魔方"
+ r_sxx_cube_desc:0"古朴的灰色正方体，对灵魂有着莫名的吸引力。"
+ sxx_cube_passive_effect:0"§R吞噬陨落者的神魂§!"
+ relic_sxx_sphere_active_tooltip:0"被动效果翻倍"

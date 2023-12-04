@@ -1,0 +1,595 @@
+sxx_heaven_emperor = {
+	category = sxx_heaven_3
+	building_icon = building_sxx_lingxiao
+	clothes_texture_index = 1
+	icon = knight_commander
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		#owner = { is_sxx_heaven_country = yes }
+		planet = { is_planet_class = pc_sxx_heaven }
+		has_pop_flag = sxx_xiandi
+	}
+
+	resources = {
+		category = planet_sxx_heaven_emperors
+		produces = {
+			unity = 100
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+		produces = {
+			sxx_qiyun = 0.125
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+	}
+
+	planet_modifier = {
+		sxx_xingjun_modifier_mult = 1
+		planet_stability_add = 100
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 4
+	}
+
+	weight = {
+		weight = 500000
+	}
+}
+
+sxx_heaven_king = {
+	category = sxx_heaven_2
+	building_icon = building_sxx_lingxiao
+	clothes_texture_index = 1
+	icon = knight
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		#owner = { is_sxx_heaven_country = yes }
+		planet = { is_planet_class = pc_sxx_heaven }
+		has_pop_flag = sxx_xianwang
+	}
+
+	resources = {
+		category = planet_sxx_heaven_kings
+		produces = {
+			unity = 10
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+		produces = {
+			sxx_qiyun = 0.025
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+	}
+
+	planet_modifier = {
+		sxx_xingjun_modifier_mult = 0.25
+		planet_stability_add = 20
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 2
+	}
+
+	weight = {
+		weight = 400000
+	}
+}
+
+sxx_fairy_tanlang = {
+	category = sxx_heaven_1
+	building_icon = building_sxx_lingxiao
+	clothes_texture_index = 1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		is_sxx_fairy_pop = yes
+	}
+
+	resources = {
+		category = planet_sxx_fairy_tanlangs
+		produces = {
+			unity = 1
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+		produces = {
+			sxx_qiyun = 0.005
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+	}
+
+	triggered_country_modifier = {
+		pop_growth_speed = 0.02
+		planet_pop_assembly_organic_mult = 0.02
+		planet_pop_assembly_mult = 0.02
+		sxx_planet_kuilei_assembly_mult = 0.02
+		mult = value:scripted_modifier_mult|MODIFIER|sxx_xingjun_modifier_mult|
+	}
+
+	triggered_planet_modifier = {
+		job_sxx_heaven_emperor_add = 0.1
+		job_sxx_heaven_king_add = 0.2
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 1
+	}
+
+	weight = {
+		weight = 1000
+		modifier = {
+			factor = 1.5
+			has_job = sxx_fairy_tanlang
+		}
+		modifier = {
+			add = 300000
+			always = yes
+		}
+	}
+}
+
+sxx_fairy_jumen = {
+	category = sxx_heaven_1
+	building_icon = building_sxx_lingxiao
+	clothes_texture_index = 1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		is_sxx_fairy_pop = yes
+	}
+
+	resources = {
+		category = planet_sxx_fairy_jumens
+		produces = {
+			unity = 1
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+		produces = {
+			sxx_qiyun = 0.005
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+	}
+
+	triggered_country_modifier = {
+		sxx_planet_jobs_sxx_extra_speed_mod_produces_mult = 0.01
+		mult = value:scripted_modifier_mult|MODIFIER|sxx_xingjun_modifier_mult|
+	}
+
+	triggered_planet_modifier = {
+		job_sxx_heaven_emperor_add = 0.1
+		job_sxx_heaven_king_add = 0.2
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 1
+	}
+
+	weight = {
+		weight = 1000
+		modifier = {
+			factor = 1.5
+			has_job = sxx_fairy_jumen
+		}
+		modifier = {
+			add = 300000
+			always = yes
+		}
+	}
+}
+
+sxx_fairy_lucun = {
+	category = sxx_heaven_1
+	building_icon = building_sxx_lingxiao
+	clothes_texture_index = 1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		is_sxx_fairy_pop = yes
+	}
+
+	resources = {
+		category = planet_sxx_fairy_lucuns
+		produces = {
+			unity = 1
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+		produces = {
+			sxx_qiyun = 0.005
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+	}
+
+	triggered_country_modifier = {
+		megastructures_produces_mult = 0.05
+		mult = value:scripted_modifier_mult|MODIFIER|sxx_xingjun_modifier_mult|
+	}
+
+	triggered_planet_modifier = {
+		job_sxx_heaven_emperor_add = 0.1
+		job_sxx_heaven_king_add = 0.2
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 1
+	}
+
+	weight = {
+		weight = 1000
+		modifier = {
+			factor = 1.5
+			has_job = sxx_fairy_lucun
+		}
+		modifier = {
+			add = 300000
+			always = yes
+		}
+	}
+}
+
+sxx_fairy_wenqu = {
+	category = sxx_heaven_1
+	building_icon = building_sxx_lingxiao
+	clothes_texture_index = 1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		is_sxx_fairy_pop = yes
+	}
+
+	resources = {
+		category = planet_sxx_fairy_wenqus
+		produces = {
+			unity = 1
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+		produces = {
+			sxx_qiyun = 0.005
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+	}
+
+	triggered_country_modifier = {
+		all_technology_research_speed = 0.05
+		mult = value:scripted_modifier_mult|MODIFIER|sxx_xingjun_modifier_mult|
+	}
+
+	triggered_planet_modifier = {
+		job_sxx_heaven_emperor_add = 0.1
+		job_sxx_heaven_king_add = 0.2
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 1
+	}
+
+	weight = {
+		weight = 1000
+		modifier = {
+			factor = 1.5
+			has_job = sxx_fairy_wenqu
+		}
+		modifier = {
+			add = 300000
+			always = yes
+		}
+	}
+}
+
+sxx_fairy_lianzhen = {
+	category = sxx_heaven_1
+	building_icon = building_sxx_lingxiao
+	clothes_texture_index = 1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		is_sxx_fairy_pop = yes
+	}
+
+	resources = {
+		category = planet_sxx_fairy_lianzhens
+		produces = {
+			unity = 1
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+		produces = {
+			sxx_qiyun = 0.005
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+	}
+
+	triggered_country_modifier = {
+		empire_size_mult = -0.02
+		mult = value:scripted_modifier_mult|MODIFIER|sxx_xingjun_modifier_mult|
+	}
+
+	triggered_planet_modifier = {
+		job_sxx_heaven_emperor_add = 0.1
+		job_sxx_heaven_king_add = 0.2
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 1
+	}
+
+	weight = {
+		weight = 1000
+		modifier = {
+			factor = 1.5
+			has_job = sxx_fairy_lianzhen
+		}
+		modifier = {
+			add = 300000
+			always = yes
+		}
+	}
+}
+
+sxx_fairy_wuqu = {
+	category = sxx_heaven_1
+	building_icon = building_sxx_lingxiao
+	clothes_texture_index = 1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		is_sxx_fairy_pop = yes
+	}
+
+	resources = {
+		category = planet_sxx_fairy_wuqus
+		produces = {
+			unity = 1
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+		produces = {
+			sxx_qiyun = 0.005
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+	}
+
+	triggered_country_modifier = {
+		country_naval_cap_mult = 0.02
+		ship_fire_rate_mult = 0.02
+		mult = value:scripted_modifier_mult|MODIFIER|sxx_xingjun_modifier_mult|
+	}
+
+	triggered_planet_modifier = {
+		job_sxx_heaven_emperor_add = 0.1
+		job_sxx_heaven_king_add = 0.2
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 1
+	}
+
+	weight = {
+		weight = 1000
+		modifier = {
+			factor = 1.5
+			has_job = sxx_fairy_wuqu
+		}
+		modifier = {
+			add = 300000
+			always = yes
+		}
+	}
+}
+
+sxx_fairy_pojun = {
+	category = sxx_heaven_1
+	building_icon = building_sxx_lingxiao
+	clothes_texture_index = 1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		is_sxx_fairy_pop = yes
+	}
+
+	resources = {
+		category = planet_sxx_fairy_pojuns
+		produces = {
+			unity = 1
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+		produces = {
+			sxx_qiyun = 0.005
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+	}
+
+	triggered_country_modifier = {
+		planet_building_build_speed_mult = 0.1
+		megastructure_build_speed_mult = 0.1
+		mult = value:scripted_modifier_mult|MODIFIER|sxx_xingjun_modifier_mult|
+	}
+
+	triggered_planet_modifier = {
+		job_sxx_heaven_emperor_add = 0.1
+		job_sxx_heaven_king_add = 0.2
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 1
+	}
+
+	weight = {
+		weight = 1000
+		modifier = {
+			factor = 1.5
+			has_job = sxx_fairy_pojun
+		}
+		modifier = {
+			add = 300000
+			always = yes
+		}
+	}
+}
+
+sxx_supreme_fairy = {
+	category = sxx_heaven_1
+	building_icon = building_sxx_zongmen
+	clothes_texture_index = 1
+	icon = bio_trophy
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		is_sxx_fairy_pop = yes
+	}
+
+	resources = {
+		category = planet_sxx_supreme_fairies
+		produces = {
+			unity = 1
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+		produces = {
+			sxx_qiyun = 0.0025
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_stability_add = 20
+		planet_jobs_produces_mult = 0.05
+		job_sxx_heaven_emperor_add = 0.1
+		job_sxx_heaven_king_add = 0.2
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 1
+	}
+
+	triggered_pop_modifier = {
+		pop_cat_sxx_heaven_1_political_power = -25
+	}
+
+	weight = {
+		weight = 500
+		modifier = {
+			factor = 1.5
+			has_job = sxx_supreme_fairy
+		}
+		modifier = {
+			add = 300000
+			always = yes
+		}
+	}
+}
+
+sxx_other_fairy = {
+	category = sxx_heaven_1
+	clothes_texture_index = 1
+	icon = fe_hedonist
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+	#	owner = { is_sxx_heaven_country = yes }
+	#	planet = { is_planet_class = pc_sxx_heaven }
+		is_sxx_fairy_pop = yes
+		exists = owner
+		owner = { is_ai = yes }
+	}
+
+	resources = {
+		category = planet_sxx_other_fairies
+		produces = {
+			sxx_qiyun = 0.001
+			mult = value:scripted_modifier_mult|MODIFIER|sxx_pop_xiuxian_job_produces_mult|
+		}
+	}
+
+	triggered_pop_modifier = {
+		pop_cat_sxx_heaven_1_political_power = -50
+	}
+
+	weight = {
+		weight = 300000
+	}
+}
+
+sxx_heaven_purge = {
+	icon = purge
+	category = purge
+	purge = purge_sxx_heaven
+	clothes_texture_index = 2
+	ignores_sapience = yes
+
+	possible = {
+		exists = planet
+		planet = {
+			is_planet_class = pc_sxx_heaven
+		}
+		is_sxx_fairy_pop = no
+		exists = owner
+		owner = { is_ai = yes }
+	}
+
+	weight = {
+		weight = 600000
+	}
+}

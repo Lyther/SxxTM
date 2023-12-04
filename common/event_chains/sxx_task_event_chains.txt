@@ -1,0 +1,803 @@
+sxx_task_1_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_1_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_2_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_2_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_3_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_3_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_4_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_4_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_5_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_5_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_6_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_6_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_7_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_7_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_8_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_8_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_9_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_9_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_10_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_10_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_20_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_20_counter = { max = 1 }
+		sxx_time_remaining = { max = 180 }
+	}
+}
+
+sxx_task_21_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_21_counter = { max = 2 }
+		sxx_time_remaining = { max = 180 }
+	}
+}
+
+sxx_task_22_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_22_counter = { max = 3 }
+		sxx_time_remaining = { max = 180 }
+	}
+}
+
+sxx_task_23_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_23_counter = { max = 1 }
+		sxx_time_remaining = { max = 360 }
+	}
+}
+
+sxx_task_24_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_24_counter = { max = 1 }
+		sxx_time_remaining = { max = 240 }
+	}
+}
+
+sxx_task_30_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_30_counter = { max = 1 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_31_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_31_counter = { max = 2 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_32_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_32_counter = { max = 3 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_40_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_41_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_42_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_43_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_50_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_51_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_52_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_55_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_56_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_57_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_60_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_65_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_67_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_70_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_71_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_72_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_73_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_74_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_74_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_80_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_80_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_81_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_81_counter = { max = 30 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_85_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_85_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_86_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_86_counter = { max = 30 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_90_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_90_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_91_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_91_counter = { max = 30 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_95_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_95_counter = { max = 1 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_96_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_96_counter = { max = 3 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_100_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_100_counter = { max = 3 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_101_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_101_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_120_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_130_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_131_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_132_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_133_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_134_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_135_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_136_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_137_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_138_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_139_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_140_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_200_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_201_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 90 }
+	}
+}
+
+sxx_task_202_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_210_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_211_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_212_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_213_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_220_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_221_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_222_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_223_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_230_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_240_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_241_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_242_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 180 }
+	}
+}
+
+sxx_task_243_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 240 }
+	}
+}
+
+sxx_task_250_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_250_counter = { max = 5 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_251_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_251_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_252_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_252_counter = { max = 20 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_253_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_253_counter = { max = 50 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_260_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_260_counter = { max = 5 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_261_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_261_counter = { max = 10 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_262_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_262_counter = { max = 20 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_263_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_task_263_counter = { max = 50 }
+		sxx_time_remaining = { max = 120 }
+	}
+}
+
+sxx_task_270_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_300_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_301_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_302_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_305_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_306_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_307_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_310_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_311_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_312_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 60 }
+	}
+}
+
+sxx_task_400_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 180 }
+	}
+}
+
+sxx_task_401_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 180 }
+	}
+}
+
+sxx_task_402_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		sxx_time_remaining = { max = 180 }
+	}
+}

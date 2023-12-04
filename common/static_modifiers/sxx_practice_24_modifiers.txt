@@ -1,0 +1,136 @@
+################# 太上化龙诀 ######################
+
+sxx_practice_modifier_24_1_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_speed_mod_produces_mult = 0.02
+}
+
+sxx_practice_modifier_24_1_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.025
+	sxx_planet_jobs_sxx_break_pd_chance_upkeep_mult = -0.025
+}
+
+sxx_practice_modifier_24_2_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_speed_mod_produces_mult = 0.02
+}
+	
+sxx_practice_modifier_24_2_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.025
+	sxx_planet_jobs_sxx_break_pd_chance_upkeep_mult = -0.025
+}
+
+sxx_practice_modifier_24_3_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_speed_mod_produces_mult = 0.02
+}
+
+sxx_practice_modifier_24_3_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.5
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.025
+	sxx_planet_jobs_sxx_break_pd_chance_upkeep_mult = -0.025
+}
+
+sxx_practice_modifier_24_4_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_speed_mod_produces_mult = 0.02
+}
+
+sxx_practice_modifier_24_4_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.025
+	sxx_planet_jobs_sxx_break_pd_chance_upkeep_mult = -0.025
+}
+
+sxx_practice_modifier_24_5_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_speed_mod_produces_mult = 0.02
+}
+	
+sxx_practice_modifier_24_5_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.025
+	sxx_planet_jobs_sxx_break_pd_chance_upkeep_mult = -0.025
+}
+
+sxx_practice_modifier_24_6_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_speed_mod_produces_mult = 0.02
+}
+
+sxx_practice_modifier_24_6_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 1
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.025
+	sxx_planet_jobs_sxx_break_pd_chance_upkeep_mult = -0.025
+}
+
+sxx_practice_modifier_24_7_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_speed_mod_produces_mult = 0.02
+}
+
+sxx_practice_modifier_24_7_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.025
+	sxx_planet_jobs_sxx_break_pd_chance_upkeep_mult = -0.025
+}
+
+sxx_practice_modifier_24_8_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_speed_mod_produces_mult = 0.02
+}
+	
+sxx_practice_modifier_24_8_1 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.05
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.025
+	sxx_planet_jobs_sxx_break_pd_chance_upkeep_mult = -0.025
+}
+
+sxx_practice_modifier_24_9_0 = {
+	hide_from_country_list = yes
+	sxx_planet_jobs_sxx_speed_mod_produces_mult = 0.04
+}
+
+sxx_practice_modifier_24_9_1 = {
+    hide_from_country_list = yes
+	sxx_planet_jobs_sxx_gongfa_speed_1_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_2_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_3_mod_produces_mult = 0.1
+	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 2
+	sxx_planet_jobs_sxx_break_die_chance_upkeep_mult = -0.05
+	sxx_planet_jobs_sxx_break_pd_chance_upkeep_mult = -0.05
+}

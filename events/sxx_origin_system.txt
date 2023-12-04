@@ -1,0 +1,2040 @@
+namespace = sxx_origin_system
+
+# 系统界面
+country_event = {
+	id = sxx_origin_system.1
+	title = sxx_origin_system_name
+	desc = sxx_coins_show
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.1.a
+		hidden_effect = { country_event = { id = sxx_origin_system.100 } }
+	}
+	option = {
+		name = sxx_origin_system.1.b
+		allow = {
+			if = {
+				limit = {
+					check_variable = { which = sxx_task_num value >= sxx_task_max }
+				}
+				custom_tooltip = {
+					fail_text = sxx_task_num_is_max
+					always = no
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = sxx_getting_task
+				}
+				custom_tooltip = {
+					fail_text = sxx_is_getting_task
+					always = no
+				}
+			}
+			else = {
+				hidden_trigger = { always = yes }
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = { flag = sxx_getting_task days = 360 }
+			country_event = { id = sxx_origin_system.200 }
+		}
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+	}
+}
+
+# 外交打开系统界面
+country_event = {
+	id = sxx_origin_system.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = { is_country_type = sxx_system }
+		has_origin = origin_sxx_system
+	}
+
+	immediate = {
+		country_event = { id = sxx_origin_system.1 }
+	}
+}
+
+# 系统界面-兑换总览
+country_event = {
+	id = sxx_origin_system.100
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.100.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.100.a
+		hidden_effect = { country_event = { id = sxx_origin_system.110 } }
+	}
+	option = {
+		name = sxx_origin_system.100.b
+		hidden_effect = { country_event = { id = sxx_origin_system.120 } }
+	}
+	option = {
+		name = sxx_origin_system.100.c
+		allow = {
+			custom_tooltip = {
+				fail_text = sxx_origin_system_zizhi_need_2
+				check_variable = { which = sxx_origin_system_zizhi value >= 2 }
+			}
+		}
+		hidden_effect = { country_event = { id = sxx_origin_system.130 } }
+	}
+	option = {
+		name = sxx_origin_system.100.d
+		hidden_effect = { country_event = { id = sxx_origin_system.140 } }
+	}
+	option = {
+		name = sxx_origin_system.100.e.1
+		trigger = {
+			check_variable = { which = sxx_origin_system_zizhi value = -2 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 30
+		}
+		custom_tooltip = sxx_origin_system_zizhi_up_tooltip.1
+		hidden_effect = {
+			owner_main_species = {
+				every_galaxy_species = {
+					limit = {
+						is_same_species = prev
+						has_trait = trait_sxx_zizhi1
+					}
+					change_species_characteristics = {
+						remove_trait = trait_sxx_zizhi1
+						add_trait = trait_sxx_zizhi2
+					}
+				}
+			}
+			every_country = {
+				every_owned_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi1
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi1
+						add_trait = trait_sxx_zizhi2
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi1
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi1
+						add_trait = trait_sxx_zizhi2
+					}
+				}
+			}
+			set_variable = { which = sxx_origin_system_zizhi value = -1 }
+			country_event = { id = sxx_origin_system.100 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.100.e.2
+		trigger = {
+			check_variable = { which = sxx_origin_system_zizhi value = -1 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 300
+		}
+		custom_tooltip = sxx_origin_system_zizhi_up_tooltip.2
+		hidden_effect = {
+			owner_main_species = {
+				every_galaxy_species = {
+					limit = {
+						is_same_species = prev
+						has_trait = trait_sxx_zizhi2
+					}
+					change_species_characteristics = {
+						remove_trait = trait_sxx_zizhi2
+						add_trait = trait_sxx_zizhi3
+					}
+				}
+			}
+			every_country = {
+				every_owned_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi2
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi2
+						add_trait = trait_sxx_zizhi3
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi2
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi2
+						add_trait = trait_sxx_zizhi3
+					}
+				}
+			}
+			set_variable = { which = sxx_origin_system_zizhi value = 0 }
+			country_event = { id = sxx_origin_system.100 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.100.e.3
+		trigger = {
+			check_variable = { which = sxx_origin_system_zizhi value = 0 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 3000
+		}
+		custom_tooltip = sxx_origin_system_zizhi_up_tooltip.3
+		hidden_effect = {
+			owner_main_species = {
+				every_galaxy_species = {
+					limit = {
+						is_same_species = prev
+						has_trait = trait_sxx_zizhi3
+					}
+					change_species_characteristics = {
+						remove_trait = trait_sxx_zizhi3
+						add_trait = trait_sxx_zizhi4
+					}
+				}
+			}
+			every_country = {
+				every_owned_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi3
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi3
+						add_trait = trait_sxx_zizhi4
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi3
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi3
+						add_trait = trait_sxx_zizhi4
+					}
+				}
+			}
+			set_variable = { which = sxx_origin_system_zizhi value = 1 }
+			country_event = { id = sxx_origin_system.100 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.100.e.4
+		trigger = {
+			check_variable = { which = sxx_origin_system_zizhi value = 1 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 30000
+		}
+		custom_tooltip = sxx_origin_system_zizhi_up_tooltip.4
+		hidden_effect = {
+			owner_main_species = {
+				every_galaxy_species = {
+					limit = {
+						is_same_species = prev
+						has_trait = trait_sxx_zizhi4
+					}
+					change_species_characteristics = {
+						remove_trait = trait_sxx_zizhi4
+						add_trait = trait_sxx_zizhi5
+					}
+				}
+			}
+			every_country = {
+				every_owned_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi4
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi4
+						add_trait = trait_sxx_zizhi5
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi4
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi4
+						add_trait = trait_sxx_zizhi5
+					}
+				}
+			}
+			set_variable = { which = sxx_origin_system_zizhi value = 2 }
+			country_event = { id = sxx_origin_system.100 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.100.e.5
+		trigger = {
+			check_variable = { which = sxx_origin_system_zizhi value = 2 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 300000
+		}
+		custom_tooltip = sxx_origin_system_zizhi_up_tooltip.5
+		hidden_effect = {
+			owner_main_species = {
+				every_galaxy_species = {
+					limit = {
+						is_same_species = prev
+						has_trait = trait_sxx_zizhi5
+					}
+					change_species_characteristics = {
+						remove_trait = trait_sxx_zizhi5
+						add_trait = trait_sxx_zizhi6
+					}
+				}
+			}
+			every_country = {
+				every_owned_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi5
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi5
+						add_trait = trait_sxx_zizhi6
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi5
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi5
+						add_trait = trait_sxx_zizhi6
+					}
+				}
+			}
+			set_variable = { which = sxx_origin_system_zizhi value = 3 }
+			country_event = { id = sxx_origin_system.100 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.100.e.6
+		trigger = {
+			check_variable = { which = sxx_origin_system_zizhi value = 3 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 3000000
+		}
+		custom_tooltip = sxx_origin_system_zizhi_up_tooltip.6
+		hidden_effect = {
+			owner_main_species = {
+				every_galaxy_species = {
+					limit = {
+						is_same_species = prev
+						has_trait = trait_sxx_zizhi6
+					}
+					change_species_characteristics = {
+						remove_trait = trait_sxx_zizhi6
+						add_trait = trait_sxx_zizhi7
+					}
+				}
+			}
+			every_country = {
+				every_owned_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi6
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi6
+						add_trait = trait_sxx_zizhi7
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						species = {
+							is_same_species = owner_main_species
+							has_trait = trait_sxx_zizhi6
+						}
+					}
+					modify_species = {
+						species = this
+						remove_trait = trait_sxx_zizhi6
+						add_trait = trait_sxx_zizhi7
+					}
+				}
+			}
+			set_variable = { which = sxx_origin_system_zizhi value = 4 }
+			country_event = { id = sxx_origin_system.100 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.100.f
+		hidden_effect = { country_event = { id = sxx_origin_system.160 } }
+	}
+	option = {
+		name = sxx_origin_system.100.z
+		allow = {
+			if = {
+				limit = { check_variable = { which = sxx_task_max value = 1 } }
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 1 }
+				}
+			}
+			else_if = {
+				limit = { check_variable = { which = sxx_task_max value = 2 } }
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 10 }
+				}
+			}
+			else_if = {
+				limit = { check_variable = { which = sxx_task_max value = 3 } }
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 100 }
+				}
+			}
+			else_if = {
+				limit = { check_variable = { which = sxx_task_max value = 4 } }
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 1000 }
+				}
+			}
+			else_if = {
+				limit = { check_variable = { which = sxx_task_max value = 5 } }
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 10000 }
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = sxx_task_max_reached_upper_limit
+					always = no
+				}
+			}
+		}
+		if = {
+			limit = { check_variable = { which = sxx_task_max value = 1 } }
+			sxx_change_coins = { COINS = -1 }
+			custom_tooltip = sxx_task_max_add_tooltip
+			hidden_effect = { change_variable = { which = sxx_task_max value = 1 } }
+		}
+		else_if = {
+			limit = { check_variable = { which = sxx_task_max value = 2 } }
+			sxx_change_coins = { COINS = -10 }
+			custom_tooltip = sxx_task_max_add_tooltip
+			hidden_effect = { change_variable = { which = sxx_task_max value = 1 } }
+		}
+		else_if = {
+			limit = { check_variable = { which = sxx_task_max value = 3 } }
+			sxx_change_coins = { COINS = -100 }
+			custom_tooltip = sxx_task_max_add_tooltip
+			hidden_effect = { change_variable = { which = sxx_task_max value = 1 } }
+		}
+		else_if = {
+			limit = { check_variable = { which = sxx_task_max value = 4 } }
+			sxx_change_coins = { COINS = -1000 }
+			custom_tooltip = sxx_task_max_add_tooltip
+			hidden_effect = { change_variable = { which = sxx_task_max value = 1 } }
+		}
+		else_if = {
+			limit = { check_variable = { which = sxx_task_max value = 5 } }
+			sxx_change_coins = { COINS = -10000 }
+			custom_tooltip = sxx_task_max_add_tooltip
+			hidden_effect = { change_variable = { which = sxx_task_max value = 1 } }
+		}
+		hidden_effect = { country_event = { id = sxx_origin_system.100 } }
+	}
+
+	option = {
+		name = sxx_system_back
+		hidden_effect = { country_event = { id = sxx_origin_system.1 } }
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+	}
+}
+
+# 系统界面-资源
+country_event = {
+	id = sxx_origin_system.110
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.100.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.110.cultivation
+		hidden_effect = { country_event = { id = sxx_origin_system.111 } }
+	}
+	option = {
+		name = sxx_origin_system.110.base
+		hidden_effect = { country_event = { id = sxx_origin_system.112 } }
+	}
+	option = {
+		name = sxx_origin_system.110.advanced
+		hidden_effect = { country_event = { id = sxx_origin_system.113 } }
+	}
+	option = {
+		name = sxx_origin_system.110.strategic
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+
+	option = {
+		name = sxx_system_back
+		hidden_effect = { country_event = { id = sxx_origin_system.100 } }
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+	}
+}
+
+# 系统界面-修炼资源
+country_event = {
+	id = sxx_origin_system.111
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.100.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.111.500stones
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { sxx_stones = 500 }
+		hidden_effect = { country_event = { id = sxx_origin_system.111 } }
+	}
+	option = {
+		name = sxx_origin_system.111.50000stones
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 100
+		}
+		add_resource = { sxx_stones = 50000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.111 } }
+	}
+	option = {
+		name = sxx_origin_system.111.5Mstones
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10000
+		}
+		add_resource = { sxx_stones = 5000000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.111 } }
+	}
+	option = {
+		name = sxx_origin_system.111.50pills
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { sxx_pills = 50 }
+		hidden_effect = { country_event = { id = sxx_origin_system.111 } }
+	}
+	option = {
+		name = sxx_origin_system.111.5000pills
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 100
+		}
+		add_resource = { sxx_pills = 5000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.111 } }
+	}
+	option = {
+		name = sxx_origin_system.111.500Kpills
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10000
+		}
+		add_resource = { sxx_pills = 500000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.111 } }
+	}
+	option = {
+		name = sxx_origin_system.111.50gongfa
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { sxx_gongfa = 50 }
+		hidden_effect = { country_event = { id = sxx_origin_system.111 } }
+	}
+	option = {
+		name = sxx_origin_system.111.5000gongfa
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 100
+		}
+		add_resource = { sxx_gongfa = 5000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.111 } }
+	}
+	option = {
+		name = sxx_origin_system.111.500Kgongfa
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10000
+		}
+		add_resource = { sxx_gongfa = 500000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.111 } }
+	}
+
+	option = {
+		name = sxx_system_back
+		hidden_effect = { country_event = { id = sxx_origin_system.110 } }
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+	}
+}
+
+# 系统界面-基础资源
+country_event = {
+	id = sxx_origin_system.112
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.100.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.112.1000energy
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { energy = 1000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.112 } }
+	}
+	option = {
+		name = sxx_origin_system.112.10000energy
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { energy = 10000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.112 } }
+	}
+	option = {
+		name = sxx_origin_system.112.1000minerals
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { minerals = 1000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.112 } }
+	}
+	option = {
+		name = sxx_origin_system.112.10000minerals
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { minerals = 10000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.112 } }
+	}
+	option = {
+		name = sxx_origin_system.112.1000food
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { food = 1000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.112 } }
+	}
+	option = {
+		name = sxx_origin_system.112.10000food
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { food = 10000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.112 } }
+	}
+
+	option = {
+		name = sxx_system_back
+		hidden_effect = { country_event = { id = sxx_origin_system.110 } }
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+	}
+}
+
+# 系统界面-高级资源
+country_event = {
+	id = sxx_origin_system.113
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.100.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.113.500consumer_goods
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { consumer_goods = 500 }
+		hidden_effect = { country_event = { id = sxx_origin_system.113 } }
+	}
+	option = {
+		name = sxx_origin_system.113.5000consumer_goods
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { consumer_goods = 5000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.113 } }
+	}
+	option = {
+		name = sxx_origin_system.113.250alloys
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { alloys = 250 }
+		hidden_effect = { country_event = { id = sxx_origin_system.113 } }
+	}
+	option = {
+		name = sxx_origin_system.113.2500alloys
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { alloys = 2500 }
+		hidden_effect = { country_event = { id = sxx_origin_system.113 } }
+	}
+
+	option = {
+		name = sxx_system_back
+		hidden_effect = { country_event = { id = sxx_origin_system.110 } }
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+	}
+}
+
+# 系统界面-战略资源
+country_event = {
+	id = sxx_origin_system.114
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.100.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.114.100volatile_motes
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { volatile_motes = 100 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.1000volatile_motes
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { volatile_motes = 1000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.100exotic_gases
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { exotic_gases = 100 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.1000exotic_gases
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { exotic_gases = 1000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.100rare_crystals
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { rare_crystals = 100 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.1000rare_crystals
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { rare_crystals = 1000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.50sr_living_metal
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { sr_living_metal = 50 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.500sr_living_metal
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { sr_living_metal = 500 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.50sr_zro
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { sr_zro = 50 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.500sr_zro
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { sr_zro = 500 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.50sr_dark_matter
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { sr_dark_matter = 50 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.500sr_dark_matter
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { sr_dark_matter = 500 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.50nanites
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { nanites = 50 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.500nanites
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { nanites = 500 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.100minor_artifacts
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1
+		}
+		add_resource = { minor_artifacts = 100 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+	option = {
+		name = sxx_origin_system.114.1000minor_artifacts
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		add_resource = { minor_artifacts = 1000 }
+		hidden_effect = { country_event = { id = sxx_origin_system.114 } }
+	}
+
+	option = {
+		name = sxx_system_back
+		hidden_effect = { country_event = { id = sxx_origin_system.110 } }
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+	}
+}
+
+# 系统界面-人口
+country_event = {
+	id = sxx_origin_system.120
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.100.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.120.a
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 5
+		}
+		hidden_effect = {
+			capital_scope = {
+				create_pop = {
+					species = owner_main_species
+					effect = {
+						pop_sxx_remove_xiuxian_flag_and_trait = yes
+						sxx_origin_system_new_pop_zizhi_effect = yes
+					}
+				}
+			}
+			country_event = { id = sxx_origin_system.120 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.120.b
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 50
+		}
+		hidden_effect = {
+			capital_scope = {
+				while = {
+					count = 10
+					create_pop = {
+						species = owner_main_species
+						effect = {
+							pop_sxx_remove_xiuxian_flag_and_trait = yes
+							sxx_origin_system_new_pop_zizhi_effect = yes
+						}
+					}
+				}
+			}
+			country_event = { id = sxx_origin_system.120 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.120.1
+		trigger = {
+			is_sxx_lianxu_country = no
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		hidden_effect = {
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = lianqi STATE_VALUE = 1 }
+				last_created_pop = { sxx_origin_system_new_pop_zizhi_effect = yes }
+			}
+			if = {
+				limit = {
+					is_sxx_lianqi_country = no
+				}
+				country_event = { id = sxx_break.1001 }
+			}
+			country_event = { id = sxx_origin_system.120 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.120.2
+		trigger = {
+			is_sxx_heti_country = no
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 30
+		}
+		hidden_effect = {
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = zhuji STATE_VALUE = 2 }
+				last_created_pop = { sxx_origin_system_new_pop_zizhi_effect = yes }
+			}
+			if = {
+				limit = {
+					is_sxx_zhuji_country = no
+				}
+				country_event = { id = sxx_break.1002 }
+			}
+			country_event = { id = sxx_origin_system.120 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.120.3
+		trigger = {
+			is_sxx_dacheng_country = no
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 100
+		}
+		hidden_effect = {
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = jindan STATE_VALUE = 3 }
+				last_created_pop = { sxx_origin_system_new_pop_zizhi_effect = yes }
+			}
+			if = {
+				limit = {
+					is_sxx_jindan_country = no
+				}
+				country_event = { id = sxx_break.1003 }
+			}
+			country_event = { id = sxx_origin_system.120 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.120.4
+		trigger = {
+			is_sxx_dujie_country = no
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 300
+		}
+		hidden_effect = {
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = yuanying STATE_VALUE = 4 }
+				last_created_pop = { sxx_origin_system_new_pop_zizhi_effect = yes }
+			}
+			if = {
+				limit = {
+					is_sxx_yuanying_country = no
+				}
+				country_event = { id = sxx_break.1004 }
+			}
+			country_event = { id = sxx_origin_system.120 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.120.5
+		trigger = {
+			is_sxx_final_country = no
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1000
+		}
+		hidden_effect = {
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = huashen STATE_VALUE = 5 }
+				last_created_pop = { sxx_origin_system_new_pop_zizhi_effect = yes }
+			}
+			if = {
+				limit = {
+					is_sxx_huashen_country = no
+				}
+				country_event = { id = sxx_break.1005 }
+			}
+			country_event = { id = sxx_origin_system.120 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.120.6
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 3000
+		}
+		hidden_effect = {
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = lianxu STATE_VALUE = 6 }
+				last_created_pop = { sxx_origin_system_new_pop_zizhi_effect = yes }
+			}
+			if = {
+				limit = {
+					is_sxx_lianxu_country = no
+				}
+				country_event = { id = sxx_break.1006 }
+			}
+			country_event = { id = sxx_origin_system.120 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.120.7
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10000
+		}
+		hidden_effect = {
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = heti STATE_VALUE = 7 }
+				last_created_pop = { sxx_origin_system_new_pop_zizhi_effect = yes }
+			}
+			if = {
+				limit = {
+					is_sxx_heti_country = no
+				}
+				country_event = { id = sxx_break.1007 }
+			}
+			country_event = { id = sxx_origin_system.120 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.120.8
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 30000
+		}
+		hidden_effect = {
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = dacheng STATE_VALUE = 8 }
+				last_created_pop = { sxx_origin_system_new_pop_zizhi_effect = yes }
+			}
+			if = {
+				limit = {
+					is_sxx_dacheng_country = no
+				}
+				country_event = { id = sxx_break.1008 }
+			}
+			country_event = { id = sxx_origin_system.120 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.120.9
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 100000
+		}
+		hidden_effect = {
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = dujie STATE_VALUE = 9 }
+				last_created_pop = { sxx_origin_system_new_pop_zizhi_effect = yes }
+			}
+			if = {
+				limit = {
+					is_sxx_dujie_country = no
+				}
+				country_event = { id = sxx_break.1009 }
+			}
+			country_event = { id = sxx_origin_system.120 }
+		}
+	}
+
+	option = {
+		name = sxx_system_back
+		hidden_effect = { country_event = { id = sxx_origin_system.100 } }
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+	}
+}
+
+# 系统界面-特殊体质
+country_event = {
+	id = sxx_origin_system.130
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.100.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.130.a
+		trigger = {
+			NOT = { has_country_flag = sxx_origin_system_created_xiantian }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 20000
+		}
+		hidden_effect = {
+			set_country_flag = sxx_origin_system_created_xiantian
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = lianqi STATE_VALUE = 1 }
+				last_created_pop = {
+					add_modifier = { modifier = sxx_xiantiandaoti } planet = { planet_event = { id = sxx_break.160 days = 1 random = 29 } }
+				}
+			}
+			if = {
+				limit = {
+					is_sxx_lianqi_country = no
+				}
+				country_event = { id = sxx_break.1001 }
+			}
+			country_event = { id = sxx_origin_system.130 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.130.b
+		trigger = {
+			NOT = { has_country_flag = sxx_origin_system_created_ziyang }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 20000
+		}
+		hidden_effect = {
+			set_country_flag = sxx_origin_system_created_ziyang
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = lianqi STATE_VALUE = 1 }
+				last_created_pop = {
+					add_modifier = { modifier = sxx_ziyanglingti } planet = { planet_event = { id = sxx_break.165 days = 1 random = 29 } }
+				}
+			}
+			if = {
+				limit = {
+					is_sxx_lianqi_country = no
+				}
+				country_event = { id = sxx_break.1001 }
+			}
+			country_event = { id = sxx_origin_system.130 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.130.c
+		trigger = {
+			NOT = { has_country_flag = sxx_origin_system_created_liuli }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 20000
+		}
+		hidden_effect = {
+			set_country_flag = sxx_origin_system_created_liuli
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = lianqi STATE_VALUE = 1 }
+				last_created_pop = {
+					add_modifier = { modifier = sxx_liulishenti } planet = { planet_event = { id = sxx_break.170 days = 1 random = 29 } }
+				}
+			}
+			if = {
+				limit = {
+					is_sxx_lianqi_country = no
+				}
+				country_event = { id = sxx_break.1001 }
+			}
+			country_event = { id = sxx_origin_system.130 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.130.d
+		trigger = {
+			NOT = { has_country_flag = sxx_origin_system_created_huanggu }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 20000
+		}
+		hidden_effect = {
+			set_country_flag = sxx_origin_system_created_huanggu
+			capital_scope = {
+				sxx_planet_add_main_species_state_pop = { STATE = lianqi STATE_VALUE = 1 }
+				last_created_pop = {
+					add_modifier = { modifier = sxx_huanggushengti } planet = { planet_event = { id = sxx_break.175 days = 1 random = 29 } }
+				}
+			}
+			if = {
+				limit = {
+					is_sxx_lianqi_country = no
+				}
+				country_event = { id = sxx_break.1001 }
+			}
+			country_event = { id = sxx_origin_system.130 }
+		}
+	}
+
+	option = {
+		name = sxx_system_back
+		hidden_effect = { country_event = { id = sxx_origin_system.100 } }
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+	}
+}
+
+# 系统界面-灵脉
+country_event = {
+	id = sxx_origin_system.140
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.100.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.140.1
+		trigger = {
+			check_variable = { which = sxx_origin_system_lingmai_1_count value > 0 }
+		}
+		allow = {
+			if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_1_count value = 5 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 50 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_1_count value = 4 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 100 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_1_count value = 3 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 200 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_1_count value = 2 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 400 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_1_count value = 1 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 800 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_1_count value = 5 }
+			}
+			sxx_change_coins = { COINS = -50 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_1_count value = 4 }
+			}
+			sxx_change_coins = { COINS = -100 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_1_count value = 3 }
+			}
+			sxx_change_coins = { COINS = -200 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_1_count value = 2 }
+			}
+			sxx_change_coins = { COINS = -400 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_1_count value = 1 }
+			}
+			sxx_change_coins = { COINS = -800 }
+		}
+		custom_tooltip = sxx_origin_system_lingmai_1_count_tooltip
+		custom_tooltip = sxx_origin_system_create_lingmai_tootip
+		hidden_effect = {
+			change_variable = { which = sxx_origin_system_lingmai_1_can_create value = 1 }
+			subtract_variable = { which = sxx_origin_system_lingmai_1_count value = 1 }
+			country_event = { id = sxx_origin_system.140 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.140.2
+		trigger = {
+			check_variable = { which = sxx_origin_system_lingmai_2_count value > 0 }
+		}
+		allow = {
+			if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_2_count value = 5 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 150 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_2_count value = 4 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 300 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_2_count value = 3 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 600 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_2_count value = 2 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 1200 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_2_count value = 1 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 2400 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_2_count value = 5 }
+			}
+			sxx_change_coins = { COINS = -150 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_2_count value = 4 }
+			}
+			sxx_change_coins = { COINS = -300 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_2_count value = 3 }
+			}
+			sxx_change_coins = { COINS = -600 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_2_count value = 2 }
+			}
+			sxx_change_coins = { COINS = -1200 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_2_count value = 1 }
+			}
+			sxx_change_coins = { COINS = -2400 }
+		}
+		custom_tooltip = sxx_origin_system_lingmai_2_count_tooltip
+		custom_tooltip = sxx_origin_system_create_lingmai_tootip
+		hidden_effect = {
+			change_variable = { which = sxx_origin_system_lingmai_2_can_create value = 1 }
+			subtract_variable = { which = sxx_origin_system_lingmai_2_count value = 1 }
+			country_event = { id = sxx_origin_system.140 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.140.3
+		trigger = {
+			check_variable = { which = sxx_origin_system_lingmai_3_count value > 0 }
+		}
+		allow = {
+			if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_3_count value = 5 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 500 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_3_count value = 4 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 1000 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_3_count value = 3 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 2000 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_3_count value = 2 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 4000 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_3_count value = 1 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 8000 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_3_count value = 5 }
+			}
+			sxx_change_coins = { COINS = -500 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_3_count value = 4 }
+			}
+			sxx_change_coins = { COINS = -1000 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_3_count value = 3 }
+			}
+			sxx_change_coins = { COINS = -2000 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_3_count value = 2 }
+			}
+			sxx_change_coins = { COINS = -4000 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_3_count value = 1 }
+			}
+			sxx_change_coins = { COINS = -8000 }
+		}
+		custom_tooltip = sxx_origin_system_lingmai_3_count_tooltip
+		custom_tooltip = sxx_origin_system_create_lingmai_tootip
+		hidden_effect = {
+			change_variable = { which = sxx_origin_system_lingmai_3_can_create value = 1 }
+			subtract_variable = { which = sxx_origin_system_lingmai_3_count value = 1 }
+			country_event = { id = sxx_origin_system.140 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.140.4
+		trigger = {
+			check_variable = { which = sxx_origin_system_lingmai_4_count value > 0 }
+		}
+		allow = {
+			if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_4_count value = 5 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 5000 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_4_count value = 4 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 10000 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_4_count value = 3 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 20000 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_4_count value = 2 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 40000 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = sxx_origin_system_lingmai_4_count value = 1 }
+				}
+				custom_tooltip = {
+					fail_text = sxx_coins_not_enough
+					check_variable = { which = sxx_coins value >= 80000 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_4_count value = 5 }
+			}
+			sxx_change_coins = { COINS = -5000 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_4_count value = 4 }
+			}
+			sxx_change_coins = { COINS = -10000 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_4_count value = 3 }
+			}
+			sxx_change_coins = { COINS = -20000 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_4_count value = 2 }
+			}
+			sxx_change_coins = { COINS = -40000 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { which = sxx_origin_system_lingmai_4_count value = 1 }
+			}
+			sxx_change_coins = { COINS = -80000 }
+		}
+		custom_tooltip = sxx_origin_system_lingmai_4_count_tooltip
+		custom_tooltip = sxx_origin_system_create_lingmai_tootip
+		hidden_effect = {
+			change_variable = { which = sxx_origin_system_lingmai_4_can_create value = 1 }
+			subtract_variable = { which = sxx_origin_system_lingmai_4_count value = 1 }
+			country_event = { id = sxx_origin_system.140 }
+		}
+	}
+
+	option = {
+		name = sxx_system_back
+		hidden_effect = { country_event = { id = sxx_origin_system.100 } }
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+	}
+}
+
+# 系统界面-功法
+country_event = {
+	id = sxx_origin_system.160
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.100.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.160.1
+		trigger = {
+			check_variable = { which = sxx_origin_system_practice_24_level value = 0 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 3
+		}
+		hidden_effect = {
+			set_variable = { which = sxx_origin_system_practice_24_level value = 1 }
+			country_event = { id = sxx_origin_system.160 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.160.2
+		trigger = {
+			check_variable = { which = sxx_origin_system_practice_24_level value = 1 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10
+		}
+		hidden_effect = {
+			set_variable = { which = sxx_origin_system_practice_24_level value = 2 }
+			country_event = { id = sxx_origin_system.160 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.160.3
+		trigger = {
+			check_variable = { which = sxx_origin_system_practice_24_level value = 2 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 30
+		}
+		hidden_effect = {
+			set_variable = { which = sxx_origin_system_practice_24_level value = 3 }
+			country_event = { id = sxx_origin_system.160 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.160.4
+		trigger = {
+			check_variable = { which = sxx_origin_system_practice_24_level value = 3 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 100
+		}
+		hidden_effect = {
+			set_variable = { which = sxx_origin_system_practice_24_level value = 4 }
+			country_event = { id = sxx_origin_system.160 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.160.5
+		trigger = {
+			check_variable = { which = sxx_origin_system_practice_24_level value = 4 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 300
+		}
+		hidden_effect = {
+			set_variable = { which = sxx_origin_system_practice_24_level value = 5 }
+			country_event = { id = sxx_origin_system.160 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.160.6
+		trigger = {
+			check_variable = { which = sxx_origin_system_practice_24_level value = 5 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 1000
+		}
+		hidden_effect = {
+			set_variable = { which = sxx_origin_system_practice_24_level value = 6 }
+			country_event = { id = sxx_origin_system.160 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.160.7
+		trigger = {
+			check_variable = { which = sxx_origin_system_practice_24_level value = 6 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 3000
+		}
+		hidden_effect = {
+			set_variable = { which = sxx_origin_system_practice_24_level value = 7 }
+			country_event = { id = sxx_origin_system.160 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.160.8
+		trigger = {
+			check_variable = { which = sxx_origin_system_practice_24_level value = 7 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 10000
+		}
+		hidden_effect = {
+			set_variable = { which = sxx_origin_system_practice_24_level value = 8 }
+			country_event = { id = sxx_origin_system.160 }
+		}
+	}
+	option = {
+		name = sxx_origin_system.160.9
+		trigger = {
+			check_variable = { which = sxx_origin_system_practice_24_level value = 8 }
+		}
+		inline_script = {
+			script = sxx_origin_system/sxx_coins_cost
+			COINS = 30000
+		}
+		hidden_effect = {
+			set_variable = { which = sxx_origin_system_practice_24_level value = 9 }
+			country_event = { id = sxx_origin_system.160 }
+		}
+	}
+
+	option = {
+		name = sxx_system_back
+		hidden_effect = { country_event = { id = sxx_origin_system.100 } }
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+	}
+}
+
+####################################################################################################
+
+# 系统界面-领取任务总览
+country_event = {
+	id = sxx_origin_system.200
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.200.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.200.a
+		hidden_effect = { sxx_random_selsect_task_simple = yes }
+	}
+	option = {
+		name = sxx_origin_system.200.b
+		hidden_effect = { sxx_random_selsect_task_normal = yes }
+	}
+	option = {
+		name = sxx_origin_system.200.c
+		hidden_effect = { sxx_random_selsect_task_hard = yes }
+	}
+	option = {
+		name = sxx_system_back
+		hidden_effect = {
+			remove_country_flag = sxx_getting_task
+			country_event = { id = sxx_origin_system.1 }
+		}
+	}
+	option = {
+		name = sxx_system_close
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = sxx_getting_task
+		}
+	}
+}
+
+# 开局系统
+country_event = {
+	id = sxx_origin_system.1000
+	title = sxx_origin_system_name
+	desc = sxx_origin_system.1000.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	trigger = {
+		has_origin = origin_sxx_system
+	}
+
+	option = {
+		name = sxx_origin_system.1000.a
+		response_text = sxx_origin_system.1000.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_origin_system.1000.b
+		response_text = sxx_origin_system.1000.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = sxx_origin_system.1000.c
+		response_text = sxx_origin_system.1000.c.response
+		default_hide_option = yes
+		add_resource = {
+			sxx_stones = 1000
+			sxx_pills = 100
+		}
+		sxx_change_coins = { COINS = 5 }
+		hidden_effect = {
+			set_variable = { which = sxx_task_num value = 0 }
+			set_variable = { which = sxx_task_max value = 1 }
+			set_variable = { which = sxx_origin_system_lingmai_1_count value = 5 }
+			set_variable = { which = sxx_origin_system_lingmai_2_count value = 5 }
+			set_variable = { which = sxx_origin_system_lingmai_3_count value = 5 }
+			set_variable = { which = sxx_origin_system_lingmai_4_count value = 5 }
+			set_variable = { which = sxx_origin_system_zizhi value = -2 }
+			establish_communications_no_message = event_target:sxx_system_country
+		}
+	}
+}
