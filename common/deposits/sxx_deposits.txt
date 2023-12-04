@@ -251,6 +251,30 @@ d_sxx_seal = {
 	}
 }
 
+d_sxx_sleep_fairy = {
+	icon = d_sxx_sleep_fairy
+
+	category = deposit_cat_rare
+
+	potential = {
+		always = no
+	}
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			trigger = {
+				owner = { is_sxx_heaven_country = yes }
+			}
+			sxx_qiyun = 0.1
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
 ####################################### 野矿类 ###########################################
 
 d_sxx_stones_2 = {

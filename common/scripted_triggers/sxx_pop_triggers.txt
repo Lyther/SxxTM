@@ -229,20 +229,19 @@ sxx_pop_is_robot_can_be_upgraded = {
 }
 
 is_sxx_cultivable_cultivator = {
-	is_variable_set = sxx_pop_state
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_ai = yes }
+		}
+		is_variable_set = sxx_pop_state
+	}
 	is_sxx_cultivable = yes
-}
-
-is_sxx_robot_not_cultivable = {
-	always = no
 }
 
 is_sxx_cultivable = {
 	custom_tooltip = {
 		text = text_is_sxx_cultivable
-		NOT = {
-			is_sxx_robot_not_cultivable = yes
-		}
 		is_sapient = yes
 		can_think = yes
 	}

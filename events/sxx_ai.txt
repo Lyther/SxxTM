@@ -845,23 +845,41 @@ country_event = {
 				limit = {
 					is_sxx_sect = no
 				}
-				every_owned_planet = {
-					if = {
-						limit = {
-							NOT = { has_holding = { holding = holding_sxx_shengxiantai owner = root } }
-							has_holding = { holding = holding_garrison owner = root }
-						}
-						remove_holding = { holding = holding_garrison owner = root }
-						add_holding = { holding = holding_sxx_shengxiantai owner = root }
+				if = {
+					limit = {
+						is_gestalt = no
 					}
-					if = {
-						limit = {
-							has_sxx_lingmai = yes
-							NOT = { has_holding = { holding = holding_sxx_stones_mine owner = root } }
-							has_holding = { holding = holding_orbital_assembly_complex owner = root }
+					every_owned_planet = {
+						if = {
+							limit = {
+								NOT = { has_holding = { holding = holding_sxx_shengxiantai owner = root } }
+								has_holding = { holding = holding_garrison owner = root }
+							}
+							remove_holding = { holding = holding_garrison owner = root }
+							add_holding = { holding = holding_sxx_shengxiantai owner = root }
 						}
-						remove_holding = { holding = holding_orbital_assembly_complex owner = root }
-						add_holding = { holding = holding_sxx_stones_mine owner = root }
+						if = {
+							limit = {
+								has_sxx_lingmai = yes
+								NOT = { has_holding = { holding = holding_sxx_stones_mine owner = root } }
+								has_holding = { holding = holding_orbital_assembly_complex owner = root }
+							}
+							remove_holding = { holding = holding_orbital_assembly_complex owner = root }
+							add_holding = { holding = holding_sxx_stones_mine owner = root }
+						}
+					}
+				}
+				else = {
+					every_owned_planet = {
+						if = {
+							limit = {
+								has_sxx_lingmai = yes
+								NOT = { has_holding = { holding = holding_sxx_stones_mine owner = root } }
+								has_holding = { holding = holding_orbital_assembly_complex owner = root }
+							}
+							remove_holding = { holding = holding_orbital_assembly_complex owner = root }
+							add_holding = { holding = holding_sxx_stones_mine owner = root }
+						}
 					}
 				}
 			}

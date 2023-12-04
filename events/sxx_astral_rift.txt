@@ -270,6 +270,7 @@ country_event = {
 
 	option = {
 		name = sxx_astral_rift.135.a
+		add_relic = r_sxx_sphere
 	}
 }
 
@@ -285,5 +286,6 @@ country_event = {
 
 	option = {
 		name = sxx_astral_rift.140.a
+		add_relic = r_sxx_sphere
 	}
 }

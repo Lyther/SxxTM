@@ -186,6 +186,7 @@ country_event = {
 			}
 			sxx_planet_fairy_cultivate_effect = yes
 		}
+		sxx_fairy_may_sleep_effect = yes
 	}
 }
 

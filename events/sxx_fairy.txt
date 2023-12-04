@@ -89,6 +89,31 @@ country_event = {
 	}
 }
 
+# 真仙长眠
+country_event = {
+	id = sxx_fairy.140
+	title = sxx_fairy.140.name
+	desc = sxx_fairy.140.desc
+	picture = GFX_evt_excavation_team
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = sxx_fairy_sleep_fired }
+	}
+
+	immediate = {
+		set_country_flag = sxx_fairy_sleep_fired
+	}
+
+	option = {
+		name = sxx_fairy.140.a
+	}
+	option = {
+		name = sxx_fairy.140.b
+	}
+}
+
 # 更新位面承载力 & 恢复凌霄宝殿
 country_event = {
 	id = sxx_fairy.150

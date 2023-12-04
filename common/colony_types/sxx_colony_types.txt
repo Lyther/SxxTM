@@ -441,13 +441,7 @@ col_capital_sxx_stones = {
 				is_country_type = default
 				is_gestalt = no
 				is_sxx_sect = yes
-				OR = {
-					is_ai = no
-					AND = {
-						years_passed > 25
-						num_owned_planets >= 5
-					}
-				}
+				is_ai = no
 			}
 		}
 	}
@@ -484,13 +478,7 @@ col_capital_sxx_gongfa = {
 				is_country_type = default
 				is_gestalt = no
 				is_sxx_sect = yes
-				OR = {
-					is_ai = no
-					AND = {
-						years_passed > 25
-						num_owned_planets >= 5
-					}
-				}
+				is_ai = no
 			}
 		}
 	}
@@ -529,13 +517,7 @@ col_capital_sxx_lingyao = { # 废弃
 				is_country_type = default
 				is_gestalt = no
 				is_sxx_sect = yes
-				OR = {
-					is_ai = no
-					AND = {
-						years_passed > 25
-						num_owned_planets >= 5
-					}
-				}
+				is_ai = no
 			}
 		}
 	}

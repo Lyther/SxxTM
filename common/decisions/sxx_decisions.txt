@@ -335,6 +335,39 @@ decision_sxx_heaven_ship_3_all = {
 	}
 }
 
+decision_sxx_wake_fairy = {
+	owned_planets_only = yes
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000000
+			sxx_qiyun = 1000
+		}
+	}
+
+	potential = {
+		owner = { is_sxx_heaven_country = yes }
+		has_deposit = d_sxx_sleep_fairy
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = decision_sxx_wake_fairy_tooltip
+		hidden_effect = {
+			remove_deposit = d_sxx_sleep_fairy
+			sxx_planet_add_main_species_state_pop = { STATE = zhenxian STATE_VALUE = 10 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
 decision_sxx_cultivator_ship_return = {
 	owned_planets_only = yes
 

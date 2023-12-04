@@ -1290,6 +1290,137 @@ sxx_planet_fairy_cultivate_effect = {
 	set_update_modifiers_batch = end
 }
 
+sxx_fairy_pop_may_sleep = {
+	if = {
+		limit = {
+			owner = { is_ai = yes }
+		}
+		random_list = {
+			1 = {
+				modifier = {
+					add = owner.num_sxx_xianwang
+				}
+				random_list = {
+					10 = {
+						modifier = {
+							add = 10
+							planet = { NOT = { is_planet_class = pc_sxx_heaven } }
+						}
+						modifier = {
+							add = 10
+							has_job = sxx_other_fairy
+						}
+						owner = {
+							country_event = { id = sxx_fairy.140 }
+						}
+						event_target:sxx_heaven_planet = { add_deposit = d_sxx_sleep_fairy }
+						kill_pop = yes
+					}
+					90 = {
+						modifier = {
+							subtract = 10
+							planet = { NOT = { is_planet_class = pc_sxx_heaven } }
+						}
+						modifier = {
+							subtract = 10
+							has_job = sxx_other_fairy
+						}
+					}
+				}
+			}
+			9 = {
+				modifier = {
+					subtract = owner.num_sxx_xianwang
+				}
+			}
+		}
+	}
+}
+
+sxx_fairy_may_sleep_effect = {
+	if = {
+		limit = {
+			any_owned_planet = {
+				is_planet_class = pc_sxx_heaven
+			}
+		}
+		random_owned_planet = {
+			limit = {
+				is_planet_class = pc_sxx_heaven
+			}
+			save_event_target_as = sxx_heaven_planet
+		}
+		switch = {
+			trigger = has_global_flag
+			sxx_break_level_1 = {
+				every_owned_pop = {
+					limit = {
+						has_pop_flag = sxx_zhenxian
+						is_sxx_cultivable_cultivator = yes
+						NOT = { has_job = sxx_sealer }
+					}
+					random_list = {
+						1 = { sxx_fairy_pop_may_sleep = yes }
+						99 = {}
+					}
+				}
+			}
+			sxx_break_level_2 = {
+				every_owned_pop = {
+					limit = {
+						has_pop_flag = sxx_zhenxian
+						is_sxx_cultivable_cultivator = yes
+						NOT = { has_job = sxx_sealer }
+					}
+					random_list = {
+						2 = { sxx_fairy_pop_may_sleep = yes }
+						98 = {}
+					}
+				}
+			}
+			sxx_break_level_3 = {
+				every_owned_pop = {
+					limit = {
+						has_pop_flag = sxx_zhenxian
+						is_sxx_cultivable_cultivator = yes
+						NOT = { has_job = sxx_sealer }
+					}
+					random_list = {
+						3 = { sxx_fairy_pop_may_sleep = yes }
+						97 = {}
+					}
+				}
+			}
+			sxx_break_level_4 = {
+				every_owned_pop = {
+					limit = {
+						has_pop_flag = sxx_zhenxian
+						is_sxx_cultivable_cultivator = yes
+						NOT = { has_job = sxx_sealer }
+					}
+					random_list = {
+						4 = { sxx_fairy_pop_may_sleep = yes }
+						96 = {}
+					}
+				}
+			}
+			default = {
+				every_owned_pop = {
+					limit = {
+						has_pop_flag = sxx_zhenxian
+						is_sxx_cultivable_cultivator = yes
+						NOT = { has_job = sxx_sealer }
+					}
+					random_list = {
+						2 = { sxx_fairy_pop_may_sleep = yes }
+						98 = {}
+					}
+				}
+			}
+		}
+	}
+}
+
 sxx_planet_kuilei_upgrade_effect = {
 	if = { # 傀儡升级
 		limit = {

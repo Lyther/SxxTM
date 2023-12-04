@@ -91,6 +91,30 @@ sxx_pop_become_zombie_or_be_killed = {
 				exists = owner
 				owner = { is_ai = yes }
 			}
+			if = {
+				limit = {
+					owner = { has_relic = r_sxx_sphere }
+				}
+				owner = {
+					change_variable = { which = r_sxx_sphere_count value = 1 }
+				}
+			}
+			if = {
+				limit = {
+					owner = { has_relic = r_sxx_crystal }
+				}
+				owner = {
+					change_variable = { which = r_sxx_crystal_count value = 1 }
+				}
+			}
+			if = {
+				limit = {
+					owner = { has_relic = r_sxx_cube }
+				}
+				owner = {
+					change_variable = { which = r_sxx_cube_count value = 1 }
+				}
+			}
 			kill_pop = yes
 		}
 	}

@@ -1,6 +1,7 @@
 sxx_senior_job_control = {
 	potential = {
 		is_sxx_sect = yes
+		is_ai = yes
 	}
 
 	option = {
@@ -55,6 +56,7 @@ sxx_senior_job_control = {
 sxx_junior_job_control = {
 	potential = {
 		is_sxx_sect = yes
+		is_ai = yes
 	}
 
 	option = {
@@ -125,6 +127,7 @@ sxx_junior_job_control = {
 sxx_talent_test = {
 	potential = {
 		is_sxx_sect = yes
+		is_ai = yes
 	}
 
 	option = {

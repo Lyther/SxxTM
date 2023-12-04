@@ -21,7 +21,7 @@ trait_sxx_lianqi = {
 
 	custom_tooltip_with_modifiers = sxx_trait_new_pop_auto_remove_tooltip
 	modifier = {
-		sxx_pop_xiuxian_job_produces_mult = 0.25
+		sxx_pop_xiuxian_job_produces_mult = -0.75
 		army_damage_mult = 0.3
         army_health = 0.3
 		army_morale = 0.3
@@ -31,9 +31,8 @@ trait_sxx_lianqi = {
 		planet_pops_energy_upkeep_mult = 1
 		planet_pops_minerals_upkeep_mult = 1
 		planet_pops_food_upkeep_mult = 1
-		sxx_pop_xiuxian_job_upkeep_mult = 0.25
+		sxx_pop_xiuxian_job_upkeep_mult = -0.75
 		pop_resettlement_cost_mult = 0.1
-		planet_jobs_produces_mult = 0.25
 	}
 	slave_cost = {
 		energy = 2000
@@ -68,7 +67,7 @@ trait_sxx_zhuji = {
 		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 1
 		planet_pops_sxx_stones_upkeep_mult = 1
 		planet_pops_sxx_pills_upkeep_mult = 1
-		sxx_pop_xiuxian_job_produces_mult = 0.5
+		sxx_pop_xiuxian_job_produces_mult = -0.5
 		army_damage_mult = 1
         army_health = 1
 		army_morale = 1
@@ -78,9 +77,8 @@ trait_sxx_zhuji = {
 		planet_pops_energy_upkeep_mult = -0.5
 		planet_pops_minerals_upkeep_mult = -0.5
 		planet_pops_food_upkeep_mult = -0.5
-		sxx_pop_xiuxian_job_upkeep_mult = 0.5
+		sxx_pop_xiuxian_job_upkeep_mult = -0.5
 		pop_resettlement_cost_mult = 0.2
-		planet_jobs_produces_mult = 0.5
 	}
 	slave_cost = {
 		energy = 3000
@@ -115,7 +113,7 @@ trait_sxx_jindan = {
 		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 3
 		planet_pops_sxx_stones_upkeep_mult = 3
 		planet_pops_sxx_pills_upkeep_mult = 3
-		sxx_pop_xiuxian_job_produces_mult = 1
+	#	sxx_pop_xiuxian_job_produces_mult = 0
 		army_damage_mult = 3
         army_health = 3
 		army_morale = 3
@@ -125,9 +123,8 @@ trait_sxx_jindan = {
 		planet_pops_energy_upkeep_mult = -1
 		planet_pops_minerals_upkeep_mult = -1
 		planet_pops_food_upkeep_mult = -1
-		sxx_pop_xiuxian_job_upkeep_mult = 1
+	#	sxx_pop_xiuxian_job_upkeep_mult = 0
 		pop_resettlement_cost_mult = 0.3
-		planet_jobs_produces_mult = 1
 	}
 	slave_cost = {
 		energy = 4000
@@ -162,7 +159,7 @@ trait_sxx_yuanying = {
 		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 7
 		planet_pops_sxx_stones_upkeep_mult = 7
 		planet_pops_sxx_pills_upkeep_mult = 7
-		sxx_pop_xiuxian_job_produces_mult = 2
+		sxx_pop_xiuxian_job_produces_mult = 1
 		army_damage_mult = 10
         army_health = 10
 		army_morale = 10
@@ -172,9 +169,8 @@ trait_sxx_yuanying = {
 		planet_pops_energy_upkeep_mult = -2
 		planet_pops_minerals_upkeep_mult = -2
 		planet_pops_food_upkeep_mult = -2
-		sxx_pop_xiuxian_job_upkeep_mult = 2
+		sxx_pop_xiuxian_job_upkeep_mult = 1
 		pop_resettlement_cost_mult = 0.4
-		planet_jobs_produces_mult = 2
 	}
 	slave_cost = {
 		energy = 5000
@@ -221,7 +217,6 @@ trait_sxx_huashen = {
 		planet_pops_food_upkeep_mult = -4
 		sxx_pop_xiuxian_job_upkeep_mult = 3
 		pop_resettlement_cost_mult = 0.5
-		planet_jobs_produces_mult = 3
 	}
 	slave_cost = {
 		energy = 6000
@@ -268,7 +263,6 @@ trait_sxx_lianxu = {
 		planet_pops_food_upkeep_mult = -8
 		sxx_pop_xiuxian_job_upkeep_mult = 7
 		pop_resettlement_cost_mult = 0.6
-		planet_jobs_produces_mult = 7
 	}
 	slave_cost = {
 		energy = 7000
@@ -315,7 +309,6 @@ trait_sxx_heti = {
 		planet_pops_food_upkeep_mult = -16
 		sxx_pop_xiuxian_job_upkeep_mult = 15
 		pop_resettlement_cost_mult = 0.7
-		planet_jobs_produces_mult = 15
 	}
 	slave_cost = {
 		energy = 8000
@@ -362,7 +355,6 @@ trait_sxx_dacheng = {
 		planet_pops_food_upkeep_mult = -32
 		sxx_pop_xiuxian_job_upkeep_mult = 31
 		pop_resettlement_cost_mult = 0.8
-		planet_jobs_produces_mult = 31
 	}
 	slave_cost = {
 		energy = 9000
@@ -409,7 +401,6 @@ trait_sxx_dujie = {
 		planet_pops_food_upkeep_mult = -64
 		sxx_pop_xiuxian_job_upkeep_mult = 63
 		pop_resettlement_cost_mult = 0.9
-		planet_jobs_produces_mult = 63
 	}
 	slave_cost = {
 		energy = 10000
@@ -453,7 +444,6 @@ trait_sxx_zhenxian = {
 		planet_pops_food_upkeep_mult = -200
 		sxx_pop_xiuxian_job_upkeep_mult = 63
 		pop_resettlement_cost_mult = 1.0
-		planet_jobs_produces_mult = 127
 	}
 	slave_cost = {
 		energy = 15000
@@ -497,7 +487,6 @@ trait_sxx_xianwang = {
 		planet_pops_food_upkeep_mult = -400
 		sxx_pop_xiuxian_job_upkeep_mult = 127
 		pop_resettlement_cost_mult = 1.1
-		planet_jobs_produces_mult = 255
 	}
 	slave_cost = {
 		energy = 20000
@@ -541,7 +530,6 @@ trait_sxx_xiandi = {
 		planet_pops_food_upkeep_mult = -800
 		sxx_pop_xiuxian_job_upkeep_mult = 255
 		pop_resettlement_cost_mult = 1.2
-		planet_jobs_produces_mult = 511
 	}
 	slave_cost = {
 		energy = 25000
@@ -639,7 +627,6 @@ trait_sxx_linggen = {
 	modifier = {
 		sxx_planet_jobs_sxx_speed_mod_produces_mult = 0.2
 		leader_lifespan_add = -20
-		planet_jobs_produces_mult = 0.2
 	}
 }
 
@@ -1503,6 +1490,7 @@ trait_sxx_douluo = {
 		leader_lifespan_add = 100
 		pop_environment_tolerance = -0.99
 		planet_pops_upkeep_mult = -0.99
+		planet_jobs_upkeep_mult = -0.99
 	}
 	triggered_planet_growth_habitability_modifier = {
 		potential = {
@@ -1548,6 +1536,7 @@ trait_sxx_douluo_god = {
 		#army_collateral_damage_mult = -0.9
 		pop_environment_tolerance = -0.9
 		planet_pops_upkeep_mult = -0.99
+		planet_jobs_upkeep_mult = -0.9
 		planet_pop_assembly_organic_mult = -100
 	}
 	triggered_planet_growth_habitability_modifier = {

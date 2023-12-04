@@ -106,3 +106,40 @@ planet_event = {
         planet_event = { id = sxx_other_world_intruder.11 days = 2 }
     }
 }
+
+# 鸿蒙灵珠
+country_event = {
+    id = sxx_other_world_intruder.20
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        is_sxx_sect = yes
+        from = { is_country_type = sxx_other_world_intruder }
+    }
+
+    immediate = {
+        random_list = {
+            1 = { country_event = { id = sxx_other_world_intruder.21 } }
+            199 = {}
+        }
+    }
+}
+
+# 鸿蒙灵珠
+country_event = {
+    id = sxx_other_world_intruder.21
+    title = sxx_other_world_intruder.21.name
+    desc = sxx_other_world_intruder.21.desc
+
+    picture = GFX_evt_analyzing_artifacts
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = sxx_other_world_intruder.21.a
+        add_relic = r_sxx_sphere
+    }
+}

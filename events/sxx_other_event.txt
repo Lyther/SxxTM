@@ -2171,3 +2171,187 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = sxx_other_event.1000
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_sxx_sect = yes
+		is_ai = no
+		any_owned_planet = {
+			has_deposit = d_sxx_lingmai_4
+		}
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				has_deposit = d_sxx_lingmai_4
+			}
+			random_list = {
+				1 = { planet_event = { id = sxx_other_event.1001 days = 1 random = 1799 } }
+				99 = {}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = sxx_other_event.1001
+	title = sxx_other_event.1001.name
+	desc = sxx_other_event.1001.desc
+	picture = GFX_evt_crystal_mining
+	location = root
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_sxx_sect = yes
+			is_ai = no
+		}
+		has_deposit = d_sxx_lingmai_4
+	}
+
+	option = {
+		name = sxx_other_event.1001.a
+		hidden_effect = {
+			planet_event = { id = sxx_other_event.1002 days = 180 random = 180 }
+		}
+	}
+}
+
+planet_event = {
+	id = sxx_other_event.1002
+	title = sxx_other_event.1002.name
+	desc = sxx_other_event.1002.desc
+	picture = GFX_evt_crystal_mining
+	location = root
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_sxx_sect = yes
+			is_ai = no
+		}
+		has_deposit = d_sxx_lingmai_4
+	}
+
+	option = {
+		name = sxx_other_event.1002.a
+		remove_deposit = d_sxx_lingmai_4
+		hidden_effect = {
+			planet_event = { id = sxx_other_event.1003 days = 180 random = 180 }
+		}
+	}
+	option = {
+		name = sxx_other_event.1002.b
+		remove_deposit = d_sxx_lingmai_4
+		add_deposit = d_sxx_lingmai_3
+	}
+}
+
+planet_event = {
+	id = sxx_other_event.1003
+	title = sxx_other_event.1003.name
+	desc = sxx_other_event.1003.desc
+	picture = GFX_evt_analyzing_artifacts
+	location = root
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_sxx_sect = yes
+			is_ai = no
+		}
+	}
+
+	after = {
+		owner = { add_relic = r_sxx_crystal }
+	}
+
+	option = {
+		name = sxx_other_event.1003.a
+	}
+	option = {
+		name = sxx_other_event.1003.b
+	}
+}
+
+planet_event = {
+	id = sxx_other_event.1100
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		from.owner = {
+			is_sxx_sect = yes
+			is_ai = no
+		}
+	}
+
+	immediate = {
+		random_list = {
+			1 = {
+				modifier = {
+					add = 1
+					is_star = no
+					exists = owner
+				}
+				modifier = {
+					add = 1
+					is_star = no
+					exists = owner
+					owner = { is_sxx_sect = yes }
+				}
+				modifier = {
+					add = 2
+					is_star = yes
+					solar_system = {
+						any_system_planet = {
+							exists = owner
+						}
+					}
+				}
+				modifier = {
+					add = 2
+					is_star = yes
+					solar_system = {
+						any_system_planet = {
+							exists = owner
+							owner = { is_sxx_sect = yes }
+						}
+					}
+				}
+				from.owner = { country_event = { id = sxx_other_event.1101 } }
+			}
+			199 = {}
+		}
+	}
+}
+
+country_event = {
+	id = sxx_other_event.1101
+	title = sxx_other_event.1101.name
+	desc = sxx_other_event.1101.desc
+	picture = GFX_evt_analyzing_artifacts
+	location = root
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	after = {
+		add_relic = r_sxx_cube
+	}
+
+	option = {
+		name = sxx_other_event.1101.a
+	}
+}

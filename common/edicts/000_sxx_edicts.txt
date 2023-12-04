@@ -484,7 +484,7 @@ sxx_nizhuan = {
 	}
 
 	potential = {
-		is_sxx_fairy_country = yes
+		is_sxx_final_country = yes
 	}
 
 	allow = {
@@ -494,7 +494,6 @@ sxx_nizhuan = {
 				check_variable = { which = value_sxx_fairy_3 value >= 1 }
 				check_variable = { which = value_sxx_fairy_4 value >= 1 }
 				check_variable = { which = value_sxx_fairy_5 value >= 1 }
-				check_variable = { which = value_sxx_fairy_2 value >= 1 }
 				check_variable = { which = num_sxx_xianwang value >= 1 }
 				check_variable = { which = num_sxx_xiandi value >= 1 }
 			}

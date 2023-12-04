@@ -17,10 +17,6 @@ site_sxx_demon_rift = {
 	}
 
 	allow = {
-		exists = owner
-		owner = {
-			is_ai = no
-		}
 		is_ship_class = shipclass_science_ship
 		exists = leader
 	}
@@ -28,6 +24,7 @@ site_sxx_demon_rift = {
 	potential = {
 		hidden_trigger = {
 			owner = { is_sxx_sect = yes }
+			owner = { is_ai = no }
 		}
 	}
 
@@ -107,12 +104,14 @@ site_sxx_zhumo = {
 	}
 
 	allow = {
-		exists = owner
-		owner = {
-			is_ai = no
-		}
 		is_ship_class = shipclass_science_ship
 		exists = leader
+	}
+
+	potential = {
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
 	}
 
 	visible = {
@@ -165,12 +164,14 @@ site_sxx_vanishing_civilization = {
 	}
 
 	allow = {
-		exists = owner
-		owner = {
-			is_ai = no
-		}
 		is_ship_class = shipclass_science_ship
 		exists = leader
+	}
+
+	potential = {
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
 	}
 
 	visible = {
@@ -221,10 +222,6 @@ site_sxx_sea_of_asteroid = {
 	max_instances = 1
 
 	allow = {
-		exists = owner
-		owner = {
-			is_ai = no
-		}
 		is_ship_class = shipclass_science_ship
 		exists = leader
 	}
@@ -233,6 +230,7 @@ site_sxx_sea_of_asteroid = {
 		hidden_trigger = {
 			owner = {
 				has_origin = origin_sxx_heaven_fall
+				is_ai = no
 			}
 		}
 	}
@@ -302,10 +300,6 @@ site_sxx_graveyard_of_watcher = {
 	}
 
 	allow = {
-		exists = owner
-		owner = {
-			is_ai = no
-		}
 		is_ship_class = shipclass_science_ship
 		exists = leader
 	}
@@ -313,6 +307,7 @@ site_sxx_graveyard_of_watcher = {
 	potential = {
 		hidden_trigger = {
 			owner = { is_sxx_sect = yes }
+			owner = { is_ai = no }
 		}
 	}
 
