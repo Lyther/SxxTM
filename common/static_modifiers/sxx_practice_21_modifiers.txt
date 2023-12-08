@@ -3,6 +3,7 @@
 sxx_practice_modifier_21_1_0 = {
 	hide_from_country_list = yes
 	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	planet_jobs_produces_mult = 0.1
 }
 
 sxx_practice_modifier_21_1_1 = {
@@ -13,6 +14,7 @@ sxx_practice_modifier_21_1_1 = {
 sxx_practice_modifier_21_2_0 = {
 	hide_from_country_list = yes
 	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	planet_jobs_produces_mult = 0.5
 }
 	
 sxx_practice_modifier_21_2_1 = {
@@ -23,6 +25,7 @@ sxx_practice_modifier_21_2_1 = {
 sxx_practice_modifier_21_3_0 = {
 	hide_from_country_list = yes
 	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	planet_jobs_produces_mult = 2.5
 }
 
 sxx_practice_modifier_21_3_1 = {
@@ -33,6 +36,7 @@ sxx_practice_modifier_21_3_1 = {
 sxx_practice_modifier_21_4_0 = {
 	hide_from_country_list = yes
 	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	planet_jobs_produces_mult = 12.5
 }
 
 sxx_practice_modifier_21_4_1 = {
@@ -43,6 +47,7 @@ sxx_practice_modifier_21_4_1 = {
 sxx_practice_modifier_21_5_0 = {
 	hide_from_country_list = yes
 	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	planet_jobs_produces_mult = 62.5
 }
 	
 sxx_practice_modifier_21_5_1 = {
@@ -53,6 +58,7 @@ sxx_practice_modifier_21_5_1 = {
 sxx_practice_modifier_21_6_0 = {
 	hide_from_country_list = yes
 	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	planet_jobs_produces_mult = 312.5
 }
 
 sxx_practice_modifier_21_6_1 = {
@@ -63,6 +69,7 @@ sxx_practice_modifier_21_6_1 = {
 sxx_practice_modifier_21_7_0 = {
 	hide_from_country_list = yes
 	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	planet_jobs_produces_mult = 1562.5
 }
 
 sxx_practice_modifier_21_7_1 = {
@@ -73,6 +80,7 @@ sxx_practice_modifier_21_7_1 = {
 sxx_practice_modifier_21_8_0 = {
 	hide_from_country_list = yes
 	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	planet_jobs_produces_mult = 7812.5
 }
 	
 sxx_practice_modifier_21_8_1 = {
@@ -83,6 +91,7 @@ sxx_practice_modifier_21_8_1 = {
 sxx_practice_modifier_21_9_0 = {
 	hide_from_country_list = yes
 	sxx_planet_jobs_sxx_gongfa_speed_mod_produces_mult = 0.1
+	planet_jobs_produces_mult = 39062.5
 }
 
 sxx_practice_modifier_21_9_1 = {

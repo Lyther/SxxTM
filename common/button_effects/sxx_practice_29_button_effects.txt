@@ -147,11 +147,11 @@ sxx_button_practice_29_1_effect = {
 		check_variable = { which = sxx_practice_29 value < 1 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 29 LEVEL = 0 STATE = lianqi GONGFA = 300 }
+		sxx_get_practice_trigger = { NUM = 29 LEVEL = 0 STATE = lianqi GONGFA = 150 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 29 LEVEL = 1 GONGFA = -300 }
+		sxx_get_practice_effect = { NUM = 29 LEVEL = 1 GONGFA = -150 }
 	}
 }
 
@@ -160,11 +160,11 @@ sxx_button_practice_29_2_effect = {
 		check_variable = { which = sxx_practice_29 value < 2 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 29 LEVEL = 1 STATE = zhuji GONGFA = 1500 }
+		sxx_get_practice_trigger = { NUM = 29 LEVEL = 1 STATE = zhuji GONGFA = 300 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 29 LEVEL = 2 GONGFA = -1500 }
+		sxx_get_practice_effect = { NUM = 29 LEVEL = 2 GONGFA = -300 }
 	}
 }
 
@@ -173,11 +173,11 @@ sxx_button_practice_29_3_effect = {
 		check_variable = { which = sxx_practice_29 value < 3 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 29 LEVEL = 2 STATE = jindan GONGFA = 3000 }
+		sxx_get_practice_trigger = { NUM = 29 LEVEL = 2 STATE = jindan GONGFA = 900 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 29 LEVEL = 3 GONGFA = -3000 }
+		sxx_get_practice_effect = { NUM = 29 LEVEL = 3 GONGFA = -900 }
 	}
 }
 
@@ -186,11 +186,11 @@ sxx_button_practice_29_4_effect = {
 		check_variable = { which = sxx_practice_29 value < 4 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 29 LEVEL = 3 STATE = yuanying GONGFA = 15000 }
+		sxx_get_practice_trigger = { NUM = 29 LEVEL = 3 STATE = yuanying GONGFA = 1800 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 29 LEVEL = 4 GONGFA = -15000 }
+		sxx_get_practice_effect = { NUM = 29 LEVEL = 4 GONGFA = -1800 }
 	}
 }
 
@@ -199,11 +199,11 @@ sxx_button_practice_29_5_effect = {
 		check_variable = { which = sxx_practice_29 value < 5 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 29 LEVEL = 4 STATE = huashen GONGFA = 30000 }
+		sxx_get_practice_trigger = { NUM = 29 LEVEL = 4 STATE = huashen GONGFA = 5000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 29 LEVEL = 5 GONGFA = -30000 }
+		sxx_get_practice_effect = { NUM = 29 LEVEL = 5 GONGFA = -5000 }
 	}
 }
 
@@ -212,11 +212,11 @@ sxx_button_practice_29_6_effect = {
 		check_variable = { which = sxx_practice_29 value < 6 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 29 LEVEL = 5 STATE = lianxu GONGFA = 150000 }
+		sxx_get_practice_trigger = { NUM = 29 LEVEL = 5 STATE = lianxu GONGFA = 10000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 29 LEVEL = 6 GONGFA = -150000 }
+		sxx_get_practice_effect = { NUM = 29 LEVEL = 6 GONGFA = -10000 }
 	}
 }
 
@@ -225,11 +225,11 @@ sxx_button_practice_29_7_effect = {
 		check_variable = { which = sxx_practice_29 value < 7 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 29 LEVEL = 6 STATE = heti GONGFA = 300000 }
+		sxx_get_practice_trigger = { NUM = 29 LEVEL = 6 STATE = heti GONGFA = 30000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 29 LEVEL = 7 GONGFA = -300000 }
+		sxx_get_practice_effect = { NUM = 29 LEVEL = 7 GONGFA = -30000 }
 	}
 }
 
@@ -238,11 +238,11 @@ sxx_button_practice_29_8_effect = {
 		check_variable = { which = sxx_practice_29 value < 8 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 29 LEVEL = 7 STATE = dacheng GONGFA = 1500000 }
+		sxx_get_practice_trigger = { NUM = 29 LEVEL = 7 STATE = dacheng GONGFA = 60000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 29 LEVEL = 8 GONGFA = -1500000 }
+		sxx_get_practice_effect = { NUM = 29 LEVEL = 8 GONGFA = -60000 }
 	}
 }
 
@@ -251,11 +251,11 @@ sxx_button_practice_29_9_effect = {
 		check_variable = { which = sxx_practice_29 value < 9 }
 	}
 	allow = {
-		sxx_get_practice_trigger = { NUM = 29 LEVEL = 8 STATE = dujie GONGFA = 3000000 }
+		sxx_get_practice_trigger = { NUM = 29 LEVEL = 8 STATE = dujie GONGFA = 180000 }
 	}
 
 	effect = {
-		sxx_get_practice_effect = { NUM = 29 LEVEL = 9 GONGFA = -3000000 }
+		sxx_get_practice_effect = { NUM = 29 LEVEL = 9 GONGFA = -180000 }
 	}
 }
 

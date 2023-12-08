@@ -206,7 +206,12 @@ create_sxx_fairy_ship_1 = {
 					design = "NAME_SXX_Fairy_1"
 					effect = {
 						add_modifier = { modifier = sxx_fairy_ship_modifier_1 }
-						ship_event = { id = sxx_fairy.1005 days = 1800 }
+						if = {
+							limit = {
+								owner = { is_ai = yes }
+							}
+							ship_event = { id = sxx_fairy.1005 days = 1800 }
+						}
 					}
 				}
 			}
@@ -239,7 +244,12 @@ create_sxx_fairy_ship_2 = {
 					design = "NAME_SXX_Fairy_2"
 					effect = {
 						add_modifier = { modifier = sxx_fairy_ship_modifier_2 }
-						ship_event = { id = sxx_fairy.1005 days = 3600 }
+						if = {
+							limit = {
+								owner = { is_ai = yes }
+							}
+							ship_event = { id = sxx_fairy.1005 days = 3600 }
+						}
 					}
 				}
 			}
@@ -272,7 +282,12 @@ create_sxx_fairy_ship_3 = {
 					design = "NAME_SXX_Fairy_3"
 					effect = {
 						add_modifier = { modifier = sxx_fairy_ship_modifier_3 }
-						ship_event = { id = sxx_fairy.1005 days = 7200 }
+						if = {
+							limit = {
+								owner = { is_ai = yes }
+							}
+							ship_event = { id = sxx_fairy.1005 days = 7200 }
+						}
 					}
 				}
 			}
@@ -305,7 +320,12 @@ create_sxx_fairy_ship_4 = {
 					design = "NAME_SXX_Fairy_4"
 					effect = {
 						add_modifier = { modifier = sxx_fairy_ship_modifier_4 }
-						ship_event = { id = sxx_fairy.1005 days = 14400 }
+						if = {
+							limit = {
+								owner = { is_ai = yes }
+							}
+							ship_event = { id = sxx_fairy.1005 days = 14400 }
+						}
 					}
 				}
 			}
@@ -338,7 +358,12 @@ create_sxx_fairy_ship_5 = {
 					design = "NAME_SXX_Fairy_5"
 					effect = {
 						add_modifier = { modifier = sxx_fairy_ship_modifier_5 }
-						ship_event = { id = sxx_fairy.1005 days = 28800 }
+						if = {
+							limit = {
+								owner = { is_ai = yes }
+							}
+							ship_event = { id = sxx_fairy.1005 days = 28800 }
+						}
 					}
 				}
 			}
@@ -349,7 +374,12 @@ create_sxx_fairy_ship_5 = {
 			}
 			last_created_ship = {
 				add_modifier = { modifier = sxx_fairy_ship_modifier_5 }
-				ship_event = { id = sxx_fairy.1005 days = 28800 }
+				if = {
+					limit = {
+						owner = { is_ai = yes }
+					}
+					ship_event = { id = sxx_fairy.1005 days = 28800 }
+				}
 			}
 		}
 	}

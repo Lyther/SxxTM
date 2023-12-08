@@ -335,7 +335,6 @@ civic_sxx_fe = {
 
 	potential = {
 		country_type = { value = sxx_fallen_guardian }
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	
 	random_weight = { base = 5 }
@@ -354,7 +353,6 @@ civic_sxx_afe = {
 
 	potential = {
 		country_type = { value = sxx_awakened_fallen_guardian }
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	
 	random_weight = { base = 5 }

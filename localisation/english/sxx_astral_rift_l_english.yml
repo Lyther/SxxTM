@@ -1,0 +1,70 @@
+﻿l_english:
+
+ astral_rift_sxx_other_world:0 "Otherworld"
+
+ sxx_astral_rift.100.name:0 "New World"
+ sxx_astral_rift.100.desc:0 "Beneath the rift lies a vast continent teeming with life and rich with the dense spiritual energy of heaven and earth. As we turn to observe the astral rift, we find it beginning to destabilize—it seems to be slowly closing, but there's no immediate urgency; we still have ample time for exploration."
+ sxx_astral_rift.100.a:0 "Explore this new world thoroughly."
+
+ sxx_astral_rift.105.name:0 "Cultivation Civilization"
+ sxx_astral_rift.105.desc:0 "After some time exploring, we finally encounter signs of intelligent life—a Nascent Soul stage cultivator! Thanks to telepathic communication, we immediately begin to converse.\n\nWe say we are cultivators from a remote star domain on a training journey, and he introduces us to this place. It is a market planet under the jurisdiction of the super sect True Martial Holy Land, frequented by major sects and many independent cultivators from across the universe for trade and commerce, and is one of the most renowned markets in the cosmos.\n\nFrom his words, we learn that the cultivation civilization here is extremely prosperous, with countless sects and families of all sizes throughout the universe, and more ascended beings than can be counted in a moment."
+ sxx_astral_rift.105.a:0 "Take a stroll through the market."
+ sxx_astral_rift.105.b:0 "Exchange cultivation experiences with the local cultivators."
+
+ sxx_astral_rift.110.name:0 "Acquisition"
+ sxx_astral_rift.110.desc:0 "At the market, we find an array of precious materials and peerless divine weapons. Unfortunately, due to differences in cultivation systems, they are of little use to us.\n\nThen, we notice a buying request—Geocentric Refining Spirit Milk, 100,000 spirit stones per teacup. This is a common mid-to-low-tier spiritual medicine in our world, and yet here it is incredibly precious. Upon inquiry, we learn that it is used in their cultivation system as a catalyst for concocting medicines that increase the success rate of Nascent Soul breakthroughs and tribulations, but it is nearly extinct."
+ sxx_astral_rift.110.a:0 "We have it, let's exchange it for spirit stones!"
+ sxx_astral_rift.110.b:0 "Too conspicuous, better not."
+
+ sxx_astral_rift.115.name:0 "Cultivation Exchange"
+ sxx_astral_rift.115.desc:0 "We engage in an exchange of cultivation insights with the local cultivators. Due to the differences in our cultivation systems, both sides gain much. By referencing their unique cultivation methods, we integrate the commonalities with our own practices, clearing many obstacles on our path of cultivation."
+ sxx_astral_rift.115.a:0 "Fantastic!"
+ sxx_tafa:0 "Adapting Other Methods"
+
+ sxx_astral_rift.120.name:0 "Choice"
+ sxx_astral_rift.120.desc:0 "After handing over the Geocentric Refining Spirit Milk, we become the focus of the market, attracting attention from many sects. Several have contacted us privately to inquire if we have more or where we found it. They are willing to buy it at a higher price."
+ sxx_astral_rift.120.a:0 "Yes, of course we have more! We're going to be rich!"
+ sxx_astral_rift.120.b:0 "No, we don't have any left, it was just a remnant we found in a cauldron in a secret realm."
+
+ sxx_astral_rift.125.name:0 "Exposure"
+ sxx_astral_rift.125.desc:0 "Not long after the transaction, we are ambushed!\n\nOn our way back to our residence, more than a dozen Tribulation stage powerhouses appear out of nowhere, killing our people on the spot and conducting a dreadful soul search.\n\nOur identity is exposed, the astral rift is exposed, and our world is exposed!\n\nDue to their unfamiliarity with technological means, they fail to notice our surveillance devices. The footage sent back shows that the entire universe is in turmoil because of our world, with hundreds of super sects from across the cosmos joining forces to form a massive invading army, heading towards the astral rift..."
+ sxx_astral_rift.125.a:0 "No, no..."
+ sxx_astral_rift.125.b:0 "It doesn't matter, I will take action."
+ sxx_astral_rift.125.b.tooltip:0 "Our §YImmortal King§! will take action"
+ sxx_astral_rift.125.c:0 "Leave it to me."
+ sxx_astral_rift.125.c.tooltip:0 "Leave it to our §YImmortal Emperor§!"
+
+ sxx_astral_rift.130.name:0 "Safe Return"
+ sxx_astral_rift.130.desc:0 "By steadfastly denying having more Geocentric Refining Spirit Milk, interest in us gradually wanes.\n\nFinally, we find an opportunity to shake off our pursuers and return to our universe before the rift closes."
+ sxx_astral_rift.130.a:0 "Caution is the parent of safety."
+
+ sxx_astral_rift.135.name:0 "Heavenly King's Power"
+ sxx_astral_rift.135.desc:0 "With a single step, our Heavenly King crosses through the rift into the otherworld.\n\nBefore the distant enemies can react, a colossal hand that blots out the sky covers the entire cosmos... When we come to our senses, all that is left in the rift are countless fragments of space and chaotic flows.\n\nWait, the Heavenly King has retrieved something from the cosmic debris."
+ sxx_astral_rift.135.a:0 "Uh..."
+
+ sxx_astral_rift.140.name:0 "I Am the Heavenly Emperor"
+ sxx_astral_rift.140.desc:0 "As soon as the words are spoken, the Heavenly Emperor appears in this unfamiliar universe.\n\nStanding silently in the void, it seems he is feeling this entirely new world. The cultivators of the otherworld notice him and prepare to report an enemy attack. At this moment, the Heavenly Emperor slightly releases the aura he has been suppressing, and a trace of the Immortal Emperor's pressure instantly spreads out. Centered on him, the great suns extinguish like candles, and the starry sea crumbles like dust. Fierce spatial rifts appear instantly and then fill the entire cosmic space in a moment. Then, like glass shattering, fragments turn into chunks, chunks into rubble, and finally, all is reduced to nothingness.\n\nThis universe is obliterated in a single breath.\n\nAfterward, the Heavenly Emperor extends his hand, and the only thing in this universe that has not been destroyed flies into his palm."
+ sxx_astral_rift.140.a:0 "Such is the Heavenly Emperor..."
+
+ NAME_SXX_Other_World_Intruder:0 "Otherworld Coalition"
+ NAME_SXX_Other_World_Intruder_Fleet_1:0 "Coalition Vanguard"
+ NAME_SXX_Other_World_Intruder_Fleet_2:0 "Coalition Main Force"
+
+ sxx_other_world_intruder.3.name:0 "Otherworld Rift Closed"
+ sxx_other_world_intruder.3.desc:0 "The astral rift leading to the otherworld has finally closed, and the invaders from the otherworld can no longer enter our universe!"
+ sxx_other_world_intruder.3.a:0 "It's finally closed."
+
+ sxx_other_world_intruder.21.name:0 "Mysterious Sphere"
+ sxx_other_world_intruder.21.desc:0 "Among the belongings of a slain invader, we discover a mysterious sphere, slightly smaller than a head, yet denser than a black hole.\n\nThe slayer studied it for a long time without discerning its purpose, feeling only that his blood and qi were churning and he couldn't calm his mind, so he handed it over to the sect."
+ sxx_other_world_intruder.21.a:0 "Very well."
+
+ r_sxx_sphere:0 "Primordial Spirit Pearl"
+ r_sxx_sphere_desc:0 "A mysterious sphere radiating primordial energy, one's blood and qi are stirred when near it."
+ sxx_sphere_passive_effect:0 "§RDevour the flesh of the fallen§!"
+ r_sxx_crystal:0 "Origin Purple Crystal"
+ r_sxx_crystal_desc:0 "A purple crystal with mysterious patterns on its surface, it absorbs energy from spirit stones."
+ sxx_crystal_passive_effect:0 "§RDevour the true essence of the fallen§!"
+ r_sxx_cube:0 "Divine Crystal Cube"
+ r_sxx_cube_desc:0 "An ancient grey cube that has an inexplicable attraction to souls."
+ sxx_cube_passive_effect:0 "§RDevour the souls of the fallen§!"
+ relic_sxx_sphere_active_tooltip:0 "Passive effects doubled"

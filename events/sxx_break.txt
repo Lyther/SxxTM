@@ -138,6 +138,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = { which = num_sxx_xianwang value > 4 }
+				is_ai = yes
 			}
 			random_owned_pop = {
 				limit = {
@@ -165,6 +166,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = { which = num_sxx_xiandi value > 4 }
+				is_ai = yes
 			}
 			random_owned_pop = {
 				limit = {
@@ -183,6 +185,7 @@ country_event = {
 		every_owned_planet = {
 			limit = {
 				is_planet_class = pc_sxx_heaven
+				owner = { is_ai = yes }
 			}
 			sxx_planet_fairy_cultivate_effect = yes
 		}

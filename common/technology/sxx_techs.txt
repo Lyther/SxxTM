@@ -325,6 +325,11 @@ tech_repeatable_weapon_type_sxx_lingshi_damage = {
 
 	potential = {
 		is_sxx_dujie_country = yes
+		has_policy_flag = sxxtm_repeatable_tech_mul_1
+		OR = {
+			has_policy_flag = sxxtm_repeatable_tech_all_enable
+			has_policy_flag = sxxtm_repeatable_tech_lingshi_damage_only
+		}
 	}
 
 	ai_weight = {
@@ -360,6 +365,11 @@ tech_repeatable_weapon_type_sxx_lingshi_fire_rate = {
 
 	potential = {
 		is_sxx_dujie_country = yes
+		has_policy_flag = sxxtm_repeatable_tech_mul_1
+		OR = {
+			has_policy_flag = sxxtm_repeatable_tech_all_enable
+			has_policy_flag = sxxtm_repeatable_tech_lingshi_fire_rate_only
+		}
 	}
 
 	ai_weight = {

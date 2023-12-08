@@ -1,0 +1,50 @@
+﻿l_english:
+
+ tech_sxx_planetary_array:0 "Planetary Array"
+ tech_sxx_planetary_array_desc:0 "Through vast and intricate array patterns, we can now cover an entire planet with an array."
+ unlock_sxx_planet_array:0 "The §Y$building_sxx_zongmen$§! will provide §Y$job_sxx_array_master_plural$§! positions\n§HUnlocks Planetary Array:§! Gathering Array"
+
+ sxx_array_juling:0 "Planetary Array: Gathering Array"
+ sxx_array_juling_desc:0 "A planetary array that gathers the spiritual energy of heaven and earth, increasing the concentration of spiritual energy on the planet, thus accelerating cultivation speed."
+
+ tech_sxx_array_huzong:0 "Protective Sect Array"
+ tech_sxx_array_huzong_desc:0 "By simultaneously activating specific defensive array patterns spread across the globe, a spiritual energy shield enveloping the planet can be constructed."
+ unlock_sxx_array_huzong:0 "§HUnlocks Planetary Array:§! Protective Sect Array"
+
+ sxx_array_huzong:0 "Planetary Array: Protective Sect Array"
+ sxx_array_huzong_desc:0 "A grand array that envelops the planet's surface, capable of blocking external attacks."
+
+ tech_sxx_array_yangchun:0 "Yangchun Array"
+ tech_sxx_array_yangchun_desc:0 "By studying the mysteries of the vitality of all spirits, we can use arrays to stimulate the power of Yangchun."
+ unlock_sxx_array_yangchun:0 "§HUnlocks Planetary Array:§! Yangchun Array"
+
+ sxx_array_yangchun:0 "Planetary Array: Yangchun Array"
+ sxx_array_yangchun_desc:0 "The array generates the power of Yangchun, causing the planet to burst forth with endless vitality."
+
+ tech_sxx_array_ningshen:0 "Concentration Array"
+ tech_sxx_array_ningshen_desc:0 "By studying the impact of arrays on the sea of consciousness, we can use arrays to stimulate the sea of consciousness, making it more focused."
+ unlock_sxx_array_ningshen:0 "§HUnlocks Planetary Array:§! Concentration Array"
+
+ sxx_array_ningshen:0 "Planetary Array: Concentration Array"
+ sxx_array_ningshen_desc:0 "The array's fluctuations affect the sea of consciousness, making individuals more focused."
+
+ tech_sxx_array_dihuo:0 "Earthfire Array"
+ tech_sxx_array_dihuo_desc:0 "We can use grand arrays to harness the planet's geothermal energy."
+ unlock_sxx_array_dihuo:0 "§HUnlocks Planetary Array:§! Earthfire Array"
+
+ sxx_array_dihuo:0 "Planetary Array: Earthfire Array"
+ sxx_array_dihuo_desc:0 "The array draws forth geothermal energy, increasing the efficiency of pill concoction and artifact forging."
+
+ decision_sxx_array:0 "Planetary Array"
+ decision_sxx_array_desc:0 "This is an array that covers the entire planet."
+ decision_sxx_array_tooltip:0 "Set up a §YPlanetary Array§!"
+ sxx_planet_array_event_ongoing_tooltip:0 "§RSetting up Planetary Array§!"
+
+ sxx_event.120.name:0 "$decision_sxx_array$"
+ sxx_event.120.desc:0 "We are going to reset our planetary array.\n\nThe effects of the planetary array are proportional to the §Y$mod_sxx_array_strength_add$§! on the planet."
+ sxx_event.120.a:0 "Gathering Array"
+ sxx_event.120.b:0 "Protective Sect Array"
+ sxx_event.120.c:0 "Yangchun Array"
+ sxx_event.120.d:0 "Concentration Array"
+ sxx_event.120.e:0 "Earthfire Array"
+ sxx_event.120.close:0 "Decide later"

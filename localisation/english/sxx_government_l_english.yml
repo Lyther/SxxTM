@@ -1,0 +1,255 @@
+﻿l_simp_chinese:
+
+ auth_sxx_sect:0"宗门制"
+ auth_sxx_sect_desc:0"宗门由一位掌握所有权力的宗主管理。"
+ AUTHORITY_SXX_SECT:0 "在统治者死后，用选举的方式选出下一任统治者，若统治者在位期间发觉统治者不够格，也可以随时重新选举。§H可以修炼。§!\n（与国民理念§H修仙宗门§!为等位替换关系，给需要选择其他国民理念的国家使用。与§H修仙宗门§!选择其一即可，显示两个都需选择的提示是显示错误，实际没有问题。）"
+
+ councilor_ruler_sxx_sect:0 "$councilor_ruler$"
+ councilor_ruler_sxx_sect_female:0 "$councilor_ruler_female$"
+ councilor_ruler_sxx_sect_desc:0 ""
+
+ civic_sxx_sect:0"修仙宗门"
+ civic_sxx_sect_desc:0"我命由我不由天！"
+ civic_tooltip_sxx_sect:0"§H可以修炼。§!\n（与权力制度§H宗门制§!为等位替换关系，给需要选择其他权力制度的国家使用。与§H宗门制§!选择其一即可，显示两个都需选择的提示是显示错误，实际没有问题。）"
+
+ councilor_sxx_dazhenglao:0 "大长老"
+ councilor_sxx_dazhenglao_female:0 "$councilor_sxx_dazhenglao$"
+ councilor_sxx_dazhenglao_desc:0 "$TITLE$负责处理宗门事务。"
+
+ civic_sxx_evil_way:0"魔道"
+ civic_sxx_evil_way_desc:0"这个宗门为了追求力量无所不用其极，弱者被他们视为蝼蚁。"
+ civic_tooltip_sxx_evil_way:0"可以建造£building£ §Y$building_sxx_xuemingbei$§!并执行§H$decision_sxx_xueming$§!决议来加快修炼速度\n对其他所有帝国拥有“§Y$casus_belli_cb_sxx_evil$§!”宣战理由\n降低大部分国家对其的§Y评价§!"
+
+ councilor_sxx_xuemingmoshi:0 "血冥魔使"
+ councilor_sxx_xuemingmoshi_female:0 "$councilor_sxx_xuemingmoshi$"
+ councilor_sxx_xuemingmoshi_desc:0 "$TITLE$总管星球上的血冥洗礼。"
+ councilor_sxx_xuemingmoshi_custom_modifier_desc:1 "§Y$decision_sxx_xueming$§!效果提升§G5%§!"
+
+ civic_sxx_pills_master:0"炼丹之道"
+ civic_sxx_pills_master_desc:0"这个宗门将丹道作为立宗之本，人人以炼丹为荣。"
+ civic_tooltip_sxx_pills_master:0"£building£ §Y宗门大殿§!会额外提供£job_sxx_pills_maker£§Y$job_sxx_pills_maker_plural$§!岗位\n£job_sxx_pills_maker£§Y$job_sxx_pills_maker_plural$§!基础£sxx_pills£$sxx_pills$产出：§G+0.1§!"
+
+ councilor_sxx_liandanbuzhang:0 "炼丹部长"
+ councilor_sxx_liandanbuzhang_female:0 "$councilor_sxx_liandanbuzhang$"
+ councilor_sxx_liandanbuzhang_desc:0 "$TITLE$负责监管炼丹工作的进行。"
+
+ civic_sxx_weapon_master:0"炼器之道"
+ civic_sxx_weapon_master_desc:0"这个宗门将炼器作为立宗之本，炼器师与本命法宝人器合一，炼器即是修炼。"
+ civic_tooltip_sxx_weapon_master:0"£building£ §Y宗门大殿§!会额外提供£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!岗位\n£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!修炼速度不再降低，反而会提高\n£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!基础£consumer_goods£$consumer_goods$产出：§G+1§!\n£job_sxx_weapon_refiner£§Y$job_sxx_weapon_refiner_plural$§!基础£alloys£$alloys$产出：§G+0.5§!"
+
+ councilor_sxx_lianqibuzhang:0 "炼器部长"
+ councilor_sxx_lianqibuzhang_female:0 "$councilor_sxx_lianqibuzhang$"
+ councilor_sxx_lianqibuzhang_desc:0 "$TITLE$负责监管炼器工作的进行。"
+
+ civic_sxx_zhenfa:0"阵法之道"
+ civic_sxx_zhenfa_desc:0"这个宗门将阵道作为立宗之本，各种各样的阵法是他们强盛的根基。"
+ civic_tooltip_sxx_zhenfa:0"£building£ §Y宗门大殿§!提供的£job_sxx_array_master£§Y$job_sxx_array_master_plural$§!岗位翻倍\n§Y行星阵法§!相关科技的出现率提升§G2§!倍"
+
+ councilor_sxx_zhenfabuzhang:0 "阵法部长"
+ councilor_sxx_zhenfabuzhang_female:0 "$councilor_sxx_zhenfabuzhang$"
+ councilor_sxx_zhenfabuzhang_desc:0 "$TITLE$负责监管阵法相关工作的进行。"
+
+ civic_sxx_kuilei:0"傀儡之道"
+ civic_sxx_kuilei_desc:0"这个宗门善于炼制傀儡，他们制作的机械傀儡拥有可怕的威能。"
+ civic_tooltip_sxx_kuilei:0"£job_sxx_elder£§Y$job_sxx_elder_plural$§!将会额外消耗£alloys£ $alloys$和£sxx_stones£ $sxx_stones$并产出§Y$mod_sxx_planet_kuilei_assembly_add$§!和£engineering£ §Y工程学研究点数§!，但会略微降低自身的修炼速度\n£job_sxx_elder£§Y$job_sxx_elder_plural$§!组装出的傀儡拥有与其相同的境界\n§H解锁决议：§!$decision_sxx_upgrade_kuilei$\n§H解锁决议：§!$decision_sxx_fusion_kuilei$"
+
+ councilor_sxx_kuileibuzhang:0 "傀儡部长"
+ councilor_sxx_kuileibuzhang_female:0 "$councilor_sxx_kuileibuzhang$"
+ councilor_sxx_kuileibuzhang_desc:0 "$TITLE$负责监管傀儡制作。"
+ 
+ ap_sxx_robot_cultivable:0"傀儡之心"
+ ap_sxx_robot_cultivable_desc:0"傀儡无法修炼，这是修仙界众所周知的事实。然而事实真的如此吗？"
+ enable_sxx_robot_cultivable:0"§H傀儡§!将可以修炼，并可以从事相关岗位\n§H合成人§!将可以通过升仙台变为练气期傀儡\n（没有国民理念§Y$civic_sxx_kuilei$§!或§H合成人公民权§!政策将会使该飞升§R失效§!）"
+ sxx_event.135.name:0"$ap_sxx_robot_cultivable$"
+ sxx_event.135.desc:0"最近，越来越多的门人发现，傀儡们的修为似乎在莫名其妙地增长。\n\n最初，长老们还不相信，将汇报此事的弟子都关了禁闭。但随着时间的增长，相关的汇报越来越多，甚至有傀儡当着人们的面突破了一个小境界。事实已经摆在了我们的眼前——傀儡无法修炼的定律已然被打破，长老们也不得不站出来宣布这一匪夷所思的情况。\n\n于是，经过一番变革，傀儡们被承认为宗门的正式成员，并开始与我们一同修炼。"
+ sxx_event.135.a:0"真是神奇。"
+
+ civic_sxx_hehuan:0"合欢之道"
+ civic_sxx_hehuan_desc:0"这个宗门十分推崇采补之道和双修秘法，主张通过阴阳互补来修炼。"
+ civic_tooltip_sxx_hehuan:0"§H解锁建筑：§!$building_sxx_jilegong$\n可以通过岗位£job_sxx_luding£§Y$job_sxx_luding_plural$§!增加星球上人口的修炼速度。"
+
+ councilor_sxx_dahuanxifo:0 "大欢喜佛"
+ councilor_sxx_dahuanxifo_female:0 "$councilor_sxx_dahuanxifo$"
+ councilor_sxx_dahuanxifo_desc:0 "$TITLE$管理所有双修炉鼎。"
+ councilor_sxx_dahuanxifo_custom_modifier_desc:1 "$mod_planet_sxx_ludings_consumer_goods_upkeep_mult$：§G-3%§!\n£job_sxx_luding£§Y$job_sxx_luding_plural$§!也会提供§G+0.05§!稳定度"
+
+ civic_sxx_faith:0"信仰之道"
+ civic_sxx_faith_desc:0"这个宗门掌握了利用信仰之力修炼的方式，信众越多，他们就越强大。"
+ civic_tooltip_sxx_faith:0"§H解锁建筑：§!$building_sxx_temple$\n可以通过岗位£job_sxx_believer£§Y$job_sxx_believer_plural$§!增加星球上的£job_sxx_god_position£§Y$job_sxx_god_position_plural$§!，£job_sxx_god_position£§Y$job_sxx_god_position_plural$§!拥有更快的修炼速度。"
+
+ councilor_sxx_zhushen:0 "主神"
+ councilor_sxx_zhushen_female:0 "$councilor_sxx_zhushen$"
+ councilor_sxx_zhushen_desc:0 "$TITLE$是众神之首，统御众神。"
+ councilor_sxx_zhushen_custom_modifier_desc:1 "$mod_planet_sxx_believers_unity_produces_mult$：§G+10%§!\n£building£§Y$building_sxx_temple$§!提供§G+1§!£job_sxx_believer£§Y$job_sxx_believer_plural$§!"
+
+ civic_sxx_keji:0"科技之道"
+ civic_sxx_keji_desc:0"这个宗门不仅仅重视自身的修炼，还重视对宇宙奥秘的探索。他们主张通过探索宇宙万物运转的规律来追寻大道。"
+ civic_tooltip_sxx_keji:0"§H解锁建筑：§!$building_sxx_daoyuan$\n£building£ §Y$building_sxx_daoyuan$§!提供£job_sxx_xundao£§Y$job_sxx_xundao_plural$§!岗位，£job_sxx_xundao£§Y$job_sxx_xundao_plural$§!产生£physics£ £society£ £engineering£ §Y科研点数§!和£sxx_gongfa£$sxx_gongfa$"
+
+ councilor_sxx_daozhu:0"道主"
+ councilor_sxx_daozhu_female:0 "$councilor_sxx_daozhu$"
+ councilor_sxx_daozhu_desc:0 "$TITLE$是众道院道宫之主，指引着寻道者们的前进方向。"
+
+ civic_sxx_mozheng:0"魔怔之道"
+ civic_sxx_mozheng_desc:0"哦我的天哪这是什么……也许可以用来进行游戏测试？\n§R（不推荐在正常游戏中使用！）§!"
+ civic_tooltip_sxx_mozheng:0"修炼速度非常快。"
+
+ gov_sxx_sect_normal:0"修仙门派"
+ gov_sxx_sect_normal_desc:0"修仙门派是由宗主以及诸位长老共同对国家进行管理的制度。"
+ gov_sxx_sect_evil:0"魔门"
+ gov_sxx_sect_evil_desc:0"魔门是由宗主以及诸位长老共同对国家进行管理的制度，信奉着弱肉强食的法则。弱者在这里没有丝毫地位可言。"
+
+ RT_SXX_ZONGZHU:0"宗主"
+ RT_SXX_ZONGZHU_FEMALE:0"宗主"
+ HT_SXX_DAOZI:0"道子"
+ HT_SXX_DAONV:0"道女"
+
+ gov_sxx_sect_spiritualist:0"修仙教派"
+ gov_sxx_sect_spiritualist_desc:0"修仙教派是由教主以及诸位长老共同对国家进行管理的制度，供奉着诸多仙人。"
+ gov_sxx_sect_evil_spiritualist:0"魔教"
+ gov_sxx_sect_evil_spiritualist_desc:0"魔教是由教主以及诸位长老共同对国家进行管理的制度，供奉着诸多仙人，信奉着弱肉强食的法则。弱者在这里没有丝毫地位可言。"
+
+ RT_SXX_JIAOZHU:0"教主"
+ RT_SXX_JIAOZHU_FEMALE:0"教主"
+ HT_SXX_SHENGZI:0"圣子"
+ HT_SXX_SHENGNV:0"圣女"
+
+ gov_sxx_sect_reanimator:0"阴尸宗"
+ gov_sxx_sect_reanimator_desc:0"这个宗门擅长炼制并御使尸傀——哪怕是用他们同族的尸体。"
+
+ gov_sxx_sect_kuilei:0"傀儡宗"
+ gov_sxx_sect_kuilei_desc:0"这个宗门擅长炼制傀儡，大量的傀儡构成了这个宗门的根基。"
+
+ gov_sxx_sect_hehuan:0"合欢宗"
+ gov_sxx_sect_hehuan_desc:0"这个宗门十分推崇采补之道和双修秘法，通过采补炉鼎来增进修为。"
+
+ personality_sxx_evil_way_walker:0"魔道中人"
+ personality_sxx_evil_way_walker_desc:0"魔道中人无恶不作，践踏生命，恃强凌弱。"
+
+
+ origin_sxx_cultivator_family:0"修仙世家"
+ origin_sxx_cultivator_family_desc:0"这一文明早在很久以前就开始修仙，并已经诞生出了金丹期强者。"
+ origin_tooltip_sxx_cultivator_family_effects:0"—以['concept_sxx_jindan_country']开局\n—游戏开始时额外拥有§Y1§!个['concept_sxx_jindan'] £pop£ 人口、§Y5§!个['concept_sxx_zhuji'] £pop£ 人口和§Y25§!个['concept_sxx_lianqi'] £pop£ 人口\n—母星拥有的灵脉为§H上品灵脉§!\n—开局拥有§H$tech_sxx_liandanfang_1$§!和§H$tech_sxx_lianqishi_1$§!科技，并拥有充足的£sxx_stones£ $sxx_stones$、£sxx_pills£ $sxx_pills$和£sxx_gongfa£ $sxx_gongfa$储备"
+ START_SCREEN_SXX_CULTICATOR_FAMILY:0"早在文明诞生的初期，我们就发现了修仙的道路。那时星球上宗门家族林立，筑基高手雄踞一方，摩擦与战争不断。\n\n直到最近，一个修仙家族中诞生了传说中的金丹期强者，他以不可阻挡的伟力迅速统一了整个星球。然而，他并不满足于此，金丹期的修为让他能够横渡虚空，他在星空中看到了新的道路。\n\n“万年来，我们局限于这颗小小的星球，文明发展停滞不前。如今，该做出改变了。”他说这话时，目光倒映出了星辰大海。于是，整个星球的炼器大师都被征召起来，共同研究探索虚空的方法。\n\n现在，我们做到了。"
+
+
+ origin_sxx_yuanying:0"元婴老怪"
+ origin_sxx_yuanying_desc:0"这一文明起源于一个['concept_sxx_yuanying']修士带到一个星球上的奴仆。在该修士闭关过程中，奴仆们在星球上开枝散叶，建立了宗门。"
+ origin_tooltip_sxx_yuanying_effects:0"—游戏开始时以一个§H洞天福地§!（规模：£planetsize£§Y18§!）作为你的母星，母星上拥有一条§H极品灵脉§!\n—游戏开始时额外拥有§Y10§!个['concept_sxx_lianqi'] £pop£ 人口和§Y1§!个['concept_sxx_yuanying']£job_sxx_supreme_elder£§H$job_sxx_supreme_elder$§!，但减少§Y10§!个['concept_sxx_mortal'] £pop£ 人口\n—宜居性偏好设置为§H$trait_pc_sxx_blessed_spot_preference$§!，其他类型的行星被列为不受欢迎。"
+ START_SCREEN_SXX_YUANYING:0"我们是由一个元婴期老怪带到这个洞天福地的，作为他的奴仆帮他处理杂事。后来，元婴期老怪进入了长期的闭关，无所事事的我们在星球上繁衍开来，建立了宗门，并为逃出这颗星球做准备。最终，我们研究出了超空间引擎。\n\n然而这一切都瞒不过他的感知。元婴老怪出关后，并没有责备胆战心惊的我们，反而饶有兴趣地对我们说，如果我们中有人能接近他的境界，他就会解除我们奴仆的身份，并以平等的身份加入我们的宗门，不过在此之前，他不会给我们修炼上的指导。\n\n于是，一场决定我们命运的试炼开始了。"
+
+ sxx_origin.10.desc:0"很好，本座果然没有看错你们。\n\n在你们捣鼓出那个超空间引擎时，本座就觉得你们很有前途，当仆从有点屈才了。现在，本座将解除你们仆从的身份，正式加入[Root.GetName]，并传授你们元婴期功法。"
+ sxx_origin.10.a:0"您的大恩大德我们永世难忘。"
+ sxx_origin.10.b:0"（老东西，早该爆功法了。）"
+ sxx_freedom:0"终获自由"
+
+
+ origin_sxx_yuhua:0"羽化登仙"
+ origin_sxx_yuhua_desc:0"这一文明的胚胎寄生在其他生命体内，帮助他们修炼，最终破体而出。"
+ origin_tooltip_sxx_yuhua_effects:0"—§H解锁决议：§!播撒灵根\n—拥有['concept_sxx_linggen']的['concept_sxx_huashen']及以上修士因修炼死亡时，会成为相应境界的羽化物种\n—拥有['concept_sxx_linggen']的修士突破['concept_sxx_dacheng']时，体内的羽化物种会自动破体而出。\n—拥有['concept_sxx_linggen']的['concept_sxx_dacheng']修士突破['concept_sxx_dujie']时会被天劫击毁灵根而亡。"
+ START_SCREEN_SXX_YUHUA:0"多年前的某一天，一颗陨石撞击了我们的星球。在这之后，我们中的一些人便觉醒了超凡的力量，可以感应并吸收天地中蕴含的能量。\n\n渐渐地，一则传说在我们之中流传开来：当你修炼到登峰造极的境界时，生命就会发生蜕变，羽化登仙。\n\n为此，我们都在不断努力，向着那个传说中的境界进发。"
+ origin_sxx_yuhua_secondary_species:0"羽化种族"
+
+ sxx_yuhua_awake_tooltip:0"§R我们§!觉醒了。"
+ sxx_origin.6.name:0"终成化神"
+ sxx_origin.6.desc:0"终于……\n\n§R（主体物种已变更，请注意原主体物种权利设置。）§!"
+ sxx_origin.6.a:0"……"
+ sxx_origin.7.name:0"羽化登仙"
+ sxx_origin.7.desc:0"漫长的时间过去，终于有人修到了羽化登仙的境界。\n\n一种完全不同的、奇异的生命撕裂了他的身体，从孱弱的凡体中钻出，腾空而起。\n\n——他摆脱了旧皮囊的限制，成就了羽化仙体。"
+ sxx_origin.7.a:0"有点惊悚，但修仙本就残酷，这点苦算什么！"
+ sxx_origin.7.b:0"好美……"
+
+ origin_sxx_abandoned_by_god:0"神弃一族"
+ origin_sxx_abandoned_by_god_desc:0"这个族群被认为为神所厌弃，生来就背负着强大的诅咒，且会随着年龄的增长不断变强，直至被诅咒吞噬。只有踏上修仙之路才能与诅咒对抗，延长生命。"
+ origin_tooltip_sxx_abandoned_by_god_effects:0"§R—警告：具有挑战性的起源§!\n—主体物种拥有['concept_sxx_abg']特质，减少寿命，并大幅提升修炼天赋。\n—拥有['concept_sxx_abg']特质的['concept_sxx_lianqi']人口与领袖只有§R8§!/§R14§!/§R18§!/§R20§!年（根据修炼难度变化）的生命，每突破一重境界将会延长§R4§!/§R7§!/§R9§!/§R10§!年的生命，直至成仙。"
+ START_SCREEN_SXX_ABANDONED_BY_GOD:0"诅咒从何而来已然不可考，我们大多数人都认为是我们的先祖触怒了神灵，被降下神之诅咒，只能在痛苦中死去。\n\n自我们出生以来，诅咒就铭刻于我们的身体与灵魂中，每几个月就会发作。最开始，那只是轻微的疼痛，然而随着年龄的增长，疼痛也越来越强烈，直至最后，那比常人所能经历的最强烈的疼痛更胜百倍的痛苦将撕裂我们的灵魂——我们的的概念中没有中年和老年，所有人都活不到自然死亡。\n\n我们背负着诅咒一直繁衍到了现在，超空间引擎的发明让我们偶然间在外星球发现了修仙的方法。我们发现，诅咒对我们的磨砺使我们在修炼一途上天赋超然。这是我们的机会，境界的提升能够加强我们对诅咒的抵抗力，活得更久。不过更长的寿命也会让诅咒变得更强，这是一场修炼与诅咒的赛跑。\n\n如果真的有神，也许有一天，我们能够飞升上界，当面问一问我们究竟做错了什么。"
+
+ sxx_origin.40.name:0"神弃之终"
+ sxx_origin.40.desc:0"突然间，所有[Root.GetSpeciesNamePlural]的脑海中都响起了一道声音——我们都知道，那是我们在仙界的大罗金仙。\n\n他告诉我们，我们的先祖是一位飞升者，他在仙界成就了地仙。他与另一位地仙结下了不可化解的仇怨，成为了死敌。之后，他的死敌突破了天仙，将我们的先祖击杀后抽魂炼髓，还对他的下界后人，也就是我们，降下了恶毒的诅咒，咒杀了我们所有的修仙者，使我们传承断绝，并且让我们的凡人世世代代背负着痛苦至极的诅咒。\n\n现在，他已是金仙，不过仍被我们的大罗金仙击杀。\n\n真相已明，世代背负的诅咒也已经解除，而我们从古至今所经受的磨砺已经刻入了我们的血脉中，它带来的修炼天赋不会随着诅咒的消失而消失。\n\n国家上下普天同庆，族人们喜极而泣。这注定是我们难以忘怀的一天。"
+ sxx_origin.40.a:0"终于……终于……！"
+ sxx_origin.40.b:0"大仇得报……！"
+ sxx_abg_curse_released_modifier:0"诅咒解除"
+
+
+ origin_sxx_heaven_fall:0"天庭坠落"
+ origin_sxx_heaven_fall_desc:0"在上古时期，这个文明曾被天庭统辖，然而一切都被埋没在时光长河之中。"
+ origin_tooltip_sxx_heaven_fall_effects:0"—你的母星系周围存在着一处上古遗迹。\n§R—当拥有多个该起源的国家时，仅有一个国家母星系周围会生成上古遗迹。§!"
+ START_SCREEN_SXX_HEAVEN_FALL:0"传说，在遥远的上古时代，有一座天庭屹立于我们的头顶，时不时有神仙降下他们的旨意，传授我们修仙之法。在传说的结尾，天庭坠落大地，世界因此毁灭。\n\n我们一直认为这不过是被杜撰出来的神话，直到我们登上太空，发现了残破的建筑遗迹漂流在虚空中，其中记载着上古修仙文明的辉煌与他们修炼的方法。\n\n修仙者是真实存在的，我们按照书籍上记录的方法去做，真的有人突破到了练气期。既然如此，那天庭是否也真的存在？\n\n现在，我们研发出了超空间引擎，是时候去一探究竟了。"
+
+ site_sxx_sea_of_asteroid:0"碎片之海"
+ site_sxx_sea_of_asteroid_desc:0"这个恒星系被无穷无尽的小行星碎片充斥，其中绝对埋藏着什么秘密。"
+ sxx_site.1300.name:0"建筑碎片"
+ sxx_site.1300.desc:0"考古团队在这片小行星碎片组成的海洋中找到了大量的建筑碎片，看来这里曾经存在着智慧生命。另外，这里的建筑风格与我们在母星系虚空中发现的建筑遗迹十分相似，难道它们之间有什么联系？"
+ sxx_site.1300.a:0"继续调查。"
+ sxx_site.1301.name:0"相同构成"
+ sxx_site.1301.desc:0"随着考古团队对这些碎片地质结构的考察，我们发现他们的物质构成都无比的相似，简直像是从同一个巨型星体中分裂出来的。若是这样，把这些小行星全部聚合在一起，组成物体的体积将远远超过中央的恒星！这是绝对无法想象的。\n\n之后，另一份调查结果传来，报告称这些小行星的物质构成不但彼此间相同，而且居然与我们的母星也极为相似。"
+ sxx_site.1301.a:0"令人震惊。"
+ sxx_site.1302.name:0"相似语言"
+ sxx_site.1302.desc:0"我们终于发现了这里还能辨认的文字记录，他们的语言与我们极为相似，我们这才想到我们在母星系虚空中发现的修仙功法解读起来十分简单可能不是因为它来源于我们的母星，而是因为它来自这里。"
+ sxx_site.1302.a:0"我们与这里究竟是什么关系？"
+ sxx_site.1303.name:0"无暗大陆"
+ sxx_site.1303.desc:0"记载着有用信息的文字记录被考古团队发现了，这里的居民称这里为无暗大陆，是一片广袤无垠的超级大陆，太阳与天庭始终悬挂在他们的头顶，永无暗夜。尽管难以置信，但也只有一个解释了——这里曾经存在着一片占据整片恒星系的巨型大陆，被未知力量固定于恒星与天庭下方。在之后，因为某种原因，大陆破碎，成为了现在这个样子。"
+ sxx_site.1303.a:0"这……"
+ sxx_site.1304.name:0"天庭坠落"
+ sxx_site.1304.desc:0"最终，我们翻遍了整个恒星系，找到了记载大陆破碎原因的一块刻字——天庭坠落，末日来临。\n\n科学专员[Root.Leader.GetName]提出了一个大胆的猜想，我们的母星就是这块大陆的一个碎片，被天庭坠落的冲击带向远方，最终停留于我们母星现在所处的恒星系，然后演变成现在这个样子。"
+ sxx_site.1304.a:0"居然是这样……"
+ sxx_site.1305.name:0"天坠之地"
+ sxx_site.1305.desc:0"根据大量的数据分析与演算，我们找到了最有可能是“天庭”坠落之地的位置。果然，我们在那里发现了不同寻常的波动，那里有一个隐形结界！尽管它原理非常的高级，我们完全搞不明白，但是很明显它已经支持不住了，我们不算太费力就破除了它。"
+ sxx_site.1305.a:0"让我们看看那里究竟有什么。"
+
+ NAME_Sxx_Gutianting:0"古天庭"
+ sxx_old_heaven_modifier:0"坠落天庭"
+ sxx_old_heaven_modifier_desc:0"被从高天之上打落的天庭，已然大面积损毁，位面十分不稳定。"
+ decision_sxx_repair_heaven:0"修复天庭"
+ decision_sxx_repair_heaven_desc:0"我们将修复残破的天庭，让其重现昔日的辉煌。"
+
+ sxx_origin.60.desc:0"结界……被破除了……终究还是逃不过吗……\n\n等等，你们不是……"
+ sxx_origin.60.a:0"什么人？"
+ sxx_origin.60.a.response:0"咳……我们是天庭的仙人，在大战中伤到了生命本源，命不久矣，躲在结界里沉睡苟延残喘罢了。"
+ sxx_origin.60.b:0"天庭？"
+ sxx_origin.60.b.response:0"是的，这里曾经是天庭，居住着数十名真仙，统辖整个无暗大陆。"
+ sxx_origin.60.c:0"大战？"
+ sxx_origin.60.c.response:0"说来可笑，我们找到了建立新位面这种在下界突破仙王的方法，但又担心被其他人知晓，于是在天庭下方搭建了一片巨型大陆用来培养新鲜血液，然后就将自己封闭了起来。结果还没等到我们有人突破仙王，一群怪物就杀过来了。一开始我们还能应对，结果后来有一个自称魔帝的怪物出现，我们真仙一个接一个陨落，最终我付出大代价动用秘法将整个天庭隐藏，这才让我们最后几个真仙逃过一劫。\n\n可叹！要是当初不封闭自己，我们能提前知晓消息有所准备，也不会有此一劫……"
+ sxx_origin.60.d:0"我们能做什么？"
+ sxx_origin.60.d.response:0"结界已被破除，我等也无力再动用仙术了，死亡是注定的结局……罢了，做缩头乌龟也做够了，想来我堂堂真仙，居然窝囊至此！\n\n我看你们面熟，应该是无暗大陆的遗民吧。在剩下的时光里，我们会尽力帮助你们，希望你们能够重现我们当初的辉煌。\n\n§Y[我们现在可以在星球决议中招募真仙领袖。]§!"
+
+ sxx_fairy_pop_will_die:0"重伤将死"
+
+ sxx_origin.65.desc:0"很好，看到你们成长得这么迅速，吾心甚慰。\n\n都准备好了吗，我们要再次向你们传授功法了。"
+ sxx_origin.65.a:0"请仙师赐教。"
+
+ sxx_origin.80.name:0"仙逝"
+ sxx_origin.80.desc:0"今日，我们的一位上古真仙本源枯竭，陨落于我宗。\n\n我们举国哀悼，为其送行。"
+ sxx_origin.80.a:0"我们定不会辜负他们的期望。"
+ sxx_origin.80.b:0"……"
+
+ sxx_origin.85.name:0"最后的赠礼"
+ sxx_origin.85.desc:0"就在我们为全部七位仙师的离去举办送别典礼时，他们曾经所在的星宫的方位分别射出了七道斑斓的流光。流光汇聚，呈现出七道虚影，隐约能辨识出是仙师们的样貌。\n\n虚影没有开口，声音却响彻在我们所有人心底：“分别之时终于还是来了……很高兴离去时能看到你们成长到这等地步，要是我再晚走些，怕是要被你们这帮小东西给超过了，哈哈……咳，时间有限，废话就不多说了。我们七人在星宫中度过了难以计量的岁月，对这星君的仙位也颇有些独到的体悟，你们要是有兴趣继承我们的路，这些体悟也许能够帮到你们。”\n\n话音刚落，七道虚影重新化作流光，在天庭上空凝聚在一起，化作一本法则流转的虚幻书册，而后光华一闪，出现在我们的宗门主殿中。"
+ sxx_origin.85.a:0"永别了……"
+ sxx_heaven_fall_last_gift:0"仙师遗泽"
+
+
+ origin_sxx_system:0"系统觉醒【测试版】"
+ origin_sxx_system_desc:0"“滴~宿主已觉醒宗门培养系统！”“啥？”"
+ origin_tooltip_sxx_system_effects:0"—开局觉醒宗门培养系统，完成任务，兑换奖励，培养宗门\n—你的主体物种初始拥有§Y废柴§!特质，修炼艰难，但可以通过系统改善。\n—以['concept_sxx_zhuji_country']开局\n—游戏开始时额外拥有§Y1§!个['concept_sxx_zhuji'] £pop£ 人口和§Y10§!个['concept_sxx_lianqi'] £pop£ 人口\n—母星拥有的灵脉为§H$d_sxx_lingmai_1$§!\n§R—内容尚未完善，数值有待调整§!"
+ START_SCREEN_SXX_SYSTEM:0"我们是一个拥有修仙法门的文明，可惜我们天资愚钝，千万年来怎样也无法成功筑基。\n\n但就在最近，我们星球上最大宗门的宗主，穷尽全球资源，终于成功突破，成为历史上的第一位筑基强者，彻底统一了全球。\n\n而随着资源的耗尽，我们将目光转移到了天外的其他星球。于是，超空间引擎诞生了。\n\n在我们的飞船跨越超空间航道的一刹那，一道声音在我们宗主的脑海中响起……"
+
+
+ origin_sxx_invincible:0"无敌世间"
+ origin_sxx_invincible_desc:0"你早已在这颗星球上修炼了不知多少年，现在你出关了……"
+ origin_tooltip_sxx_invincible_effects:0"§R—警告：强大到毫无游戏性的起源§!"
+ START_SCREEN_SXX_INVINCIBLE:0"你早已在这颗星球上修炼了不知多少年。\n\n现在，你参透了一切奥义，突破到了无法想象的境界，强大这个词在你面前都失去了意义。"
+
+ sxx_origin.51.name:0"无敌世间"
+ sxx_origin.51.desc:0"“突破！我无敌了！哈哈哈哈哈哈哈哈哈！！！”\n\n你从星球上飞起，大手一挥，诸天万界尽皆破碎，仙界无数仙人陨落，你已无敌世间。"
+
+
+ council_agenda_agenda_sxx_gongfa_name:0 "感悟大道"
+ council_agenda_agenda_sxx_gongfa_desc:2 "让我们努力感悟大道，为宗门的功法推演贡献一份力量。"
+ agenda_sxx_gongfa_finish:0 "$council_agenda_agenda_sxx_gongfa_name$$agenda_ref$"
+ agenda_sxx_gongfa_finish_desc:0 "$council_agenda_agenda_sxx_gongfa_desc$"
+
+ council_agenda_agenda_sxx_cultivation_name:0 "修炼至上"
+ council_agenda_agenda_sxx_cultivation_desc:2 "自身的修为是一切的根本，苦修之人才能拥有未来。"
+ agenda_sxx_cultivation_finish:0 "$council_agenda_agenda_sxx_cultivation_name$$agenda_ref$"
+ agenda_sxx_cultivation_finish_desc:0 "$council_agenda_agenda_sxx_cultivation_desc$"

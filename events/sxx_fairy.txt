@@ -347,13 +347,13 @@ country_event = {
 	}
 }
 
-# 人仙陨落
+# 人仙陨落（突破）
 country_event = {
 	id = sxx_fairy.220
 	hide_window = yes
 
 	mean_time_to_happen = {
-		years = 12.5
+		years = 10
 		modifier = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_1|
 		}
@@ -374,17 +374,26 @@ country_event = {
 	}
 
 	immediate = {
-		add_event_chain_counter = {
-			event_chain = sxx_ascend_chain
-			counter = sxx_fairy_1
-			amount = -1
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_event_chain_counter = {
+				event_chain = sxx_ascend_chain
+				counter = sxx_fairy_1
+				amount = -1
+			}
+			subtract_variable = { which = value_sxx_fairy_1 value = 1 }
+			add_resource = { sxx_qiyun = -50 }
+			country_event = { id = sxx_fairy.225 }
+			random_list = {
+				10 = { country_event = { id = sxx_fairy.221 days = 1 random = 29 } }
+				90 = {}
+			}
 		}
-		subtract_variable = { which = value_sxx_fairy_1 value = 1 }
-		add_resource = { sxx_qiyun = -50 }
-		country_event = { id = sxx_fairy.225 }
-		random_list = {
-			10 = { country_event = { id = sxx_fairy.221 days = 1 random = 29 } }
-			90 = {}
+		else = {
+			country_event = { id = sxx_fairy.221 }
+			country_event = { id = sxx_fairy.230 }
 		}
 	}
 }
@@ -543,14 +552,14 @@ country_event = {
 	}
 }
 
-# 地仙陨落
+# 地仙陨落（突破）
 country_event = {
 	id = sxx_fairy.240
 
 	hide_window = yes
 
 	mean_time_to_happen = {
-		years = 25
+		years = 15
 		modifier = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_2|
 		}
@@ -571,17 +580,26 @@ country_event = {
 	}
 
 	immediate = {
-		add_event_chain_counter = {
-			event_chain = sxx_ascend_chain
-			counter = sxx_fairy_2
-			amount = -1
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_event_chain_counter = {
+				event_chain = sxx_ascend_chain
+				counter = sxx_fairy_2
+				amount = -1
+			}
+			subtract_variable = { which = value_sxx_fairy_2 value = 1 }
+			add_resource = { sxx_qiyun = -500 }
+			country_event = { id = sxx_fairy.245 }
+			random_list = {
+				10 = { country_event = { id = sxx_fairy.241 days = 1 random = 29 } }
+				90 = {}
+			}
 		}
-		subtract_variable = { which = value_sxx_fairy_2 value = 1 }
-		add_resource = { sxx_qiyun = -500 }
-		country_event = { id = sxx_fairy.245 }
-		random_list = {
-			10 = { country_event = { id = sxx_fairy.241 days = 1 random = 29 } }
-			90 = {}
+		else = {
+			country_event = { id = sxx_fairy.241 }
+			country_event = { id = sxx_fairy.250 }
 		}
 	}
 }
@@ -743,14 +761,14 @@ country_event = {
 	}
 }
 
-# 天仙陨落
+# 天仙陨落（突破）
 country_event = {
 	id = sxx_fairy.260
 
 	hide_window = yes
 
 	mean_time_to_happen = {
-		years = 50
+		years = 20
 		modifier = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_3|
 		}
@@ -771,17 +789,26 @@ country_event = {
 	}
 
 	immediate = {
-		add_event_chain_counter = {
-			event_chain = sxx_ascend_chain
-			counter = sxx_fairy_3
-			amount = -1
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_event_chain_counter = {
+				event_chain = sxx_ascend_chain
+				counter = sxx_fairy_3
+				amount = -1
+			}
+			subtract_variable = { which = value_sxx_fairy_3 value = 1 }
+			add_resource = { sxx_qiyun = -5000 }
+			country_event = { id = sxx_fairy.265 }
+			random_list = {
+				10 = { country_event = { id = sxx_fairy.261 days = 1 random = 29 } }
+				90 = {}
+			}
 		}
-		subtract_variable = { which = value_sxx_fairy_3 value = 1 }
-		add_resource = { sxx_qiyun = -5000 }
-		country_event = { id = sxx_fairy.265 }
-		random_list = {
-			10 = { country_event = { id = sxx_fairy.261 days = 1 random = 29 } }
-			90 = {}
+		else = {
+			country_event = { id = sxx_fairy.261 }
+			country_event = { id = sxx_fairy.270 }
 		}
 	}
 }
@@ -946,14 +973,14 @@ country_event = {
 	}
 }
 
-# 金仙陨落
+# 金仙陨落（突破）
 country_event = {
 	id = sxx_fairy.280
 	
 	hide_window = yes
 
 	mean_time_to_happen = {
-		years = 100
+		years = 25
 		modifier = {
 			factor = value:sxx_fairy_factor|VARIABLE|value_sxx_fairy_4|
 		}
@@ -974,17 +1001,26 @@ country_event = {
 	}
 
 	immediate = {
-		add_event_chain_counter = {
-			event_chain = sxx_ascend_chain
-			counter = sxx_fairy_4
-			amount = -1
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_event_chain_counter = {
+				event_chain = sxx_ascend_chain
+				counter = sxx_fairy_4
+				amount = -1
+			}
+			subtract_variable = { which = value_sxx_fairy_4 value = 1 }
+			add_resource = { sxx_qiyun = -50000 }
+			country_event = { id = sxx_fairy.285 }
+			random_list = {
+				10 = { country_event = { id = sxx_fairy.281 days = 1 random = 29 } }
+				90 = {}
+			}
 		}
-		subtract_variable = { which = value_sxx_fairy_4 value = 1 }
-		add_resource = { sxx_qiyun = -50000 }
-		country_event = { id = sxx_fairy.285 }
-		random_list = {
-			10 = { country_event = { id = sxx_fairy.281 days = 1 random = 29 } }
-			90 = {}
+		else = {
+			country_event = { id = sxx_fairy.281 }
+			country_event = { id = sxx_fairy.290 }
 		}
 	}
 }
@@ -1129,6 +1165,24 @@ country_event = {
 				NOT = { has_country_flag = sxx_abg_curse_released }
 			}
 			country_event = { id = sxx_origin.40 days = 30 random = 720 }
+		}
+	}
+}
+
+# 晋升大罗弹窗
+country_event = {
+	id = sxx_fairy.295
+	title = sxx_fairy.290.name
+	desc = sxx_fairy.290.desc
+	picture = GFX_evt_vortex
+	show_sound = event_mind_over_matter
+
+	is_triggered_only = yes
+
+	trigger = {
+		check_variable = {
+			which = value_sxx_fairy_5
+			value < 10
 		}
 	}
 

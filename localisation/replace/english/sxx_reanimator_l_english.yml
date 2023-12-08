@@ -1,0 +1,5 @@
+﻿l_english:
+
+ civic_tooltip_reanimated_armies_effects:2 "The §YMilitary Academy§! building will be replaced by a §YChamber of Horror§!, providing the £job_necromancer£ §YNecromancer§! job, allowing the recruitment of §YUndead Armies§!.\n$job_necromancer_effect_desc$.\nFallen armies have a chance to be resurrected as §YUndead Armies§!.\nSlain organic Titans have a chance to be resurrected.\nMonks who practice death will turn into §YZombies§!."
+
+ civic_tooltip_permanent_employment_effects:3 "Allows the construction of £building£ §Y$building_posthumous_employment_center$§!\n$job_reassigner_effect_desc$\n\nAllows the construction of £building£ §Y$holding_reemployment_center$§! real estate\n\nDefeated organic Titans have a chance to be resurrected.\nMonks who practice death will turn into §YZombies§!."

@@ -243,6 +243,6 @@ country_event = {
 	}
 
 	immediate = {
-		sxx_main_select_effect = { NUM = 29 }
+		sxx_main_practice_select_effect = { NUM = 29 }
 	}
 }

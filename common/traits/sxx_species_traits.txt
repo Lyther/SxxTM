@@ -4,7 +4,6 @@ trait_sxx_lianqi = {
 	sorting_priority = 15
 	initial = no
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -21,17 +20,17 @@ trait_sxx_lianqi = {
 
 	custom_tooltip_with_modifiers = sxx_trait_new_pop_auto_remove_tooltip
 	modifier = {
-		sxx_pop_xiuxian_job_produces_mult = -0.75
+		sxx_pop_xiuxian_job_produces_mult = 0.25
 		army_damage_mult = 0.3
         army_health = 0.3
 		army_morale = 0.3
 		#army_collateral_damage_mult = 0.1
 		leader_lifespan_add = 30
 		pop_environment_tolerance = 0.1
-		planet_pops_energy_upkeep_mult = 1
-		planet_pops_minerals_upkeep_mult = 1
-		planet_pops_food_upkeep_mult = 1
-		sxx_pop_xiuxian_job_upkeep_mult = -0.75
+		# planet_pops_energy_upkeep_mult = 0
+		# planet_pops_minerals_upkeep_mult = 0
+		# planet_pops_food_upkeep_mult = 0
+		# sxx_pop_xiuxian_job_upkeep_mult = 0
 		pop_resettlement_cost_mult = 0.1
 	}
 	slave_cost = {
@@ -45,7 +44,6 @@ trait_sxx_zhuji = {
 	sorting_priority = 15
 	initial = no
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -67,7 +65,7 @@ trait_sxx_zhuji = {
 		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 1
 		planet_pops_sxx_stones_upkeep_mult = 1
 		planet_pops_sxx_pills_upkeep_mult = 1
-		sxx_pop_xiuxian_job_produces_mult = -0.5
+		sxx_pop_xiuxian_job_produces_mult = 0.5
 		army_damage_mult = 1
         army_health = 1
 		army_morale = 1
@@ -77,7 +75,7 @@ trait_sxx_zhuji = {
 		planet_pops_energy_upkeep_mult = -0.5
 		planet_pops_minerals_upkeep_mult = -0.5
 		planet_pops_food_upkeep_mult = -0.5
-		sxx_pop_xiuxian_job_upkeep_mult = -0.5
+		sxx_pop_xiuxian_job_upkeep_mult = 0.25
 		pop_resettlement_cost_mult = 0.2
 	}
 	slave_cost = {
@@ -91,7 +89,6 @@ trait_sxx_jindan = {
 	sorting_priority = 15
 	initial = no
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -113,7 +110,7 @@ trait_sxx_jindan = {
 		sxx_planet_jobs_sxx_base_speed_mod_produces_mult = 3
 		planet_pops_sxx_stones_upkeep_mult = 3
 		planet_pops_sxx_pills_upkeep_mult = 3
-	#	sxx_pop_xiuxian_job_produces_mult = 0
+		sxx_pop_xiuxian_job_produces_mult = 0.75
 		army_damage_mult = 3
         army_health = 3
 		army_morale = 3
@@ -123,7 +120,7 @@ trait_sxx_jindan = {
 		planet_pops_energy_upkeep_mult = -1
 		planet_pops_minerals_upkeep_mult = -1
 		planet_pops_food_upkeep_mult = -1
-	#	sxx_pop_xiuxian_job_upkeep_mult = 0
+		sxx_pop_xiuxian_job_upkeep_mult = 0.5
 		pop_resettlement_cost_mult = 0.3
 	}
 	slave_cost = {
@@ -137,7 +134,6 @@ trait_sxx_yuanying = {
 	sorting_priority = 15
 	initial = no
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -169,7 +165,7 @@ trait_sxx_yuanying = {
 		planet_pops_energy_upkeep_mult = -2
 		planet_pops_minerals_upkeep_mult = -2
 		planet_pops_food_upkeep_mult = -2
-		sxx_pop_xiuxian_job_upkeep_mult = 1
+		sxx_pop_xiuxian_job_upkeep_mult = 0.75
 		pop_resettlement_cost_mult = 0.4
 	}
 	slave_cost = {
@@ -183,7 +179,6 @@ trait_sxx_huashen = {
 	sorting_priority = 15
 	initial = no
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -215,7 +210,7 @@ trait_sxx_huashen = {
 		planet_pops_energy_upkeep_mult = -4
 		planet_pops_minerals_upkeep_mult = -4
 		planet_pops_food_upkeep_mult = -4
-		sxx_pop_xiuxian_job_upkeep_mult = 3
+		sxx_pop_xiuxian_job_upkeep_mult = 1
 		pop_resettlement_cost_mult = 0.5
 	}
 	slave_cost = {
@@ -229,7 +224,6 @@ trait_sxx_lianxu = {
 	sorting_priority = 15
 	initial = no
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -261,7 +255,7 @@ trait_sxx_lianxu = {
 		planet_pops_energy_upkeep_mult = -8
 		planet_pops_minerals_upkeep_mult = -8
 		planet_pops_food_upkeep_mult = -8
-		sxx_pop_xiuxian_job_upkeep_mult = 7
+		sxx_pop_xiuxian_job_upkeep_mult = 3
 		pop_resettlement_cost_mult = 0.6
 	}
 	slave_cost = {
@@ -275,7 +269,6 @@ trait_sxx_heti = {
 	sorting_priority = 15
 	initial = no
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -307,7 +300,7 @@ trait_sxx_heti = {
 		planet_pops_energy_upkeep_mult = -16
 		planet_pops_minerals_upkeep_mult = -16
 		planet_pops_food_upkeep_mult = -16
-		sxx_pop_xiuxian_job_upkeep_mult = 15
+		sxx_pop_xiuxian_job_upkeep_mult = 7
 		pop_resettlement_cost_mult = 0.7
 	}
 	slave_cost = {
@@ -321,7 +314,6 @@ trait_sxx_dacheng = {
 	sorting_priority = 15
 	initial = no
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -353,7 +345,7 @@ trait_sxx_dacheng = {
 		planet_pops_energy_upkeep_mult = -32
 		planet_pops_minerals_upkeep_mult = -32
 		planet_pops_food_upkeep_mult = -32
-		sxx_pop_xiuxian_job_upkeep_mult = 31
+		sxx_pop_xiuxian_job_upkeep_mult = 15
 		pop_resettlement_cost_mult = 0.8
 	}
 	slave_cost = {
@@ -367,7 +359,6 @@ trait_sxx_dujie = {
 	sorting_priority = 15
 	initial = no
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -399,7 +390,7 @@ trait_sxx_dujie = {
 		planet_pops_energy_upkeep_mult = -64
 		planet_pops_minerals_upkeep_mult = -64
 		planet_pops_food_upkeep_mult = -64
-		sxx_pop_xiuxian_job_upkeep_mult = 63
+		sxx_pop_xiuxian_job_upkeep_mult = 31
 		pop_resettlement_cost_mult = 0.9
 	}
 	slave_cost = {
@@ -414,7 +405,6 @@ trait_sxx_zhenxian = {
 	initial = no
 	immortal_leaders = yes
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -433,7 +423,7 @@ trait_sxx_zhenxian = {
 
 	custom_tooltip_with_modifiers = sxx_trait_new_pop_auto_remove_tooltip
 	modifier = {
-		sxx_pop_xiuxian_job_produces_mult = 127
+		sxx_pop_xiuxian_job_produces_mult = 200
 		army_damage_mult = 30000
         army_health = 30000
 		army_morale = 30000
@@ -442,7 +432,7 @@ trait_sxx_zhenxian = {
 		planet_pops_energy_upkeep_mult = -200
 		planet_pops_minerals_upkeep_mult = -200
 		planet_pops_food_upkeep_mult = -200
-		sxx_pop_xiuxian_job_upkeep_mult = 63
+		sxx_pop_xiuxian_job_upkeep_mult = 50
 		pop_resettlement_cost_mult = 1.0
 	}
 	slave_cost = {
@@ -457,7 +447,6 @@ trait_sxx_xianwang = {
 	initial = no
 	immortal_leaders = yes
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -476,7 +465,7 @@ trait_sxx_xianwang = {
 
 	custom_tooltip_with_modifiers = sxx_trait_new_pop_auto_remove_tooltip
 	modifier = {
-		sxx_pop_xiuxian_job_produces_mult = 255
+		sxx_pop_xiuxian_job_produces_mult = 1000
 		army_damage_mult = 100000
         army_health = 100000
 		army_morale = 100000
@@ -485,7 +474,7 @@ trait_sxx_xianwang = {
 		planet_pops_energy_upkeep_mult = -400
 		planet_pops_minerals_upkeep_mult = -400
 		planet_pops_food_upkeep_mult = -400
-		sxx_pop_xiuxian_job_upkeep_mult = 127
+		sxx_pop_xiuxian_job_upkeep_mult = 100
 		pop_resettlement_cost_mult = 1.1
 	}
 	slave_cost = {
@@ -500,7 +489,6 @@ trait_sxx_xiandi = {
 	initial = no
 	immortal_leaders = yes
 	randomized = no
-	infertile = yes
 	improves_leaders = yes
 
 	species_potential_add = {
@@ -519,7 +507,7 @@ trait_sxx_xiandi = {
 
 	custom_tooltip_with_modifiers = sxx_trait_new_pop_auto_remove_tooltip
 	modifier = {
-		sxx_pop_xiuxian_job_produces_mult = 511
+		sxx_pop_xiuxian_job_produces_mult = 5000
 		army_damage_mult = 300000
         army_health = 300000
 		army_morale = 300000
@@ -528,7 +516,7 @@ trait_sxx_xiandi = {
 		planet_pops_energy_upkeep_mult = -800
 		planet_pops_minerals_upkeep_mult = -800
 		planet_pops_food_upkeep_mult = -800
-		sxx_pop_xiuxian_job_upkeep_mult = 255
+		sxx_pop_xiuxian_job_upkeep_mult = 200
 		pop_resettlement_cost_mult = 1.2
 	}
 	slave_cost = {
@@ -573,7 +561,6 @@ trait_sxx_yuhua = {
 	sorting_priority = 20
 	initial = no
 	randomized = no
-	infertile = yes
 
 	species_potential_add = {
 		always = no
@@ -1514,7 +1501,6 @@ trait_sxx_douluo_god = {
 	initial = no
 	randomized = no
 
-	infertile = yes
 	immortal_leaders = yes
 
 	species_potential_add = {

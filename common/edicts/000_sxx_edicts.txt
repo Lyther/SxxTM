@@ -230,8 +230,21 @@ sxx_stones_machine_apply_1 = {
 	}
 
 	allow = {
-		NOT = {
-			has_deficit = sxx_stones
+		OR = {
+			AND = {
+				is_ai = yes
+				NOR = {
+					has_edict = sxx_stones_machine_apply_2
+					has_edict = sxx_stones_machine_apply_3
+					has_deficit = sxx_stones
+				}
+			}
+			AND = {
+				is_ai = no
+				NOT = {
+					has_deficit = sxx_stones
+				}
+			}
 		}
 	}
 
@@ -258,6 +271,13 @@ sxx_stones_machine_apply_1 = {
 
 	ai_weight = {
 		weight = 500
+		modifier = {
+			factor = 0
+			OR = {
+				has_technology = tech_sxx_stones_machine_2
+				has_technology = tech_sxx_stones_machine_3
+			}
+		}
 	}
 }
 
@@ -280,8 +300,21 @@ sxx_stones_machine_apply_2 = {
 	}
 
 	allow = {
-		NOT = {
-			has_deficit = sxx_stones
+		OR = {
+			AND = {
+				is_ai = yes
+				NOR = {
+					has_edict = sxx_stones_machine_apply_1
+					has_edict = sxx_stones_machine_apply_3
+					has_deficit = sxx_stones
+				}
+			}
+			AND = {
+				is_ai = no
+				NOT = {
+					has_deficit = sxx_stones
+				}
+			}
 		}
 	}
 
@@ -308,6 +341,10 @@ sxx_stones_machine_apply_2 = {
 
 	ai_weight = {
 		weight = 500
+		modifier = {
+			factor = 0
+			has_technology = tech_sxx_stones_machine_3
+		}
 	}
 }
 
@@ -330,8 +367,21 @@ sxx_stones_machine_apply_3 = {
 	}
 
 	allow = {
-		NOT = {
-			has_deficit = sxx_stones
+		OR = {
+			AND = {
+				is_ai = yes
+				NOR = {
+					has_edict = sxx_stones_machine_apply_1
+					has_edict = sxx_stones_machine_apply_2
+					has_deficit = sxx_stones
+				}
+			}
+			AND = {
+				is_ai = no
+				NOT = {
+					has_deficit = sxx_stones
+				}
+			}
 		}
 	}
 
@@ -358,6 +408,76 @@ sxx_stones_machine_apply_3 = {
 
 	ai_weight = {
 		weight = 500
+	}
+}
+
+sxx_more_break_success = {
+	length = -1
+	icon = GFX_edict_type_sxx_qiyun
+
+	resources = {
+		category = edicts
+		upkeep = {
+			sxx_qiyun = 1
+			mult = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_ai = yes
+		OR = {
+			is_sxx_final_country = yes
+			has_country_flag = sxx_country_can_use_qiyun
+		}
+	}
+
+	allow = {
+		resource_stockpile_compare = { resource = sxx_qiyun value > 0 }
+	}
+
+	modifier = {
+		sxx_planet_jobs_sxx_break_success_chance_produces_mult = 0.5
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_more_cultivator_spawn = {
+	length = -1
+	icon = GFX_edict_type_sxx_qiyun
+
+	resources = {
+		category = edicts
+		cost = {
+			sxx_qiyun = 1.1
+			mult = value:edict_size_effect
+		}
+		upkeep = {
+			sxx_qiyun = 0.1
+			mult = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		is_ai = yes
+		OR = {
+			is_sxx_final_country = yes
+			has_country_flag = sxx_country_can_use_qiyun
+		}
+	}
+
+	allow = {
+		resource_stockpile_compare = { resource = sxx_qiyun value > 0 }
+	}
+
+	modifier = {
+		sxx_planet_jobs_sxx_cultivator_spawn_chance_produces_mult = 1
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }
 
@@ -390,6 +510,44 @@ sxx_more_special_body = {
 
 	effect = {
 		custom_tooltip = edict_sxx_more_special_body_tooltip
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_break_bottleneck = {
+	length = 1800
+	icon = GFX_edict_type_sxx_qiyun
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_break_bottleneck
+	}
+
+	potential = {
+		is_ai = yes
+		OR = {
+			is_sxx_final_country = yes
+			has_country_flag = sxx_country_can_use_qiyun
+		}
+	}
+
+	allow = {
+		OR = {
+			has_edict = sxx_break_bottleneck
+			resource_stockpile_compare = { resource = sxx_qiyun value >= 50 }
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = sxx_fairy.1010 }
+		}
 	}
 
 	ai_weight = {
@@ -684,6 +842,86 @@ sxx_show_pop_cultivation_data = {
 						multiplier = value:sxx_fairy_pop_xp_max
 						days = 30
 					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_add_trait_sxx_potential_depletion = {
+	length = 1
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_add_trait_sxx_potential_depletion
+	}
+
+	potential = {
+		always = no
+	}
+
+	effect = {
+		hidden_effect = {
+			set_country_flag = add_trait_sxx_potential_depletion
+			every_owned_pop = {
+				limit = {
+					has_pop_flag = sxx_potential_depletion
+				}
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					modify_species = {
+						species = this
+						add_trait = trait_sxx_potential_depletion
+					}
+				}
+				else = {
+					modify_pop = {
+						pop = this
+						remove_pop_flag = sxx_potential_depletion
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+sxx_remove_trait_sxx_potential_depletion = {
+	length = 1
+	icon = GFX_edict_type_time
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = effect_edict_sxx_remove_trait_sxx_potential_depletion
+	}
+
+	potential = {
+		always = no
+	}
+
+	effect = {
+		hidden_effect = {
+			remove_country_flag = add_trait_sxx_potential_depletion
+			every_owned_pop = {
+				modify_species = {
+					species = this
+					remove_trait = trait_sxx_potential_depletion
 				}
 			}
 		}
