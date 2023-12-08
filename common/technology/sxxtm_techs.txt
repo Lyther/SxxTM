@@ -41,7 +41,7 @@ tech_repeatable_weapon_type_sxx_lingshi_damage_mul_5 = {
 	}
 }
 
-tech_repeatable_weapon_type_sxx_lingshi_fire_rate_mul_5 = {
+tech_repeatable_weapon_type_sxx_lingshi_fr_mul_5 = {
 	cost = 250000
 	cost_per_level = 25000
 	area = physics
@@ -127,7 +127,7 @@ tech_repeatable_weapon_type_sxx_lingshi_damage_mul_10 = {
 	}
 }
 
-tech_repeatable_weapon_type_sxx_lingshi_fire_rate_mul_10 = {
+tech_repeatable_weapon_type_sxx_lingshi_fr_mul_10 = {
 	cost = 500000
 	cost_per_level = 50000
 	area = physics
@@ -213,7 +213,7 @@ tech_repeatable_weapon_type_sxx_lingshi_damage_mul_25 = {
 	}
 }
 
-tech_repeatable_weapon_type_sxx_lingshi_fire_rate_mul_25 = {
+tech_repeatable_weapon_type_sxx_lingshi_fr_mul_25 = {
 	cost = 1250000
 	cost_per_level = 125000
 	area = physics
@@ -299,7 +299,7 @@ tech_repeatable_weapon_type_sxx_lingshi_damage_mul_100 = {
 	}
 }
 
-tech_repeatable_weapon_type_sxx_lingshi_fire_rate_mul_100 = {
+tech_repeatable_weapon_type_sxx_lingshi_fr_mul_100 = {
 	cost = 5000000
 	cost_per_level = 500000
 	area = physics
@@ -385,7 +385,7 @@ tech_repeatable_weapon_type_sxx_lingshi_damage_mul_500 = {
 	}
 }
 
-tech_repeatable_weapon_type_sxx_lingshi_fire_rate_mul_500 = {
+tech_repeatable_weapon_type_sxx_lingshi_fr_mul_500 = {
 	cost = 25000000
 	cost_per_level = 2500000
 	area = physics
@@ -471,7 +471,7 @@ tech_repeatable_weapon_type_sxx_lingshi_damage_mul_10000 = {
 	}
 }
 
-tech_repeatable_weapon_type_sxx_lingshi_fire_rate_mul_10000 = {
+tech_repeatable_weapon_type_sxx_lingshi_fr_mul_10000 = {
 	cost = 500000000
 	cost_per_level = 0
 	area = physics

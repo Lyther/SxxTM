@@ -9,9 +9,6 @@ building_sxx_zongmen_1 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -25,7 +22,6 @@ building_sxx_zongmen_1 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_lianqi_country = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -114,9 +110,6 @@ building_sxx_zongmen_2 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -130,7 +123,6 @@ building_sxx_zongmen_2 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_zhuji_country = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -222,9 +214,6 @@ building_sxx_zongmen_3 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -238,7 +227,6 @@ building_sxx_zongmen_3 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_jindan_country = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -342,9 +330,6 @@ building_sxx_zongmen_4 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -358,7 +343,6 @@ building_sxx_zongmen_4 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_yuanying_country = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -462,9 +446,6 @@ building_sxx_zongmen_5 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -478,7 +459,6 @@ building_sxx_zongmen_5 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_huashen_country = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -582,9 +562,6 @@ building_sxx_zongmen_6 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -598,7 +575,6 @@ building_sxx_zongmen_6 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_lianxu_country = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -702,9 +678,6 @@ building_sxx_zongmen_7 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -718,7 +691,6 @@ building_sxx_zongmen_7 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_heti_country = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -822,9 +794,6 @@ building_sxx_zongmen_8 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -838,7 +807,6 @@ building_sxx_zongmen_8 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_dacheng_country = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -942,9 +910,6 @@ building_sxx_zongmen_9 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -958,7 +923,6 @@ building_sxx_zongmen_9 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_dujie_country = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -1092,9 +1056,6 @@ building_sxx_zongmen_10 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1108,7 +1069,6 @@ building_sxx_zongmen_10 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_final_country = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -1235,9 +1195,6 @@ building_sxx_xuefu_1 = {
 	potential = {
 		exists = owner
 		owner = { is_sxx_jindan_country = yes }
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1249,7 +1206,6 @@ building_sxx_xuefu_1 = {
 		planet = {
 			OR = {
 				is_sxx_jindan_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1293,9 +1249,6 @@ building_sxx_xuefu_2 = {
 	potential = {
 		exists = owner
 		owner = { is_sxx_yuanying_country = yes }
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1307,7 +1260,6 @@ building_sxx_xuefu_2 = {
 		planet = {
 			OR = {
 				is_sxx_yuanying_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1351,9 +1303,6 @@ building_sxx_xuefu_3 = {
 	potential = {
 		exists = owner
 		owner = { is_sxx_huashen_country = yes }
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1365,7 +1314,6 @@ building_sxx_xuefu_3 = {
 		planet = {
 			OR = {
 				is_sxx_huashen_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1411,9 +1359,6 @@ building_sxx_xuefu_4 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1425,7 +1370,6 @@ building_sxx_xuefu_4 = {
 		planet = {
 			OR = {
 				is_sxx_lianxu_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1471,9 +1415,6 @@ building_sxx_xuefu_5 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1485,7 +1426,6 @@ building_sxx_xuefu_5 = {
 		planet = {
 			OR = {
 				is_sxx_heti_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1531,9 +1471,6 @@ building_sxx_xuefu_6 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1545,7 +1482,6 @@ building_sxx_xuefu_6 = {
 		planet = {
 			OR = {
 				is_sxx_dacheng_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1591,9 +1527,6 @@ building_sxx_xuefu_7 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1605,7 +1538,6 @@ building_sxx_xuefu_7 = {
 		planet = {
 			OR = {
 				is_sxx_dujie_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1651,9 +1583,6 @@ building_sxx_xuefu_8 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1665,7 +1594,6 @@ building_sxx_xuefu_8 = {
 		planet = {
 			OR = {
 				is_sxx_fairy_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1709,9 +1637,6 @@ building_sxx_liandanfang_1 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1723,7 +1648,6 @@ building_sxx_liandanfang_1 = {
 		planet = {
 			OR = {
 				is_sxx_lianqi_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1767,9 +1691,6 @@ building_sxx_liandanfang_2 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1781,7 +1702,6 @@ building_sxx_liandanfang_2 = {
 		planet = {
 			OR = {
 				is_sxx_yuanying_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1827,9 +1747,6 @@ building_sxx_liandanfang_3 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1841,7 +1758,6 @@ building_sxx_liandanfang_3 = {
 		planet = {
 			OR = {
 				is_sxx_heti_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1887,9 +1803,6 @@ building_sxx_liandanfang_4 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1901,7 +1814,6 @@ building_sxx_liandanfang_4 = {
 		planet = {
 			OR = {
 				is_sxx_fairy_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -1942,9 +1854,6 @@ building_sxx_lianqishi_1 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -1956,7 +1865,6 @@ building_sxx_lianqishi_1 = {
 		planet = {
 			OR = {
 				is_sxx_lianqi_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -2000,9 +1908,6 @@ building_sxx_lianqishi_2 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -2014,7 +1919,6 @@ building_sxx_lianqishi_2 = {
 		planet = {
 			OR = {
 				is_sxx_yuanying_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -2060,9 +1964,6 @@ building_sxx_lianqishi_3 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -2074,7 +1975,6 @@ building_sxx_lianqishi_3 = {
 		planet = {
 			OR = {
 				is_sxx_heti_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -2120,9 +2020,6 @@ building_sxx_lianqishi_4 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -2134,7 +2031,6 @@ building_sxx_lianqishi_4 = {
 		planet = {
 			OR = {
 				is_sxx_fairy_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -2176,7 +2072,6 @@ building_sxx_temple = {
 			has_valid_civic = civic_sxx_faith
 		}
 		is_sxx_lianqi_planet = yes
-		NOT = { is_planet_class = pc_sxx_heaven }
 	}
 
 	destroy_trigger = {
@@ -2184,7 +2079,6 @@ building_sxx_temple = {
 		OR = {
 			owner = { NOT = { has_valid_civic = civic_sxx_faith } }
 			is_sxx_lianqi_planet = no
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2228,9 +2122,6 @@ building_sxx_xuemingbei = {
 		owner = {
 			has_valid_civic = civic_sxx_evil_way
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -2245,7 +2136,6 @@ building_sxx_xuemingbei = {
 		OR = {
 			owner = { NOT = { has_valid_civic = civic_sxx_evil_way } }
 			is_sxx_lianqi_planet = no
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2291,7 +2181,6 @@ building_sxx_shengxiantai = {
 		exists = owner
 		owner = { is_sxx_sect = yes }
 		owner = { is_ai = yes }
-		NOT = { is_planet_class = pc_sxx_heaven }
 	}
 
 	allow = {
@@ -2302,7 +2191,6 @@ building_sxx_shengxiantai = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_sect = no }
-			is_planet_class = pc_sxx_heaven
 			owner = { is_ai = no }
 		}
 	}
@@ -2332,7 +2220,6 @@ building_sxx_stones_energy_plant = {
 	potential = {
 		exists = owner
 		owner = { is_sxx_sect = yes }
-		NOT = { is_planet_class = pc_sxx_heaven }
 	}
 
 	allow = {
@@ -2343,7 +2230,6 @@ building_sxx_stones_energy_plant = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_sect = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2377,7 +2263,6 @@ building_sxx_pills_processing_center = {
 	potential = {
 		exists = owner
 		owner = { is_sxx_sect = yes }
-		NOT = { is_planet_class = pc_sxx_heaven }
 	}
 
 	allow = {
@@ -2389,7 +2274,6 @@ building_sxx_pills_processing_center = {
 		planet = {
 			OR = {
 				is_sxx_lianqi_planet = no
-				is_planet_class = pc_sxx_heaven
 			}
 		}
 	}
@@ -2424,7 +2308,6 @@ building_sxx_stones_mine_1 = {
 			is_sxx_sect = yes
 		}
 		NOR = {
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2432,7 +2315,6 @@ building_sxx_stones_mine_1 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_sect = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2472,7 +2354,6 @@ building_sxx_stones_mine_2 = {
 			is_sxx_sect = yes
 		}
 		NOR = {
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2480,7 +2361,6 @@ building_sxx_stones_mine_2 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_sect = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2520,7 +2400,6 @@ building_sxx_stones_mine_3 = {
 			is_sxx_sect = yes
 		}
 		NOR = {
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2528,7 +2407,6 @@ building_sxx_stones_mine_3 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_sect = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2568,7 +2446,6 @@ building_sxx_stones_mine_4 = {
 			is_sxx_sect = yes
 		}
 		NOR = {
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2576,7 +2453,6 @@ building_sxx_stones_mine_4 = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_sect = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2615,9 +2491,6 @@ building_sxx_jilegong = {
 			is_sxx_sect = yes
 			has_valid_civic = civic_sxx_hehuan
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -2628,7 +2501,6 @@ building_sxx_jilegong = {
 		exists = owner
 		OR = {
 			owner = { NOT = { has_valid_civic = civic_sxx_hehuan } }
-			is_planet_class = pc_sxx_heaven
 			is_sxx_lianqi_planet = no
 		}
 	}
@@ -2682,9 +2554,6 @@ building_sxx_jileshijie = {
 			is_sxx_sect = yes
 			has_valid_civic = civic_sxx_hehuan
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -2695,7 +2564,6 @@ building_sxx_jileshijie = {
 		exists = owner
 		OR = {
 			owner = { NOT = { has_valid_civic = civic_sxx_hehuan } }
-			is_planet_class = pc_sxx_heaven
 			is_sxx_huashen_planet = no
 		}
 	}
@@ -2746,9 +2614,6 @@ building_sxx_daoyuan = {
 			is_sxx_sect = yes
 			has_valid_civic = civic_sxx_keji
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -2759,7 +2624,6 @@ building_sxx_daoyuan = {
 		exists = owner
 		OR = {
 			owner = { NOT = { has_valid_civic = civic_sxx_keji } }
-			is_planet_class = pc_sxx_heaven
 			is_sxx_lianqi_planet = no
 		}
 	}
@@ -2804,9 +2668,6 @@ building_sxx_daogong = {
 			is_sxx_sect = yes
 			has_valid_civic = civic_sxx_keji
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	allow = {
@@ -2817,7 +2678,6 @@ building_sxx_daogong = {
 		exists = owner
 		OR = {
 			owner = { NOT = { has_valid_civic = civic_sxx_keji } }
-			is_planet_class = pc_sxx_heaven
 			is_sxx_huashen_planet = no
 		}
 	}
@@ -2858,16 +2718,12 @@ building_sxx_stones_plant_1 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	destroy_trigger = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_sect = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
@@ -2910,16 +2766,12 @@ building_sxx_stones_plant_2 = {
 		owner = {
 			is_sxx_sect = yes
 		}
-		planet = {
-			NOT = { is_planet_class = pc_sxx_heaven }
-		}
 	}
 
 	destroy_trigger = {
 		exists = owner
 		OR = {
 			owner = { is_sxx_sect = no }
-			is_planet_class = pc_sxx_heaven
 		}
 	}
 
