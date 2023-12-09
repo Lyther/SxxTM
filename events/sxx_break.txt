@@ -184,12 +184,22 @@ country_event = {
 		}
 		every_owned_planet = {
 			limit = {
-				is_planet_class = pc_sxx_heaven
-				owner = { is_ai = yes }
+				OR = {
+					AND = {
+						is_planet_class = pc_sxx_heaven
+						owner = { is_ai = yes }
+					}
+					owner = { is_ai = no }
+				}
 			}
 			sxx_planet_fairy_cultivate_effect = yes
 		}
-		sxx_fairy_may_sleep_effect = yes
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			sxx_fairy_may_sleep_effect = yes
+		}
 	}
 }
 

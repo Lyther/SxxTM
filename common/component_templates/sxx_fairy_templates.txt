@@ -264,8 +264,8 @@ weapon_component_template = {
 	power = 0
 
 	damage = { min = 0 max = 0 }
-	windup = { min = 30 max = 30 }
-	total_fire_time = 100
+	windup = { min = 0.3 max = 0.3 }
+	total_fire_time = 1
 	accuracy = 1
 
 	size_restriction = { sxx_fairy }

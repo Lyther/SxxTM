@@ -2561,6 +2561,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_BEAM_9"
+	upgrades_to = "SXX_SHIP_BEAM_10"
 	projectile_gfx = "perdition_beam"
 	tags = { weapon_type_sxx_lingshi weapon_role_artillery t_slot }
 	#ai_tags = { weapon_role_artillery }
@@ -2619,6 +2620,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_LANCE_9"
+	upgrades_to = "SXX_SHIP_LANCE_10"
 	projectile_gfx = "sxx_ship_lance"
 	tags = { weapon_type_sxx_lingshi weapon_role_artillery x_slot }
 	ai_tags = { weapon_role_artillery artillery }
@@ -2676,6 +2678,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_SML_9"
+	upgrades_to = "SXX_SHIP_L_10"
 	projectile_gfx = "plasma_thrower_l"
 	tags = { weapon_type_sxx_lingshi l_slot }
 	ai_tags = { weapon_role_artillery gunship }
@@ -2728,6 +2731,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_SML_9"
+	upgrades_to = "SXX_SHIP_M_10"
 	projectile_gfx = "plasma_thrower_m"
 	tags = { weapon_type_sxx_lingshi m_slot }
 	ai_tags = { weapon_role_artillery gunship }
@@ -2780,6 +2784,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_SML_9"
+	upgrades_to = "SXX_SHIP_S_10"
 	projectile_gfx = "plasma_thrower_s"
 	tags = { weapon_type_sxx_lingshi s_slot }
 	ai_tags = { weapon_role_artillery gunship }
@@ -2832,6 +2837,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_PD_9"
+	upgrades_to = "SXX_SHIP_PD_10"
 	projectile_gfx = "red_laser_pd"
 	tags = { weapon_type_sxx_lingshi weapon_type_point_defense }
 	ai_tags = { weapon_role_point_defense screen }

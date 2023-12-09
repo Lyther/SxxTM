@@ -279,8 +279,8 @@ weapon_component_template = {
 	power = 0
 
 	damage = { min = 0 max = 0 }
-	windup = { min = 50 max = 50 }
-	total_fire_time = 150
+	windup = { min = 5 max = 5 }
+	total_fire_time = 15
 	accuracy = 1
 
 	size_restriction = { sxx_cultivator }
