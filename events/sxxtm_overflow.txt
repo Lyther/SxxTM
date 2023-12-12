@@ -1,0 +1,101 @@
+namespace = sxxtm_overflow
+
+country_event = {
+	id = sxxtm_overflow.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		country_event = {
+			id = sxxtm_overflow.1
+			days = 1
+		}
+		country_event = {
+			id = sxxtm_overflow.2
+			days = 2
+		}
+	}
+}
+
+# This event is triggered when a country has more than 2^63-1 stored research points.
+country_event = {
+	id = sxxtm_overflow.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						stored_physics_points >= 922337203
+						stored_society_points >= 922337203
+						stored_engineering_points >= 922337203
+					}
+					AND = {
+						has_monthly_income = {
+							resource = physics_research
+							value >= 9223372
+						}
+						has_monthly_income = {
+							resource = society_research
+							value >= 9223372
+						}
+						has_monthly_income = {
+							resource = engineering_research
+							value >= 9223372
+						}
+					}
+				}
+			}
+			add_random_research_option = {
+				area = physics
+				add_progress = 1.0
+			}
+			add_random_research_option = {
+				area = society
+				add_progress = 1.0
+			}
+			add_random_research_option = {
+				area = engineering
+				add_progress = 1.0
+			}
+		}
+	}
+}
+
+# This event is triggered when a country has more than 2^63-1 stored diplomatic weight.
+country_event = {
+	id = sxxtm_overflow.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				diplomacy_weight <= 0
+			}
+			if = {
+				limit = {
+					NOT = { is_variable_set = sxxtm_diplo_weight_overflow_variable }
+				}
+				set_variable = {
+					which = sxxtm_diplo_weight_overflow_variable
+					value = 1
+				}
+			}
+			multiply_variable = {
+				which = sxxtm_diplo_weight_overflow_variable
+				value = 1
+			}
+			add_modifier = {
+				modifier = diplo_weight_overflow_modifier
+				multiplier = sxxtm_diplo_weight_overflow_variable
+			}
+		}
+	}
+}

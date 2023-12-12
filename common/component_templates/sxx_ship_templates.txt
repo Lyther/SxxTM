@@ -890,6 +890,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_ARMOR_9"
+	upgrades_to = "SMALL_SXX_SHIP_ARMOR_10"
 	resources = {
 		category = ship_components
 		cost = {
@@ -924,6 +925,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_ARMOR_9"
+	upgrades_to = "MEDIUM_SXX_SHIP_ARMOR_10"
 	resources = {
 		category = ship_components
 		cost = {
@@ -958,6 +960,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_ARMOR_9"
+	upgrades_to = "LARGE_SXX_SHIP_ARMOR_10"
 	resources = {
 		category = ship_components
 		cost = {
@@ -1874,6 +1877,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_SHIELD_9"
+	upgrades_to = "SMALL_SXX_SHIP_SHIELD_10"
 	resources = {
 		category = ship_components
 		cost = {
@@ -1908,6 +1912,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_SHIELD_9"
+	upgrades_to = "MEDIUM_SXX_SHIP_SHIELD_10"
 	resources = {
 		category = ship_components
 		cost = {
@@ -1942,6 +1947,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_sxx_lingshi_weapon_9" }
 	component_set = "SXX_SHIP_SHIELD_9"
+	upgrades_to = "LARGE_SXX_SHIP_SHIELD_10"
 	resources = {
 		category = ship_components
 		cost = {

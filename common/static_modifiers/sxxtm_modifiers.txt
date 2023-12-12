@@ -1,0 +1,13 @@
+diplo_weight_overflow_modifier = {
+	diplo_weight_stance_mult = -0.01
+	diplo_weight_sprawl_mult = -0.01
+	diplo_weight_naval_mult = -0.01
+	diplo_weight_pops_mult = -0.01
+	diplo_weight_economy_mult = -0.01
+	diplo_weight_technology_mult = -0.01
+	diplo_weight_delegate_mult = -0.01
+	diplo_weight_council_mult = -0.01
+	diplo_weight_opposing_mult = -0.01
+	diplo_weight_supporting_mult = -0.01
+	diplo_weight_rivals_mult = -0.01
+}

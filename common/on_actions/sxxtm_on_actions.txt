@@ -1,3 +1,6 @@
 on_monthly_pulse_country = {
-	events = { sxxtm_event.0 }
+	events = {
+		sxxtm_event.0
+		sxxtm_overflow.0
+	}
 }

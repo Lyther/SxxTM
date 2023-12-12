@@ -12,12 +12,14 @@
 councilor_ruler_sxx_sect = {
 	leader_class = { official commander scientist }
 	possible = { always = no }
-	is_leader_possible = { always = yes }
 	modifier = {
 		country_base_influence_produces_add = 0.2
 		country_edict_fund_add = 20
 	}
 	icon = "GFX_icon_councilor_ruler"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 ################################
@@ -26,6 +28,9 @@ councilor_ruler_sxx_sect = {
 
 councilor_sxx_dazhenglao = {
 	leader_class = { commander scientist official }
+	possible = {
+		is_sxx_sect = yes
+	}
 	is_leader_possible = {
 		OR = {
 			leader_class = commander
@@ -33,10 +38,12 @@ councilor_sxx_dazhenglao = {
 			leader_class = official
 		}
 	}
-	civic = civic_sxx_sect
 	modifier = {
 		country_base_influence_produces_add = 0.1
 		country_edict_fund_add = 10
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -51,6 +58,9 @@ councilor_sxx_xuemingmoshi = {
 	}
 	civic = civic_sxx_evil_way
 	custom_tooltip = "councilor_sxx_xuemingmoshi_custom_modifier_desc"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_sxx_liandanbuzhang = {
@@ -64,6 +74,10 @@ councilor_sxx_liandanbuzhang = {
 	civic = civic_sxx_pills_master
 	modifier = {
 		planet_sxx_pills_makers_sxx_pills_produces_mult = 0.02
+		planet_sxx_pills_makers_sxx_pills_produces_add = 0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -79,6 +93,11 @@ councilor_sxx_lianqibuzhang = {
 	modifier = {
 		planet_sxx_weapon_refiners_consumer_goods_produces_mult = 0.02
 		planet_sxx_weapon_refiners_alloys_produces_mult = 0.02
+		planet_sxx_weapon_refiners_consumer_goods_produces_add = 0.01
+		planet_sxx_weapon_refiners_alloys_produces_add = 0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -92,7 +111,11 @@ councilor_sxx_zhenfabuzhang = {
 	}
 	civic = civic_sxx_zhenfa
 	modifier = {
-		planet_sxx_array_masters_upkeep_mult = -0.03
+		planet_sxx_array_masters_sxx_stones_upkeep_mult = -0.03
+		planet_sxx_array_masters_sxx_stones_upkeep_add = -0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -108,6 +131,11 @@ councilor_sxx_kuileibuzhang = {
 	modifier = {
 		planet_sxx_elders_alloys_upkeep_mult = -0.03
 		planet_sxx_elders_sxx_stones_upkeep_mult = -0.03
+		planet_sxx_elders_alloys_upkeep_add = -0.01
+		planet_sxx_elders_sxx_stones_upkeep_add = -0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }
 
@@ -119,8 +147,12 @@ councilor_sxx_dahuanxifo = {
 	civic = civic_sxx_hehuan
 	modifier = {
 		planet_sxx_ludings_consumer_goods_upkeep_mult = -0.03
+		planet_sxx_ludings_consumer_goods_upkeep_add = -0.01
 	}
 	custom_tooltip = "councilor_sxx_dahuanxifo_custom_modifier_desc"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_sxx_zhushen = {
@@ -131,8 +163,12 @@ councilor_sxx_zhushen = {
 	civic = civic_sxx_faith
 	modifier = {
 		planet_sxx_believers_unity_produces_mult = 0.1
+		planet_sxx_believers_unity_produces_add = 0.05
 	}
 	custom_tooltip = "councilor_sxx_zhushen_custom_modifier_desc"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_sxx_daozhu = {
@@ -144,6 +180,9 @@ councilor_sxx_daozhu = {
 	modifier = {
 		planet_sxx_xundaos_produces_mult = 0.02
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
 }
 
 councilor_duzhanzhanglao = {
@@ -154,5 +193,8 @@ councilor_duzhanzhanglao = {
 	civic = civic_sxx_afe
 	modifier = {
 		ship_fire_rate_mult = 0.05
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
 	}
 }

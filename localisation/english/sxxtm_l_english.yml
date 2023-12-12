@@ -155,3 +155,6 @@
  edict_destroy_sxx_outer_demon:0 "摧毁域外天魔"
  edict_destroy_sxx_outer_demon_desc:0 "如果摧毁一次不够的话，那就再来一次。"
  effect_edict_destroy_sxx_outer_demon:0 "§MBOOM，灰飞烟灭。§!"
+
+ diplo_weight_overflow_modifier:0 "外交权重溢出修正"
+ diplo_weight_overflow_modifier_desc:0 "外交权重溢出时，修正权重的数值。"

@@ -43,8 +43,11 @@
  mod_planet_district_sxx_hab_lingyao_build_speed_mult:0"$district_sxx_hab_lingyao$建造速度"
 
  mod_planet_sxx_stones_makers_upkeep_mult:0"£job_sxx_stones_maker£ $job_sxx_stones_maker_plural$维护费"
+ mod_planet_sxx_stones_makers_minerals_upkeep_add:0"$mod_planet_sxx_stones_makers_upkeep_mult$"
  mod_planet_sxx_pills_makers_upkeep_mult:0"£job_sxx_pills_maker£ $job_sxx_pills_maker_plural$维护费"
+ mod_planet_sxx_pills_makers_food_upkeep_add:0"$mod_planet_sxx_pills_makers_upkeep_mult$"
  mod_planet_sxx_weapon_refiners_upkeep_mult:0"£job_sxx_weapon_refiner£ $job_sxx_weapon_refiner_plural$维护费"
+ mod_planet_sxx_weapon_refiners_minerals_upkeep_add:0"$mod_planet_sxx_weapon_refiners_upkeep_mult$"
 
  mod_planet_sxx_stones_miners_produces_mult:0"灵脉开采修士岗位资源产出"
  mod_planet_sxx_secular_stones_miners_produces_mult:0"灵脉开采工岗位资源产出"
@@ -113,15 +116,16 @@
 
  mod_planet_sxx_array_masters_upkeep_mult:0"£job_sxx_array_master£ $job_sxx_array_master_plural$维护费"
  mod_planet_sxx_array_masters_sxx_stones_upkeep_mult:0"£job_sxx_array_master£ $job_sxx_array_master_plural$的£sxx_stones£ $sxx_stones$维护费"
+ mod_planet_sxx_array_masters_sxx_stones_upkeep_add:0"$mod_planet_sxx_array_masters_sxx_stones_upkeep_mult$"
 
  mod_planet_sxx_xundaos_produces_mult:0"£job_sxx_xundao£ $job_sxx_xundao_plural$产出"
 
  mod_planet_sxx_factotum_disciples_energy_produces_mult:0"来自£job_sxx_factotum_disciple£$job_sxx_factotum_disciple_plural$的£energy£$energy$"
- mod_planet_sxx_factotum_disciples_energy_produces_add:0"$mod_planet_sxx_factotum_disciples_sxx_pills_produces_mult$"
+ mod_planet_sxx_factotum_disciples_energy_produces_add:0"$mod_planet_sxx_factotum_disciples_energy_produces_mult$"
  mod_planet_sxx_factotum_disciples_minerals_produces_mult:0"来自£job_sxx_factotum_disciple£$job_sxx_factotum_disciple_plural$的£minerals£$minerals$"
- mod_planet_sxx_factotum_disciples_minerals_produces_add:0"$mod_planet_sxx_factotum_disciples_sxx_pills_produces_mult$"
+ mod_planet_sxx_factotum_disciples_minerals_produces_add:0"$mod_planet_sxx_factotum_disciples_minerals_produces_mult$"
  mod_planet_sxx_factotum_disciples_food_produces_mult:0"来自£job_sxx_factotum_disciple£$job_sxx_factotum_disciple_plural$的£food£$food$"
- mod_planet_sxx_factotum_disciples_food_produces_add:0"$mod_planet_sxx_factotum_disciples_sxx_pills_produces_mult$"
+ mod_planet_sxx_factotum_disciples_food_produces_add:0"$mod_planet_sxx_factotum_disciples_food_produces_mult$"
 
  mod_planet_sxx_farmer_disciples_produces_mult:0"£job_sxx_farmer_disciple£$job_sxx_farmer_disciple_plural$产出"
  mod_planet_sxx_farmer_disciples_food_produces_mult:0"来自£job_sxx_farmer_disciple£$job_sxx_farmer_disciple_plural$的£food£$food$"
@@ -231,8 +235,11 @@
  mod_pop_category_sxx_xiuxianzhe_consumer_goods_upkeep_add:0"$mod_pop_category_sxx_xiuxianzhe_consumer_goods_upkeep_mult$"
 
  mod_planet_sxx_elders_alloys_upkeep_mult:0 "£job_sxx_elder£ $job_sxx_elder_plural$岗位£alloys£$alloys$维护费"
+ mod_planet_sxx_elders_alloys_upkeep_add:0 "$mod_planet_sxx_elders_alloys_upkeep_mult$"
  mod_planet_sxx_elders_sxx_stones_upkeep_mult:0 "£job_sxx_elder£ $job_sxx_elder_plural$岗位£sxx_stones£$sxx_stones$维护费"
+ mod_planet_sxx_elders_sxx_stones_upkeep_add:0 "$mod_planet_sxx_elders_sxx_stones_upkeep_mult$"
  mod_planet_sxx_ludings_consumer_goods_upkeep_mult:0 "£job_sxx_luding£ $job_sxx_luding_plural$岗位£consumer_goods£$consumer_goods$维护费"
+ mod_planet_sxx_ludings_consumer_goods_upkeep_add:0 "$mod_planet_sxx_ludings_consumer_goods_upkeep_mult$"
 
  mod_pc_sxx_blessed_spot_habitability:0 "洞天福地宜居性"
  mod_pc_sxx_heaven_habitability:0 "天庭宜居性"

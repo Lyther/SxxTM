@@ -354,6 +354,12 @@ sxx_pop_break_to_fairy = {
 		if = {
 			limit = {
 				is_sxx_fairy_reborn_body = yes
+				owner = {
+					check_variable = {
+						which = value_sxx_fairy_1
+						value < 10
+					}
+				}
 			}
 			owner = { country_event = { id = sxx_fairy.505 days = 1 } }
 		}
@@ -522,24 +528,6 @@ sxx_pop_may_break_from_cultivation_by_state = {
 						80 = {}
 					}
 				}
-				sxx_zhenxian = {
-					random_list = {
-						30 = { sxx_pop_break_to_fairy = yes }
-						70 = {}
-					}
-				}
-				sxx_xianwang = {
-					random_list = {
-						40 = { sxx_pop_break_to_fairy = yes }
-						60 = {}
-					}
-				}
-				sxx_xiandi = {
-					random_list = {
-						50 = { sxx_pop_break_to_fairy = yes }
-						50 = {}
-					}
-				}
 			}
 		}
 	}
@@ -558,6 +546,30 @@ sxx_fairy_pop_may_break_from_cultivation_by_state = {
 			random_list = {
 				90 = {}
 				10 = { sxx_pop_break_to_xiandi = yes }
+			}
+		}
+	}
+}
+
+sxx_fairy_pop_may_break_to_heaven_from_cultivation_by_state = {
+	switch = {
+		trigger = has_pop_flag
+		sxx_zhenxian = {
+			random_list = {
+				5 = { sxx_pop_break_to_fairy = yes }
+				95 = {}
+			}
+		}
+		sxx_xianwang = {
+			random_list = {
+				10 = { sxx_pop_break_to_fairy = yes }
+				90 = {}
+			}
+		}
+		sxx_xiandi = {
+			random_list = {
+				20 = { sxx_pop_break_to_fairy = yes }
+				80 = {}
 			}
 		}
 	}
@@ -896,6 +908,7 @@ sxx_fairy_pop_random_get_xp = {
 		5 = { change_variable = { which = sxx_fairy_pop_xp value = value:sxx_fairy_pop_xp_get_t9 } } # 100倍经验
 	}
 	sxx_set_fairy_pop_xp_max_if_over_max = yes
+	sxx_fairy_pop_may_break_to_heaven_from_cultivation_by_state = yes
 }
 
 sxx_planet_cultivate_effect = {

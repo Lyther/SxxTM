@@ -25,7 +25,6 @@ cb_sxx_anti_evil = {
 		NOT = { is_in_federation_with = from }
 	}
 	is_valid = {
-		has_total_war_cb = no
 		from = {
 			has_valid_civic = civic_sxx_evil_way
 		}
