@@ -92,9 +92,9 @@ country_event = {
 					value = 1
 				}
 			}
-			multiply_variable = {
+			change_variable = {
 				which = sxxtm_diplo_weight_overflow_variable
-				value = 2
+				value = 1
 			}
 			every_country = {
 				if = {
@@ -140,9 +140,9 @@ country_event = {
 					value = 1
 				}
 			}
-			multiply_variable = {
+			change_variable = {
 				which = sxxtm_ship_health_overflow_variable
-				value = 2
+				value = 1
 			}
 			every_country = {
 				if = {

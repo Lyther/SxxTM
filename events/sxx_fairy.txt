@@ -1118,10 +1118,7 @@ planet_event = {
 # 晋升大罗
 country_event = {
 	id = sxx_fairy.290
-	title = sxx_fairy.290.name
-	desc = sxx_fairy.290.desc
-	picture = GFX_evt_vortex
-	show_sound = event_mind_over_matter
+	hide_window = yes
 
 	mean_time_to_happen = {
 		years = 80
@@ -1166,6 +1163,7 @@ country_event = {
 		}
 		change_variable = { which = value_sxx_fairy_5 value = 1 }
 		add_resource = { sxx_qiyun = 1000000 }
+		country_event = { id = sxx_fairy.295 }
 
 		if = {
 			limit = {
