@@ -18,6 +18,10 @@ country_event = {
 			id = sxxtm_overflow.2
 			days = 2
 		}
+		country_event = {
+			id = sxxtm_overflow.3
+			days = 3
+		}
 	}
 }
 
@@ -90,11 +94,74 @@ country_event = {
 			}
 			multiply_variable = {
 				which = sxxtm_diplo_weight_overflow_variable
-				value = 1
+				value = 2
+			}
+			every_country = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					add_modifier = {
+						modifier = diplo_weight_overflow_modifier
+						multiplier = sxxtm_diplo_weight_overflow_variable
+					}
+				}
 			}
 			add_modifier = {
 				modifier = diplo_weight_overflow_modifier
 				multiplier = sxxtm_diplo_weight_overflow_variable
+			}
+			country_event = {
+				id = sxxtm_overflow.2
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sxxtm_overflow.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_owned_ship = {
+					has_hp = 1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { is_variable_set = sxxtm_ship_health_overflow_variable }
+				}
+				set_variable = {
+					which = sxxtm_ship_health_overflow_variable
+					value = 1
+				}
+			}
+			multiply_variable = {
+				which = sxxtm_ship_health_overflow_variable
+				value = 2
+			}
+			every_country = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					add_modifier = {
+						modifier = ship_health_overflow_modifier
+						multiplier = sxxtm_ship_health_overflow_variable
+					}
+				}
+			}
+			add_modifier = {
+				modifier = ship_health_overflow_modifier
+				multiplier = sxxtm_ship_health_overflow_variable
+			}
+			country_event = {
+				id = sxxtm_overflow.3
+				days = 1
 			}
 		}
 	}

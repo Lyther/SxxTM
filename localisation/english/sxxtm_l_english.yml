@@ -158,3 +158,5 @@
 
  diplo_weight_overflow_modifier:0 "外交权重溢出修正"
  diplo_weight_overflow_modifier_desc:0 "外交权重溢出时，修正权重的数值。"
+ ship_health_overflow_modifier:0 "舰船生命溢出修正"
+ ship_health_overflow_modifier_desc:0 "舰船生命溢出时，修正生命的数值。"

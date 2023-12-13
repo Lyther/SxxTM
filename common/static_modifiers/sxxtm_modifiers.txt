@@ -11,3 +11,9 @@ diplo_weight_overflow_modifier = {
 	diplo_weight_supporting_mult = -0.01
 	diplo_weight_rivals_mult = -0.01
 }
+
+ship_health_overflow_modifier = {
+	ship_hull_regen_add_perc = -0.01
+	ship_armor_regen_add_perc = -0.01
+	ship_shield_regen_add_perc = -0.01
+}
