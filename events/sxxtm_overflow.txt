@@ -68,10 +68,6 @@ country_event = {
 				area = engineering
 				add_progress = 1.0
 			}
-			country_event = {
-				id = sxxtm_overflow.1
-				days = 1
-			}
 		}
 	}
 }
