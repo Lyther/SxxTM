@@ -68,6 +68,10 @@ country_event = {
 				area = engineering
 				add_progress = 1.0
 			}
+			country_event = {
+				id = sxxtm_overflow.1
+				days = 1
+			}
 		}
 	}
 }
@@ -92,20 +96,21 @@ country_event = {
 					value = 1
 				}
 			}
+			if = {
+				limit = {
+					check_variable = {
+						which = sxxtm_diplo_weight_overflow_variable
+						value >= 1000
+					}
+				}
+				set_variable = {
+					which = sxxtm_diplo_weight_overflow_variable
+					value = 1
+				}
+			}
 			change_variable = {
 				which = sxxtm_diplo_weight_overflow_variable
 				value = 1
-			}
-			every_country = {
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					add_modifier = {
-						modifier = diplo_weight_overflow_modifier
-						multiplier = sxxtm_diplo_weight_overflow_variable
-					}
-				}
 			}
 			add_modifier = {
 				modifier = diplo_weight_overflow_modifier
@@ -140,20 +145,21 @@ country_event = {
 					value = 1
 				}
 			}
+			if = {
+				limit = {
+					check_variable = {
+						which = sxxtm_ship_health_overflow_variable
+						value >= 1000
+					}
+				}
+				set_variable = {
+					which = sxxtm_ship_health_overflow_variable
+					value = 1
+				}
+			}
 			change_variable = {
 				which = sxxtm_ship_health_overflow_variable
 				value = 1
-			}
-			every_country = {
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					add_modifier = {
-						modifier = ship_health_overflow_modifier
-						multiplier = sxxtm_ship_health_overflow_variable
-					}
-				}
 			}
 			add_modifier = {
 				modifier = ship_health_overflow_modifier
